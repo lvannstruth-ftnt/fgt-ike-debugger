@@ -1,5 +1,7 @@
 import os
 import re
+import pandas as pd
+from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
@@ -175,12 +177,12 @@ def _phase_1_2_mismatch(i,line,comes_line_phase_1,ike_phase_1_type,Ike_param):
     # only hit this statement if phase_2 remains false
     if "IKEv1" in ike_phase_1_type and phase_2==False:
         Ike_type = "IKE-V1"
-        analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' With mismatch as '+mismatch_param)
+        analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' With mismatch as \n'+str(parse_to_table(mismatch_param)))
 
     # only hit this statement if phase_2 remains false
     if "IKEv2" in ike_phase_1_type and phase_2==False:
         Ike_type = "IKE-V2"
-        analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' With mismatch as '+mismatch_param)
+        analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' With mismatch as \n'+str(parse_to_table(mismatch_param)))
 
 
 def _phase_1_psk_fail(i,line,comes_line_phase_1,ike_phase_1_type):
@@ -199,7 +201,38 @@ def _phase_2_subset(i,line,lines):
     if i + 1 < len(lines):
         accepted_proposals=lines[i + 2]+lines[i + 3]
     analysis_output.append(f'[{str(i+1)}]:: phase2 matched by subset. Accepted proposals are: \n' + accepted_proposals + '\n advised to use matching selectors and not sub/super sets')
-    
+
+def parse_to_table(data_string):
+    # Split the string into individual comparisons
+    entries = data_string.split(",, ")
+
+    # Initialize lists to store parsed data
+    incoming_data = []
+    local_data = []
+
+    # Parse each entry and extract incoming and local information
+    for entry in entries:
+        incoming_part, local_part = entry.split(" | ")
+
+        # Extract the key and value parts for incoming and local
+        incoming_key, incoming_val1, incoming_val2 = eval(incoming_part.split(": ")[1])
+        local_key, local_val1, local_val2 = eval(local_part.split(": ")[1])
+
+        # Append the parsed values to the respective lists
+        incoming_data.append([incoming_key, incoming_val1, incoming_val2])
+        local_data.append([local_key, local_val1, local_val2])
+
+    # Create DataFrames for Incoming and Local data
+    incoming_df = pd.DataFrame(incoming_data, columns=["Key", "Value1", "Value2"])
+    local_df = pd.DataFrame(local_data, columns=["Key", "Value1", "Value2"])
+
+    # Combine Incoming and Local data into a single table
+    combined_df = pd.concat(
+        [incoming_df.add_prefix("Incoming_"), local_df.add_prefix("Local_")], axis=1
+    )
+
+    # Pretty-print the table
+    return tabulate(combined_df, headers="keys", tablefmt="grid")
     
 # Log file in cache
 ike_log = read_file(file_name)

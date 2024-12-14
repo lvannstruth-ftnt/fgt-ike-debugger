@@ -5,13 +5,16 @@ from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_SAMPLE_LOG.txt"
+file_name = "IKE_Log_combined_all.txt"
 # IKE_LOG_V2_PSK.txt
 # IKE_LOG_V2_Mismatch.txt
 # IKE_SAMPLE_LOG.txt
 # IKE_LOG_V2
 # IKE_LOG_PFS_mismatch.txt
 # IKE_LOG_V2_Partial_selector.txt
+# IKE_LOG_V2_ph_2_TS_mismatch_responder.txt
+# IKE_LOG_V2_ph_2_TS_mismatch_initiator.txt
+# IKE_Log_combined_all.txt
 # array to store sentencs to display to the user
 analysis_output = []
 
@@ -81,6 +84,25 @@ def ike_parser(text):
         
         if "phase2 matched by subset" in line:
             _phase_2_subset(i,line,lines)
+
+        if "failed to match peer selectors" in line:
+            fail_line=i
+            if comes_line_phase_1:
+                _phase_2_ts_mismatch_responder(i,line,lines,comes_line_phase_1,ike_phase_1_type)
+                comes_line_phase_1 = None
+                ike_phase_1_type = None
+                comes_line = None
+                fail_line = None
+                _phase_2_ts_mismatch_initiator
+        
+        if 'TS_UNACCEPTABLE' in line:
+            fail_line=i
+            if comes_line_phase_1:
+                _phase_2_ts_mismatch_initiator(i,line,lines,comes_line_phase_1,ike_phase_1_type)
+                comes_line_phase_1 = None
+                ike_phase_1_type = None
+                comes_line = None
+                fail_line = None
 
 def _extract_lines(lines, start_line, end_line):
     input_string = "\n".join(lines[start_line-1:end_line])
@@ -199,8 +221,34 @@ def _phase_1_psk_fail(i,line,comes_line_phase_1,ike_phase_1_type):
 def _phase_2_subset(i,line,lines):
     accepted_proposals = ''
     if i + 1 < len(lines):
-        accepted_proposals=lines[i + 2]+lines[i + 3]
+        accepted_proposals=lines[i + 2]+'\n'+lines[i + 3]
     analysis_output.append(f'[{str(i+1)}]:: phase2 matched by subset. Accepted proposals are: \n' + accepted_proposals + '\n advised to use matching selectors and not sub/super sets')
+
+# phase_2 selector mismatch on responder
+def _phase_2_ts_mismatch_responder(i,line,lines,comes_line_phase_1,ike_phase_1_type):
+    start_index_failure = comes_line_phase_1.index("comes")
+    failure_message = comes_line_phase_1[start_index_failure:]
+    ts = ''
+    if i + 1 < len(lines):
+        ts=lines[i - 2]+'\n'+lines[i - 3]
+        if "IKEv1" in ike_phase_1_type:
+            Ike_type = "IKE-V1"
+            analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch for incoming traffic selectors \n' + ts + '\n advised to check traffic selectors on initiatior for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+        if "IKEv2" in ike_phase_1_type:
+            Ike_type = "IKE-V2"
+            analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch for incoming traffic selectors \n' + ts + '\n advised to check traffic selectors on initiatior for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+
+# phase_2 selector mismatch on initiator
+def _phase_2_ts_mismatch_initiator(i,line,lines,comes_line_phase_1,ike_phase_1_type):
+    start_index_failure = comes_line_phase_1.index("comes")
+    failure_message = comes_line_phase_1[start_index_failure:]
+    if "IKEv1" in ike_phase_1_type:
+        Ike_type = "IKE-V1"
+        analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+    if "IKEv2" in ike_phase_1_type:
+        Ike_type = "IKE-V2"
+        analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+    
 
 def parse_to_table(data_string):
     # Split the string into individual comparisons

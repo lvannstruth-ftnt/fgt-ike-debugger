@@ -5,7 +5,7 @@ from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_Log_combined_all.txt"
+file_name = "IKE_LOG_retrans.txt"
 # IKE_LOG_V2_PSK.txt
 # IKE_LOG_V2_Mismatch.txt
 # IKE_SAMPLE_LOG.txt
@@ -15,6 +15,7 @@ file_name = "IKE_Log_combined_all.txt"
 # IKE_LOG_V2_ph_2_TS_mismatch_responder.txt
 # IKE_LOG_V2_ph_2_TS_mismatch_initiator.txt
 # IKE_Log_combined_all.txt
+# IKE_LOG_retrans
 # array to store sentencs to display to the user
 analysis_output = []
 
@@ -46,14 +47,18 @@ def ike_parser(text):
     comes_line = None
     fail_line = None
     lines = text.splitlines()
+    connection_info_retrans = None
+    timeout_index = -1
     for i, line in enumerate(lines):
 
         # Phase-1 check
         if "SA proposal chosen" in line and "no SA proposal chosen" not in line:
-            _phase_1_check(i,line,lines)
+            _phase_1_check(i,line,lines,comes_line_phase_1)
+            comes_line_phase_1 = None
         # phase-2 check
         if "added IPsec SA" in line:
-            _phase_2_check(i,line,lines)
+            _phase_2_check(i,line,lines,comes_line_phase_1)
+            comes_line_phase_1 = None
         #Check for Phase-1 Negotiation failures
         if "negotiation failure" in line or "no proposal chosen" in line:
             fail_line=i
@@ -103,6 +108,16 @@ def ike_parser(text):
                 ike_phase_1_type = None
                 comes_line = None
                 fail_line = None
+                
+        if "negotiation timeout, deleting" in line:
+            timeout_index = i
+        
+        if timeout_index != -1 and abs(i - timeout_index) <= 5:
+            if "connection expiring due to phase1 down" in line:
+                # Search for the connection info pattern in the log
+                _phase_1_retrans_check(text,i)
+                timeout_index = -1
+
 
 def _extract_lines(lines, start_line, end_line):
     input_string = "\n".join(lines[start_line-1:end_line])
@@ -120,22 +135,23 @@ def _extract_lines(lines, start_line, end_line):
 
 
 # Phase-1 check helper function
-def _phase_1_check(i,line,lines):
+def _phase_1_check(i,line,lines,comes_line_phase_1):
     start_index = line.index("SA proposal chosen")
     sa_proposal = line[start_index:]
+    start_index_failure = comes_line_phase_1.index("comes")
+    failure_message = comes_line_phase_1[start_index_failure:]
     # Also get the connection for which SA proposal is chosen
-    if i + 1 < len(lines):
-        conn = lines[i + 1]
-        sa_conn = conn.split()[-1]
-        analysis_output.append(f'[{str(i+1)}]::'+sa_proposal+' VPN with IP Connection as:'+sa_conn+' is UP for phase-1')
+    analysis_output.append(f'[{str(i+1)}]::'+sa_proposal+' VPN with IP Connection as:'+failure_message+' is UP for phase-1')
 
 # Phase-2 check helper function
-def _phase_2_check(i,line,lines):
+def _phase_2_check(i,line,lines,comes_line_phase_1):
+    start_index_failure = comes_line_phase_1.index("comes")
+    failure_message = comes_line_phase_1[start_index_failure:]
     if i + 1 < len(lines):
         phase_2_log = lines[i + 1].strip()
         start_index = phase_2_log.index("IKE connection add")
         phase_2_conn = (phase_2_log[start_index:]).split()[-1]
-        analysis_output.append(f'[{str(i+1)}]::'+'VPN with IP Connection as -> '+phase_2_conn+' is UP for phase-2')
+        analysis_output.append(f'[{str(i+1)}]::'+'VPN with IP Connection as -> '+failure_message+' is UP for phase-2')
 
 # Phase-1/2 mismatch helper function
 def _phase_1_2_mismatch(i,line,comes_line_phase_1,ike_phase_1_type,Ike_param):
@@ -248,7 +264,15 @@ def _phase_2_ts_mismatch_initiator(i,line,lines,comes_line_phase_1,ike_phase_1_t
     if "IKEv2" in ike_phase_1_type:
         Ike_type = "IKE-V2"
         analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
-    
+
+# check for retrans for phase-1 down
+def _phase_1_retrans_check(text,i):
+    connection_match = re.search(r"(\d+\.\d+\.\d+\.\d+:\d+->\d+\.\d+\.\d+\.\d+:\d+)", text)
+    if connection_match:
+        connection_info = connection_match.group(1)
+        print(i)
+        print(connection_info)
+        analysis_output.append(f'[{str(i+1)}]:: VPN with IP Connection as: '+connection_info+' is down for Phase-1 due to retransmission failures \n  Possible issues could be: \n -> NAT-T blocked \n -> ISP blocking IKE \n -> port forward misconfig')
 
 def parse_to_table(data_string):
     # Split the string into individual comparisons
@@ -290,6 +314,7 @@ ike_parser(ike_log)
 # Loop through the array to print the analysis
 for output in analysis_output:
     print(output)
+    print('\n')
 
 
 

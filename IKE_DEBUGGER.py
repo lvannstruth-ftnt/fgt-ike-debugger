@@ -5,7 +5,7 @@ from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_LOG_passive_mode.txt"
+file_name = "IKE_LOG_V2_multiple_phase_2.txt"
 # IKE_LOG_V2_PSK.txt
 # IKE_LOG_V2_Mismatch.txt
 # IKE_SAMPLE_LOG.txt
@@ -55,9 +55,15 @@ def ike_parser(text):
     timeout_index = -1
     src_pattern = r"src .*?:([\d.]+-[\d.]+)"
     dst_pattern = r"dst .*?:([\d.]+-[\d.]+)"
+    src_pattern_mis = r"TSi_0\s\d+:[\d.]+-[\d.]+:\d+"
+    dst_pattern_mis = r"TSr_0\s\d+:[\d.]+-[\d.]+:\d+"
     src_selectors = None
     dst_selectors = None
     policy_error = False
+    src=''
+    dst=''
+    src_mis=''
+    dst_mis=''
     passive_mode_pattern = r"ignoring request to establish IPsec SA, gateway is in passive mode"
     connection_pattern = r"IPsec SA connect \d+ (\d+\.\d+\.\d+\.\d+->\d+\.\d+\.\d+\.\d+:\d+)"
     for i, line in enumerate(lines):
@@ -70,10 +76,14 @@ def ike_parser(text):
         # Phase-2 selector object storage
         if re.search(src_pattern, line):
             src = re.search(src_pattern, line).group(1)
+        if re.search(src_pattern_mis, line):
+            src_mis = re.search(src_pattern_mis, line).group(0)
          
         # Phase-2 selector object storage    
         if re.search(dst_pattern, line):
             dst = re.search(dst_pattern, line).group(1)
+        if re.search(dst_pattern_mis, line):
+            dst_mis = re.search(dst_pattern_mis, line).group(0)
             
         # phase-2 check    
         if "added IPsec SA" in line:
@@ -132,8 +142,8 @@ def ike_parser(text):
             fail_line=i
             selectors = ''
             if comes_line_phase_1:
-                if src and dst:
-                    selectors = f'[{str(i+1)}]:: The selectors are: \n'+'src: '+src+'\n'+'dst: '+dst 
+                if src_mis and dst_mis:
+                    selectors = f'[{str(i+1)}]:: The selectors are: \n'+'src: '+src_mis+'\n'+'dst: '+dst_mis 
                 _phase_2_ts_mismatch_responder(i,line,lines,comes_line_phase_1,ike_phase_1_type,selectors)
                 comes_line_phase_1 = None
                 ike_phase_1_type = None
@@ -166,7 +176,7 @@ def ike_parser(text):
             for j in range(i + 1, len(lines)):
                 match = re.search(connection_pattern, lines[j])
                 if match:
-                    analysis_output.append(f'[{str(i+1)}]:: No policy configured for connection: '+match.group(1))
+                    analysis_output.append(f'[{str(i+1)}]:: Gateway in passive mode for connection: '+match.group(1))
                     break
 
 

@@ -5,7 +5,7 @@ from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_LOG_V2_policy_not_found.txt"
+file_name = "IKE_LOG_passive_mode.txt"
 # IKE_LOG_V2_PSK.txt
 # IKE_LOG_V2_Mismatch.txt
 # IKE_SAMPLE_LOG.txt
@@ -20,6 +20,7 @@ file_name = "IKE_LOG_V2_policy_not_found.txt"
 # IKE_LOG_V2_multiple_phase_2
 # IKE_LOG_V2_multiple_phase_2_initiator.txt
 # IKE_LOG_V2_policy_not_found
+# IKE_LOG_passive_mode
 analysis_output = []
 
 def read_file(filename):
@@ -57,6 +58,8 @@ def ike_parser(text):
     src_selectors = None
     dst_selectors = None
     policy_error = False
+    passive_mode_pattern = r"ignoring request to establish IPsec SA, gateway is in passive mode"
+    connection_pattern = r"IPsec SA connect \d+ (\d+\.\d+\.\d+\.\d+->\d+\.\d+\.\d+\.\d+:\d+)"
     for i, line in enumerate(lines):
 
         # Phase-1 check
@@ -156,6 +159,15 @@ def ike_parser(text):
                 # Search for the connection info pattern in the log
                 _phase_1_retrans_check_1(line,lines,i)
                 timeout_index = -1
+        
+        #No Policy found use case
+        if re.search(passive_mode_pattern, line):
+            # Look ahead to find connection details in the next lines
+            for j in range(i + 1, len(lines)):
+                match = re.search(connection_pattern, lines[j])
+                if match:
+                    analysis_output.append(f'[{str(i+1)}]:: No policy configured for connection: '+match.group(1))
+                    break
 
 
 def _extract_lines(lines, start_line, end_line):

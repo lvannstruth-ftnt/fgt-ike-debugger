@@ -1,0 +1,29 @@
+FortiGate5 (root) # di de en
+
+FortiGate5 (root) # 
+FortiGate5 (root) # ike V=root:0:eveS2S:eveS2S-1-2: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S-1-2: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+ike V=root:0:eveS2S:eveS2S-1-4: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S-1-4: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+ike V=root:0:eveS2S:eveS2S-1-8: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S-1-8: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+ike V=root:0:eveS2S:eveS2S-1-3: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S-1-3: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+ike V=root:0:eveS2S:eveS2S-1-7: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S-1-7: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+ike V=root:0:eveS2S:eveS2S_1: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S_1: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+ike V=root:0:eveS2S:eveS2S-1-5: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S-1-5: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+ike V=root:0:eveS2S:eveS2S-1-9: IPsec SA connect 4 2.2.2.254->1.1.1.254:0
+ike V=root:0:eveS2S:eveS2S-1-9: config found
+ike V=root:0:eveS2S: ignoring request to establish IPsec SA, gateway is in passive mode
+
+FortiGate5 (root) # 

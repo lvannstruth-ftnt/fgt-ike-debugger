@@ -5,7 +5,7 @@ from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_LOG_V2_multiple_phase_2.txt"
+file_name = "IKE_LOG_V2_policy_not_found.txt"
 # IKE_LOG_V2_PSK.txt
 # IKE_LOG_V2_Mismatch.txt
 # IKE_SAMPLE_LOG.txt
@@ -18,6 +18,8 @@ file_name = "IKE_LOG_V2_multiple_phase_2.txt"
 # IKE_LOG_retrans
 # array to store sentencs to display to the user
 # IKE_LOG_V2_multiple_phase_2
+# IKE_LOG_V2_multiple_phase_2_initiator.txt
+# IKE_LOG_V2_policy_not_found
 analysis_output = []
 
 def read_file(filename):
@@ -54,6 +56,7 @@ def ike_parser(text):
     dst_pattern = r"dst .*?:([\d.]+-[\d.]+)"
     src_selectors = None
     dst_selectors = None
+    policy_error = False
     for i, line in enumerate(lines):
 
         # Phase-1 check
@@ -78,17 +81,26 @@ def ike_parser(text):
             comes_line_phase_1 = None    
             src_selectors = None
             dst_selectors = None
+        
+        #Flagging for no policy configured
+        if 'no policy configured' in line:
+            _no_policy_configured(i,comes_line_phase_1)
+            policy_error = True
+            comes_line_phase_1 = None
             
         #Check for Phase-1 Negotiation failures
         if "negotiation failure" in line or "no proposal chosen" in line:
             fail_line=i
-            if comes_line_phase_1:
+            if comes_line_phase_1 and policy_error == False:
                 Ike_param = _extract_lines(lines, comes_line, fail_line)
                 _phase_1_2_mismatch(i,line,comes_line_phase_1,ike_phase_1_type,Ike_param)
                 comes_line_phase_1 = None
                 ike_phase_1_type = None
                 comes_line = None
                 fail_line = None
+            else:
+                policy_error = False
+
         
         if "PSK auth failed: probable pre-shared key mismatch" in line:
             if comes_line_phase_1:
@@ -284,6 +296,11 @@ def _phase_2_ts_mismatch_initiator(i,line,lines,comes_line_phase_1,ike_phase_1_t
     if "IKEv2" in ike_phase_1_type:
         Ike_type = "IKE-V2"
         analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+
+def _no_policy_configured(i,comes_line_phase_1):
+    start_index_failure = comes_line_phase_1.index("comes")
+    failure_message = comes_line_phase_1[start_index_failure:]
+    analysis_output.append(f'[{str(i+1)}]:: No Policy is Configured for connection'+failure_message)
 
 # check for retrans for phase-1 down
 def _phase_1_retrans_check_1(line,lines,i):

@@ -1,0 +1,28 @@
+2024-12-02 16:04:27.816241 ike V=root:0:vpn-it-ipsec:7720: received FCT-UID : E7F01B7B40F04DFDBCCFB0E67832DF7B
+2024-12-02 16:04:27.816248 ike V=root:0:vpn-it-ipsec:7720: received EMS SN : FCTEMS8824000829
+2024-12-02 16:04:27.816255 ike V=root:0:vpn-it-ipsec:7720: received EMS tenant ID : 00000000000000000000000000000000
+2024-12-02 16:04:27.816264 ike V=root:0:vpn-it-ipsec:7720: peer identifier IPV6_ADDR 2605:b100:1128:7955:98cc:84c0:874a:3544
+2024-12-02 16:04:27.816272 ike V=root:0:vpn-it-ipsec:7720: re-validate gw ID
+2024-12-02 16:04:27.816283 ike V=root:0:vpn-it-ipsec:7720: gw validation OK
+2024-12-02 16:04:27.816291 ike V=root:0:vpn-it-ipsec:7720: responder preparing EAP identity request
+2024-12-02 16:04:27.816316 ike 0:vpn-it-ipsec:7720: enc 2700000C0100000040CB5B0A3000002802000000100F3C5117F80EFE72E21A2392EA6DDF0F93F457D727F8079DFAE07226346E1D000000090150000501020102
+2024-12-02 16:04:27.816333 ike V=root:0:vpn-it-ipsec:7720: remote port change 1526 -> 4501
+2024-12-02 16:04:27.816342 ike 0:vpn-it-ipsec:7720: out 8F175E73579B13682E85021916BC7A592E2023200000000100000080240000646930D539C33B01429E8E5266FEE807928BC805E5F0A9FE45E6A0D4D82E7FEB34353CC70
+0BA23189428A90D9714D39CB7D09F7F5E5C534A89D1BD39B26A5A278F2ABEBCD5F689C3E9F64B596E9C4923CF2B555E6715A425F284BF3110153009AB
+2024-12-02 16:04:27.816364 ike V=root:0:vpn-it-ipsec:7720: sent IKE msg (AUTH_RESPONSE): 64.203.91.10:4500->184.151.246.110:4501, len=128, vrf=0, id=8f175e73579b1368/2e85021916bc7a59:00000001
+, oif=7
+
+fgt-777 #
+fgt-777 #
+fgt-777 #
+fgt-777 # 2024-12-02 16:04:57.720005 ike V=root:0:vpn-it-ipsec:7720: negotiation timeout, deleting
+2024-12-02 16:04:57.720109 ike V=root:0:vpn-it-ipsec: connection expiring due to phase1 down
+2024-12-02 16:04:57.720127 ike V=root:0:vpn-it-ipsec: going to be deleted
+2024-12-02 16:05:44 [1437] peer_user_cn_dns_refresh-
+2024-12-02 16:05:44 [3023] __peer_user_cn_dns_refresh-Refresh in 1800 secs
+samld_process_request [145]: len=441, cmd=0, pid=485, job_id=565359
+samld_process_request [162]: Received 441, 0x7fae40
+__samld_sp_create_auth_req [433]: SAML SP algo: 0 -> lasso=1. Binding Method: urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST
+
+__samld_sp_create_auth_req [453]:
+**** AuthnRequest URL ****

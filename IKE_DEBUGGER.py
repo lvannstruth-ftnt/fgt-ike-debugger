@@ -229,11 +229,12 @@ def ike_parser(text):
         if "connection expiring due to phase1 down" in line and timeout_index == -1:
             _phase_1_retrans_check_1(line,lines,i)
         if "connection expiring due to phase1 down" in line and timeout_index != -1:
-            start_index_failure = comes_line_phase_1.index("comes")
-            failure_message = comes_line_phase_1[start_index_failure:]
-            for prev_line in lines[:i]:
-                if "EAP identity request" in prev_line:
-                    analysis_output.append(f'[{str(i+1)}]::VPN with IP Connection as:: '+failure_message+' is down due to bad PSK in EAP Request from clinet')
+            if comes_line_phase_1:
+                start_index_failure = comes_line_phase_1.index("comes")
+                failure_message = comes_line_phase_1[start_index_failure:]
+                for prev_line in lines[:i]:
+                    if "EAP identity request" in prev_line:
+                        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::VPN with IP Connection as:: '+failure_message+' is down due to bad PSK in EAP Request from clinet </span>')
 
         if "negotiation timeout, deleting" in line:
             timeout_index = i

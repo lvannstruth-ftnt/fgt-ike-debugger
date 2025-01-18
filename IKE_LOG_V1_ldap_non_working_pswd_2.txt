@@ -1,0 +1,269 @@
+FortiWiFi-61E #
+FortiWiFi-61E # 2025-01-15 08:51:23.486829 ike V=root:0: comes 10.21.4.174:1012->10.128.202.142:500,ifindex=6,vrf=0,len=513....
+2025-01-15 08:51:23.486969 ike V=root:0: IKEv1 exchange=Aggressive id=49317576df4661f5/0000000000000000 len=513 vrf=0
+2025-01-15 08:51:23.487043 ike 0: in 49317576DF4661F50000000000000000011004000000000000000201040000640000000100000001000000580101000203000
+02801010000800B0001000C00040001518080010007800E00808003000180020002800400050000002802010000800B0001000C00040001518080010007800E01008003000
+180020004800400050A0000C46718C1316E345AF7ABFC1D8136ED5D50E3559B86F675DEE87462D630C450A9C2E79F5CB6648BD98220D5BE8FB7A90BEA7A554538388DBC5EC
+CBE542142929E7637A0CEAA2DDC19E1C047CF7D36C5FA71BE6191B568B2320038845E286347CED9FCAF4837418F6463A637D9BD44C6D87688CC5BA9674F1FF47CEC5595931
+9C5149CB31FFC2B088BC82FAC7715E85E6CA8D593B3C2CBC389805197D30206B7D98F6D79670384524EFCA7006CD713BEA15BB3546686A73E83B0025866BD3ED73C0305000
+014F4064A37ED74B9D765B8C6B11BDC7B310D00001102000000696B6576316C6461700D00001412F5F28C457168A9702D9FE274CC01000D0000144A131C81070358455C572
+8F20E95452F0D000014CD60464335DF21F87CFDB2FC68B6A4480D00001490CB80913EBB696E086381B5EC427B1F0D00000C09002689DFD6B7120D000014AFCAD71368A1F1C
+96B8696FC775701000D0000144C53427B6D465D1B337BB755A37A7FEF00000014B4F01CA951E9DA8D0BAFBBD34AD3044E
+2025-01-15 08:51:23.487203 ike V=root:0:49317576df4661f5/0000000000000000:35399: responder: aggressive mode get 1st message...
+2025-01-15 08:51:23.487286 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID CISCO-UNITY 12F5F28C457168A9702D9FE274CC0100
+2025-01-15 08:51:23.487358 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID RFC 3947 4A131C81070358455C5728F20E95452F
+2025-01-15 08:51:23.487428 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID draft-ietf-ipsec-nat-t-ike-02 CD60464335DF21F87CFDB2F
+C68B6A448
+2025-01-15 08:51:23.487498 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID draft-ietf-ipsec-nat-t-ike-02\n 90CB80913EBB696E08638
+1B5EC427B1F
+2025-01-15 08:51:23.487567 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID draft-ietf-ipsra-isakmp-xauth-06.txt 09002689DFD6B712
+2025-01-15 08:51:23.487637 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID DPD AFCAD71368A1F1C96B8696FC77570100
+2025-01-15 08:51:23.487706 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID forticlient connect license 4C53427B6D465D1B337BB755A
+37A7FEF
+2025-01-15 08:51:23.487776 ike V=root:0:49317576df4661f5/0000000000000000:35399: VID Fortinet Endpoint Control B4F01CA951E9DA8D0BAFBBD34AD
+3044E
+2025-01-15 08:51:23.487835 ike V=root:0::35399: received peer identifier FQDN 'ikev1ldap'
+2025-01-15 08:51:23.488088 ike V=root:0: IKEv1 Aggressive, comes 10.21.4.174:1012->10.128.202.142 6
+2025-01-15 08:51:23.488184 ike V=root:0:49317576df4661f5/0000000000000000:35399: negotiation result
+2025-01-15 08:51:23.488256 ike V=root:0:49317576df4661f5/0000000000000000:35399: proposal id = 1:
+2025-01-15 08:51:23.488312 ike V=root:0:49317576df4661f5/0000000000000000:35399:   protocol id = ISAKMP:
+2025-01-15 08:51:23.488367 ike V=root:0:49317576df4661f5/0000000000000000:35399:      trans_id = KEY_IKE.
+2025-01-15 08:51:23.488423 ike V=root:0:49317576df4661f5/0000000000000000:35399:      encapsulation = IKE/none
+2025-01-15 08:51:23.488479 ike V=root:0:49317576df4661f5/0000000000000000:35399:         type=OAKLEY_ENCRYPT_ALG, val=AES_CBC, key-len=256
+2025-01-15 08:51:23.488536 ike V=root:0:49317576df4661f5/0000000000000000:35399:         type=OAKLEY_HASH_ALG, val=SHA2_256.
+2025-01-15 08:51:23.488592 ike V=root:0:49317576df4661f5/0000000000000000:35399:         type=AUTH_METHOD, val=PRESHARED_KEY.
+2025-01-15 08:51:23.488647 ike V=root:0:49317576df4661f5/0000000000000000:35399:         type=OAKLEY_GROUP, val=MODP1536.
+2025-01-15 08:51:23.488703 ike V=root:0:49317576df4661f5/0000000000000000:35399: ISAKMP SA lifetime=86400
+2025-01-15 08:51:23.488776 ike V=root:0:49317576df4661f5/0000000000000000:35399: SA proposal chosen, matched gateway ikev1-ldap
+2025-01-15 08:51:23.488867 ike V=root:0:ikev1-ldap:ikev1-ldap: created connection: 0x740c458 6 10.128.202.142->10.21.4.174:1012.
+2025-01-15 08:51:23.488944 ike V=root:0:ikev1-ldap:35399: DPD negotiated
+2025-01-15 08:51:23.489031 ike V=root:0:ikev1-ldap:35399: XAUTHv6 negotiated
+2025-01-15 08:51:23.489084 ike V=root:0:ikev1-ldap:35399: peer supports UNITY
+2025-01-15 08:51:23.489134 ike V=root:0:ikev1-ldap:35399: enable FortiClient license check
+2025-01-15 08:51:23.489189 ike V=root:0:ikev1-ldap:35399: enable FortiClient endpoint compliance check, use 169.254.2.1
+2025-01-15 08:51:23.489243 ike V=root:0:ikev1-ldap:35399: selected NAT-T version: RFC 3947
+2025-01-15 08:51:23.489319 ike V=root:0:ikev1-ldap:35399: generate DH public value request queued
+2025-01-15 08:51:23.489532 ike V=root:0:ikev1-ldap:35399: compute DH shared secret request queued
+2025-01-15 08:51:23.490942 ike V=root:0:ikev1-ldap:35399: cookie 49317576df4661f5/b4e9e5e10822d342
+2025-01-15 08:51:23.491182 ike 0:ikev1-ldap:35399: ISAKMP SA 49317576df4661f5/b4e9e5e10822d342 key 32:33A910C9A381E0BCB8DCECEAE3E2A5991F70
+613F2A8CB30699A05C0BDEC93B3E
+2025-01-15 08:51:23.491338 ike 0:ikev1-ldap:35399: out 49317576DF4661F5B4E9E5E10822D34201100400000000000000022C0400003C0000000100000001000
+00030010100010000002802010000800B0001000C00040001518080010007800E01008003000180020004800400050A0000C46C747EA2E12844A9949AC9C666CFD218BDA66
+CB927452C39A194A4B2ED9A0706C8DE5D34A629B4443A7646EB1BF89E1D3B2A3790661DE3D6262E1662AC3C27D282EA891171CD9174334E35B2A023D9EE56459DB1B55C1D0
+B9C49FDD27AB1F846C3A64F13A8CFE3A6C9B7D8B2EEB4A99202E43DDCC6841CF43800AA1BA047903A147D1AB603DE1F4E105024AA9930E971C3CC5817989426E09D424F054
+739C0F6D74EEE3A50C1FC02ED7DE1458F6799E2E2FADFC6C964539628DAA046C0884ABF050000143346FE21C122B6B69EFA631BB5BC3D480800000C010000000A80CA8E0D0
+00024403D672471B3E0E9E9217959C160552296A4445521D0D5D945AA0E4247BC79DB140000144A131C81070358455C5728F20E95452F1400002485AA48768F53FD4CA1122
+80DD117051FD30F5CE570468E8B7B5578FA3DF1779A0D000024D75CAEBE629A450BE4E0028DED060971A9E34FADBBAB98403E9E9303D5D4A82E0D000014AFCAD71368A1F1C
+96B8696FC775701000D00000C09002689DFD6B7120D00001412F5F28C457168A9702D9FE274CC02040D0000144C53427B6D465D1B337BB755A37A7FEF0D000014B4F01CA95
+1E9DA8D0BAFBBD34AD3044E000000148299031757A36082C6A621DE00000000
+2025-01-15 08:51:23.491527 ike V=root:0:ikev1-ldap:35399: sent IKE msg (agg_r1send): 10.128.202.142:500->10.21.4.174:1012, len=556, vrf=0,
+ id=49317576df4661f5/b4e9e5e10822d342
+2025-01-15 08:51:23.607298 ike V=root:0: comes 10.21.4.174:64917->10.128.202.142:4500,ifindex=6,vrf=0,len=176....
+2025-01-15 08:51:23.607407 ike V=root:0: IKEv1 exchange=Aggressive id=49317576df4661f5/b4e9e5e10822d342 len=172 vrf=0
+2025-01-15 08:51:23.607464 ike 0: in 49317576DF4661F5B4E9E5E10822D3420810040100000000000000ACC0D6FB2120AA008DF62AA52D18A164280E55F743A0EF9
+CF0583C65FF68406A4D38868B952BCD96E35F4B467111D20C1CA9EFBD2D663793A9D50A6CA7B1EB1C58201AF53B93E1A11F6FEDBF3588B22F6CA19F0D769A6130CCCCEFACC
+02ABD60431EB8C08C7EDAC28C18B034E10E13F945436729BB4E91C8A16D4D4904065B75F77105122D0E2E21559BF261021F139E0B
+2025-01-15 08:51:23.607549 ike V=root:0:ikev1-ldap:35399: responder: aggressive mode get 2nd response...
+2025-01-15 08:51:23.607684 ike 0:ikev1-ldap:35399: dec 49317576DF4661F5B4E9E5E10822D3420810040100000000000000AC14000024098B2CB5F2F35AE6898
+84CBF61749AA22A78A2FEB6CB44DE5AE9A69B2EEE3F8F140000240BE5D74885583F1A789AD3CEA2F81A5783700F6B0B61001BC2C5BB1EEA8860470B000024D8BD9A13D6CDD
+BAA8D39AD86FCA3FC314E3154A0F3FB54C862177F377E6A2E6D0000001C000000010110600249317576DF4661F5B4E9E5E10822D342A5F69CE296FAE107
+2025-01-15 08:51:23.607760 ike V=root:0:ikev1-ldap:35399: received NAT-D payload type 20
+2025-01-15 08:51:23.607830 ike V=root:0:ikev1-ldap:35399: received NAT-D payload type 20
+2025-01-15 08:51:23.607891 ike V=root:0:ikev1-ldap:35399: received p1 notify type INITIAL-CONTACT
+2025-01-15 08:51:23.608010 ike V=root:0:ikev1-ldap:35399: PSK authentication succeeded
+2025-01-15 08:51:23.608065 ike V=root:0:ikev1-ldap:35399: authentication OK
+2025-01-15 08:51:23.608115 ike V=root:0:ikev1-ldap:35399: NAT detected: PEER
+2025-01-15 08:51:23.608289 ike V=root:0:ikev1-ldap:35399: remote port change 1012 -> 64917
+2025-01-15 08:51:23.608365 ike V=root:0:ikev1-ldap: mode-cfg allocate 192.168.59.10/0.0.0.0
+2025-01-15 08:51:23.608419 ike V=root:0:ikev1-ldap: IPv6 pool is not configured
+2025-01-15 08:51:23.608475 ike V=root:0:ikev1-ldap: adding new dynamic tunnel for 10.21.4.174:64917
+2025-01-15 08:51:23.608601 ike V=root:0:ikev1-ldap_0: tunnel created tun_id 192.168.59.10/::10.0.0.30 remote_location 0.0.0.0
+2025-01-15 08:51:23.608817 ike V=root:0:ikev1-ldap_0: added new dynamic tunnel for 10.21.4.174:64917
+2025-01-15 08:51:23.608891 ike V=root:0:ikev1-ldap_0:35399: established IKE SA 49317576df4661f5/b4e9e5e10822d342
+2025-01-15 08:51:23.608978 ike V=root:0:ikev1-ldap_0:35399: check peer route: if_addr4_rcvd=0, if_addr6_rcvd=0, mode_cfg=0
+2025-01-15 08:51:23.609126 ike V=root:0:ikev1-ldap_0:35399: processing INITIAL-CONTACT
+2025-01-15 08:51:23.609180 ike V=root:0:ikev1-ldap_0: flushing
+2025-01-15 08:51:23.609283 ike V=root:0:ikev1-ldap_0: flushed
+2025-01-15 08:51:23.609338 ike V=root:0:ikev1-ldap_0:35399: processed INITIAL-CONTACT
+2025-01-15 08:51:23.609388 ike V=root:0:ikev1-ldap_0:35399: initiating XAUTH.
+2025-01-15 08:51:23.609475 ike V=root:0:ikev1-ldap_0:35399: sending XAUTH request
+2025-01-15 08:51:23.609654 ike 0:ikev1-ldap_0:35399: enc 49317576DF4661F5B4E9E5E10822D342081006014A7A0ECA000000540E0000248D3C3F54BA368C617
+8012A4FA25168A89872630C7199480FB214688CD7FECBDB000000140100B5EBC088000040890000408A0000
+2025-01-15 08:51:23.609758 ike 0:ikev1-ldap_0:35399: out 49317576DF4661F5B4E9E5E10822D342081006014A7A0ECA0000005C6E84F0BF5D429BC48C5574752
+FC1115E1351CFB25F2320164470C2D2E0C9BA218D305911A6EC5B8B5995DA5A4930EB08FC3AEDF0FD6242ED3E1B619C93956A14
+2025-01-15 08:51:23.609904 ike V=root:0:ikev1-ldap_0:35399: sent IKE msg (cfg_send): 10.128.202.142:4500->10.21.4.174:64917, len=92, vrf=0
+, id=49317576df4661f5/b4e9e5e10822d342:4a7a0eca
+2025-01-15 08:51:23.610046 ike V=root:0:ikev1-ldap_0:35399: peer has not completed XAUTH exchange
+2025-01-15 08:51:23.610963 ike V=root:0: comes 10.21.4.174:64917->10.128.202.142:4500,ifindex=6,vrf=0,len=112....
+2025-01-15 08:51:23.611045 ike V=root:0: IKEv1 exchange=Mode config id=49317576df4661f5/b4e9e5e10822d342:4a7a0eca len=108 vrf=0
+2025-01-15 08:51:23.611099 ike 0: in 49317576DF4661F5B4E9E5E10822D342081006014A7A0ECA0000006CB39F4EA663698B71D01FA48C36E52106C22F5D7CFDBF7
+C798B39BBBC8AABCF57DCDD8E671F9B9E64AE6A8EB99FA49B78BDA1E80D0B713C6085782E1AA33EB8CE89C17B726008FF0BEB2E88120590D9B8
+2025-01-15 08:51:23.611198 ike 0:ikev1-ldap_0:35399: dec 49317576DF4661F5B4E9E5E10822D342081006014A7A0ECA0000006C0E0000241259A00FA26D9F63B
+7C2E0FA7726D0F205B951507870E9C26B6A51E4A1EE4D550000001F0200B5EBC0880000408900057669746F6F408A0006666774313233E68886F7A9AAFB90BCBB88C50C
+2025-01-15 08:51:23.611313 ike V=root:0:ikev1-ldap_0:35399: received XAUTH_USER_NAME 'vitoo' length 5
+2025-01-15 08:51:23.611370 ike V=root:0:ikev1-ldap_0:35399: received XAUTH_USER_PASSWORD length 6
+2025-01-15 08:51:23.611426 ike V=root:0:ikev1-ldap_0: XAUTH user "vitoo"
+2025-01-15 08:51:23 [1738] handle_req-Rcvd auth req 799105187908 for vitoo in labDC-ldap-ITAdmins opt=00000000 prot=4 svc=2
+2025-01-15 08:51:23 [332] __compose_group_list_from_req-Group 'labDC-ldap-ITAdmins', type 1
+2025-01-15 08:51:23 [760] fnbamd_saml_auth_cache_lookup-Authneticating 'vitoo'.
+2025-01-15 08:51:23 [507] create_auth_session-Session created for req id 799105187908
+2025-01-15 08:51:23 [353] auth_local-started for vitoo
+2025-01-15 08:51:23 [425] auth_local-No conclusion, FNBAM_UNKNOWN
+2025-01-15 08:51:23 [590] fnbamd_cfg_get_tac_plus_list-
+2025-01-15 08:51:23 [545] __fnbamd_cfg_get_tac_plus_list_by_group-
+2025-01-15 08:51:23 [557] __fnbamd_cfg_get_tac_plus_list_by_group-Group 'labDC-ldap-ITAdmins'
+2025-01-15 08:51:23 [606] fnbamd_cfg_get_tac_plus_list-Total tac+ servers to try: 0
+2025-01-15 08:51:23 [840] fnbamd_cfg_get_ldap_list-
+2025-01-15 08:51:23 [756] __fnbamd_cfg_get_ldap_list_by_group-
+2025-01-15 08:51:23 [306] fnbamd_user_ldap_create-vfid=0
+2025-01-15 08:51:23 [264] fnbamd_ldap_new-2022-Server
+2025-01-15 08:51:23.615461 ike V=root:0:ikev1-ldap_0: XAUTH 799105187908 pending
+2025-01-15 08:51:23 [104] __init_ldap_setting-Preping LDAP servers.
+2025-01-15 08:51:23 [88] __ldap_server_push-Inserted LDAP server '172.17.98.29'.
+2025-01-15 08:51:23 [269] fnbamd_ldap_new-2022-Server created
+2025-01-15 08:51:23 [264] fnbamd_ldap_new-labDC-ldap
+2025-01-15 08:51:23 [104] __init_ldap_setting-Preping LDAP servers.
+2025-01-15 08:51:23 [88] __ldap_server_push-Inserted LDAP server 'labsrvdc1.van.fortilab.net'.
+2025-01-15 08:51:23 [269] fnbamd_ldap_new-labDC-ldap created
+2025-01-15 08:51:23 [322] fnbamd_user_ldap_create-LDAP servers are created, vfid=0, total=2
+2025-01-15 08:51:23 [348] fnbamd_ldap_get-vfid=0, name='labDC-ldap'
+2025-01-15 08:51:23 [818] __fnbamd_cfg_get_ldap_list_by_group-Loaded LDAP server 'labDC-ldap' for usergroup 'labDC-ldap-ITAdmins' (8)
+2025-01-15 08:51:23 [856] fnbamd_cfg_get_ldap_list-Total LDAP servers to try: 1
+2025-01-15 08:51:23 [1751] fnbamd_ldap_auth_ctx_init-User: vitoo, password query: 0, group list query: 1, group only: 0, UPN query: 0, use
+r domain query: 0
+2025-01-15 08:51:23 [874] fnbamd_ldap_get_auth_server-
+2025-01-15 08:51:23 [115] fnbamd_dns_resolv_ex-DNS req ipv4 0x27 'labsrvdc1.van.fortilab.net'
+2025-01-15 08:51:23 [125] fnbamd_dns_resolv_ex-DNS req ipv6 0x2027 'labsrvdc1.van.fortilab.net'
+2025-01-15 08:51:23 [137] fnbamd_dns_resolv_ex-DNS maintainer started.
+2025-01-15 08:51:23 [662] __ldap_add_job_timer-
+2025-01-15 08:51:23 [316] radius_start-eap_local=0
+2025-01-15 08:51:23 [896] fnbamd_cfg_get_radius_list-
+2025-01-15 08:51:23 [844] __fnbamd_cfg_get_radius_list_by_group-
+2025-01-15 08:51:23 [858] __fnbamd_cfg_get_radius_list_by_group-Group 'labDC-ldap-ITAdmins'
+2025-01-15 08:51:23 [818] __rad_auth_ctx_insert_all_usergroup-
+2025-01-15 08:51:23 [918] fnbamd_cfg_get_radius_list-Total rad servers to try: 0
+2025-01-15 08:51:23 [439] fnbamd_cfg_get_pop3_list-
+2025-01-15 08:51:23 [417] __fnbamd_cfg_get_pop3_list_by_group-
+2025-01-15 08:51:23 [422] __fnbamd_cfg_get_pop3_list_by_group-Group 'labDC-ldap-ITAdmins'
+2025-01-15 08:51:23 [449] fnbamd_cfg_get_pop3_list-Total pop3 servers to try: 0
+2025-01-15 08:51:23 [481] fnbamd_cfg_get_ext_idp_list-
+2025-01-15 08:51:23 [455] __fnbamd_cfg_get_ext_idp_list_by_group-
+2025-01-15 08:51:23 [461] __fnbamd_cfg_get_ext_idp_list_by_group-Group 'labDC-ldap-ITAdmins'
+2025-01-15 08:51:23 [491] fnbamd_cfg_get_ext_idp_list-Total external identity provider servers to try: 0
+2025-01-15 08:51:23 [433] start_remote_auth-Total 1 server(s) to try
+2025-01-15 08:51:23 [1881] handle_req-r=4
+2025-01-15 08:51:23 [247] fnbamd_dns_parse_resp-got IPv4 DNS reply, req-id=0x27
+2025-01-15 08:51:23 [309] fnbamd_dns_parse_resp-req 0x27: 10.21.1.100
+2025-01-15 08:51:23 [1515] __fnbamd_ldap_dns_cb-Resolved labDC-ldap:labsrvdc1.van.fortilab.net to 10.21.1.100, cur stack size:-1
+2025-01-15 08:51:23 [1704] __auth_ctx_svr_push-Added addr 10.21.1.100:389 from LDAP 'labDC-ldap'
+2025-01-15 08:51:23 [631] __ldap_add_conn_start_timer-
+2025-01-15 08:51:23 [623] __ldap_conn_start_cb-
+2025-01-15 08:51:23 [1536] __fnbamd_ldap_get_next_addr-Next available address of LDAP 'labDC-ldap': 10.21.1.100:389.
+2025-01-15 08:51:23 [1722] __auth_ctx_start-Connection starts labDC-ldap:labsrvdc1.van.fortilab.net, addr 10.21.1.100:389
+2025-01-15 08:51:23 [1420] __ldap_tcps_open-vfid 0, addr 10.21.1.100, src_ip , ssl_opt 0
+2025-01-15 08:51:23 [1159] fnbamd_socket_update_interface-vfid is 0, intf mode is 0, intf name is , server address is 10.21.1.100:389, sou
+rce address is null, protocol number is 6, oif id is 0
+2025-01-15 08:51:23 [1443] __ldap_tcps_open-oif=0, intf_sel.mode=0, intf_sel.name=
+2025-01-15 08:51:23 [1458] __ldap_tcps_open-Still connecting 10.21.1.100.
+2025-01-15 08:51:23 [1475] __ldap_tcps_open-Start ldap conn timer.
+2025-01-15 08:51:23 [1551] __ldap_conn_start-Socket 9 is created for LDAP 'labDC-ldap'.
+2025-01-15 08:51:23 [247] fnbamd_dns_parse_resp-got IPv6 DNS reply, req-id=0x2027
+2025-01-15 08:51:23 [35] __fnbamd_dns_req_del-DNS req 0x27 (0x73f1000) is removed. Current total: 2
+2025-01-15 08:51:23 [47] __fnbamd_dns_req_del-DNS maintainer stopped.
+2025-01-15 08:51:23 [269] fnbamd_dns_parse_resp-req 0x0: wrong dns format, qr=1, opcode=0, qdc=1, ancount=0
+2025-01-15 08:51:23 [1515] __fnbamd_ldap_dns_cb-Resolved labDC-ldap:labsrvdc1.van.fortilab.net to ::, cur stack size:0
+2025-01-15 08:51:23 [1363] __ldap_tcps_connect-tcps_connect(10.21.1.100) is established. Current state: Connecting.
+2025-01-15 08:51:23 [1120] __ldap_auth_ctx_reset-
+2025-01-15 08:51:23 [984] __ldap_next_state-State: Connecting -> Admin Binding
+2025-01-15 08:51:23 [1378] __ldap_tcps_connect-Start ldap conn timer.
+2025-01-15 08:51:23 [1221] __ldap_rxtx-fd 9, state 2(Admin Binding)
+2025-01-15 08:51:23 [1223] __ldap_rxtx-Stop ldap conn timer.
+2025-01-15 08:51:23 [1232] __ldap_rxtx-
+2025-01-15 08:51:23 [472] __ldap_build_bind_req-Binding to 'itadmin'
+2025-01-15 08:51:23 [1261] fnbamd_ldap_send-sending 28 bytes to 10.21.1.100
+2025-01-15 08:51:23 [1274] fnbamd_ldap_send-Request is sent. ID 1
+2025-01-15 08:51:23 [1120] __ldap_auth_ctx_reset-
+2025-01-15 08:51:23 [1257] __ldap_rxtx-Start ldap conn timer.
+2025-01-15 08:51:23 [1221] __ldap_rxtx-fd 9, state 2(Admin Binding)
+2025-01-15 08:51:23 [1223] __ldap_rxtx-Stop ldap conn timer.
+2025-01-15 08:51:23 [1260] __ldap_rxtx-
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 8
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 14
+2025-01-15 08:51:23 [1484] fnbamd_ldap_recv-Response len: 16, svr: 10.21.1.100
+2025-01-15 08:51:23 [1164] fnbamd_ldap_parse_response-Got one MESSAGE. ID:1, type:bind
+2025-01-15 08:51:23 [1200] fnbamd_ldap_parse_response-ret=0
+2025-01-15 08:51:23 [1120] __ldap_auth_ctx_reset-
+2025-01-15 08:51:23 [984] __ldap_next_state-State: Admin Binding -> DN Search
+2025-01-15 08:51:23 [1325] __ldap_rxtx-Start ldap conn timer.
+2025-01-15 08:51:23 [1221] __ldap_rxtx-fd 9, state 4(DN Search)
+2025-01-15 08:51:23 [1223] __ldap_rxtx-Stop ldap conn timer.
+2025-01-15 08:51:23 [1232] __ldap_rxtx-
+2025-01-15 08:51:23 [888] fnbamd_ldap_build_dn_search_req-base:'dc=labsrvdc,dc=van,dc=fortilab,dc=net' filter:cn=vitoo
+2025-01-15 08:51:23 [1261] fnbamd_ldap_send-sending 81 bytes to 10.21.1.100
+2025-01-15 08:51:23 [1274] fnbamd_ldap_send-Request is sent. ID 2
+2025-01-15 08:51:23 [1120] __ldap_auth_ctx_reset-
+2025-01-15 08:51:23 [1257] __ldap_rxtx-Start ldap conn timer.
+2025-01-15 08:51:23 [1221] __ldap_rxtx-fd 9, state 4(DN Search)
+2025-01-15 08:51:23 [1223] __ldap_rxtx-Stop ldap conn timer.
+2025-01-15 08:51:23 [1260] __ldap_rxtx-
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 8
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 112
+2025-01-15 08:51:23 [1484] fnbamd_ldap_recv-Response len: 114, svr: 10.21.1.100
+2025-01-15 08:51:23 [1164] fnbamd_ldap_parse_response-Got one MESSAGE. ID:2, type:search-reference
+2025-01-15 08:51:23 [1200] fnbamd_ldap_parse_response-ret=0
+2025-01-15 08:51:23 [1260] __ldap_rxtx-
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 8
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 112
+2025-01-15 08:51:23 [1484] fnbamd_ldap_recv-Response len: 114, svr: 10.21.1.100
+2025-01-15 08:51:23 [1164] fnbamd_ldap_parse_response-Got one MESSAGE. ID:2, type:search-reference
+2025-01-15 08:51:23 [1200] fnbamd_ldap_parse_response-ret=0
+2025-01-15 08:51:23 [1260] __ldap_rxtx-
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 8
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 96
+2025-01-15 08:51:23 [1484] fnbamd_ldap_recv-Response len: 98, svr: 10.21.1.100
+2025-01-15 08:51:23 [1164] fnbamd_ldap_parse_response-Got one MESSAGE. ID:2, type:search-reference
+2025-01-15 08:51:23 [1200] fnbamd_ldap_parse_response-ret=0
+2025-01-15 08:51:23 [1260] __ldap_rxtx-
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 8
+2025-01-15 08:51:23 [1305] __fnbamd_ldap_read-Read 14
+2025-01-15 08:51:23 [1484] fnbamd_ldap_recv-Response len: 16, svr: 10.21.1.100
+2025-01-15 08:51:23 [1164] fnbamd_ldap_parse_response-Got one MESSAGE. ID:2, type:search-result
+2025-01-15 08:51:23 [1200] fnbamd_ldap_parse_response-ret=0
+2025-01-15 08:51:23 [900] __ldap_next_state-No DN is found.
+2025-01-15 08:51:23 [1120] __ldap_auth_ctx_reset-
+2025-01-15 08:51:23 [984] __ldap_next_state-State: DN Search -> Done
+2025-01-15 08:51:23 [239] fnbamd_comm_send_result-Sending result 1 (nid 0) for req 799105187908, len=2524
+2025-01-15 08:51:23.648800 ike V=root:0:ikev1-ldap_0:35399: XAUTH 799105187908 result FNBAM_DENIED
+2025-01-15 08:51:23.648925 ike V=root:0:ikev1-ldap_0: XAUTH failed for user "vitoo", retry(2).
+2025-01-15 08:51:23.649113 ike V=root:0:ikev1-ldap_0:35399: sending XAUTH request
+2025-01-15 08:51:23.649407 ike 0:ikev1-ldap_0:35399: enc 49317576DF4661F5B4E9E5E10822D342081006019797DCFA000000540E00002401D14C3CEF134E867
+4F36FDACB7BF522687C8732A390100482C570289F412EB7000000140100D4A4C088000040890000408A0000
+2025-01-15 08:51:23.649553 ike 0:ikev1-ldap_0:35399: out 49317576DF4661F5B4E9E5E10822D342081006019797DCFA0000005CEAC31D93F86007E2AAE272003
+E7B3994A7B25097F04AE1115F88D851739EF58396FA7B0242855A5A49BE526E97C798811B9AC6FC2582A0293462592FE1AFFE27
+2025-01-15 08:51:23.649775 ike V=root:0:ikev1-ldap_0:35399: sent IKE msg (cfg_send): 10.128.202.142:4500->10.21.4.174:64917, len=92, vrf=0
+, id=49317576df4661f5/b4e9e5e10822d342:9797dcfa
+2025-01-15 08:51:23 [599] destroy_auth_session-delete session 799105187908
+2025-01-15 08:51:23 [1263] fnbamd_rads_destroy-
+2025-01-15 08:51:23 [1830] fnbamd_ldaps_destroy-
+2025-01-15 08:51:23 [442] fnbamd_ldap_auth_ctx_free-Freeing 'labDC-ldap' ctx
+2025-01-15 08:51:23 [1789] fnbamd_ldap_auth_ctx_uninit-
+2025-01-15 08:51:23 [1572] __ldap_stop-
+2025-01-15 08:51:23 [1485] __ldap_tcps_close-closed.
+2025-01-15 08:51:23 [1567] __ldap_conn_stop-Stop ldap conn timer.
+2025-01-15 08:51:23 [653] __ldap_del_job_timer-
+2025-01-15 08:51:23 [1132] __ldap_auth_ctx_clear-
+2025-01-15 08:51:23 [1120] __ldap_auth_ctx_reset-
+2025-01-15 08:51:23 [249] fnbamd_ldap_free-Freeing labDC-ldap, ref:2
+2025-01-15 08:51:23 [29] __ldap_server_free-Freeing labsrvdc1.van.fortilab.net, ref:2
+2025-01-15 08:51:23 [1019] fnbamd_tacs_destroy-
+2025-01-15 08:51:23 [889] fnbamd_pop3s_destroy-
+2025-01-15 08:51:23 [1068] fnbamd_ext_idps_destroy-
+2025-01-15 08:51:25.665447 ike 0:ikev1-ldap_0:35399: out 49317576DF4661F5B4E9E5E10822D342081006019797DCFA0000005CEAC31D93F86007E2AAE272003
+E7B3994A7B25097F04AE1115F88D851739EF58396FA7B0242855A5A49BE526E97C798811B9AC6FC2582A0293462592FE1AFFE27
+2025-01-15 08:51:25.665627 ike V=root:0:ikev1-ldap_0:35399: sent IKE msg (CFG_RETRANS): 10.128.202.142:4500->10.21.4.174:64917, len=92, vr
+f=0, id=49317576df4661f5/b4e9e5e10822d342:9797dcfa
+2025-01-15 08:51:29.675429 ike 0:ikev1-ldap_0:35399: out 49317576DF4661F5B4E9E5E10822D342081006019797DCFA0000005CEAC31D93F86007E2AAE272003
+E7B3994A7B25097F04AE1115F88D851739EF58396FA7B0242855A5A49BE526E97C798811B9AC6FC2582A0293462592FE1AFFE27
+2025-01-15 08:51:29.675635 ike V=root:0:ikev1-ldap_0:35399: sent IKE msg (CFG_RETRANS): 10.128.202.142:4500->10.21.4.174:64917, len=92, vr
+f=0, id=49317576df4661f5/b4e9e5e10822d342:9797dcfa
+2025-01-15 08:51:33.495561 ike :shrank heap by 331776 bytes

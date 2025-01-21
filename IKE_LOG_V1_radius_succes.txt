@@ -1,0 +1,645 @@
+FortiWiFi-61E # 2025-01-20 14:28:19 [2388] handle_req-Rcvd auth_cert req id=1202760349491, len=3411, opt=8
+2025-01-20 14:28:19 [1161] __cert_auth_ctx_init-req_id=1202760349491, opt=8
+2025-01-20 14:28:19 [103] __cert_chg_st- 'Init'
+2025-01-20 14:28:19 [201] fnbamd_cert_load_certs_from_req-2 cert(s) in req.
+2025-01-20 14:28:19 [839] __cert_init-req_id=1202760349491
+2025-01-20 14:28:19 [888] __cert_build_chain-req_id=1202760349491
+2025-01-20 14:28:19 [319] fnbamd_chain_build-Chain discovery, opt 0x19, cur total 1
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 0
+2025-01-20 14:28:19 [382] fnbamd_chain_build-Extend chain by builtin CA cache. (good)
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 1
+2025-01-20 14:28:19 [351] fnbamd_chain_build-Self-sign detected.
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Init' -> 'Validation'
+2025-01-20 14:28:19 [1010] __cert_verify-req_id=1202760349491
+2025-01-20 14:28:19 [1011] __cert_verify-Chain is complete.
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 0
+2025-01-20 14:28:19 [504] fnbamd_builtin_cert_check-Builtin CRL found: a15c7b4f
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 1
+2025-01-20 14:28:19 [1051] __cert_verify_do_next-req_id=1202760349491
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Validation' -> 'Done'
+2025-01-20 14:28:19 [1098] __cert_done-req_id=1202760349491
+2025-01-20 14:28:19 [1542] fnbamd_auth_session_done-Session done, id=1202760349491
+2025-01-20 14:28:19 [1144] __fnbamd_cert_auth_run-Exit, req_id=1202760349491
+2025-01-20 14:28:19 [1585] create_auth_cert_session-fnbamd_cert_auth_init returns 0, id=1202760349491
+2025-01-20 14:28:19 [1498] auth_cert_success-id=1202760349491
+2025-01-20 14:28:19 [1256] fnbamd_cert_auth_copy_cert_status-req_id=1202760349491
+2025-01-20 14:28:19 [1383] fnbamd_cert_auth_copy_cert_status-Cert st 210, req_id=1202760349491
+2025-01-20 14:28:19 [239] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 1202760349491, len=2520
+2025-01-20 14:28:19 [1373] destroy_auth_cert_session-id=1202760349491
+2025-01-20 14:28:19 [1228] fnbamd_cert_auth_uninit-req_id=1202760349491
+2025-01-20 14:28:19 [1865] fnbamd_ldaps_destroy-
+2025-01-20 14:28:19 [1350] fnbamd_rads_destroy-
+2025-01-20 14:28:19 [2388] handle_req-Rcvd auth_cert req id=1202760349492, len=3411, opt=8
+2025-01-20 14:28:19 [1161] __cert_auth_ctx_init-req_id=1202760349492, opt=8
+2025-01-20 14:28:19 [103] __cert_chg_st- 'Init'
+2025-01-20 14:28:19 [201] fnbamd_cert_load_certs_from_req-2 cert(s) in req.
+2025-01-20 14:28:19 [839] __cert_init-req_id=1202760349492
+2025-01-20 14:28:19 [888] __cert_build_chain-req_id=1202760349492
+2025-01-20 14:28:19 [319] fnbamd_chain_build-Chain discovery, opt 0x19, cur total 1
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 0
+2025-01-20 14:28:19 [382] fnbamd_chain_build-Extend chain by builtin CA cache. (good)
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 1
+2025-01-20 14:28:19 [351] fnbamd_chain_build-Self-sign detected.
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Init' -> 'Validation'
+2025-01-20 14:28:19 [1010] __cert_verify-req_id=1202760349492
+2025-01-20 14:28:19 [1011] __cert_verify-Chain is complete.
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 0
+2025-01-20 14:28:19 [504] fnbamd_builtin_cert_check-Builtin CRL found: a15c7b4f
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 1
+2025-01-20 14:28:19 [1051] __cert_verify_do_next-req_id=1202760349492
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Validation' -> 'Done'
+2025-01-20 14:28:19 [1098] __cert_done-req_id=1202760349492
+2025-01-20 14:28:19 [1542] fnbamd_auth_session_done-Session done, id=1202760349492
+2025-01-20 14:28:19 [1144] __fnbamd_cert_auth_run-Exit, req_id=1202760349492
+2025-01-20 14:28:19 [1585] create_auth_cert_session-fnbamd_cert_auth_init returns 0, id=1202760349492
+2025-01-20 14:28:19 [1498] auth_cert_success-id=1202760349492
+2025-01-20 14:28:19 [1256] fnbamd_cert_auth_copy_cert_status-req_id=1202760349492
+2025-01-20 14:28:19 [1383] fnbamd_cert_auth_copy_cert_status-Cert st 210, req_id=1202760349492
+2025-01-20 14:28:19 [239] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 1202760349492, len=2520
+2025-01-20 14:28:19 [1373] destroy_auth_cert_session-id=1202760349492
+2025-01-20 14:28:19 [1228] fnbamd_cert_auth_uninit-req_id=1202760349492
+2025-01-20 14:28:19 [1865] fnbamd_ldaps_destroy-
+2025-01-20 14:28:19 [1350] fnbamd_rads_destroy-
+2025-01-20 14:28:19 [2388] handle_req-Rcvd auth_cert req id=1202760349493, len=3411, opt=8
+2025-01-20 14:28:19 [1161] __cert_auth_ctx_init-req_id=1202760349493, opt=8
+2025-01-20 14:28:19 [103] __cert_chg_st- 'Init'
+2025-01-20 14:28:19 [201] fnbamd_cert_load_certs_from_req-2 cert(s) in req.
+2025-01-20 14:28:19 [839] __cert_init-req_id=1202760349493
+2025-01-20 14:28:19 [888] __cert_build_chain-req_id=1202760349493
+2025-01-20 14:28:19 [319] fnbamd_chain_build-Chain discovery, opt 0x19, cur total 1
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 0
+2025-01-20 14:28:19 [382] fnbamd_chain_build-Extend chain by builtin CA cache. (good)
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 1
+2025-01-20 14:28:19 [351] fnbamd_chain_build-Self-sign detected.
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Init' -> 'Validation'
+2025-01-20 14:28:19 [1010] __cert_verify-req_id=1202760349493
+2025-01-20 14:28:19 [1011] __cert_verify-Chain is complete.
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 0
+2025-01-20 14:28:19 [504] fnbamd_builtin_cert_check-Builtin CRL found: a15c7b4f
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 1
+2025-01-20 14:28:19 [1051] __cert_verify_do_next-req_id=1202760349493
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Validation' -> 'Done'
+2025-01-20 14:28:19 [1098] __cert_done-req_id=1202760349493
+2025-01-20 14:28:19 [1542] fnbamd_auth_session_done-Session done, id=1202760349493
+2025-01-20 14:28:19 [1144] __fnbamd_cert_auth_run-Exit, req_id=1202760349493
+2025-01-20 14:28:19 [1585] create_auth_cert_session-fnbamd_cert_auth_init returns 0, id=1202760349493
+2025-01-20 14:28:19 [1498] auth_cert_success-id=1202760349493
+2025-01-20 14:28:19 [1256] fnbamd_cert_auth_copy_cert_status-req_id=1202760349493
+2025-01-20 14:28:19 [1383] fnbamd_cert_auth_copy_cert_status-Cert st 210, req_id=1202760349493
+2025-01-20 14:28:19 [239] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 1202760349493, len=2520
+2025-01-20 14:28:19 [1373] destroy_auth_cert_session-id=1202760349493
+2025-01-20 14:28:19 [1228] fnbamd_cert_auth_uninit-req_id=1202760349493
+2025-01-20 14:28:19 [1865] fnbamd_ldaps_destroy-
+2025-01-20 14:28:19 [1350] fnbamd_rads_destroy-
+2025-01-20 14:28:19 [2388] handle_req-Rcvd auth_cert req id=1202760349494, len=3411, opt=8
+2025-01-20 14:28:19 [1161] __cert_auth_ctx_init-req_id=1202760349494, opt=8
+2025-01-20 14:28:19 [103] __cert_chg_st- 'Init'
+2025-01-20 14:28:19 [201] fnbamd_cert_load_certs_from_req-2 cert(s) in req.
+2025-01-20 14:28:19 [839] __cert_init-req_id=1202760349494
+2025-01-20 14:28:19 [888] __cert_build_chain-req_id=1202760349494
+2025-01-20 14:28:19 [319] fnbamd_chain_build-Chain discovery, opt 0x19, cur total 1
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 0
+2025-01-20 14:28:19 [382] fnbamd_chain_build-Extend chain by builtin CA cache. (good)
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 1
+2025-01-20 14:28:19 [351] fnbamd_chain_build-Self-sign detected.
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Init' -> 'Validation'
+2025-01-20 14:28:19 [1010] __cert_verify-req_id=1202760349494
+2025-01-20 14:28:19 [1011] __cert_verify-Chain is complete.
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 0
+2025-01-20 14:28:19 [504] fnbamd_builtin_cert_check-Builtin CRL found: a15c7b4f
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 1
+2025-01-20 14:28:19 [1051] __cert_verify_do_next-req_id=1202760349494
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Validation' -> 'Done'
+2025-01-20 14:28:19 [1098] __cert_done-req_id=1202760349494
+2025-01-20 14:28:19 [1542] fnbamd_auth_session_done-Session done, id=1202760349494
+2025-01-20 14:28:19 [1144] __fnbamd_cert_auth_run-Exit, req_id=1202760349494
+2025-01-20 14:28:19 [1585] create_auth_cert_session-fnbamd_cert_auth_init returns 0, id=1202760349494
+2025-01-20 14:28:19 [1498] auth_cert_success-id=1202760349494
+2025-01-20 14:28:19 [1256] fnbamd_cert_auth_copy_cert_status-req_id=1202760349494
+2025-01-20 14:28:19 [1383] fnbamd_cert_auth_copy_cert_status-Cert st 210, req_id=1202760349494
+2025-01-20 14:28:19 [239] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 1202760349494, len=2520
+2025-01-20 14:28:19 [1373] destroy_auth_cert_session-id=1202760349494
+2025-01-20 14:28:19 [1228] fnbamd_cert_auth_uninit-req_id=1202760349494
+2025-01-20 14:28:19 [1865] fnbamd_ldaps_destroy-
+2025-01-20 14:28:19 [1350] fnbamd_rads_destroy-
+2025-01-20 14:28:19 [2388] handle_req-Rcvd auth_cert req id=1202760349495, len=3411, opt=8
+2025-01-20 14:28:19 [1161] __cert_auth_ctx_init-req_id=1202760349495, opt=8
+2025-01-20 14:28:19 [103] __cert_chg_st- 'Init'
+2025-01-20 14:28:19 [201] fnbamd_cert_load_certs_from_req-2 cert(s) in req.
+2025-01-20 14:28:19 [839] __cert_init-req_id=1202760349495
+2025-01-20 14:28:19 [888] __cert_build_chain-req_id=1202760349495
+2025-01-20 14:28:19 [319] fnbamd_chain_build-Chain discovery, opt 0x19, cur total 1
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 0
+2025-01-20 14:28:19 [382] fnbamd_chain_build-Extend chain by builtin CA cache. (good)
+2025-01-20 14:28:19 [337] fnbamd_chain_build-Following depth 1
+2025-01-20 14:28:19 [351] fnbamd_chain_build-Self-sign detected.
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Init' -> 'Validation'
+2025-01-20 14:28:19 [1010] __cert_verify-req_id=1202760349495
+2025-01-20 14:28:19 [1011] __cert_verify-Chain is complete.
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 0
+2025-01-20 14:28:19 [504] fnbamd_builtin_cert_check-Builtin CRL found: a15c7b4f
+2025-01-20 14:28:19 [481] fnbamd_builtin_cert_check-Following cert chain depth 1
+2025-01-20 14:28:19 [1051] __cert_verify_do_next-req_id=1202760349495
+2025-01-20 14:28:19 [99] __cert_chg_st- 'Validation' -> 'Done'
+2025-01-20 14:28:19 [1098] __cert_done-req_id=1202760349495
+2025-01-20 14:28:19 [1542] fnbamd_auth_session_done-Session done, id=1202760349495
+2025-01-20 14:28:19 [1144] __fnbamd_cert_auth_run-Exit, req_id=1202760349495
+2025-01-20 14:28:19 [1585] create_auth_cert_session-fnbamd_cert_auth_init returns 0, id=1202760349495
+2025-01-20 14:28:19 [1498] auth_cert_success-id=1202760349495
+2025-01-20 14:28:19 [1256] fnbamd_cert_auth_copy_cert_status-req_id=1202760349495
+2025-01-20 14:28:19 [1383] fnbamd_cert_auth_copy_cert_status-Cert st 210, req_id=1202760349495
+2025-01-20 14:28:19 [239] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 1202760349495, len=2520
+2025-01-20 14:28:19 [1373] destroy_auth_cert_session-id=1202760349495
+2025-01-20 14:28:19 [1228] fnbamd_cert_auth_uninit-req_id=1202760349495
+2025-01-20 14:28:19 [1865] fnbamd_ldaps_destroy-
+2025-01-20 14:28:19 [1350] fnbamd_rads_destroy-
+2025-01-20 14:28:22.325993 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=515....
+2025-01-20 14:28:22.326123 ike V=root:0: IKEv1 exchange=Aggressive id=97244df0183f9c21/0000000000000000 len=515 vrf=0
+2025-01-20 14:28:22.326189 ike 0: in 97244DF0183F9C210000000000000000011004000000000000000203040000640000000100000001000000580101000203000
+02801010000800B0001000C00040001518080010007800E00808003000180020002800400050000002802010000800B0001000C00040001518080010007800E01008003000
+180020004800400050A0000C4B3BC8E1D65A6998EDECFC912FC3697C5672B447499F9E103D21FD37B86FD2EFC298788A83F03DB2A600AA1D221777DB8B3A43AC207043106B
+8A72F14146A94DF66CD55355CB865C560A1CF30B3705C3B39125B72FC9E16A37407E50E4C2B4E1BF0B0E76584441E6FD527B9C11ADDE5DCEB5DA70FC9F37DEACAAC177ED40
+6AC3765273467C684FA44D166630F61F381B3BCE113B63A8B88E77E20F6FFC03D54C4984EEA2E8EABC3537772F19647486BCA1AAD2CF82EBE88EE3D5E74B9C1580EA505000
+014A800322DBAB3B67DAD5964B96C1362460D00001302000000696B6576317261646975730D00001412F5F28C457168A9702D9FE274CC01000D0000144A131C81070358455
+C5728F20E95452F0D000014CD60464335DF21F87CFDB2FC68B6A4480D00001490CB80913EBB696E086381B5EC427B1F0D00000C09002689DFD6B7120D000014AFCAD71368A
+1F1C96B8696FC775701000D0000144C53427B6D465D1B337BB755A37A7FEF00000014B4F01CA951E9DA8D0BAFBBD34AD3044E
+2025-01-20 14:28:22.326320 ike V=root:0:97244df0183f9c21/0000000000000000:43797: responder: aggressive mode get 1st message...
+2025-01-20 14:28:22.326398 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID CISCO-UNITY 12F5F28C457168A9702D9FE274CC0100
+2025-01-20 14:28:22.326464 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID RFC 3947 4A131C81070358455C5728F20E95452F
+2025-01-20 14:28:22.326529 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID draft-ietf-ipsec-nat-t-ike-02 CD60464335DF21F87CFDB2F
+C68B6A448
+2025-01-20 14:28:22.326593 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID draft-ietf-ipsec-nat-t-ike-02\n 90CB80913EBB696E08638
+1B5EC427B1F
+2025-01-20 14:28:22.326654 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID draft-ietf-ipsra-isakmp-xauth-06.txt 09002689DFD6B712
+2025-01-20 14:28:22.326718 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID DPD AFCAD71368A1F1C96B8696FC77570100
+2025-01-20 14:28:22.326781 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID forticlient connect license 4C53427B6D465D1B337BB755A
+37A7FEF
+2025-01-20 14:28:22.326845 ike V=root:0:97244df0183f9c21/0000000000000000:43797: VID Fortinet Endpoint Control B4F01CA951E9DA8D0BAFBBD34AD
+3044E
+2025-01-20 14:28:22.326897 ike V=root:0::43797: received peer identifier FQDN 'ikev1radius'
+2025-01-20 14:28:22.326988 ike V=root:0: IKEv1 Aggressive, comes 10.21.4.181:500->10.128.202.142 6
+2025-01-20 14:28:22.327080 ike V=root:0:97244df0183f9c21/0000000000000000:43797: negotiation result
+2025-01-20 14:28:22.327174 ike V=root:0:97244df0183f9c21/0000000000000000:43797: proposal id = 1:
+2025-01-20 14:28:22.327230 ike V=root:0:97244df0183f9c21/0000000000000000:43797:   protocol id = ISAKMP:
+2025-01-20 14:28:22.327280 ike V=root:0:97244df0183f9c21/0000000000000000:43797:      trans_id = KEY_IKE.
+2025-01-20 14:28:22.327331 ike V=root:0:97244df0183f9c21/0000000000000000:43797:      encapsulation = IKE/none
+2025-01-20 14:28:22.327381 ike V=root:0:97244df0183f9c21/0000000000000000:43797:         type=OAKLEY_ENCRYPT_ALG, val=AES_CBC, key-len=256
+2025-01-20 14:28:22.327432 ike V=root:0:97244df0183f9c21/0000000000000000:43797:         type=OAKLEY_HASH_ALG, val=SHA2_256.
+2025-01-20 14:28:22.327482 ike V=root:0:97244df0183f9c21/0000000000000000:43797:         type=AUTH_METHOD, val=PRESHARED_KEY.
+2025-01-20 14:28:22.327532 ike V=root:0:97244df0183f9c21/0000000000000000:43797:         type=OAKLEY_GROUP, val=MODP1536.
+2025-01-20 14:28:22.327584 ike V=root:0:97244df0183f9c21/0000000000000000:43797: ISAKMP SA lifetime=86400
+2025-01-20 14:28:22.327653 ike V=root:0:97244df0183f9c21/0000000000000000:43797: SA proposal chosen, matched gateway ikev1-radius
+2025-01-20 14:28:22.327741 ike V=root:0:ikev1-radius:ikev1-radius: created connection: 0x6f0a310 6 10.128.202.142->10.21.4.181:500.
+2025-01-20 14:28:22.327813 ike V=root:0:ikev1-radius:43797: DPD negotiated
+2025-01-20 14:28:22.327867 ike V=root:0:ikev1-radius:43797: XAUTHv6 negotiated
+2025-01-20 14:28:22.327917 ike V=root:0:ikev1-radius:43797: peer supports UNITY
+2025-01-20 14:28:22.327966 ike V=root:0:ikev1-radius:43797: enable FortiClient license check
+2025-01-20 14:28:22.328016 ike V=root:0:ikev1-radius:43797: FEC vendor ID received FEC but IP not set
+2025-01-20 14:28:22.328070 ike V=root:0:ikev1-radius:43797: selected NAT-T version: RFC 3947
+2025-01-20 14:28:22.328153 ike V=root:0:ikev1-radius:43797: generate DH public value request queued
+2025-01-20 14:28:22.328334 ike V=root:0:ikev1-radius:43797: compute DH shared secret request queued
+2025-01-20 14:28:22.329761 ike V=root:0:ikev1-radius:43797: cookie 97244df0183f9c21/80b0664b53cfb829
+2025-01-20 14:28:22.330005 ike 0:ikev1-radius:43797: ISAKMP SA 97244df0183f9c21/80b0664b53cfb829 key 32:380B9AFDC65DB127CE65D1D82F72627097
+E52E7480510E4B8F6201AB64869B1E
+2025-01-20 14:28:22.330174 ike 0:ikev1-radius:43797: out 97244DF0183F9C2180B0664B53CFB8290110040000000000000002180400003C00000001000000010
+0000030010100010000002802010000800B0001000C00040001518080010007800E01008003000180020004800400050A0000C4DBF684DC85D6D24F9CD9ED129686C823CBC
+1857DBD09E9A930AC1D26CEE540EDF1BB6BBF654D6E2EFC5F410C1A61B8D9CE75BB07F0A3E039227958385750D0E1AB23C90FC4A5A60B1D887E1DA209CDFCA09AF3E939FF9
+A0E1C8670AD46F3A01B6247145D3267A6775CA5D98AB0B4890D9735AF0019214F113A323254AFBA7CDBC7970B982C33FBFB3562DC266BEDA9992C0BA08DAFFD616355AF0CC
+40DFB5907AA780B9B339DE35FD2A97389D12BF0BA9F2B2E9D8B05B62DCFB58BB6FA2F6A3A05000014B723906316F0A0C779457B7578BF18F60800000C010000000A80CA8E0
+D000024AF955B024B0ACE5B41EAC378489136146C47A678991C5978EE896AE6B030E844140000144A131C81070358455C5728F20E95452F140000246EB6483710BB8CEA3F5
+2140A4BDC5F7BD4783913F276C6819E62B12B8D0E14680D0000247FF60CB9F6CED947583720EB7A120D16FE979CC673582605FC1953A96C3774E80D000014AFCAD71368A1F
+1C96B8696FC775701000D00000C09002689DFD6B7120D00001412F5F28C457168A9702D9FE274CC02040D0000144C53427B6D465D1B337BB755A37A7FEF000000148299031
+757A36082C6A621DE00000000
+2025-01-20 14:28:22.332241 ike V=root:0:ikev1-radius:43797: sent IKE msg (agg_r1send): 10.128.202.142:500->10.21.4.181:500, len=536, vrf=0
+, id=97244df0183f9c21/80b0664b53cfb829
+2025-01-20 14:28:22.430474 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=172....
+2025-01-20 14:28:22.430616 ike V=root:0: IKEv1 exchange=Aggressive id=97244df0183f9c21/80b0664b53cfb829 len=172 vrf=0
+2025-01-20 14:28:22.430692 ike 0: in 97244DF0183F9C2180B0664B53CFB8290810040100000000000000AC6AE9CF536EC93AE786C93FAF8EC642E217DCBFFA944C7
+943C8C0617FBC9F098D93B243ECFE9BFFA783106776DFAFEF05D8EB21DD1233E62F9FFE90C6D0B3016C856AF6ED6EDBB2DEFE291263192EA24454996EB01D8C15BBA336269
+863CEE9DB18E1B7B3212AC11641491DA93D61B431A29292630BC941F4E3F250714C7E87D68D5602F75AEEA3A0C7E95C7D4CE4AF10
+2025-01-20 14:28:22.430798 ike V=root:0:ikev1-radius:43797: responder: aggressive mode get 2nd response...
+2025-01-20 14:28:22.430942 ike 0:ikev1-radius:43797: dec 97244DF0183F9C2180B0664B53CFB8290810040100000000000000AC14000024A98997952024F822B
+A2E64320B0763E3455922E7BB225BF7345089D743CFC084140000247FF60CB9F6CED947583720EB7A120D16FE979CC673582605FC1953A96C3774E80B0000246EB6483710B
+B8CEA3F52140A4BDC5F7BD4783913F276C6819E62B12B8D0E14680000001C000000010110600297244DF0183F9C2180B0664B53CFB829B4D182ABFAF7C707
+2025-01-20 14:28:22.431035 ike V=root:0:ikev1-radius:43797: received NAT-D payload type 20
+2025-01-20 14:28:22.431116 ike V=root:0:ikev1-radius:43797: received NAT-D payload type 20
+2025-01-20 14:28:22.431189 ike V=root:0:ikev1-radius:43797: received p1 notify type INITIAL-CONTACT
+2025-01-20 14:28:22.431319 ike V=root:0:ikev1-radius:43797: PSK authentication succeeded
+2025-01-20 14:28:22.431388 ike V=root:0:ikev1-radius:43797: authentication OK
+2025-01-20 14:28:22.431454 ike V=root:0:ikev1-radius:43797: NAT not detected
+2025-01-20 14:28:22.431653 ike V=root:0:ikev1-radius: mode-cfg allocate 192.168.59.10/0.0.0.0
+2025-01-20 14:28:22.431738 ike V=root:0:ikev1-radius: IPv6 pool is not configured
+2025-01-20 14:28:22.431811 ike V=root:0:ikev1-radius: adding new dynamic tunnel for 10.21.4.181:500
+2025-01-20 14:28:22.431954 ike V=root:0:ikev1-radius_0: tunnel created tun_id 192.168.59.10/::10.0.0.46 remote_location 0.0.0.0
+2025-01-20 14:28:22.432198 ike V=root:0:ikev1-radius_0: added new dynamic tunnel for 10.21.4.181:500
+2025-01-20 14:28:22.432302 ike V=root:0:ikev1-radius_0:43797: established IKE SA 97244df0183f9c21/80b0664b53cfb829
+2025-01-20 14:28:22.432429 ike V=root:0:ikev1-radius_0:43797: check peer route: if_addr4_rcvd=0, if_addr6_rcvd=0, mode_cfg=0
+2025-01-20 14:28:22.432557 ike V=root:0:ikev1-radius_0:43797: processing INITIAL-CONTACT
+2025-01-20 14:28:22.432638 ike V=root:0:ikev1-radius_0: flushing
+2025-01-20 14:28:22.432779 ike V=root:0:ikev1-radius_0: flushed
+2025-01-20 14:28:22.432864 ike V=root:0:ikev1-radius_0:43797: processed INITIAL-CONTACT
+2025-01-20 14:28:22.432933 ike V=root:0:ikev1-radius_0:43797: initiating XAUTH.
+2025-01-20 14:28:22.433036 ike V=root:0:ikev1-radius_0:43797: sending XAUTH request
+2025-01-20 14:28:22.433251 ike 0:ikev1-radius_0:43797: enc 97244DF0183F9C2180B0664B53CFB829081006019C5EE541000000540E000024966E0DC27E366E1
+6BD44AB79E53FFFD42FC869B9CD55689E67F1970087C6CB10000000140100DDF8C088000040890000408A0000
+2025-01-20 14:28:22.433389 ike 0:ikev1-radius_0:43797: out 97244DF0183F9C2180B0664B53CFB829081006019C5EE5410000005C7985F529F39ECCF7929C6C6
+93C1D2D308B86432CDA87D342C9E22C00C35917314161CDD5F1BEF50B96C131B2E6E3EDD72F7024A2AAE0F66E0A801829F9C11F81
+2025-01-20 14:28:22.433563 ike V=root:0:ikev1-radius_0:43797: sent IKE msg (cfg_send): 10.128.202.142:500->10.21.4.181:500, len=92, vrf=0,
+ id=97244df0183f9c21/80b0664b53cfb829:9c5ee541
+2025-01-20 14:28:22.434001 ike V=root:0:ikev1-radius_0:43797: peer has not completed XAUTH exchange
+2025-01-20 14:28:22.435423 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=108....
+2025-01-20 14:28:22.435566 ike V=root:0: IKEv1 exchange=Mode config id=97244df0183f9c21/80b0664b53cfb829:9c5ee541 len=108 vrf=0
+2025-01-20 14:28:22.435643 ike 0: in 97244DF0183F9C2180B0664B53CFB829081006019C5EE5410000006CD0C15D5D0A7D669D261F426AA0755EDEF056DE555ED72
+F1DE2C08E460C69B65D9418C8D69C5176C5808C5C1665CEE73576EA1949B2DFCFD9F9646C65D96F8A65C3DC6E053FB60790DBF8889CDA61B9A9
+2025-01-20 14:28:22.435784 ike 0:ikev1-radius_0:43797: dec 97244DF0183F9C2180B0664B53CFB829081006019C5EE5410000006C0E000024E8431D1AA28A242
+3AD0BFF7557A6D436242E2AD8197011084931549DD3C8D4F60000001F0200DDF8C0880000408900047669746F408A000766677421313233CDDCB5D3CBAED8C3939BC4AA0C
+2025-01-20 14:28:22.435947 ike V=root:0:ikev1-radius_0:43797: received XAUTH_USER_NAME 'vito' length 4
+2025-01-20 14:28:22.436024 ike V=root:0:ikev1-radius_0:43797: received XAUTH_USER_PASSWORD length 7
+2025-01-20 14:28:22.436095 ike V=root:0:ikev1-radius_0: XAUTH user "vito"
+2025-01-20 14:28:22 [1757] handle_req-Rcvd auth req 700221448250 for vito in labDC-radius-ITAdmins opt=00000000 prot=4 svc=2
+2025-01-20 14:28:22 [333] __compose_group_list_from_req-Group 'labDC-radius-ITAdmins', type 1
+2025-01-20 14:28:22 [760] fnbamd_saml_auth_cache_lookup-Authneticating 'vito'.
+2025-01-20 14:28:22 [508] create_auth_session-Session created for req id 700221448250
+2025-01-20 14:28:22 [357] auth_local-started for vito
+2025-01-20 14:28:22 [429] auth_local-No conclusion, FNBAM_UNKNOWN
+2025-01-20 14:28:22 [590] fnbamd_cfg_get_tac_plus_list-
+2025-01-20 14:28:22 [545] __fnbamd_cfg_get_tac_plus_list_by_group-
+2025-01-20 14:28:22 [557] __fnbamd_cfg_get_tac_plus_list_by_group-Group 'labDC-radius-ITAdmins'
+2025-01-20 14:28:22 [606] fnbamd_cfg_get_tac_plus_list-Total tac+ servers to try: 0
+2025-01-20 14:28:22.439462 ike V=root:0:ikev1-radius_0: XAUTH 700221448250 pending
+2025-01-20 14:28:22 [840] fnbamd_cfg_get_ldap_list-
+2025-01-20 14:28:22.439628 ike V=root:0:ikev1-radius_0: link is idle 6 10.128.202.142->10.21.4.181:0 dpd=1 seqno=1 rr=0
+2025-01-20 14:28:22 [756] __fnbamd_cfg_get_ldap_list_by_group-
+2025-01-20 14:28:22 [856] fnbamd_cfg_get_ldap_list-Total LDAP servers to try: 0
+2025-01-20 14:28:22 [416] ldap_start-Didn't find ldap servers
+2025-01-20 14:28:22 [316] radius_start-eap_local=0
+2025-01-20 14:28:22 [896] fnbamd_cfg_get_radius_list-
+2025-01-20 14:28:22 [844] __fnbamd_cfg_get_radius_list_by_group-
+2025-01-20 14:28:22 [858] __fnbamd_cfg_get_radius_list_by_group-Group 'labDC-radius-ITAdmins'
+2025-01-20 14:28:22 [456] fnbamd_rad_get-vfid=0, name='labDC-radius'
+2025-01-20 14:28:22 [805] __rad_auth_ctx_insert-Loaded RADIUS server 'labDC-radius'
+2025-01-20 14:28:22 [863] __fnbamd_cfg_get_radius_list_by_group-Loaded RADIUS server 'labDC-radius' for usergroup 'labDC-radius-ITAdmins'
+(6)
+2025-01-20 14:28:22 [818] __rad_auth_ctx_insert_all_usergroup-
+2025-01-20 14:28:22 [918] fnbamd_cfg_get_radius_list-Total rad servers to try: 1
+2025-01-20 14:28:22 [936] fnbamd_rad_get_auth_server-
+2025-01-20 14:28:22 [1172] fnbamd_rad_auth_ctx_init-User ha_relay? 0.
+2025-01-20 14:28:22 [295] fnbamd_radius_get_next_auth_prot-Next auth prot MS-CHAPv2
+2025-01-20 14:28:22 [115] fnbamd_dns_resolv_ex-DNS req ipv4 0x3f 'labsrvdc1.van.fortilab.net'
+2025-01-20 14:28:22 [125] fnbamd_dns_resolv_ex-DNS req ipv6 0x203f 'labsrvdc1.van.fortilab.net'
+2025-01-20 14:28:22 [137] fnbamd_dns_resolv_ex-DNS maintainer started.
+2025-01-20 14:28:22 [1200] fnbamd_rad_auth_ctx_init-Start rad conn timer.
+2025-01-20 14:28:22 [807] __rad_add_job_timer-
+2025-01-20 14:28:22 [439] fnbamd_cfg_get_pop3_list-
+2025-01-20 14:28:22 [417] __fnbamd_cfg_get_pop3_list_by_group-
+2025-01-20 14:28:22 [422] __fnbamd_cfg_get_pop3_list_by_group-Group 'labDC-radius-ITAdmins'
+2025-01-20 14:28:22 [449] fnbamd_cfg_get_pop3_list-Total pop3 servers to try: 0
+2025-01-20 14:28:22 [434] start_remote_auth-Total 1 server(s) to try
+2025-01-20 14:28:22 [1900] handle_req-r=4
+2025-01-20 14:28:22 [247] fnbamd_dns_parse_resp-got IPv4 DNS reply, req-id=0x3f
+2025-01-20 14:28:22 [309] fnbamd_dns_parse_resp-req 0x3f: 10.21.1.100
+2025-01-20 14:28:22 [1148] __fnbamd_rad_dns_cb-Resolved labDC-radius:labsrvdc1.van.fortilab.net to 10.21.1.100, cur stack size:-1
+2025-01-20 14:28:22 [1107] __auth_ctx_svr_push-Added addr 10.21.1.100:1812 from rad 'labDC-radius'
+2025-01-20 14:28:22 [930] __fnbamd_rad_get_next_addr-Next available address of rad 'labDC-radius': 10.21.1.100:1812.
+2025-01-20 14:28:22 [1125] __auth_ctx_start-Connection starts labDC-radius:labsrvdc1.van.fortilab.net, addr 10.21.1.100:1812 proto: UDP
+2025-01-20 14:28:22 [280] __rad_udp_open-Opened radius socket 11, sa_family 2
+2025-01-20 14:28:22 [945] __rad_conn_start-Socket 11 is created for rad 'labDC-radius'.
+2025-01-20 14:28:22 [247] fnbamd_dns_parse_resp-got IPv6 DNS reply, req-id=0x203f
+2025-01-20 14:28:22 [35] __fnbamd_dns_req_del-DNS req 0x3f (0x6eb8d9c) is removed. Current total: 2
+2025-01-20 14:28:22 [47] __fnbamd_dns_req_del-DNS maintainer stopped.
+2025-01-20 14:28:22 [269] fnbamd_dns_parse_resp-req 0x0: wrong dns format, qr=1, opcode=0, qdc=1, ancount=0
+2025-01-20 14:28:22 [1148] __fnbamd_rad_dns_cb-Resolved labDC-radius:labsrvdc1.van.fortilab.net to ::, cur stack size:0
+2025-01-20 14:28:22 [1113] __auth_ctx_svr_push-Failed to add addr labsrvdc1.van.fortilab.net from rad 'labDC-radius'
+2025-01-20 14:28:22 [828] __rad_rxtx-fd 11, state 1(Auth)
+2025-01-20 14:28:22 [830] __rad_rxtx-Stop rad conn timer.
+2025-01-20 14:28:22 [837] __rad_rxtx-
+2025-01-20 14:28:22 [605] fnbamd_rad_make_access_request-
+2025-01-20 14:28:22 [328] __create_access_request-Compose RADIUS request
+2025-01-20 14:28:22 [588] __create_access_request-Created RADIUS Access-Request. Len: 206.
+2025-01-20 14:28:22 [1171] fnbamd_socket_update_interface-vfid is 0, intf mode is 0, intf name is , server address is 10.21.1.100:1812, so
+urce address is null, protocol number is 17, oif id is 0
+2025-01-20 14:28:22 [353] __rad_udp_send-oif=0, intf_sel.mode=0, intf_sel.name=
+2025-01-20 14:28:22 [868] __rad_rxtx-Sent radius req to server 'labDC-radius': fd=11, IP=labsrvdc1.van.fortilab.net(10.21.1.100:1812) code
+=1 id=55 len=206
+2025-01-20 14:28:22 [877] __rad_rxtx-Start rad conn timer.
+2025-01-20 14:28:22 [828] __rad_rxtx-fd 11, state 1(Auth)
+2025-01-20 14:28:22 [830] __rad_rxtx-Stop rad conn timer.
+2025-01-20 14:28:22 [880] __rad_rxtx-
+2025-01-20 14:28:22 [431] __rad_udp_recv-Recved 267 bytes. Buf sz 8192
+2025-01-20 14:28:22 [1125] __rad_chk_resp_authenticator-The Message Authenticator validation is mandatory now
+2025-01-20 14:28:22 [1148] __rad_chk_resp_authenticator-ret=0
+2025-01-20 14:28:22 [1216] fnbamd_rad_validate_pkt-RADIUS resp code 2
+2025-01-20 14:28:22 [912] __rad_rxtx-
+2025-01-20 14:28:22 [1286] fnbamd_rad_process-Result from radius svr 'labDC-radius' is 0, req 700221448250
+2025-01-20 14:28:22 [502] fnbamd_rad_get_vsas-FORTINET attr, type 1, val VPN_ITAdmin
+2025-01-20 14:28:22 [1485] fnbamd_rad_process-Challenged: 0, FTK_Challenge: 0, CHG_PWD: 0, Invaid_Digest: 0, State_Len: 0
+2025-01-20 14:28:22 [627] fnbam_user_auth_group_match-req id: 700221448250, server: labDC-radius, local auth: 0, dn match: 0
+2025-01-20 14:28:22 [581] __group_match-Check if labDC-radius is a group member
+2025-01-20 14:28:22 [587] __group_match-Group 'labDC-radius-ITAdmins' passed group matching
+2025-01-20 14:28:22 [590] __group_match-Add matched group 'labDC-radius-ITAdmins'(6)
+2025-01-20 14:28:22 [206] find_matched_usr_grps-Passed group matching
+2025-01-20 14:28:22 [909] update_auth_token_session-config does not require 2fa
+2025-01-20 14:28:22 [239] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 700221448250, len=2582
+2025-01-20 14:28:22.462948 ike V=root:0:ikev1-radius_0:43797: XAUTH 700221448250 result FNBAM_SUCCESS
+2025-01-20 14:28:22.463074 ike V=root:0:ikev1-radius_0: XAUTH succeeded for user "vito" group "labDC-radius-ITAdmins" 2FA=no
+2025-01-20 14:28:22.463524 ike 0:ikev1-radius_0:43797: enc 97244DF0183F9C2180B0664B53CFB829081006015601065F0000004C0E0000244109E58940B63F2
+967EF02DC7B90A13988F6B8936FE56B9EF2D1F4B9B164321B0000000C0300DDF8C08F0001
+2025-01-20 14:28:22.463686 ike 0:ikev1-radius_0:43797: out 97244DF0183F9C2180B0664B53CFB829081006015601065F0000005C69A79387F911D20E8AD753C
+48ADF4C194B9557D48DF9525A1B6A220CC5FEC6891032933EE888DE93DCF5AB00188BC0748861A8A23D23A8FA21DCBC387D9DB786
+2025-01-20 14:28:22.463885 ike V=root:0:ikev1-radius_0:43797: sent IKE msg (cfg_send): 10.128.202.142:500->10.21.4.181:500, len=92, vrf=0,
+ id=97244df0183f9c21/80b0664b53cfb829:5601065f
+2025-01-20 14:28:22 [600] destroy_auth_session-delete session 700221448250
+2025-01-20 14:28:22 [1347] fnbamd_rads_destroy-
+2025-01-20 14:28:22 [516] fnbamd_rad_auth_ctx_free-Freeing 'labDC-radius' ctx
+2025-01-20 14:28:22 [1219] fnbamd_rad_auth_ctx_uninit-
+2025-01-20 14:28:22 [969] __rad_stop-
+2025-01-20 14:28:22 [306] __rad_udp_close-closed.
+2025-01-20 14:28:22.466043 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=76....
+2025-01-20 14:28:22.466144 ike V=root:0: IKEv1 exchange=Mode config id=97244df0183f9c21/80b0664b53cfb829:5601065f len=76 vrf=0
+2025-01-20 14:28:22.466201 ike 0: in 97244DF0183F9C2180B0664B53CFB829081006015601065F0000004CF33A30ECADFB4BC36DF1A330157181A1FE3BE14F35B9F
+73C8398DCA5C8482DB4A0F03722A934D7B7B10FAB4B82532246
+2025-01-20 14:28:22.466369 ike 0:ikev1-radius_0:43797: dec 97244DF0183F9C2180B0664B53CFB829081006015601065F0000004C0E00002454E7532D0D45A83
+7415437BBF2CBAF9CC92A4818EDE462A99EE3F5F6E47BDF34000000080400DDF8A9C1A103
+2025-01-20 14:28:22.466639 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=156....
+2025-01-20 14:28:22.466722 ike V=root:0: IKEv1 exchange=Mode config id=97244df0183f9c21/80b0664b53cfb829:a3ed8984 len=156 vrf=0
+2025-01-20 14:28:22.466779 ike 0: in 97244DF0183F9C2180B0664B53CFB82908100601A3ED89840000009CB2B7D9CA5DA6A7F87F14094E782CF41A11A9458FAB5DD
+DE8AAA366AA183CC89F48AEAE083DD213177D201AF52CF1250B537EFE8512DA4972703D85F6F1E132E2FCA1179A058923514F5CFA9D4F42FAAC565A616C00A82CFBF2F3867
+193B3A672C345B9594F72ADC0E3A590D82E2F11C57730ED7FD35AF72EA04560242B58B08D
+2025-01-20 14:28:22.466911 ike 0:ikev1-radius_0:43797: dec 97244DF0183F9C2180B0664B53CFB82908100601A3ED89840000009C0E000024F6B405DE9E0D119
+8A37C6AF5467F4D3CE3133C7D7E7878C96AFB79249A9FD0C20000005401005C8300010000000200000003000000040000000D00000008000000090000000A0000000B00000
+00F0000001900007000000070020000700300007006000070010000D40A0000D40B0000000700008FCAB1CBD08E8807
+2025-01-20 14:28:22.467028 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 1 request 0:''
+2025-01-20 14:28:22.467098 ike V=root:0:ikev1-radius_0:43797: mode-cfg using allocated IPv4 192.168.59.10
+2025-01-20 14:28:22.467176 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 2 request 0:''
+2025-01-20 14:28:22.467233 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 3 request 0:''
+2025-01-20 14:28:22.467286 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 4 request 0:''
+2025-01-20 14:28:22.467340 ike V=root:0:ikev1-radius_0:43797: mode-cfg WINS ignored, no WINS servers configured
+2025-01-20 14:28:22.467392 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 13 request 0:''
+2025-01-20 14:28:22.467443 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 8 request 0:''
+2025-01-20 14:28:22.467498 ike V=root:0:ikev1-radius_0: IPv6 pool is not configured
+2025-01-20 14:28:22.467549 ike V=root:0:ikev1-radius_0:43797: mode-cfg could not allocate IPv6 address
+2025-01-20 14:28:22.467600 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 9 request 0:''
+2025-01-20 14:28:22.467652 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 10 request 0:''
+2025-01-20 14:28:22.467705 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 11 request 0:''
+2025-01-20 14:28:22.467756 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 11 not supported, ignoring
+2025-01-20 14:28:22.467808 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 15 request 0:''
+2025-01-20 14:28:22.467863 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 25 request 0:''
+2025-01-20 14:28:22.467914 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 28672 request 0:''
+2025-01-20 14:28:22.467968 ike V=root:0:ikev1-radius_0:43797: mode-cfg UNITY type 28672 requested
+2025-01-20 14:28:22.468018 ike V=root:0:ikev1-radius_0:43797: mode-cfg no banner configured, ignoring
+2025-01-20 14:28:22.468070 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 28674 request 0:''
+2025-01-20 14:28:22.468122 ike V=root:0:ikev1-radius_0:43797: mode-cfg UNITY type 28674 requested
+2025-01-20 14:28:22.468173 ike V=root:0:ikev1-radius_0:43797: mode-cfg no domain configured, ignoring
+2025-01-20 14:28:22.468225 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 28675 request 0:''
+2025-01-20 14:28:22.468276 ike V=root:0:ikev1-radius_0:43797: mode-cfg UNITY type 28675 requested
+2025-01-20 14:28:22.468327 ike V=root:0:ikev1-radius_0:43797: mode-cfg UNITY type 28675 not supported, ignoring
+2025-01-20 14:28:22.468378 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 28678 request 0:''
+2025-01-20 14:28:22.468429 ike V=root:0:ikev1-radius_0:43797: mode-cfg UNITY type 28678 requested
+2025-01-20 14:28:22.468478 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 28673 request 0:''
+2025-01-20 14:28:22.468530 ike V=root:0:ikev1-radius_0:43797: mode-cfg UNITY type 28673 requested
+2025-01-20 14:28:22.468581 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 21514 requested
+2025-01-20 14:28:22.468634 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 21515 requested
+2025-01-20 14:28:22.468684 ike V=root:0:ikev1-radius_0:43797: mode-cfg type 7 request 0:''
+2025-01-20 14:28:22.468740 ike V=root:0:ikev1-radius_0:43797: mode-cfg assigned (1) IPv4 address 192.168.59.10
+2025-01-20 14:28:22.468796 ike V=root:0:ikev1-radius_0:43797: mode-cfg assigned (2) IPv4 netmask 255.255.255.255
+2025-01-20 14:28:22.468864 ike V=root:0:ikev1-radius_0:43797: mode-cfg send (13) 0:192.168.30.0/255.255.255.0:0
+2025-01-20 14:28:22.468923 ike V=root:0:ikev1-radius_0:43797: mode-cfg send (3) IPv4 DNS(1) 10.21.1.100
+2025-01-20 14:28:22.468981 ike V=root:0:ikev1-radius_0:43797: mode-cfg send (3) IPv4 DNS(2) 10.21.1.100
+2025-01-20 14:28:22.469047 ike V=root:0:ikev1-radius_0:43797: mode-cfg assigned (9) IPv6 prefix 128 netmask ffffffffffffffffffffffffffffff
+ff
+2025-01-20 14:28:22.469107 ike V=root:0:ikev1-radius_0:43797: mode-cfg send INTERNAL_IP6_SUBNET
+2025-01-20 14:28:22.469164 ike V=root:0:ikev1-radius_0:43797: mode-cfg IPv6 DNS ignored, no IPv6 DNS servers found
+2025-01-20 14:28:22.469217 ike V=root:0:ikev1-radius_0:43797: mode-cfg send APPLICATION_VERSION 'FortiWiFi-61E v7.4.6,build2726,241210 (GA
+.M)'
+2025-01-20 14:28:22.469278 ike V=root:0:ikev1-radius_0:43797: mode-cfg send (28673) UNITY_SAVE_PASSWD
+2025-01-20 14:28:22.469335 ike V=root:0:ikev1-radius_0:43797: client auto-negotiate is disabled
+2025-01-20 14:28:22.469389 ike V=root:0:ikev1-radius_0:43797: client-keep-alive is disabled
+2025-01-20 14:28:22 [964] __rad_conn_stop-Stop rad conn timer.
+2025-01-20 14:28:22 2025-01-20 14:28:22.469652 ike 0:ikev1-radius_0:43797: enc 97244DF0183F9C2180B0664B53CFB82908100601A3ED8984000000D10E0
+00024D960611F28D1A0FC4B986C83F2D8AF0C9AFA5DFEF488398B1890EFBF0C6A2EA80000009102005C8300010004C0A83B0A00020004FFFFFFFF000D0008C0A81E00FFFFF
+F00000300040A150164000300040A15016400090010FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000F001100000000000000000000000000000000000007002C466F727469576
+946692D3631452076372E342E362C6275696C64323732362C323431323130202847412E4D29F0010001
+2025-01-20 14:28:22.469804 ike 0:ikev1-radius_0:43797: out 97244DF0183F9C2180B0664B53CFB82908100601A3ED8984000000DC1658766033741F54EBA32B4
+DB781B22345AE318AE729479E1D04D8FE0534FC6A6492CE1213C5003DA1D69AF307934D0F82FE5D8B23843B18A0FA9F0CFB4F70B4027392D07AF04B57E559DE2C81C8484EA
+0EE64AB20A4C8D0B401517697E33620CA7F2C2BEB8CDC7D4492769E9A803E1E37BBE032FD2BCA5A1812AA979A4F198A8F601BB3FB87CEAC5CC77463C7132FD3DD282282AE4
+F8442A99E96651F6921CD6B34A6C6FA8B24A028D704674317EF3307645F94A76EB8F075AD236516C0C80A
+2025-01-20 14:28:22 2025-01-20 14:28:22.469969 ike V=root:0:ikev1-radius_0:43797: sent IKE msg (cfg_send): 10.128.202.142:500->10.21.4.181
+:500, len=220, vrf=0, id=97244df0183f9c21/80b0664b53cfb829:a3ed8984
+2025-01-20 14:28:22 [519] fnbamd_rad_auth_ctx_free-
+2025-01-20 14:28:22 [1350] fnbamd_rads_destroy-
+2025-01-20 14:28:22 [1865] fnbamd_ldaps_destroy-
+2025-01-20 14:28:22 [1042] fnbamd_tacs_destroy-
+2025-01-20 14:28:22 [902] fnbamd_pop3s_destroy-
+2025-01-20 14:28:22 [1070] fnbamd_ext_idps_destroy-
+2025-01-20 14:28:22 [2366] handle_req-Rcvd abort req for 700221448250
+2025-01-20 14:28:22 [2381] handle_req-Can't abort, no active req 700221448250
+2025-01-20 14:28:23.499389 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=684....
+2025-01-20 14:28:23.499508 ike V=root:0: IKEv1 exchange=Quick id=97244df0183f9c21/80b0664b53cfb829:ef8d9466 len=684 vrf=0
+2025-01-20 14:28:23.499575 ike 0: in 97244DF0183F9C2180B0664B53CFB82908102001EF8D9466000002AC6B973899AE74B9EB89F4D141AF96ED28A8894686ACE0D
+80FBA14A3A9F14987FBC75686BABC4EB502ADC695092540B2ECB88CF71CC9B0397AFF9F122B7588AC128545B3B6BF855D3D0DF1D284504176C3CF76926195CBDD826EAB1AF
+59065B953951F10019410495DE5A3DA46DAD40594E919C94AAE3E39CEC6B2804BEEA7CDDA1F370FD69F870D32C4BE21DDD78B87566775B23CFA6CC9BAC40CEF8670E2C292F
+7598D298017DB1AD28D8C16F13591E5D65FDD8E5AB450B7E7115B11E6C0984EE0DEA7A512D12F04C87EBE0F8389BAA36D655CB1921223C4CFF5A19E35F2A4F2125DB3589B0
+D7E90B654DE2A347556013E9442AE76373D2AAD7A34F309E34778CAD0615484C631B896DCA8EA9F1C6D22D389730C7D79852928A4BCE637051A077FC09A90077F65656421F
+85243B991E45133E2203A865BF2751C36C2D46EFB16B657EC6B5E323F18E7DAAC8F2D4B89A000432F3C924AC40D44FD572371682E69AEC266626C896BC6BEB96FB69E65F57
+4F7918B527FA334C943311EAA55FE6BAEB5641A9B4EFB3346BD10D573FF26EAB2C3908CA5D82BD4B73D1D1B15506F17B329519827B2A58C813B68B42C4A37BF62F025F64E6
+3262C11950E56E183694118DED38CA6C557BF1B6763E429FD68DE1959B12642A4939185C479792FDA9F7116A0CD50031D53A59FBF27B699F47D9EA916CCD65C0955E3AD60E
+A277775AD35D02AA1B69DE9A57ADFEAA5EDE1AD02C8F726737A80AB919EC9D7E756D5B91D78F46C3CECEBB4ABA07138436934CE71B63936F481FDD50901FC8FBA8FEDEC33F
+B5F1651C372B2A95E0DEBE8EE044044CC1210801E126BDA15D2E5E4AAA71E4F666D75E916E546A5E6893667E08EEC258DE18B7CC78CFBE03621B6A4CE60E207327E81721A5
+864DF3A29AF055629027D050A
+2025-01-20 14:28:23.499725 ike V=root:0:ikev1-radius_0:43797:204: responder received first quick-mode message
+2025-01-20 14:28:23.499884 ike 0:ikev1-radius_0:43797: dec 97244DF0183F9C2180B0664B53CFB82908102001EF8D9466000002AC01000024292A6DE10C02733
+3DA36AC896F4B078F191A88926ACEC233A04056A95069B5070A00009800000001000000010000008C0103040425A9ADDF03000020010C0000800100018002A8C0800400018
+0060080800500028003000503000020020C0000800100018002A8C08004000180060080800500058003000503000020030C0000800100018002A8C08004000180060100800
+500028003000500000020040C0000800100018002A8C08004000180060100800500058003000504000014B53C10F4E0C96D757F55200DA6D6EA03050000C430A360A775E8A
+7415297C0DEEB877D5DF9AC25CA7B55B31110C7F06723D84CBF60CE55047A0156D612E5B8EFF0B413FE0A01B091C61EAE907ED26E47DD7736F352D989891EF1B75A7A7C30E
+A46823AF50DEC3BCD175E24799C9E87F9517AA7EED02C51821E25C8C34FCD827CF700755D7E5BC8E2B4998FF715A215D08B9BA1778820AF2DFA502656DD3AA982DD04079AC
+1D756C2720CC007C74253DEAFB97281956C3B5D87F705924ABB11A5FBDE3EE6FB086937967BE1EBA4BB82A50F31A7500500000C01000000C0A83B0A0B00001004000000000
+0000000000000000000D90100000001007DF65645523D310A4643545645523D372E342E312E313733360A5549443D343438383034313836363430343238423934314231453
+03734383536373732330A49503D31302E32312E342E3138310A4D41433D30302D36322D36632D36312D35662D30313B0A484F53543D7669746F2D310A555345523D7669746
+F0A4F535645523D4D6963726F736F66742057696E646F77732031312050726F66657373696F6E616C2045646974696F6E2C2036342D62697420286275696C6420323236323
+1290A5245475F5354415455533D300A00ABA4DDD3A8D706
+2025-01-20 14:28:23.500014 ike V=root:0:ikev1-radius_0:43797: received p1 notify type FORTICLIENT-CONNECT
+2025-01-20 14:28:23.500070 ike V=root:0:ikev1-radius_0:43797:204: FORTICLIENT-CONNECT received, license status = 0
+2025-01-20 14:28:23.500121 ike V=root:0:ikev1-radius_0:43797:204: FCC request len = 205, data = 'VER=1
+FCTVER=7.4.1.1736
+UID=448804186640428B941B1E0748567723
+IP=10.21.4.181
+MAC=00-62-6c-61-5f-01;
+HOST=vito-1
+USER=vito
+OSVER=Microsoft Windows 11 Professional Edition, 64-bit (build 22621)
+REG_STATUS=0
+'
+2025-01-20 14:28:23.500240 ike V=root:0:ikev1-radius_0:43797: received FCT-UID: 448804186640428B941B1E0748567723
+2025-01-20 14:28:23.500294 ike V=root:0:ikev1-radius_0:43797: received EMS SN :
+2025-01-20 14:28:23.500347 ike V=root:0:ikev1-radius_0:43797: received EMS tenant ID :
+2025-01-20 14:28:23.500399 ike V=root:0:ikev1-radius_0:43797:204: FCC reply len = 14, data = 'VER=1
+CODE=0
+'
+2025-01-20 14:28:23.500536 ike V=root:0:ikev1-radius_0:43797:204: peer proposal is: peer:0:192.168.59.10-192.168.59.10:0, me:0:0.0.0.0-255
+.255.255.255:0
+2025-01-20 14:28:23.500594 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: trying
+2025-01-20 14:28:23.500650 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: matched phase2
+2025-01-20 14:28:23.500704 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: dynamic client
+2025-01-20 14:28:23.500785 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: my proposal:
+2025-01-20 14:28:23.500839 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: proposal id = 1:
+2025-01-20 14:28:23.500890 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   protocol id = IPSEC_ESP:
+2025-01-20 14:28:23.500939 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   PFS DH group = 14
+2025-01-20 14:28:23.500992 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 128)
+2025-01-20 14:28:23.501043 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.501094 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA1
+2025-01-20 14:28:23.501145 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 256)
+2025-01-20 14:28:23.501195 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.501245 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA1
+2025-01-20 14:28:23.501297 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 128)
+2025-01-20 14:28:23.501348 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.501397 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA2_256
+2025-01-20 14:28:23.501448 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 256)
+2025-01-20 14:28:23.501498 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.501546 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA2_256
+2025-01-20 14:28:23.501597 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_GCM_16 (key_len = 128)
+2025-01-20 14:28:23.501647 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.501697 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=NULL
+2025-01-20 14:28:23.501748 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_GCM_16 (key_len = 256)
+2025-01-20 14:28:23.501798 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.501846 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=NULL
+2025-01-20 14:28:23.501895 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_CHACHA20_POLY1305 (key_len = 256)
+2025-01-20 14:28:23.501945 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.501994 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=NULL
+2025-01-20 14:28:23.502042 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: proposal id = 2:
+2025-01-20 14:28:23.502093 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   protocol id = IPSEC_ESP:
+2025-01-20 14:28:23.502141 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   PFS DH group = 5
+2025-01-20 14:28:23.502192 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 128)
+2025-01-20 14:28:23.502242 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.502291 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA1
+2025-01-20 14:28:23.502342 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 256)
+2025-01-20 14:28:23.502392 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.502440 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA1
+2025-01-20 14:28:23.502491 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 128)
+2025-01-20 14:28:23.502540 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.502588 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA2_256
+2025-01-20 14:28:23.502639 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 256)
+2025-01-20 14:28:23.502689 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.502739 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA2_256
+2025-01-20 14:28:23.502789 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_GCM_16 (key_len = 128)
+2025-01-20 14:28:23.502839 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.502887 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=NULL
+2025-01-20 14:28:23.502938 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_GCM_16 (key_len = 256)
+2025-01-20 14:28:23.502987 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.503036 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=NULL
+2025-01-20 14:28:23.503089 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_CHACHA20_POLY1305 (key_len = 256)
+2025-01-20 14:28:23.503139 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.503188 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=NULL
+2025-01-20 14:28:23.503246 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: incoming proposal:
+2025-01-20 14:28:23.503296 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: proposal id = 1:
+2025-01-20 14:28:23.503345 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   protocol id = IPSEC_ESP:
+2025-01-20 14:28:23.503394 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   PFS DH group = 5
+2025-01-20 14:28:23.503445 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 128)
+2025-01-20 14:28:23.503494 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.503543 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA1
+2025-01-20 14:28:23.503593 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 128)
+2025-01-20 14:28:23.503643 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.503691 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA2_256
+2025-01-20 14:28:23.503742 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 256)
+2025-01-20 14:28:23.503791 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.503842 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA1
+2025-01-20 14:28:23.503892 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 256)
+2025-01-20 14:28:23.503942 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.503991 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA2_256
+2025-01-20 14:28:23.504054 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: negotiation result
+2025-01-20 14:28:23.504106 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: proposal id = 1:
+2025-01-20 14:28:23.504155 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   protocol id = IPSEC_ESP:
+2025-01-20 14:28:23.504203 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:   PFS DH group = 5
+2025-01-20 14:28:23.504253 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      trans_id = ESP_AES_CBC (key_len = 128)
+2025-01-20 14:28:23.504303 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:      encapsulation = ENCAPSULATION_MODE_TUNNEL
+2025-01-20 14:28:23.504354 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204:         type = AUTH_ALG, val=SHA1
+2025-01-20 14:28:23.504404 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: set pfs=MODP1536
+2025-01-20 14:28:23.504454 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: using tunnel mode.
+2025-01-20 14:28:23.504535 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: generate DH public value request queued
+2025-01-20 14:28:23.504701 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: compute DH shared secret request queued
+2025-01-20 14:28:23.506345 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: replay protection enabled
+2025-01-20 14:28:23.506416 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: SA life soft seconds=43188.
+2025-01-20 14:28:23.506470 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: SA life hard seconds=43200.
+2025-01-20 14:28:23.506523 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: IPsec SA selectors #src=1 #dst=1
+2025-01-20 14:28:23.506583 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: src 0 7 0:0.0.0.0-255.255.255.255:0
+2025-01-20 14:28:23.506643 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: dst 0 7 0:192.168.59.10-192.168.59.10:0
+2025-01-20 14:28:23.506699 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: add dynamic IPsec SA selectors 282
+2025-01-20 14:28:23.506807 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: added dynamic IPsec SA proxyids new 1 282
+2025-01-20 14:28:23.506910 ike V=root:0:ikev1-radius:204: add route 192.168.59.10/255.255.255.255 gw 192.168.59.10 oif ikev1-radius(68) me
+tric 15 priority 1
+2025-01-20 14:28:23.509779 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: tunnel 1 of VDOM limit 0/0
+2025-01-20 14:28:23.509888 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: add IPsec SA: SPIs=92eea972/25a9addf
+2025-01-20 14:28:23.509949 ike 0:ikev1-radius_0:43797:ikev1-radius:204: IPsec SA dec spi 92eea972 key 16:F91B8C46C08FDBA4AB37F3FD3ADB274F
+auth 20:75694445BF8AD747F5D01F2F4DC31E71532D0A2D
+2025-01-20 14:28:23.510006 ike 0:ikev1-radius_0:43797:ikev1-radius:204: IPsec SA enc spi 25a9addf key 16:C86A099266DC13902BDE6B0693D595CB
+auth 20:8866E151163C5821106ADCA95EC465C68FA98369
+2025-01-20 14:28:23.510174 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: added IPsec SA: SPIs=92eea972/25a9addf
+2025-01-20 14:28:23.510383 ike V=root:0:ikev1-radius_0:43797:ikev1-radius:204: sending SNMP tunnel UP trap
+2025-01-20 14:28:23.510478 ike V=root:0:ikev1-radius_0: tunnel up event assigned address 192.168.59.10
+2025-01-20 14:28:23 [2430] handle_req-Rcvd 6 req
+2025-01-20 14:28:23 [1075] fnbamd_cfg_get_radius_acct_list-
+2025-01-20 14:28:23.511474 ike V=root:0:ikev1-radius_0: sent tunnel-up message to EMS: (fct-uid=448804186640428B941B1E0748567723, intf=ike
+v1-radius_0, addr=192.168.59.10, vdom=root)
+2025-01-20 14:28:23 [456] fnbamd_rad_get-vfid=0, name='labDC-radius'
+2025-01-20 14:28:23.511713 ike 0:ikev1-radius_0:43797: enc 97244DF0183F9C2180B0664B53CFB82908102001EF8D94660000016C01000024FF50B34035A0A4A
+76D678D736DC313CBAA07A1B7A1F0D5BA8A7CBB86BD66E6380A00003800000001000000010000002C0103040192EEA97200000020010C0000800100018002A8C0800400018
+0060080800500028003000504000014458E9541BC18C5F97C0232036388815B050000C4033DD01162AE9FC97C96E4C1DE2CCCF8097E68D4176557B2372D9C4EE2C909D7FF9
+F2F88F67C48EFFF742B8B08F9523EA76BFAEDE79D8D494C173D176714A2C022651AC32BEDBD51FF988B756DB0F91C2E88C049BDE71D93A019EDE0318E44FDE36CF0DD586F2
+D617767557F833AF5E14FDC4A15877AB7CCDAE38721AFE5B44F7EA78F9A63CA6736E505F0831E61D1397A2FD5A065261DAB0487FAE2DBFD3117EF21594EDC2B752B25155B7
+76D8D59AC06DB471E8790009DE4B7A1FBAD909D6D0500000C01000000C0A83B0A00000010040000000000000000000000
+2025-01-20 14:28:23 [1082] fnbamd_cfg_get_radius_acct_list-Loaded RADIUS server 'labDC-radius'
+2025-01-20 14:28:23.511947 ike 0:ikev1-radius_0:43797: out 97244DF0183F9C2180B0664B53CFB82908102001EF8D94660000017C8D7C57619C6D75B7EF020C6
+AE5C7C0D5918B0646B1737F175EFDDD2904BDA8621A4F80287864DBC8E4F2C5B4B72DFED30646D038A76D8713409F24E85745F23CCF3857542A46B15A678BFC40479CD7075
+1731A37A9540F8F0A1671509D707C141D389257F0854A034F56148658C996EEF6BEA992E601B5769237BECC747EBA89C80C4318A9F8DB4E58A5E7A1321EF8463BBEE7D3878
+5C1E04FE0C0A3B00935D9640C3382A5287AB746EC47959A370D75E895CEBFCE913A4383D3A4DA68E740CD0027CF67DBBB770394D49382EE2E5006CF802A0B2993A4FDDD3AB
+6EC002C48E70ED714792D4275DC106FEDF698C9944FFF671CAAF1FADBD36A71633ACB23EE9728247A8FDEC643BEF0A2413C66995A3F2F4B3CBAE60ED33678C25340756F527
+40A04381DC4CDF2FA34F14E5171E648AC8133807CBA2C26BFF0A2E4D3B085B890C3D0E8DA7A970E0AB278B2D7D8A8036963364E501635D62C3DD50CCB5B13B3F5
+2025-01-20 14:28:23 [936] fnbamd_rad_get_auth_server-
+2025-01-20 14:28:23 2025-01-20 14:28:23.512132 ike V=root:0:ikev1-radius_0:43797: sent IKE msg (quick_r1send): 10.128.202.142:500->10.21.4
+.181:500, len=380, vrf=0, id=97244df0183f9c21/80b0664b53cfb829:ef8d9466
+2025-01-20 14:28:23 [370] fnbamd_acct_start-Failed to init rad ctx for labDC-radius
+2025-01-20 14:28:23 [1435] create_acct_session-Error start acct type 6
+2025-01-20 14:28:23 [1347] fnbamd_rads_destroy-
+2025-01-20 14:28:23 [516] fnbamd_rad_auth_ctx_free-Freeing 'labDC-radius' ctx
+2025-01-20 14:28:23 [1219] fnbamd_rad_auth_ctx_uninit-
+2025-01-20 14:28:23 [969] __rad_stop-
+2025-01-20 14:28:23 [964] __rad_conn_stop-Stop rad conn timer.
+2025-01-20 14:28:23 [364] fnbamd_rad_free-Freeing labDC-radius, ref:2
+2025-01-20 14:28:23 [519] fnbamd_rad_auth_ctx_free-
+2025-01-20 14:28:23 [1350] fnbamd_rads_destroy-
+2025-01-20 14:28:23 [1354] destroy_acct_session-Acct session destroyed
+2025-01-20 14:28:23 [2441] handle_req-Error creating acct session 6
+2025-01-20 14:28:23.521199 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=76....
+2025-01-20 14:28:23.521341 ike V=root:0: IKEv1 exchange=Quick id=97244df0183f9c21/80b0664b53cfb829:ef8d9466 len=76 vrf=0
+2025-01-20 14:28:23.521400 ike 0: in 97244DF0183F9C2180B0664B53CFB82908102001EF8D94660000004C6EA970EAE7BF1B13520B01448F58F4A8B88B48F7FF8A9
+5527AF38B6159C46E0C0DA3627CE68FE93240FD5A559675CE24
+2025-01-20 14:28:23.521534 ike 0:ikev1-radius_0:43797: dec 97244DF0183F9C2180B0664B53CFB82908102001EF8D94660000004C000000241800D6D1C5F1FEC
+9EE52A80A4A5FFB73F138BDADC741BF83D6E21C5CADCE4AA6CD94BC89D78EB2C4BD8AB80B
+2025-01-20 14:28:23.521737 ike 0:ikev1-radius_0:43797: enc 97244DF0183F9C2180B0664B53CFB82908102001EF8D94660000005A0B0000242DCC77155D672ED
+2BE5C66B551350420AB11E5FDDDDF7894D610A040F866215F0000001A0000000101007DF75645523D310A434F44453D300A00
+2025-01-20 14:28:23.521833 ike 0:ikev1-radius_0:43797: out 97244DF0183F9C2180B0664B53CFB82908102001EF8D94660000005C35617C4F41751249CB0CA75
+CE2D8699D7C49D93B231295005D041002678198DEC570A5C89D677B72DD77372A522C0BBA6DF36F1CE60516C4FB177F4C63CCB4D0
+2025-01-20 14:28:23.521970 ike V=root:0:ikev1-radius_0:43797: sent IKE msg (quick_r2send): 10.128.202.142:500->10.21.4.181:500, len=92, vr
+f=0, id=97244df0183f9c21/80b0664b53cfb829:ef8d9466
+2025-01-20 14:28:23.522213 ike V=root:0:ikev1-radius_0:ikev1-radius:204: send SA_DONE SPI 0x25a9addf
+
+FortiWiFi-61E #
+FortiWiFi-61E #
+FortiWiFi-61E # 2025-01-20 14:28:27.438316 ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=108....
+2025-01-20 14:28:27.438427 ike V=root:0: IKEv1 exchange=Informational id=97244df0183f9c21/80b0664b53cfb829:de1caddd len=108 vrf=0
+2025-01-20 14:28:27.438486 ike 0: in 97244DF0183F9C2180B0664B53CFB82908100501DE1CADDD0000006CD198209F29EBE3D91AF4099DDA0CD566B18A09E8D8009
+849862501CA45966769488D0F83642243803C65A57034DA0C9671331DEAE1716174131273AED208C9E8DB342575F59C840AE504A8275B7AAA42
+2025-01-20 14:28:27.438645 ike 0:ikev1-radius_0:43797: dec 97244DF0183F9C2180B0664B53CFB82908100501DE1CADDD0000006C0B000024FE5D9BA86431B16
+EC3823558F5044154E082D8E2603E83300BF48C7ADFF93E22000000200000000101108D2897244DF0183F9C2180B0664B53CFB82900000000B583EFA5B4DAE69AB392FE0B
+2025-01-20 14:28:27.438783 ike V=root:0:ikev1-radius_0:43797: notify msg received: R-U-THERE
+2025-01-20 14:28:27.438987 ike 0:ikev1-radius_0:43797: enc 97244DF0183F9C2180B0664B53CFB82908100501AC3ED074000000600B000024F5BC99E42A23B1E
+F7248E9B899B78C2E119483C6269A3A8226F4B7FCB13B8715000000200000000101108D2997244DF0183F9C2180B0664B53CFB82900000000
+2025-01-20 14:28:27.439083 ike 0:ikev1-radius_0:43797: out 97244DF0183F9C2180B0664B53CFB82908100501AC3ED0740000006C27EE512ECC29D94BC37116E
+CA990DBB6016FDE1961A477B1FC07B961AE1750F462F12B53178AE583CDDCBF10B67D3EDA42F523E03EA12738C9B3E5FDD37352A04D7AC4BF7815ECB763523531D14A794C
+2025-01-20 14:28:27.439231 ike V=root:0:ikev1-radius_0:43797: sent IKE msg (R-U-THERE-ACK): 10.128.202.142:500->10.21.4.181:500, len=108,
+vrf=0, id=97244df0183f9c21/80b0664b53cfb829:ac3ed074
+
+FortiWiFi-61E #
+FortiWiFi-61E # di de di
+
+FortiWiFi-61E #

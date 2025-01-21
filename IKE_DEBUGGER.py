@@ -5,9 +5,14 @@ from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_LOG_DH_grouo_known_issue.txt"
+file_name = "IKE_LOG_V1_radius_pswd_wrong.txt"
+# IKE_LOG_V1_radius_DNS_Issues.txt
+# IKE_LOG_V1_radius_not_reachable.txt
+# IKE_LOG_V1_radius_wrong_account.txt
+# IKE_LOG_V1_radius_pswd_wrong
+# IKE_LOG_V1_radius_succes
 # IKE_LOG_DH_grouo_known_issue
-# IKE_LOG_V1_ldap_PSK_Mismatch.txt
+# IKE_LOG_V1_ldap_PSK_Mismatch.txt\
 # IKE_LOG_V1_ldap_non_reachable_2
 # IKE_LOG_V1_ldap_non_reachable_1
 # IKE_LOG_V1_ldap_non_working_pswd_2
@@ -375,12 +380,33 @@ def ike_parser(text):
                             if "fnbamd_dns_parse_resp" in prev_line and 'wrong dns format' in prev_line:
                                 analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. DNS for LDAP server issue detected</span>')
                     if eap_id in remaining_line and 'FNBAM_TIMEOUT' in remaining_line:
-                        analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] FNBAM_TIMEOUT means possible FNBAMD Unavailaibility due to lack of servers or non_reachability</span>')
+                        analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] FNBAM_TIMEOUT means possible FNBAMD Unavailaibility due to lack of servers or non_reachability or retries exceeded for wrong credentials</span>')
                         for prev_line in reversed(rest_lines[:k]):
                             if "__ldap_try_next_server-No more server to try." in prev_line:
                                 analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for FNBAM_error. Could be a possible reason as: {prev_line}</span>')
                             if "fnbamd_cfg_ldap_update_reachability" in prev_line and 'conn_fails' in prev_line:
                                 analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. SERVER not reachable as in log {prev_line}</span>')
+                    # RADIUS LOGIC 
+                    if eap_id in remaining_line and 'fnbamd_rad_process-Result' in remaining_line:
+                        proceed = True
+                        match1 = re.search(r"svr\s'([^']+)'", remaining_line)
+                        if match1:
+                            svr = match1.group(1)  # Extracts 'EAP_PROXY'
+                            print(svr)
+                            for prev_line in reversed(rest_lines[:k]):
+                                if "fnbamd_cfg_radius_update_reachability" in prev_line and 'conn_fails' in prev_line and svr in prev_line:
+                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS log found for deny. SERVER not reachable as in log {prev_line}</span>')
+                                if "__rad_try_next_server-No more server to try." in prev_line:
+                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS log found for FNBAM_error. Could be a possible reason as: {prev_line}</span>')
+                                if "__fnbamd_rad_dns_cb-Resolved" in prev_line and '0.0.0.0' in prev_line and svr in prev_line:
+                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS reason for deny found. DNS for RADIUS server issue detected</span>') 
+                                    proceed = False
+                        pattern = r"Result from radius svr '.*?' is (\d+)"
+                        match = re.search(pattern, remaining_line)
+                        if match and proceed == True:
+                            if int(match.group(1)) == 10:
+                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] radius issue detected for wrong username or password by USER: {user} </span>')
+
 
 #IKE v2 auth logic
         if 'ike' in line and 'send EAP message to FNBAM' in line:

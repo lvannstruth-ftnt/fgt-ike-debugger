@@ -1,0 +1,792 @@
+https://community.fortinet.com/t5/FortiGate/Troubleshooting-Tip-IPsec-SAML-Authentication-fails-due-to/ta-p/339738
+
+
+AZFW01-FGT # di de di
+
+AZFW01-FGT # diag debug console timestamp enable
+
+AZFW01-FGT # diagnose vpn ike log filter rem-addr4 98.109.204.57
+
+AZFW01-FGT # diag debug app fnbamd -1
+Debug messages will be on for 30 minutes.
+
+AZFW01-FGT # diag debug app saml -1
+
+AZFW01-FGT # diag debug app ike -1
+Debug messages will be on for 30 minutes.
+
+AZFW01-FGT # di de app eap_proxy -1
+Debug messages will be on for 30 minutes.
+
+AZFW01-FGT # diag debug enable
+
+AZFW01-FGT # 2024-09-25 15:44:04 1727293444.855203: 2024-09-25 15:44:04 eap_comm_client_read 653.rsp->msg_type:2
+2024-09-25 15:44:07.177660 ike V=root:0:saml-vpn_4c: NAT keep-alive 4 172.17.4.4->98.109.204.57:4500.
+2024-09-25 15:44:07.181279 ike 0:saml-vpn_4c:277764: out FF
+2024-09-25 15:44:07.183263 ike V=root:0:saml-vpn_4c:277764: sent IKE msg (keepalive): 172.17.4.4:4500->98.109.204.57:4500, len=1, vr
+f=0, id=ff00000000000000/7100000000000000:9b550000, oif=4
+2024-09-25 15:44:07.537164 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=64....
+2024-09-25 15:44:07.540898 ike V=root:0: IKEv2 exchange=INFORMATIONAL id=eda55d05dffc828a/ae5a0ca780b2f306:0000005a len=60
+2024-09-25 15:44:07.544803 ike 0: in EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005A0000003C00000020AB10FA117B6E06F10AF44EB7F3A6A9D
+1DBC2DA28B1C78B8C484516E5
+2024-09-25 15:44:07.553803 ike 0:saml-vpn_4c:277764: dec EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005A0000002000000004
+2024-09-25 15:44:07.557441 ike V=root:0:saml-vpn_4c:277764: received informational request
+2024-09-25 15:44:07.560275 ike 0:saml-vpn_4c:277764: enc 0706050403020107
+2024-09-25 15:44:07.562622 ike 0:saml-vpn_4c:277764: out EDA55D05DFFC828AAE5A0CA780B2F3062E2025200000005A0000003C00000020690A1F96ACC
+F4AE8D2F04AD54520417476BE606628295600085DBD7A
+2024-09-25 15:44:07.567682 ike V=root:0:saml-vpn_4c:277764: sent IKE msg (INFORMATIONAL_RESPONSE): 172.17.4.4:4500->98.109.204.57:45
+00, len=60, vrf=0, id=eda55d05dffc828a/ae5a0ca780b2f306:0000005a, oif=4
+2024-09-25 15:44:12.594444 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=64....
+2024-09-25 15:44:12.595551 ike V=root:0: IKEv2 exchange=INFORMATIONAL id=eda55d05dffc828a/ae5a0ca780b2f306:0000005b len=60
+2024-09-25 15:44:12.595974 ike 0: in EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005B0000003C00000020A4A3B6357B39C16C466E18F555A3FA3
+E23CBC730F2F1BB8CA9A08FD7
+2024-09-25 15:44:12.596014 ike 0:saml-vpn_4c:277764: dec EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005B0000002000000004
+2024-09-25 15:44:12.596428 ike V=root:0:saml-vpn_4c:277764: received informational request
+2024-09-25 15:44:12.596854 ike 0:saml-vpn_4c:277764: enc 0706050403020107
+2024-09-25 15:44:12.597272 ike 0:saml-vpn_4c:277764: out EDA55D05DFFC828AAE5A0CA780B2F3062E2025200000005B0000003C000000203390B2BF840
+E5413C1376C81DA039762BF747A7924C58BDC344D60A6
+2024-09-25 15:44:12.598113 ike V=root:0:saml-vpn_4c:277764: sent IKE msg (INFORMATIONAL_RESPONSE): 172.17.4.4:4500->98.109.204.57:45
+00, len=60, vrf=0, id=eda55d05dffc828a/ae5a0ca780b2f306:0000005b, oif=4
+2024-09-25 15:44:17.612628 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=64....
+2024-09-25 15:44:17.613757 ike V=root:0: IKEv2 exchange=INFORMATIONAL id=eda55d05dffc828a/ae5a0ca780b2f306:0000005c len=60
+2024-09-25 15:44:17.614175 ike 0: in EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005C0000003C00000020DE196685895E81DA056974870E485D9
+C818765EB445CFBE12CA2A821
+2024-09-25 15:44:17.614235 ike 0:saml-vpn_4c:277764: dec EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005C0000002000000004
+2024-09-25 15:44:17.614604 ike V=root:0:saml-vpn_4c:277764: received informational request
+2024-09-25 15:44:17.614626 ike 0:saml-vpn_4c:277764: enc 0706050403020107
+2024-09-25 15:44:17.615053 ike 0:saml-vpn_4c:277764: out EDA55D05DFFC828AAE5A0CA780B2F3062E2025200000005C0000003C0000002078E74A0A215
+DD3CEB7E463B861C9254033648B1ED181C7468D899A14
+2024-09-25 15:44:17.616150 ike V=root:0:saml-vpn_4c:277764: sent IKE msg (INFORMATIONAL_RESPONSE): 172.17.4.4:4500->98.109.204.57:45
+00, len=60, vrf=0, id=eda55d05dffc828a/ae5a0ca780b2f306:0000005c, oif=4
+2024-09-25 15:44:18.238954 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=72....
+2024-09-25 15:44:18.240160 ike V=root:0: IKEv2 exchange=INFORMATIONAL id=eda55d05dffc828a/ae5a0ca780b2f306:0000005d len=68
+2024-09-25 15:44:18.240615 ike 0: in EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005D000000442A0000288E70596D6379DCDA0A0E4FD321CC520
+9036A3CD395FFDDB8DF8C5B28BAD8AB3FE7881012
+2024-09-25 15:44:18.240675 ike 0:saml-vpn_4c:277764: dec EDA55D05DFFC828AAE5A0CA780B2F3062E2025080000005D000000282A00000400000008010
+00000
+2024-09-25 15:44:18.241047 ike V=root:0:saml-vpn_4c:277764: received informational request
+2024-09-25 15:44:18.241454 ike V=root:0:saml-vpn_4c:277764: processing delete request (proto 1)
+2024-09-25 15:44:18.241860 ike V=root:0:saml-vpn_4c:277764: deleting IKE SA eda55d05dffc828a/ae5a0ca780b2f306
+2024-09-25 15:44:18.242370 ike V=root:0:saml-vpn_4c:277764: schedule delete of IKE SA eda55d05dffc828a/ae5a0ca780b2f306
+2024-09-25 15:44:18.243210 ike 0:saml-vpn_4c:277764: enc 0706050403020107
+2024-09-25 15:44:18.243641 ike 0:saml-vpn_4c:277764: out EDA55D05DFFC828AAE5A0CA780B2F3062E2025200000005D0000003C00000020F2E549C9940
+9C25336FB7785DD7C69BF3655819805DC901AC2070813
+2024-09-25 15:44:18.244078 ike V=root:0:saml-vpn_4c:277764: sent IKE msg (INFORMATIONAL_RESPONSE): 172.17.4.4:4500->98.109.204.57:45
+00, len=60, vrf=0, id=eda55d05dffc828a/ae5a0ca780b2f306:0000005d, oif=4
+2024-09-25 15:44:18.244492 ike V=root:0:saml-vpn_4c:277764: scheduled delete of IKE SA eda55d05dffc828a/ae5a0ca780b2f306
+2024-09-25 15:44:18.245045 ike V=root:0:saml-vpn_4c: deleting IPsec SA with SPI 6152b7a0
+2024-09-25 15:44:18.245495 ike V=root:0:saml-vpn_4c:saml-vpn: deleted IPsec SA with SPI 6152b7a0, SA count: 0
+2024-09-25 15:44:18.287151 ike V=root:saml-vpn_4c: saml-vpn:32889433: del route 10.10.10.81/255.255.255.255 tunnel 10.10.10.81 oif s
+aml-vpn(22) metric 15 priority 1
+2024-09-25 15:44:18.288639 ike V=root:0:saml-vpn_4c: sending SNMP tunnel DOWN trap for saml-vpn
+2024-09-25 15:44:18.289286 ike V=root:0:saml-vpn_4c: remote selector down event 10.10.10.81 (devidx=22)
+2024-09-25 15:44:18.289528 ike V=root:0:saml-vpn_4c:saml-vpn: delete
+2024-09-25 15:44:18.290161 ike V=root:0:saml-vpn_4c: connection expiring due to phase1 down
+2024-09-25 15:44:18.290366 ike V=root:0:saml-vpn_4c: going to be deleted
+2024-09-25 15:44:18.290956 ike V=root:0:saml-vpn_4c: sent tunnel-down message to EMS: (fct-uid=7D7FD05651784A46BB0FD70D405AF731, int
+f=saml-vpn_4c, addr=10.10.10.81, vdom=root)
+2024-09-25 15:44:18.292147 ike V=root:0:saml-vpn_4c: flushing
+2024-09-25 15:44:18.292601 ike V=root:0:saml-vpn_4c: flushed
+2024-09-25 15:44:18.292960 ike V=root:0:saml-vpn_4c: mode-cfg release 10.10.10.81/255.255.255.255
+2024-09-25 15:44:18.293470 ike V=root:0:saml-vpn_4c: delete dynamic
+2024-09-25 15:44:18 [2348] handle_req-Rcvd abort req for 9852881223173
+2024-09-25 15:44:18 [2363] handle_req-Can't abort, no active req 9852881223173
+samld_process_request [145]: len=13667, cmd=0, pid=2379, job_id=577953
+samld_process_request [162]: Received 13667, 0x55de5b08b800
+__samld_sp_create_auth_req [433]: SAML SP algo: 0 -> lasso=1. Binding Method: urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST
+
+__samld_sp_create_auth_req [453]:
+**** AuthnRequest URL ****
+https://login.microsoftonline.com/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/saml2?SAMLRequest=lZLLbtswEEV%2FReBeL4pRIsI2IEsJaiBthdjNopuCp
+kYxAYlUOZSb%2FH0puY900QBZcjiXnHMwKxRDP%2FJycif9AN8nQBc8D71GvlysyWQ1NwIVci0GQO4k35cf7zmNEj5a44w0PXkVeTshEME6ZTQJdvWafMuqm6Iuq%2BSu3KZ
+X2zy%2FSWnOqpreMnpbpklOgkew6PvXxMd9CHGCnUYntPOlhLIwKUJ6dUgLzhin7CsJas%2BgtHBL6uTciDyOe%2FOkdDQoaQ2azhndKw2RNEMssgyKY56HIocuZNmxC4vrh
+IbX8siyJG0TkebxTEZJcGeshMXVmnSiR5gnajyUOsOfSvPLylbpVumnt4UcL03IPxwOTdh83h9IUP6WVBmN0wB2D%2FasJHx5uP8LdB51hOLZgTxp4%2BleZhheMJbFFgbjY
+Jn5wk02q%2FnAF3t2884nBnCiFU7Eq%2Fj1K6vL5nzySLu6Mb2SL7OfQbj%2FE6dRulRUG3ZLK580jiBVp6D14H1vflQWhPM2nZ2AxJvLp%2F9u6OYn&RelayState=magic
+%3D070d0782df1caf13&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=eyWbsHAE8lVUTDESPtKJi2V3G8utanIRqkELBq
+KlVxxMi%2BOdiwiFbsvZxy4%2BTP1JcGwsOYD1n%2FsW2q5BAV8XmFSEZ1w%2FIOOhIyrXePk4RQvcrli13VEuy6kCGatqwTpFzub26nkVgUD42OXM71fyofvcJEgBEL%2Fb
+hDVo1qqwgVF6wU5l6JxQfaORavG9WoC9lIj%2BAdulHjP4miB6ZN9GlgR2H4VN9uJhd0HapCXI07y3vM2j0HH5TzQkvPVCBiLvMNlFdYeULm0QyGW7zvYQGzCeB5WIR3xZsD
+yS4B8gg6MvLplCC1IVPCXA5PZ9DmzTqToOXb1KTdFO72%2BkhiBTtw%3D%3D
+***********************
+__samld_sp_create_auth_req [467]:
+**** AuthnRequest ****
+<samlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_3C89D
+AC0FAB15B6681264CD2E42EA106" Version="2.0" IssueInstant="2024-09-25T19:44:24Z" Destination="https://login.microsoftonline.com/a33e9b
+66-a6ef-43bf-9702-7cb4301d0a16/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:na
+mes:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://vpn.saxtechnology.com:9443/remote/saml/login"><saml:Issuer>
+https://vpn.saxtechnology.com:9443/remote/saml/metadata/</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid
+-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest>
+***********************
+__samld_sp_create_auth_req [472]:
+**** SP Login Dump ****
+<lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:s
+aml="urn:oasis:names:tc:SAML:2.0:assertion" LoginDumpVersion="2"><lasso:Request><samlp:AuthnRequest ID="_3C89DAC0FAB15B6681264CD2E42
+EA106" Version="2.0" IssueInstant="2024-09-25T19:44:24Z" Destination="https://login.microsoftonline.com/a33e9b66-a6ef-43bf-9702-7cb4
+301d0a16/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindin
+gs:HTTP-POST" AssertionConsumerServiceURL="https://vpn.saxtechnology.com:9443/remote/saml/login"><saml:Issuer>https://vpn.saxtechnol
+ogy.com:9443/remote/saml/metadata/</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" A
+llowCreate="true"/></samlp:AuthnRequest></lasso:Request><lasso:RemoteProviderID>https://sts.windows.net/a33e9b66-a6ef-43bf-9702-7cb4
+301d0a16/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsoftonline.com/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/saml2?SAMLReq
+uest=lZLLbtswEEV%2FReBeL4pRIsI2IEsJaiBthdjNopuCpkYxAYlUOZSb%2FH0puY900QBZcjiXnHMwKxRDP%2FJycif9AN8nQBc8D71GvlysyWQ1NwIVci0GQO4k35cf7
+zmNEj5a44w0PXkVeTshEME6ZTQJdvWafMuqm6Iuq%2BSu3KZX2zy%2FSWnOqpreMnpbpklOgkew6PvXxMd9CHGCnUYntPOlhLIwKUJ6dUgLzhin7CsJas%2BgtHBL6uTciDy
+Oe%2FOkdDQoaQ2azhndKw2RNEMssgyKY56HIocuZNmxC4vrhIbX8siyJG0TkebxTEZJcGeshMXVmnSiR5gnajyUOsOfSvPLylbpVumnt4UcL03IPxwOTdh83h9IUP6WVBmN0
+wB2D%2FasJHx5uP8LdB51hOLZgTxp4%2BleZhheMJbFFgbjYJn5wk02q%2FnAF3t2884nBnCiFU7Eq%2Fj1K6vL5nzySLu6Mb2SL7OfQbj%2FE6dRulRUG3ZLK580jiBVp6D
+14H1vflQWhPM2nZ2AxJvLp%2F9u6OYn&amp;RelayState=magic%3D070d0782df1caf13&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23r
+sa-sha1&amp;Signature=eyWbsHAE8lVUTDESPtKJi2V3G8utanIRqkELBqKlVxxMi%2BOdiwiFbsvZxy4%2BTP1JcGwsOYD1n%2FsW2q5BAV8XmFSEZ1w%2FIOOhIyrXeP
+k4RQvcrli13VEuy6kCGatqwTpFzub26nkVgUD42OXM71fyofvcJEgBEL%2FbhDVo1qqwgVF6wU5l6JxQfaORavG9WoC9lIj%2BAdulHjP4miB6ZN9GlgR2H4VN9uJhd0HapC
+XI07y3vM2j0HH5TzQkvPVCBiLvMNlFdYeULm0QyGW7zvYQGzCeB5WIR3xZsDyS4B8gg6MvLplCC1IVPCXA5PZ9DmzTqToOXb1KTdFO72%2BkhiBTtw%3D%3D</lasso:MsgU
+rl><lasso:MsgRelayState>magic=070d0782df1caf13</lasso:MsgRelayState><lasso:HttpRequestMethod>4</lasso:HttpRequestMethod><lasso:Reque
+stID>_3C89DAC0FAB15B6681264CD2E42EA106</lasso:RequestID></lasso:Login>
+***********************
+samld_send_common_reply [91]: Code: 0, id: 577953, pid: 2379, len: 3464, data_len 3448
+samld_send_common_reply [99]:     Attr: 14, 2323, <lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:sa
+mlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" LoginDumpVersion="2"><lasso:Request><s
+amlp:AuthnRequest ID="_3C89DAC0FAB15B6681264CD2E42EA106" Version="2.0" IssueInstant="2024-09-25T19:44:24Z" Destination="https://logi
+n.microsoftonline.com/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" P
+rotocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://vpn.saxtechnology.com:9443/remo
+te/saml/login"><saml:Issuer>https://vpn.saxtechnology.com:9443/remote/saml/metadata/</saml:Issuer><samlp:NameIDPolicy Format="urn:oa
+sis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest></lasso:Request><lasso:RemoteProviderID>ht
+tps://sts.windows.net/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsoftonline.com/
+a33e9b66-a6ef-43bf-9702-7cb4301d0a16/saml2?SAMLRequest=lZLLbtswEEV%2FReBeL4pRIsI2IEsJaiBthdjNopuCpkYxAYlUOZSb%2FH0puY900QBZcjiXnHMwK
+xRDP%2FJycif9AN8nQBc8D71GvlysyWQ1NwIVci0GQO4k35cf7zmNEj5a44w0PXkVeTshEME6ZTQJdvWafMuqm6Iuq%2BSu3KZX2zy%2FSWnOqpreMnpbpklOgkew6PvXxMd
+9CHGCnUYntPOlhLIwKUJ6dUgLzhin7CsJas%2BgtHBL6uTciDyOe%2FOkdDQoaQ2azhndKw2RNEMssgyKY56HIocuZNmxC4vrhIbX8siyJG0TkebxTEZJcGeshMXVmnSiR5g
+najyUOsOfSvPLylbpVumnt4UcL03IPxwOTdh83h9IUP6WVBmN0wB2D%2FasJHx5uP8LdB51hOLZgTxp4%2BleZhheMJbFFgbjYJn5wk02q%2FnAF3t2884nBnCiFU7Eq%2Fj
+1K6vL5nzySLu6Mb2SL7OfQbj%2FE6dRulRUG3ZLK580jiBVp6D14H1vflQWhPM2nZ2AxJvLp%2F9u6OYn&amp;RelayState=magic%3D070d0782df1caf13&amp;SigAlg
+=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&amp;Signature=eyWbsHAE8lVUTDESPtKJi2V3G8utanIRqkELBqKlVxxMi%2BOdiwiFbsvZxy
+4%2BTP1JcGwsOYD1n%2FsW2q5BAV8XmFSEZ1w%2FIOOhIyrXePk4RQvcrli13VEuy6kCGatqwTpFzub26nkVgUD42OXM71fyofvcJEgBEL%2FbhDVo1qqwgVF6wU5l6JxQfa
+ORavG9WoC9lIj%2BAdulHjP4miB6ZN9GlgR2H4VN9uJhd0HapCXI07y3vM2j0HH5TzQkvPVCBiLvMNlFdYeULm0QyGW7zvYQGzCeB5WIR3xZsDyS4B8gg6MvLplCC1IVPCXA
+5PZ9DmzTqToOXb1KTdFO72%2BkhiBTtw%3D%3D</lasso:MsgUrl><lasso:MsgRelayState>magic=070d0782df1caf13</lasso:MsgRelayState><lasso:HttpReq
+uestMethod>4</lasso:HttpRequestMethod><lasso:RequestID>_3C89DAC0FAB15B6681264CD2E42EA106</lasso:RequestID></lasso:Login>
+samld_send_common_reply [99]:     Attr: 11, 1125, https://login.microsoftonline.com/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/saml2?SAMLR
+equest=lZLLbtswEEV%2FReBeL4pRIsI2IEsJaiBthdjNopuCpkYxAYlUOZSb%2FH0puY900QBZcjiXnHMwKxRDP%2FJycif9AN8nQBc8D71GvlysyWQ1NwIVci0GQO4k35c
+f7zmNEj5a44w0PXkVeTshEME6ZTQJdvWafMuqm6Iuq%2BSu3KZX2zy%2FSWnOqpreMnpbpklOgkew6PvXxMd9CHGCnUYntPOlhLIwKUJ6dUgLzhin7CsJas%2BgtHBL6uTci
+DyOe%2FOkdDQoaQ2azhndKw2RNEMssgyKY56HIocuZNmxC4vrhIbX8siyJG0TkebxTEZJcGeshMXVmnSiR5gnajyUOsOfSvPLylbpVumnt4UcL03IPxwOTdh83h9IUP6WVBm
+N0wB2D%2FasJHx5uP8LdB51hOLZgTxp4%2BleZhheMJbFFgbjYJn5wk02q%2FnAF3t2884nBnCiFU7Eq%2Fj1K6vL5nzySLu6Mb2SL7OfQbj%2FE6dRulRUG3ZLK580jiBVp
+6D14H1vflQWhPM2nZ2AxJvLp%2F9u6OYn&RelayState=magic%3D070d0782df1caf13&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha
+1&Signature=eyWbsHAE8lVUTDESPtKJi2V3G8utanIRqkELBqKlVxxMi%2BOdiwiFbsvZxy4%2BTP1JcGwsOYD1n%2FsW2q5BAV8XmFSEZ1w%2FIOOhIyrXePk4RQvcrli1
+3VEuy6kCGatqwTpFzub26nkVgUD42OXM71fyofvcJEgBEL%2FbhDVo1qqwgVF6wU5l6JxQfaORavG9WoC9lIj%2BAdulHjP4miB6ZN9GlgR2H4VN9uJhd0HapCXI07y3vM2j
+0HH5TzQkvPVCBiLvMNlFdYeULm0QyGW7zvYQGzCeB5WIR3xZsDyS4B8gg6MvLplCC1IVPCXA5PZ9DmzTqToOXb1KTdFO72%2BkhiBTtw%3D%3D
+samld_send_common_reply [119]: Sent resp: 3464, pid=2379, job_id=577953.
+samld_process_request [145]: len=22786, cmd=2, pid=2379, job_id=577953
+samld_process_request [162]: Received 22786, 0x55de5b08b800
+__samld_sp_login_resp [819]:
+SP Login Response Msg Body (9280)
+<samlp:Response ID="_7efcde90-902c-4f86-bb7e-96bf366071e0" Version="2.0" IssueInstant="2024-09-25T19:44:57.945Z" Destination="https:
+//vpn.saxtechnology.com:9443/remote/saml/login" InResponseTo="_3C89DAC0FAB15B6681264CD2E42EA106" xmlns:samlp="urn:oasis:names:tc:SAM
+L:2.0:protocol"><Issuer xmlns="urn:oasis:names:tc:SAML:2.0:assertion">https://sts.windows.net/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/<
+/Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><Assertion ID="_c15918b0-
+00bc-4dfe-b551-9bde813a2300" IssueInstant="2024-09-25T19:44:57.941Z" Version="2.0" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"><Is
+suer>https://sts.windows.net/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><Si
+gnedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/
+2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c15918b0-00bc-4dfe-b551-9bde813a2300"><Transforms><Transform Algorithm="http://w
+ww.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><Digest
+Method Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>KQ3sEbLNSXdkib1tuokY9m4J9DHOuLIbmbGxTh0X4Mk=</DigestValue><
+/Reference></SignedInfo><SignatureValue>LhJeK8AaJD59OzH5BZE/bBO++p3s5Mz/+ty8NhoZdHB671v9AULmylPzcM7UKBgzRtnpKK3mJA6wNq1YDf0zHpIbJhpm
+YbLeDXtUaNh5lpfsi8YVeCTMmPH8n28beJK88/b72J9zvGV+n2f/FGNny3XaqSd8AOg4Y78DqC5RuW3LI2YL6ap5owljjckYdng927rR117J7LaRaxg0m6P7mXSMxeH76BIN
+8yLVwekjNjlSkZpuju9m9ORula+xYPwx4Jt6cpwRKhOLuVXuAKYxCoMRCPAQstboCWodLOBkG25npZ/hDHVWePCf44oZ0sXaPIk0yp/FIBjeq7UmfxZ6pg==</SignatureV
+alue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQU5sfPxlMTZ5CjA27+gq80jANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQ
+gQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA5MTcwMTU1MTlaFw0yNzA5MTcwMTU1MjRaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF
+0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzzV08kq2iPyyz/I8RogOXgPHFgPEfzBY8HxusnmMahmr8rfLLwM1qyxRMvrSvX0
+MPyohISgxGxWApkgw6XX5lbgyjCgt1pK5FUqSMsysX/KAfp3YEJ+dU4syiA7L1n0FNp+7c51N2ttvHd6S+TbkLQjvckQYAyQHOvv07CLBpjtZmRq8UVL871QvlrbVc9o9Gun
+rTC9mLm7Fd+hT19oMVZwux0tRj7I+VAIISrvBAeq1qk+vhSAH9TAmakjaxkBmgtaxJfA9YvZF2Yr+CYfYHe6EQG0C4vd1XuNRjJTCmN4yB28J+v52O8Zjn105/TuKuPO0MoJ
+tq1oIR7tsfOOdZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBtNtctO4h+bh9Iepa0dxJPd5maDJvcu8/sp2Y982//9OmAkpvSVownXHyq7l2JgFavJdTUtsYo/INc3y/Zoim
+2RHGoolPgov7OHvUqdKQ2aQPKBhjacnDnn3aWWKP8QDU7t4lLN63JGslzRR+nUWU9zC+JA9yV2EPCMYV0cMhw6pKN8FBLFGY2yqEPt1xgUKarYZfCXWrHWkI1xelx6RLkqBA
+/77ILvsbJ+Oc4AQvS475Lqo29Chu72zPQppMgFEOAR0MZv/3pXGzOeCDbWTau4QRljDMIXil9B6KNk9+OaMA4VG5wju8aOKYy35tSrQrR7FWxfU4+GQLGy06EVut+</X509C
+ertificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">mpaphit
+is@saxllp.com</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_3C
+89DAC0FAB15B6681264CD2E42EA106" NotOnOrAfter="2024-09-25T20:44:57.830Z" Recipient="https://vpn.saxtechnology.com:9443/remote/saml/lo
+gin"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-09-25T19:39:57.830Z" NotOnOrAfter="2024-09-25T20:44:57.830Z"><Audi
+enceRestriction><Audience>https://vpn.saxtechnology.com:9443/remote/saml/metadata/</Audience></AudienceRestriction></Conditions><Att
+ributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>a33e9b66-a6ef-43bf-9702-7cb4
+301d0a16</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue
+>1c1fc627-a4f2-49ba-b98d-021809e1e8bd</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/disp
+layname"><AttributeValue>Michael Paphitis</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/
+identityprovider"><AttributeValue>https://sts.windows.net/a33e9b66-a6ef-43bf-9702-7cb4301d0a16/</AttributeValue></Attribute><Attribu
+te Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identit
+y/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></
+Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>b79fbf4d-3ef9-4689-8143-76b
+194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeVa
+lue>Michael</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeVa
+lue>Paphitis</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><Attri
+buteValue>mpaphitis@saxllp.com</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/na
+me"><AttributeValue>mpaphitis@saxllp.com</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>mpaphitis@saxllp.com
+</AttributeValue></Attribute><Attribute Name="group"><AttributeValue>3a632c13-f9fa-4462-9b3c-d9ede1226080</AttributeValue><Attribute
+Value>ac7ed914-ac78-4b64-903a-05a1ef000af6</AttributeValue><AttributeValue>92da1b32-c398-4969-8846-9927bb8ce0ca</AttributeValue><Att
+ributeValue>307c9a4a-985c-45f2-a395-b134a8b58e64</AttributeValue><AttributeValue>fe1e3d54-6477-48ee-bdb3-5dab23ec43b4</AttributeValu
+e><AttributeValue>d092f559-1b33-417e-b96c-74bb282c28cb</AttributeValue><AttributeValue>76247a68-88ed-4c99-b093-294480301123</Attribu
+teValue><AttributeValue>58a44f7c-c4f2-463f-ad90-62a6f34cc508</AttributeValue><AttributeValue>4633db87-6b55-42ad-b554-9b26b522947e</A
+ttributeValue><AttributeValue>1c90768b-5039-4f58-b528-f19cb8e6f0bf</AttributeValue><AttributeValue>ba777c99-7233-426f-b838-7d1d9470a
+053</AttributeValue><AttributeValue>107e93a4-7b36-4079-b350-aeec21643eb3</AttributeValue><AttributeValue>4bd88cd7-7ea0-4e83-b33a-cb0
+c0e996097</AttributeValue><AttributeValue>87b6cedf-1935-4efb-8e2a-ee6a45d99f8b</AttributeValue><AttributeValue>f73abbd8-e82a-4b31-8c
+87-1287fd332afe</AttributeValue><AttributeValue>1fea048f-2ce2-4507-918a-ec18ad75621b</AttributeValue><AttributeValue>b0317e67-6ff8-4
+b49-8ae8-6a8b27a7f0df</AttributeValue><AttributeValue>0e332eeb-f372-44b3-9b2e-d3453d8fdc67</AttributeValue><AttributeValue>b7ef8ce5-
+0876-42cf-ab51-a816506ad6ff</AttributeValue><AttributeValue>5c668340-023e-4256-a5f8-dddabf1b90d3</AttributeValue><AttributeValue>9c3
+8d98b-2a17-44c9-8c33-c2e3c39840bb</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-09-25T19:44:55
+.058Z" SessionIndex="_c15918b0-00bc-4dfe-b551-9bde813a2300"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:class
+es:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response>
+__samld_sp_login_resp [840]:
+**** Assertion Dump ****
+<Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_c15918b0-00bc-4dfe-
+b551-9bde813a2300" IssueInstant="2024-09-25T19:44:57.941Z" Version="2.0"><Issuer>https://sts.windows.net/a33e9b66-a6ef-43bf-9702-7cb
+4301d0a16/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w
+3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c159
+18b0-00bc-4dfe-b551-9bde813a2300"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transfo
+rm Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha25
+6"/><DigestValue>KQ3sEbLNSXdkib1tuokY9m4J9DHOuLIbmbGxTh0X4Mk=</DigestValue></Reference></SignedInfo><SignatureValue>LhJeK8AaJD59OzH5
+BZE/bBO++p3s5Mz/+ty8NhoZdHB671v9AULmylPzcM7UKBgzRtnpKK3mJA6wNq1YDf0zHpIbJhpmYbLeDXtUaNh5lpfsi8YVeCTMmPH8n28beJK88/b72J9zvGV+n2f/FGNn
+y3XaqSd8AOg4Y78DqC5RuW3LI2YL6ap5owljjckYdng927rR117J7LaRaxg0m6P7mXSMxeH76BIN8yLVwekjNjlSkZpuju9m9ORula+xYPwx4Jt6cpwRKhOLuVXuAKYxCoMR
+CPAQstboCWodLOBkG25npZ/hDHVWePCf44oZ0sXaPIk0yp/FIBjeq7UmfxZ6pg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwI
+BAgIQU5sfPxlMTZ5CjA27+gq80jANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA5MTc
+wMTU1MTlaFw0yNzA5MTcwMTU1MjRaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8
+AMIIBCgKCAQEAzzV08kq2iPyyz/I8RogOXgPHFgPEfzBY8HxusnmMahmr8rfLLwM1qyxRMvrSvX0MPyohISgxGxWApkgw6XX5lbgyjCgt1pK5FUqSMsysX/KAfp3YEJ+dU4s
+yiA7L1n0FNp+7c51N2ttvHd6S+TbkLQjvckQYAyQHOvv07CLBpjtZmRq8UVL871QvlrbVc9o9GunrTC9mLm7Fd+hT19oMVZwux0tRj7I+VAIISrvBAeq1qk+vhSAH9TAmakj
+axkBmgtaxJfA9YvZF2Yr+CYfYHe6EQG0C4vd1XuNRjJTCmN4yB28J+v52O8Zjn105/TuKuPO0MoJtq1oIR7tsfOOdZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBtNtctO4h
++bh9Iepa0dxJPd5maDJvcu8/sp2Y982//9OmAkpvSVownXHyq7l2JgFavJdTUtsYo/INc3y/Zoim2RHGoolPgov7OHvUqdKQ2aQPKBhjacnDnn3aWWKP8QDU7t4lLN63JGsl
+zRR+nUWU9zC+JA9yV2EPCMYV0cMhw6pKN8FBLFGY2yqEPt1xgUKarYZfCXWrHWkI1xelx6RLkqBA/77ILvsbJ+Oc4AQvS475Lqo29Chu72zPQppMgFEOAR0MZv/3pXGzOeCD
+bWTau4QRljDMIXil9B6KNk9+OaMA4VG5wju8aOKYy35tSrQrR7FWxfU4+GQLGy06EVut+</X509Certificate></X509Data></KeyInfo></Signature><Subject><Na
+meID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">mpaphitis@saxllp.com</NameID><SubjectConfirmation Method="urn:o
+asis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmatio2024-09-25 15:44:58 [3092] __fnbamd_register_new_ha_events-Binded HA admin sock
+et 7
+2024-09-25 15:44:58 [3155] fsm_initialize-Sent ACCT-ON
+2024-09-25 15:44:58 [1122] fnbamd_cfg_init-
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'ACCVRAIZ1', subject '/CN=ACCVRAIZ1/OU=PKIACCV/O=ACCV/C=ES', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'AC_RAIZ_FNMT-RCM', subject '/C=ES/O=FNMT-RCM/OU=AC RAIZ FNMT-RCM', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS', subject '/C=ES/O=FNMT-RCM/OU=Ceres/organi
+zationIdentifier=VATES-Q2826004J/CN=AC RAIZ FNMT-RCM SERVIDORES SEGUROS', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'ANF_Secure_Server_Root_CA', subject '/serialNumber=G63287510/C=ES/O=ANF Autorid
+ad de Certificacion/OU=ANF CA Raiz/CN=ANF Secure Server Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Actalis_Authentication_Root_CA', subject '/C=IT/L=Milan/O=Actalis S.p.A.\/03358
+520967/CN=Actalis Authentication Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'AffirmTrust_Commercial', subject '/C=US/O=AffirmTrust/CN=AffirmTrust Commercial
+', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'AffirmTrust_Networking', subject '/C=US/O=AffirmTrust/CN=AffirmTrust Networking
+', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'AffirmTrust_Premium', subject '/C=US/O=AffirmTrust/CN=AffirmTrust Premium', vfi
+d -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'AffirmTrust_Premium_ECC', subject '/C=US/O=AffirmTrust/CN=AffirmTrust Premium E
+CC', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Amazon_Root_CA_1', subject '/C=US/O=Amazon/CN=Amazon Root CA 1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Amazon_Root_CA_2', subject '/C=US/O=Amazon/CN=Amazon Root CA 2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Amazon_Root_CA_3', subject '/C=US/O=Amazon/CN=Amazon Root CA 3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Amazon_Root_CA_4', subject '/C=US/O=Amazon/CN=Amazon Root CA 4', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Atos_TrustedRoot_2011', subject '/CN=Atos TrustedRoot 2011/O=Atos/C=DE', vfid -
+1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Atos_TrustedRoot_Root_CA_ECC_TLS_2021', subject '/CN=Atos TrustedRoot Root CA E
+CC TLS 2021/O=Atos/C=DE', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Atos_TrustedRoot_Root_CA_RSA_TLS_2021', subject '/CN=Atos TrustedRoot Root CA R
+SA TLS 2021/O=Atos/C=DE', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_-_V1', subject '/C=ES
+/CN=Autoridad de Certificacion Firmaprofesional CIF A62634068', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'BJCA_Global_Root_CA1', subject '/C=CN/O=BEIJING CERTIFICATE AUTHORITY/CN=BJCA G
+lobal Root CA1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'BJCA_Global_Root_CA2', subject '/C=CN/O=BEIJING CERTIFICATE AUTHORITY/CN=BJCA G
+lobal Root CA2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Baltimore_CyberTrust_Root', subject '/C=IE/O=Baltimore/OU=CyberTrust/CN=Baltimo
+re CyberTrust Root', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Buypass_Class_2_Root_CA', subject '/C=NO/O=Buypass AS-983163327/CN=Buypass Clas
+s 2 Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Buypass_Class_3_Root_CA', subject '/C=NO/O=Buypass AS-983163327/CN=Buypass Clas
+s 3 Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'CA_Cert_1', subject '/C=US/ST=Arizona/L=Scottsdale/O=GoDaddy.com, Inc./OU=http:
+\/\/certs.godaddy.com\/repository\//CN=Go Daddy Secure Certificate Authority - G2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'CA_Disig_Root_R2', subject '/C=SK/L=Bratislava/O=Disig a.s./CN=CA Disig Root R2
+', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'CFCA_EV_ROOT', subject '/C=CN/O=China Financial Certification Authority/CN=CFCA
+ EV ROOT', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'COMODO_Certification_Authority', subject '/C=GB/ST=Greater Manchester/L=Salford
+/O=COMODO CA Limited/CN=COMODO Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'COMODO_ECC_Certification_Authority', subject '/C=GB/ST=Greater Manchester/L=Sal
+ford/O=COMODO CA Limited/CN=COMODO ECC Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'COMODO_RSA_Certification_Authority', subject '/C=GB/ST=Greater Manchester/L=Sal
+ford/O=COMODO CA Limited/CN=COMODO RSA Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certainly_Root_E1', subject '/C=US/O=Certainly/CN=Certainly Root E1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certainly_Root_R1', subject '/C=US/O=Certainly/CN=Certainly Root R1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certigna', subject '/C=FR/O=Dhimyotis/CN=Certigna', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certigna_Root_CA', subject '/C=FR/O=Dhimyotis/OU=0002 48146308100036/CN=Certign
+a Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certum_EC-384_CA', subject '/C=PL/O=Asseco Data Systems S.A./OU=Certum Certific
+ation Authority/CN=Certum EC-384 CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certum_Trusted_Network_CA', subject '/C=PL/O=Unizeto Technologies S.A./OU=Certu
+m Certification Authority/CN=Certum Trusted Network CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certum_Trusted_Network_CA_2', subject '/C=PL/O=Unizeto Technologies S.A./OU=Cer
+tum Certification Authority/CN=Certum Trusted Network CA 2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Certum_Trusted_Root_CA', subject '/C=PL/O=Asseco Data Systems S.A./OU=Certum Ce
+rtification Authority/CN=Certum Trusted Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'CommScope_Public_Trust_ECC_Root-01', subject '/C=US/O=CommScope/CN=CommScope Pu
+blic Trust ECC Root-01', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'CommScope_Public_Trust_ECC_Root-02', subject '/C=US/O=CommScope/CN=CommScope Pu
+blic Trust ECC Root-02', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'CommScope_Public_Trust_RSA_Root-01', subject '/C=US/O=CommScope/CN=CommScope Pu
+blic Trust RSA Root-01', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'CommScope_Public_Trust_RSA_Root-02', subject '/C=US/O=CommScope/CN=CommScope Pu
+blic Trust RSA Root-02', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Comodo_AAA_Services_root', subject '/C=GB/ST=Greater Manchester/L=Salford/O=Com
+odo CA Limited/CN=AAA Certificate Services', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'D-TRUST_BR_Root_CA_1_2020', subject '/C=DE/O=D-Trust GmbH/CN=D-TRUST BR Root CA
+ 1 2020', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'D-TRUST_EV_Root_CA_1_2020', subject '/C=DE/O=D-Trust GmbH/CN=D-TRUST EV Root CA
+ 1 2020', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'D-TRUST_Root_Class_3_CA_2_2009', subject '/C=DE/O=D-Trust GmbH/CN=D-TRUST Root
+Class 3 CA 2 2009', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'D-TRUST_Root_Class_3_CA_2_EV_2009', subject '/C=DE/O=D-Trust GmbH/CN=D-TRUST Ro
+ot Class 3 CA 2 EV 2009', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_Assured_ID_Root_CA', subject '/C=US/O=DigiCert Inc/OU=www.digicert.com
+/CN=DigiCert Assured ID Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_Assured_ID_Root_G2', subject '/C=US/O=DigiCert Inc/OU=www.digicert.com
+/CN=DigiCert Assured ID Root G2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_Assured_ID_Root_G3', subject '/C=US/O=DigiCert Inc/OU=www.digicert.com
+/CN=DigiCert Assured ID Root G3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_Global_Root_CA', subject '/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=
+DigiCert Global Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_Global_Root_G2', subject '/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=
+DigiCert Global Root G2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_Global_Root_G3', subject '/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=
+DigiCert Global Root G3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_High_Assurance_EV_Root_CA', subject '/C=US/O=DigiCert Inc/OU=www.digic
+ert.com/CN=DigiCert High Assurance EV Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_TLS_ECC_P384_Root_G5', subject '/C=US/O=DigiCert, Inc./CN=DigiCert TLS
+ ECC P384 Root G5', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_TLS_RSA4096_Root_G5', subject '/C=US/O=DigiCert, Inc./CN=DigiCert TLS
+RSA4096 Root G5', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'DigiCert_Trusted_Root_G4', subject '/C=US/O=DigiCert Inc/OU=www.digicert.com/CN
+=DigiCert Trusted Root G4', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Entrust.net_Premium_2048_Secure_Server_CA', subject '/O=Entrust.net/OU=www.entr
+ust.net\/CPS_2048 incorp. by ref. (limits liab.)/OU=(c) 1999 Entrust.net Limited/CN=Entrust.net Certification Authority (2048)', vfi
+d -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Entrust_Root_Certification_Authority', subject '/C=US/O=Entrust, Inc./OU=www.en
+trust.net\/CPS is incorporated by reference/OU=(c) 2006 Entrust, Inc./CN=Entrust Root Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Entrust_Root_Certification_Authority_-_EC1', subject '/C=US/O=Entrust, Inc./OU=
+See www.entrust.net\/legal-terms/OU=(c) 2012 Entrust, Inc. - for authorized use only/CN=Entrust Root Certification Authority - EC1',
+ vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Entrust_Root_Certification_Authority_-_G2', subject '/C=US/O=Entrust, Inc./OU=S
+ee www.entrust.net\/legal-terms/OU=(c) 2009 Entrust, Inc. - for authorized use only/CN=Entrust Root Certification Authority - G2', v
+fid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Entrust_Root_Certification_Authority_-_G4', subject '/C=US/O=Entrust, Inc./OU=S
+ee www.entrust.net\/legal-terms/OU=(c) 2015 Entrust, Inc. - for authorized use only/CN=Entrust Root Certification Authority - G4', v
+fid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'FIRMAPROFESIONAL_CA_ROOT-A_WEB', subject '/C=ES/O=Firmaprofesional SA/organizat
+ionIdentifier=VATES-A62634068/CN=FIRMAPROFESIONAL CA ROOT-A WEB', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Fortinet_CA', subject '/C=US/ST=California/L=Sunnyvale/O=Fortinet/OU=Certificat
+e Authority/CN=fortinet-ca2/emailAddress=support@fortinet.com', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Fortinet_CA_Backup', subject '/C=US/ST=California/L=Sunnyvale/O=Fortinet/OU=Cer
+tificate Authority/CN=support/emailAddress=support@fortinet.com', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Fortinet_Sub_CA', subject '/C=US/ST=California/L=Sunnyvale/O=Fortinet/OU=Certif
+icate Authority/CN=fortinet-subca2001/emailAddress=support@fortinet.com', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Fortinet_Wifi_CA', subject '/C=US/O=DigiCert Inc/CN=DigiCert TLS RSA SHA256 202
+0 CA1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GDCA_TrustAUTH_R5_ROOT', subject '/C=CN/O=GUANG DONG CERTIFICATE AUTHORITY CO.,
+LTD./CN=GDCA TrustAUTH R5 ROOT', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GTS_Root_R1_-_V1', subject '/C=US/O=Google Trust Services LLC/CN=GTS Root R1',
+vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GTS_Root_R2_-_V1', subject '/C=US/O=Google Trust Services LLC/CN=GTS Root R2',
+vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GTS_Root_R3_-_V1', subject '/C=US/O=Google Trust Services LLC/CN=GTS Root R3',
+vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GTS_Root_R4_-_V1', subject '/C=US/O=Google Trust Services LLC/CN=GTS Root R4',
+vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GlobalSign_ECC_Root_CA_-_R4_-_V1', subject '/OU=GlobalSign ECC Root CA - R4/O=G
+lobalSign/CN=GlobalSign', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GlobalSign_ECC_Root_CA_-_R5', subject '/OU=GlobalSign ECC Root CA - R5/O=Global
+Sign/CN=GlobalSign', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GlobalSign_Root_CA', subject '/C=BE/O=GlobalSign nv-sa/OU=Root CA/CN=GlobalSign
+ Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GlobalSign_Root_CA_-_R3', subject '/OU=GlobalSign Root CA - R3/O=GlobalSign/CN=
+GlobalSign', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GlobalSign_Root_CA_-_R6', subject '/OU=GlobalSign Root CA - R6/O=GlobalSign/CN=
+GlobalSign', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GlobalSign_Root_E46', subject '/C=BE/O=GlobalSign nv-sa/CN=GlobalSign Root E46'
+, vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'GlobalSign_Root_R46', subject '/C=BE/O=GlobalSign nv-sa/CN=GlobalSign Root R46'
+, vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Go_Daddy_Class_2_CA', subject '/C=US/O=The Go Daddy Group, Inc./OU=Go Daddy Cla
+ss 2 Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Go_Daddy_Root_Certificate_Authority_-_G2', subject '/C=US/ST=Arizona/L=Scottsda
+le/O=GoDaddy.com, Inc./CN=Go Daddy Root Certificate Authority - G2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'HARICA_TLS_ECC_Root_CA_2021', subject '/C=GR/O=Hellenic Academic and Research I
+nstitutions CA/CN=HARICA TLS ECC Root CA 2021', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'HARICA_TLS_RSA_Root_CA_2021', subject '/C=GR/O=Hellenic Academic and Research I
+nstitutions CA/CN=HARICA TLS RSA Root CA 2021', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015', subject '/C=GR/L=
+Athens/O=Hellenic Academic and Research Institutions Cert. Authority/CN=Hellenic Academic and Research Institutions ECC RootCA 2015'
+, vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Hellenic_Academic_and_Research_Institutions_RootCA_2015', subject '/C=GR/L=Athe
+ns/O=Hellenic Academic and Research Institutions Cert. Authority/CN=Hellenic Academic and Research Institutions RootCA 2015', vfid -
+1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'HiPKI_Root_CA_-_G1', subject '/C=TW/O=Chunghwa Telecom Co., Ltd./CN=HiPKI Root
+CA - G1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Hongkong_Post_Root_CA_3', subject '/C=HK/ST=Hong Kong/L=Hong Kong/O=Hongkong Po
+st/CN=Hongkong Post Root CA 3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'ISRG_Root_X1', subject '/C=US/O=Internet Security Research Group/CN=ISRG Root X
+1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'ISRG_Root_X2', subject '/C=US/O=Internet Security Research Group/CN=ISRG Root X
+2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'IdenTrust_Commercial_Root_CA_1', subject '/C=US/O=IdenTrust/CN=IdenTrust Commer
+cial Root CA 1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'IdenTrust_Public_Sector_Root_CA_1', subject '/C=US/O=IdenTrust/CN=IdenTrust Pub
+lic Sector Root CA 1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Izenpe.com', subject '/C=ES/O=IZENPE S.A./CN=Izenpe.com', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Microsec_e-Szigno_Root_CA_2009', subject '/C=HU/L=Budapest/O=Microsec Ltd./CN=M
+icrosec e-Szigno Root CA 2009/emailAddress=info@e-szigno.hu', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Microsoft_ECC_Root_Certificate_Authority_2017', subject '/C=US/O=Microsoft Corp
+oration/CN=Microsoft ECC Root Certificate Authority 2017', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Microsoft_RSA_Root_Certificate_Authority_2017', subject '/C=US/O=Microsoft Corp
+oration/CN=Microsoft RSA Root Certificate Authority 2017', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'NAVER_Global_Root_Certification_Authority', subject '/C=KR/O=NAVER BUSINESS PLA
+TFORM Corp./CN=NAVER Global Root Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'NetLock_Arany_Class_Gold_Főtanúsítvány', subject '/C=HU/L=Budapest/O=NetLock Kf
+t./OU=Tan\xC3\xBAs\xC3\xADtv\xC3\xA1nykiad\xC3\xB3k (Certification Services)/CN=NetLock Arany (Class Gold) F\xC5\x91tan\xC3\xBAs\xC3
+\xADtv\xC3\xA1ny', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'OISTE_WISeKey_Global_Root_GB_CA', subject '/C=CH/O=WISeKey/OU=OISTE Foundation
+Endorsed/CN=OISTE WISeKey Global Root GB CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'OISTE_WISeKey_Global_Root_GC_CA', subject '/C=CH/O=WISeKey/OU=OISTE Foundation
+Endorsed/CN=OISTE WISeKey Global Root GC CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'QuoVadis_Root_CA_1_G3', subject '/C=BM/O=QuoVadis Limited/CN=QuoVadis Root CA 1
+ G3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'QuoVadis_Root_CA_2', subject '/C=BM/O=QuoVadis Limited/CN=QuoVadis Root CA 2',
+vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'QuoVadis_Root_CA_2_G3', subject '/C=BM/O=QuoVadis Limited/CN=QuoVadis Root CA 2
+ G3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'QuoVadis_Root_CA_3', subject '/C=BM/O=QuoVadis Limited/CN=QuoVadis Root CA 3',
+vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'QuoVadis_Root_CA_3_G3', subject '/C=BM/O=QuoVadis Limited/CN=QuoVadis Root CA 3
+ G3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SSL.com_EV_Root_Certification_Authority_ECC', subject '/C=US/ST=Texas/L=Houston
+/O=SSL Corporation/CN=SSL.com EV Root Certification Authority ECC', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SSL.com_EV_Root_Certification_Authority_RSA_R2', subject '/C=US/ST=Texas/L=Hous
+ton/O=SSL Corporation/CN=SSL.com EV Root Certification Authority RSA R2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SSL.com_Root_Certification_Authority_ECC', subject '/C=US/ST=Texas/L=Houston/O=
+SSL Corporation/CN=SSL.com Root Certification Authority ECC', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SSL.com_Root_Certification_Authority_RSA', subject '/C=US/ST=Texas/L=Houston/O=
+SSL Corporation/CN=SSL.com Root Certification Authority RSA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SSL.com_TLS_ECC_Root_CA_2022', subject '/C=US/O=SSL Corporation/CN=SSL.com TLS
+ECC Root CA 2022', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SSL.com_TLS_RSA_Root_CA_2022', subject '/C=US/O=SSL Corporation/CN=SSL.com TLS
+RSA Root CA 2022', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SZAFIR_ROOT_CA2', subject '/C=PL/O=Krajowa Izba Rozliczeniowa S.A./CN=SZAFIR RO
+OT CA2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Sectigo_Public_Server_Authentication_Root_E46', subject '/C=GB/O=Sectigo Limite
+d/CN=Sectigo Public Server Authentication Root E46', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Sectigo_Public_Server_Authentication_Root_R46', subject '/C=GB/O=Sectigo Limite
+d/CN=Sectigo Public Server Authentication Root R46', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SecureSign_RootCA11', subject '/C=JP/O=Japan Certification Services, Inc./CN=Se
+cureSign RootCA11', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SecureTrust_CA', subject '/C=US/O=SecureTrust Corporation/CN=SecureTrust CA', v
+fid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Secure_Global_CA', subject '/C=US/O=SecureTrust Corporation/CN=Secure Global CA
+', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Security_Communication_ECC_RootCA1', subject '/C=JP/O=SECOM Trust Systems CO.,L
+TD./CN=Security Communication ECC RootCA1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Security_Communication_RootCA2', subject '/C=JP/O=SECOM Trust Systems CO.,LTD./
+OU=Security Communication RootCA2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Security_Communication_RootCA3', subject '/C=JP/O=SECOM Trust Systems CO.,LTD./
+CN=Security Communication RootCA3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Starfield_Class_2_CA', subject '/C=US/O=Starfield Technologies, Inc./OU=Starfie
+ld Class 2 Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Starfield_Root_Certificate_Authority_-_G2', subject '/C=US/ST=Arizona/L=Scottsd
+ale/O=Starfield Technologies, Inc./CN=Starfield Root Certificate Authority - G2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Starfield_Services_Root_Certificate_Authority_-_G2', subject '/C=US/ST=Arizona/
+L=Scottsdale/O=Starfield Technologies, Inc./CN=Starfield Services Root Certificate Authority - G2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SwissSign_Gold_CA_-_G2', subject '/C=CH/O=SwissSign AG/CN=SwissSign Gold CA - G
+2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'SwissSign_Silver_CA_-_G2', subject '/C=CH/O=SwissSign AG/CN=SwissSign Silver CA
+ - G2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'T-TeleSec_GlobalRoot_Class_2', subject '/C=DE/O=T-Systems Enterprise Services G
+mbH/OU=T-Systems Trust Center/CN=T-TeleSec GlobalRoot Class 2', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'T-TeleSec_GlobalRoot_Class_3', subject '/C=DE/O=T-Systems Enterprise Services G
+mbH/OU=T-Systems Trust Center/CN=T-TeleSec GlobalRoot Class 3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1', subject '/C=TR/L=Gebze - Kocael
+i/O=Turkiye Bilimsel ve Teknolojik Arastirma Kurumu - TUBITAK/OU=Kamu Sertifikasyon Merkezi - Kamu SM/CN=TUBITAK Kamu SM SSL Kok Ser
+tifikasi - Surum 1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'TWCA_Global_Root_CA', subject '/C=TW/O=TAIWAN-CA/OU=Root CA/CN=TWCA Global Root
+ CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'TWCA_Root_Certification_Authority', subject '/C=TW/O=TAIWAN-CA/OU=Root CA/CN=TW
+CA Root Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Telekom_Security_TLS_ECC_Root_2020', subject '/C=DE/O=Deutsche Telekom Security
+ GmbH/CN=Telekom Security TLS ECC Root 2020', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Telekom_Security_TLS_RSA_Root_2023', subject '/C=DE/O=Deutsche Telekom Security
+ GmbH/CN=Telekom Security TLS RSA Root 2023', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'TeliaSonera_Root_CA_v1', subject '/O=TeliaSonera/CN=TeliaSonera Root CA v1', vf
+id -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Telia_Root_CA_v2', subject '/C=FI/O=Telia Finland Oyj/CN=Telia Root CA v2', vfi
+d -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'TrustAsia_Global_Root_CA_G3', subject '/C=CN/O=TrustAsia Technologies, Inc./CN=
+TrustAsia Global Root CA G3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'TrustAsia_Global_Root_CA_G4', subject '/C=CN/O=TrustAsia Technologies, Inc./CN=
+TrustAsia Global Root CA G4', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Trustwave_Global_Certification_Authority', subject '/C=US/ST=Illinois/L=Chicago
+/O=Trustwave Holdings, Inc./CN=Trustwave Global Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Trustwave_Global_ECC_P256_Certification_Authority', subject '/C=US/ST=Illinois/
+L=Chicago/O=Trustwave Holdings, Inc./CN=Trustwave Global ECC P256 Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'Trustwave_Global_ECC_P384_Certification_Authority', subject '/C=US/ST=Illinois/
+L=Chicago/O=Trustwave Holdings, Inc./CN=Trustwave Global ECC P384 Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'TunTrust_Root_CA', subject '/C=TN/O=Agence Nationale de Certification Electroni
+que/CN=TunTrust Root CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'UCA_Extended_Validation_Root', subject '/C=CN/O=UniTrust/CN=UCA Extended Valida
+tion Root', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'UCA_Global_G2_Root', subject '/C=CN/O=UniTrust/CN=UCA Global G2 Root', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'USERTrust_ECC_Certification_Authority', subject '/C=US/ST=New Jersey/L=Jersey C
+ity/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'USERTrust_RSA_Certification_Authority', subject '/C=US/ST=New Jersey/L=Jersey C
+ity/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'XRamp_Global_CA_Root', subject '/C=US/OU=www.xrampsecurity.com/O=XRamp Security
+ Services Inc/CN=XRamp Global Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'certSIGN_ROOT_CA', subject '/C=RO/O=certSIGN/OU=certSIGN ROOT CA', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'certSIGN_Root_CA_G2', subject '/C=RO/O=CERTSIGN SA/OU=certSIGN ROOT CA G2', vfi
+d -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'e-Szigno_Root_CA_2017', subject '/C=HU/L=Budapest/O=Microsec Ltd./organizationI
+dentifier=VATHU-23584497/CN=e-Szigno Root CA 2017', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'ePKI_Root_Certification_Authority', subject '/C=TW/O=Chunghwa Telecom Co., Ltd.
+/OU=ePKI Root Certification Authority', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'emSign_ECC_Root_CA_-_C3', subject '/C=US/OU=emSign PKI/O=eMudhra Inc/CN=emSign
+ECC Root CA - C3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'emSign_ECC_Root_CA_-_G3', subject '/C=IN/OU=emSign PKI/O=eMudhra Technologies L
+imited/CN=emSign ECC Root CA - G3', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'emSign_Root_CA_-_C1', subject '/C=US/OU=emSign PKI/O=eMudhra Inc/CN=emSign Root
+ CA - C1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'emSign_Root_CA_-_G1', subject '/C=IN/OU=emSign PKI/O=eMudhra Technologies Limit
+ed/CN=emSign Root CA - G1', vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'vTrus_ECC_Root_CA', subject '/C=CN/O=iTrusChina Co.,Ltd./CN=vTrus ECC Root CA',
+ vfid -1
+2024-09-25 15:44:58 [468] fnbamd_add_ca_hash-new ca 'vTrus_Root_CA', subject '/C=CN/O=iTrusChina Co.,Ltd./CN=vTrus Root CA', vfid -1
+2024-09-25 15:44:58 [63] fnbamd_local_crl_hash_init-
+2024-09-25 15:44:58 [912] fnbamd_cfg_vdom_add-VDOM 'root' is created.
+2024-09-25 15:44:58 [1395] fnbamd_peer_user_create-Peer users are created, vfid=0, total=0
+2024-09-25 15:44:58 [962] fnbamd_cfg_update_vpn_setting-VDOM 'root'
+2024-09-25 15:44:58 [2412] handle_req-Rcvd 4 req
+2024-09-25 15:44:58 [1075] fnbamd_cfg_get_radius_acct_list-
+2024-09-25 15:44:58 [119] fnbamd_admin_user_create-Admin users are created
+2024-09-25 15:44:58 [818] __rad_auth_ctx_insert_all_usergroup-
+2024-09-25 15:44:58 [408] fnbamd_user_rad_create-vfid=0
+2024-09-25 15:44:58 [347] fnbamd_rad_new-EAP_PROXY
+2024-09-25 15:44:58 [140] __init_rad_setting-Preping auth servers.
+2024-09-25 15:44:58 [123] __rad_server_push-Inserted rad server '127.0.0.1'.
+2024-09-25 15:44:58 [357] fnbamd_rad_new-EAP_PROXY created
+2024-09-25 15:44:58 [430] fnbamd_user_rad_create-Radius servers are created, vfid=0, total=1
+2024-09-25 15:44:58 [1091] fnbamd_cfg_get_radius_acct_list-Total rad servers to try: 0
+2024-09-25 15:44:58 [361] fnbamd_acct_start-No radius acct to notify
+2024-09-25 15:44:58 [1422] create_acct_session-Nothing to do for acct type 4
+2024-09-25 15:44:58 [1350] fnbamd_rads_destroy-
+2024-09-25 15:44:58 [1336] destroy_acct_session-Acct session destroyed
+2024-09-25 15:44:58 [2423] handle_req-Error creating acct session 4
+2024-09-25 15:45:00.990339 ike V=root:0: comes 98.109.204.57:500->172.17.4.4:500,ifindex=4,vrf=0,len=448....
+2024-09-25 15:45:00.994670 ike V=root:0: IKEv2 exchange=SA_INIT id=9635d66d40f1187e/0000000000000000 len=448
+2024-09-25 15:45:00.998654 ike 0: in 9635D66D40F1187E00000000000000002120220800000000000001C0220000540200002801010004030000080100000
+2030000080200000203000008030000020000000804000005000000280201000403000008010000020300000802000005030000080300000C0000000804000005280
+000C800050000B9971F5D06C0799A04E1EAD872CB6F31A9CF951133E896A08543804B9AE3A7743BA986AA586167F53FD09CB92224A7EB6D7E2F123DCC238C5123DA0
+AE4DB6A91ED3A3D3322F944EFAC5DB6A8E856C1EE5B61583E83D31CBCED0B81611E0720AE63BDEAAFF67F17CBAF292E575D18D3978B89C291F0CD18EB027032C4E2D
+94C06F5F89DF9ACF4F0056CDE35A33FF5195877950B39EBB5615C8885D83F4334F10AD3864B564167B94005E58836F1263D33A99ADD1ECA1B7BBBF54A43AE713EC37
+A2B000014AFE619C90EA09C863E62A39BF41A25B32B0000144C53427B6D465D1B337BB755A37A7FEF2B000014B4F01CA951E9DA8D0BAFBBD34AD3044E29000014C1D
+C4350476B98A429B91781914CA43E2900001C0000400481D9700ADA26068A46929D805675E6C372C7C9E40000001C00004005EAFB002609F6B43BA11F29211DA434D
+F0A4550B4
+2024-09-25 15:45:01.024527 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: responder received SA_INIT msg
+2024-09-25 15:45:01.027924 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: VID forticlient connect license 4C53427B6D465D1B33
+7BB755A37A7FEF
+2024-09-25 15:45:01.032246 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: VID Fortinet Endpoint Control B4F01CA951E9DA8D0BAF
+BBD34AD3044E
+2024-09-25 15:45:01.036397 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: VID Forticlient EAP Extension C1DC4350476B98A429B9
+1781914CA43E
+2024-09-25 15:45:01.040742 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: received notify type NAT_DETECTION_SOURCE_IP
+2024-09-25 15:45:01.044446 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: received notify type NAT_DETECTION_DESTINATION_IP
+2024-09-25 15:45:01.048428 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: incoming proposal:
+2024-09-25 15:45:01.051699 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: proposal id = 1:
+2024-09-25 15:45:01.054729 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:   protocol = IKEv2:
+2024-09-25 15:45:01.057792 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:      encapsulation = IKEv2/none
+2024-09-25 15:45:01.061033 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=ENCR, val=DES_CBC
+2024-09-25 15:45:01.064290 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=INTEGR, val=AUTH_HMAC_SHA_96
+2024-09-25 15:45:01.067929 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=PRF, val=PRF_HMAC_SHA
+2024-09-25 15:45:01.071502 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=DH_GROUP, val=MODP1536.
+2024-09-25 15:45:01.075311 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: proposal id = 2:
+2024-09-25 15:45:01.078537 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:   protocol = IKEv2:
+2024-09-25 15:45:01.081396 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:      encapsulation = IKEv2/none
+2024-09-25 15:45:01.084738 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=ENCR, val=DES_CBC
+2024-09-25 15:45:01.088211 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=INTEGR, val=AUTH_HMAC_SHA2_256_128
+2024-09-25 15:45:01.091960 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=PRF, val=PRF_HMAC_SHA2_256
+2024-09-25 15:45:01.095609 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=DH_GROUP, val=MODP1536.
+2024-09-25 15:45:01.099471 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: matched proposal id 1
+2024-09-25 15:45:01.102669 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: proposal id = 1:
+2024-09-25 15:45:01.105661 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:   protocol = IKEv2:
+2024-09-25 15:45:01.108810 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:      encapsulation = IKEv2/none
+2024-09-25 15:45:01.112276 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=ENCR, val=DES_CBC
+2024-09-25 15:45:01.115502 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=INTEGR, val=AUTH_HMAC_SHA_96
+2024-09-25 15:45:01.120370 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=PRF, val=PRF_HMAC_SHA
+2024-09-25 15:45:01.121302 ike V=root:0:9635d66d40f1187e/0000000000000000:277821:         type=DH_GROUP, val=MODP1536.
+2024-09-25 15:45:01.121727 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: lifetime=86400
+2024-09-25 15:45:01.122163 ike V=root:0:9635d66d40f1187e/0000000000000000:277821: SA proposal chosen, matched gateway saml-vpn
+2024-09-25 15:45:01.122662 ike V=root:0:saml-vpn:saml-vpn: created connection: 0x559bd2676bf0 4 172.17.4.4->98.109.204.57:500.
+2024-09-25 15:45:01.123076 ike V=root:0:saml-vpn:277821: processing notify type NAT_DETECTION_SOURCE_IP
+2024-09-25 15:45:01.123529 ike V=root:0:saml-vpn:277821: processing NAT-D payload
+2024-09-25 15:45:01.124737 ike V=root:0:saml-vpn:277821: NAT detected: PEER
+2024-09-25 15:45:01.125152 ike V=root:0:saml-vpn:277821: process NAT-D
+2024-09-25 15:45:01.125549 ike V=root:0:saml-vpn:277821: processing notify type NAT_DETECTION_DESTINATION_IP
+2024-09-25 15:45:01.125980 ike V=root:0:saml-vpn:277821: processing NAT-D payload
+2024-09-25 15:45:01.126508 ike V=root:0:saml-vpn:277821: NAT detected: ME PEER
+2024-09-25 15:45:01.126521 ike V=root:0:saml-vpn:277821: process NAT-D
+2024-09-25 15:45:01.126925 ike V=root:0:saml-vpn:277821: FEC vendor ID received FEC but IP not set
+2024-09-25 15:45:01.126947 ike 0:saml-vpn:277821: FCT EAP 2FA extension vendor ID received
+2024-09-25 15:45:01.127387 ike V=root:0:saml-vpn:277821: responder preparing SA_INIT msg
+2024-09-25 15:45:01.127784 ike V=root:0:saml-vpn:277821: generate DH public value request queued
+2024-09-25 15:45:01.128353 ike V=root:0:saml-vpn:277821: responder preparing SA_INIT msg
+2024-09-25 15:45:01.128604 ike V=root:0:saml-vpn:277821: compute DH shared secret request queued
+2024-09-25 15:45:01.129302 ike V=root:0:saml-vpn:277821: responder preparing SA_INIT msg
+2024-09-25 15:45:01.130278 ike V=root:0:saml-vpn:277821: create NAT-D hash local 172.17.4.4/500 remote 98.109.204.57/500
+2024-09-25 15:45:01.130677 ike 0:saml-vpn:277821: out 9635D66D40F1187EE0257893665818FE21202220000000000000015C2200002C00000028010100
+040300000801000002030000080200000203000008030000020000000804000005280000C800050000B21205FCEE5056D6EA0993D5DE53E2EE3CCC322472CC826A19
+19B736187101E4DCE1DDD3D106CDAA62951D382953FE1DDBCC8DC2FF063ACCC7558384BA80F73654BB9FB65342142F07C6B0785311C5FDF1670DC95EEEE73B8D2442
+AC61489E84823BF88B3EF9026D5A9A70F1DCA8E6E5DA1258BF2FE6D4AA5C53F4E96547995332629BBEFF8D52FC75E373C727D0C43AA32819CAB83F4AADA19B718C54
+E3BD0EB823BF07EF1606032CCB7DB185D82D63D0CAC1B7EAE616AE36360A75E9451BCF29000014A954DBC441E3076A13071D9EF24A18D52900001C000040045753CA
+D11628484E0E19500F9EF8AEFCCF6FDD6C0000001C000040058E5FAB3CBA7991BA3E57314AF7CCD2342A4E028D
+2024-09-25 15:45:01.131092 ike V=root:0:saml-vpn:277821: sent IKE msg (SA_INIT_RESPONSE): 172.17.4.4:500->98.109.204.57:500, len=348
+, vrf=0, id=9635d66d40f1187e/e0257893665818fe, oif=4
+2024-09-25 15:45:01.131593 ike 0:saml-vpn:277821: IKE SA 9635d66d40f1187e/e0257893665818fe SK_ei 8:9CDC6A6649F22541
+2024-09-25 15:45:01.131980 ike 0:saml-vpn:277821: IKE SA 9635d66d40f1187e/e0257893665818fe SK_er 8:4D90801C35B379F3
+2024-09-25 15:45:01.132390 ike 0:saml-vpn:277821: IKE SA 9635d66d40f1187e/e0257893665818fe SK_ai 20:8FF301E61DFD9E34252DA82F022F0697
+457FA647
+2024-09-25 15:45:01.132793 ike 0:saml-vpn:277821: IKE SA 9635d66d40f1187e/e0257893665818fe SK_ar 20:78F564D80AE7E17DDFA6568AE8EFF37C
+EACA3640
+2024-09-25 15:45:01.151080 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=600....
+2024-09-25 15:45:01.151955 ike V=root:0: IKEv2 exchange=AUTH id=9635d66d40f1187e/e0257893665818fe:00000001 len=596
+2024-09-25 15:45:01.152330 ike 0: in 9635D66D40F1187EE0257893665818FE2E202308000000010000025423000238AE00F49A75F832580A079C7192765CA
+E57E690EE57EC77B2132AEEBED383CB1288A83D5DE19B4EAC9BB4108C8A59C17E838B5FF9D17DC3AC55DA8AA870237AA9E6FF66E0AE521160F3B87B3EF96BD57EC14
+91F529F0FE0578F2AA8D6EC0FF3E778DAD9B8EF7416BADCE11E0584D98F3AB9B22AB4E6ABFD5F81E81D3D04CCCA27A4E3DA57027E0AE9B224C50DE2E246ED545C77E
+8E40F6C225B474A791E588DF485443443ADA0C6B73388BB61B3A34D088AC9F44ABF3D9E040D611006D1E93C8B3A5FA3208D8859D3E78689BE387051BFE5A3DD94183
+4AF8F3A854569C13AE65BC55C8FE3ED49A86C6E526E92DFD82C8CEE1E190265525DD9DE7B6EBD52BFA0D45E45C672FE241DD1268BD16D31C9B9D94D8F595C57F89C1
+9E83F784089C27AF3F6131EE15A41D883C525AF75FD39F4410EE7DDCF8090E0F65F100818BE79894067AA166C38C364EF6EDF72E4B959C8AFF95089C6BAFF54F1106
+3D463A40BAA7A77959D79F800D292CFC584BBC779BAEC9B18D22AD3A93F64DE3329551224C9EE8C03236C3035BE24773AD1312517EDDE4A6C7C42123F15212CD0A9C
+BD1E26CB64EE6B8ECB2DD5DE16BCC7CD209217C30411C6A774F39F3447E686FAFA1E41CACE543070F54A9CAE78051F7C04C069F59515AC23CABB4F55C2DA8A4D5167
+5A57DCAA2376C74EA528FBA7F4B00EE555B95887A02CED36B6893B4ED70031C406094D78EDB561C0F0010D792AE180D525484D208B15E585C942132BE96C14FBB8D0
+1885FE8728D2A3AAA159DD2325F9A11A16A14DBFA
+2024-09-25 15:45:01.152788 ike 0:saml-vpn:277821: dec 9635D66D40F1187EE0257893665818FE2E2023080000000100000239230000042900000C010000
+00C0A8042129000008000040002F0001290000F1005645523D310A4643545645523D372E342E302E313635380A5549443D3744374644303536353137383441343642
+4230464437304434303541463733310A49503D3139322E3136382E342E33330A4D41433D30342D30652D33632D33352D33622D32623B31382D34372D33642D38342D
+38302D64633B31382D34372D33642D38342D38302D64623B31612D34372D33642D38342D38302D64623B39612D34372D33642D38342D38302D64623B0A484F53543D
+4445415448535441520A555345523D37443746443035363531373834413436424230464437304434303541463733310A4F535645523D4D6963726F736F6674205769
+6E646F7773203131202C2036342D62697420286275696C64203232363331290A5245475F5354415455533D300A002100005801000000000700104643543830303239
+353437333037393100010000000200000003000000040000000D00000019000000080000000F0000000A0000000B000070010000540A0000540B0000700000000019
+00002C0000540200002801030403BAF006FC0300000C0100000C800E0080030000080300000C00000008050000000000002802030403BAF006FC0300000C0100000C
+800E0100030000080300000C00000008050000002D00001801000000070000100000FFFF00000000FFFFFFFF0000001801000000070000100000FFFF00000000FFFF
+FFFF
+2024-09-25 15:45:01.153181 ike V=root:0:saml-vpn:277821: responder received AUTH msg
+2024-09-25 15:45:01.153194 ike V=root:0:saml-vpn:277821: processing notify type INITIAL_CONTACT
+2024-09-25 15:45:01.153241 ike V=root:0:saml-vpn:277821: processing notify type FORTICLIENT_CONNECT
+2024-09-25 15:45:01.153261 ike V=root:0:saml-vpn:277821: received FCT data len = 289, data = 'VER=1
+FCTVER=7.4.0.1658
+UID=7D7FD05651784A46BB0FD70D405AF731
+IP=192.168.4.33
+MAC=04-0e-3c-35-3b-2b;18-47-3d-84-80-dc;18-47-3d-84-80-db;1a-47-3d-84-80-db;9a-47-3d-84-80-db;
+HOST=DEATHSTAR
+USER=7D7FD05651784A46BB0FD70D405AF731
+OSVER=Microsoft Windows 11 , 64-bit (build 22631)
+REG_STATUS=0
+'
+2024-09-25 15:45:01.153275 ike V=root:0:saml-vpn:277821: received FCT-UID : 7D7FD05651784A46BB0FD70D405AF731
+2024-09-25 15:45:01.153285 ike V=root:0:saml-vpn:277821: received EMS SN :
+2024-09-25 15:45:01.153294 ike V=root:0:saml-vpn:277821: received EMS tenant ID :
+2024-09-25 15:45:01.153304 ike V=root:0:saml-vpn:277821: peer identifier IPV4_ADDR 192.168.4.33
+2024-09-25 15:45:01.153319 ike V=root:0:saml-vpn:277821: re-validate gw ID
+2024-09-25 15:45:01.153341 ike V=root:0:saml-vpn:277821: gw validation OK
+2024-09-25 15:45:01.153351 ike V=root:0:saml-vpn:277821: responder preparing EAP identity request
+2024-09-25 15:45:01.153382 ike 0:saml-vpn:277821: enc 2700000C01000000449A0CDA3000001C020000001CC27F174436B792F9FC2234205E7E04AFDB1C
+A500000009018400050106050403020106
+2024-09-25 15:45:01.153405 ike V=root:0:saml-vpn:277821: remote port change 500 -> 4500
+2024-09-25 15:45:01.153418 ike 0:saml-vpn:277821: out 9635D66D40F1187EE0257893665818FE2E202320000000010000006C24000050FF643562391846
+0D661AF7278CF5ECF6100D6DE121105069B1E29FB83076BC550C01836CDF04629D0E16274C73AE083F68023591BC03F146E5E36EEB71BF4B5622D186FD3FC2C6310B
+BC79C3
+2024-09-25 15:45:01.153449 ike V=root:0:saml-vpn:277821: sent IKE msg (AUTH_RESPONSE): 172.17.4.4:4500->98.109.204.57:4500, len=108,
+ vrf=0, id=9635d66d40f1187e/e0257893665818fe:00000001, oif=4
+2024-09-25 15:45:01.167939 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=104....
+2024-09-25 15:45:01.167988 ike V=root:0: IKEv2 exchange=AUTH id=9635d66d40f1187e/e0257893665818fe:00000002 len=100
+2024-09-25 15:45:01.168003 ike 0: in 9635D66D40F1187EE0257893665818FE2E202308000000020000006430000048EC01EBDE43E172D54E62A6EA470CB65
+550F1C49A3223E2F75A5CEE543363D5793020BC186075F66269AC288AA6BF39393921CB490CE156191161539ECBDA22A1D950AAE1
+2024-09-25 15:45:01.168061 ike 0:saml-vpn:277821: dec 9635D66D40F1187EE0257893665818FE2E20230800000002000000493000000400000029028400
+25013744374644303536353137383441343642423046443730443430354146373331
+2024-09-25 15:45:01.168074 ike V=root:0:saml-vpn:277821: responder received EAP msg
+2024-09-25 15:45:01.168086 ike V=root:0:saml-vpn:277821: send EAP message to FNBAM
+2024-09-25 15:45:01.168098 ike V=root:0:saml-vpn:277821: initiating EAP authentication
+2024-09-25 15:45:01.168111 ike V=root:0:saml-vpn: EAP user "7D7FD05651784A46BB0FD70D405AF731"
+2024-09-25 15:45:01.168223 ike V=root:0:saml-vpn: EAP 9852881223178 pending
+2024-09-25 15:45:01 [1739] handle_req-Rcvd auth req 9852881223178 for 7D7FD05651784A46BB0FD70D405AF731 in ike-saml opt=00000000 prot
+=7 svc=9
+2024-09-25 15:45:01 [333] __compose_group_list_from_req-Group 'ike-saml', type 1
+2024-09-25 15:45:01 [508] create_auth_session-Session created for req id 9852881223178
+2024-09-25 15:45:01 [590] fnbamd_cfg_get_tac_plus_list-
+2024-09-25 15:45:01 [545] __fnbamd_cfg_get_tac_plus_list_by_group-
+2024-09-25 15:45:01 [557] __fnbamd_cfg_get_tac_plus_list_by_group-Group 'ike-saml'
+2024-09-25 15:45:01 [606] fnbamd_cfg_get_tac_plus_list-Total tac+ servers to try: 0
+2024-09-25 15:45:01 [840] fnbamd_cfg_get_ldap_list-
+2024-09-25 15:45:01 [756] __fnbamd_cfg_get_ldap_list_by_group-
+2024-09-25 15:45:01 [856] fnbamd_cfg_get_ldap_list-Total LDAP servers to try: 0
+2024-09-25 15:45:01 [416] ldap_start-Didn't find ldap servers
+2024-09-25 15:45:01 [306] fnbamd_user_ldap_create-vfid=0
+2024-09-25 15:45:01 [264] fnbamd_ldap_new-Azure DC
+2024-09-25 15:45:01 [104] __init_ldap_setting-Preping LDAP servers.
+2024-09-25 15:45:01 [88] __ldap_server_push-Inserted LDAP server '192.168.0.239'.
+2024-09-25 15:45:01 [269] fnbamd_ldap_new-Azure DC created
+2024-09-25 15:45:01 [264] fnbamd_ldap_new-Azure DC 2
+2024-09-25 15:45:01 [104] __init_ldap_setting-Preping LDAP servers.
+2024-09-25 15:45:01 [88] __ldap_server_push-Inserted LDAP server '192.168.0.9'.
+2024-09-25 15:45:01 [269] fnbamd_ldap_new-Azure DC 2 created
+2024-09-25 15:45:01 [322] fnbamd_user_ldap_create-LDAP servers are created, vfid=0, total=2
+2024-09-25 15:45:01 [316] radius_start-eap_local=0
+2024-09-25 15:45:01 [896] fnbamd_cfg_get_radius_list-
+2024-09-25 15:45:01 [844] __fnbamd_cfg_get_radius_list_by_group-
+2024-09-25 15:45:01 [858] __fnbamd_cfg_get_radius_list_by_group-Group 'ike-saml'
+2024-09-25 15:45:01 [818] __rad_auth_ctx_insert_all_usergroup-
+2024-09-25 15:45:01 [918] fnbamd_cfg_get_radius_list-Total rad servers to try: 0
+2024-09-25 15:45:01 [439] fnbamd_cfg_get_pop3_list-
+2024-09-25 15:45:01 [417] __fnbamd_cfg_get_pop3_list_by_group-
+2024-09-25 15:45:01 [422] __fnbamd_cfg_get_pop3_list_by_group-Group 'ike-saml'
+2024-09-25 15:45:01 [178] fnbamd_user_pop3_create-vfid=0
+2024-09-25 15:45:01 [195] fnbamd_user_pop3_create-POP3 servers are created, vfid=0, total=0
+2024-09-25 15:45:01 [449] fnbamd_cfg_get_pop3_list-Total pop3 servers to try: 0
+2024-09-25 15:45:01 [889] fnbamd_auth_start-No remote authentication started
+2024-09-25 15:45:01 [421] start_remote_auth-Error starting remote authentication
+2024-09-25 15:45:01 [1878] handle_req-Two-factor token is not needed
+2024-09-25 15:45:01 [1882] handle_req-r=5
+2024-09-25 15:45:01 [1912] handle_req-Error starting session
+2024-09-25 15:45:01 [239] fnbamd_comm_send_result-Sending result 5 (nid 0) for req 9852881223178, len=2592
+2024-09-25 15:45:01.271576 ike V=root:0:saml-vpn:277821 EAP 9852881223178 result FNBAM_ERROR
+2024-09-25 15:45:01.271605 ike V=root:0:saml-vpn: EAP failed for user "7D7FD05651784A46BB0FD70D405AF731"
+2024-09-25 15:45:01.271658 ike V=root:0:saml-vpn: EAP response is empty
+2024-09-25 15:45:01.271670 ike V=root:0:saml-vpn: connection expiring due to EAP failure
+2024-09-25 15:45:01.271679 ike V=root:0:saml-vpn: going to be deleted
+2024-09-25 15:45:01 [600] destroy_auth_session-delete session 9852881223178
+2024-09-25 15:45:01 [1350] fnbamd_rads_destroy-
+2024-09-25 15:45:01 [1861] fnbamd_ldaps_destroy-
+2024-09-25 15:45:01 [1030] fnbamd_tacs_destroy-
+2024-09-25 15:45:01 [890] fnbamd_pop3s_destroy-
+2024-09-25 15:45:01 [1070] fnbamd_ext_idps_destroy-
+2024-09-25 15:45:01 [2348] handle_req-Rcvd abort req for 9852881223178
+2024-09-25 15:45:01 [2363] handle_req-Can't abort, no active req 9852881223178
+2024-09-25 15:45:04.174384 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=104....
+2024-09-25 15:45:04.175630 ike V=root:0: IKEv2 exchange=AUTH id=9635d66d40f1187e/e0257893665818fe:00000002 len=100
+2024-09-25 15:45:04.176045 ike 0: in 9635D66D40F1187EE0257893665818FE2E202308000000020000006430000048EC01EBDE43E172D54E62A6EA470CB65
+550F1C49A3223E2F75A5CEE543363D5793020BC186075F66269AC288AA6BF39393921CB490CE156191161539ECBDA22A1D950AAE1
+2024-09-25 15:45:04.176465 ike V=root:0: invalid IKE request SPI 9635d66d40f1187e/e0257893665818fe:00000002
+2024-09-25 15:45:07.188792 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=104....
+2024-09-25 15:45:07.189899 ike V=root:0: IKEv2 exchange=AUTH id=9635d66d40f1187e/e0257893665818fe:00000002 len=100
+2024-09-25 15:45:07.190317 ike 0: in 9635D66D40F1187EE0257893665818FE2E202308000000020000006430000048EC01EBDE43E172D54E62A6EA470CB65
+550F1C49A3223E2F75A5CEE543363D5793020BC186075F66269AC288AA6BF39393921CB490CE156191161539ECBDA22A1D950AAE1
+2024-09-25 15:45:07.190747 ike V=root:0: invalid IKE request SPI 9635d66d40f1187e/e0257893665818fe:00000002
+2024-09-25 15:45:08 [1437] peer_user_cn_dns_refresh-
+2024-09-25 15:45:08 [3023] __peer_user_cn_dns_refresh-Refresh in 1800 secs
+2024-09-25 15:45:10.210873 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=104....
+2024-09-25 15:45:10.213082 ike V=root:0: IKEv2 exchange=AUTH id=9635d66d40f1187e/e0257893665818fe:00000002 len=100
+2024-09-25 15:45:10.213525 ike 0: in 9635D66D40F1187EE0257893665818FE2E202308000000020000006430000048EC01EBDE43E172D54E62A6EA470CB65
+550F1C49A3223E2F75A5CEE543363D5793020BC186075F66269AC288AA6BF39393921CB490CE156191161539ECBDA22A1D950AAE1
+2024-09-25 15:45:10.213982 ike V=root:0: invalid IKE request SPI 9635d66d40f1187e/e0257893665818fe:00000002
+2024-09-25 15:45:13.215115 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=104....
+2024-09-25 15:45:13.216244 ike V=root:0: IKEv2 exchange=AUTH id=9635d66d40f1187e/e0257893665818fe:00000002 len=100
+2024-09-25 15:45:13.216700 ike 0: in 9635D66D40F1187EE0257893665818FE2E202308000000020000006430000048EC01EBDE43E172D54E62A6EA470CB65
+550F1C49A3223E2F75A5CEE543363D5793020BC186075F66269AC288AA6BF39393921CB490CE156191161539ECBDA22A1D950AAE1
+2024-09-25 15:45:13.217165 ike V=root:0: invalid IKE request SPI 9635d66d40f1187e/e0257893665818fe:00000002
+2024-09-25 15:45:16.228656 ike V=root:0: comes 98.109.204.57:4500->172.17.4.4:4500,ifindex=4,vrf=0,len=104....
+2024-09-25 15:45:16.232164 ike V=root:0: IKEv2 exchange=AUTH id=9635d66d40f1187e/e0257893665818fe:00000002 len=100
+2024-09-25 15:45:16.236497 ike 0: in 9635D66D40F1187EE0257893665818FE2E202308000000020000006430000048EC01EBDE43E172D54E62A6EA470CB65
+550F1C49A3223E2F75A5CEE543363D5793020BC186075F66269AC288AA6BF39393921CB490CE156191161539ECBDA22A1D950AAE1
+2024-09-25 15:45:16.243254 ike V=root:0: invalid IKE request SPI 9635d66d40f1187e/e0257893665818fe:00000002
+di de di
+
+AZFW01-FGT #
+AZFW01-FGT #
+AZFW01-FGT #
+AZFW01-FGT #
+AZFW01-FGT #

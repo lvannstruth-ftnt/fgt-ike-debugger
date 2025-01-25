@@ -1,0 +1,236 @@
+ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=108....
+ike V=root:0: IKEv1 exchange=Mode config id=d888eba8ce9099d3/7dd96ef849a2b2ff:fdbcd32b len=108 vrf=0
+ike 0: in D888EBA8CE9099D37DD96EF849A2B2FF08100601FDBCD32B0000006C0C79218393F277534DA0CFCF227D056C319EEC738F87A38D9C36D862D4A8888393DDC4
+1B108892EC434A8A5ACA6CD5BBB6CE199703BD5B18093316BCD4E1BBB0CE1648B7D2B3FEE8123BC894EEDAADC1
+ike 0:ikev1-radius_0:63232: dec D888EBA8CE9099D37DD96EF849A2B2FF08100601FDBCD32B0000006C0E000024E2957B76F02D78C30FF4C158E3ED7DDE54F79089
+8A63700E6866BACE8A5D33C0000000220200206AC0880000408900077669746F616161408A000766677421313233DF94AECDDDFC98A09A09
+ike V=root:0:ikev1-radius_0:63232: received XAUTH_USER_NAME 'vitoaaa' length 7
+ike V=root:0:ikev1-radius_0:63232: received XAUTH_USER_PASSWORD length 7
+ike V=root:0:ikev1-radius_0: XAUTH user "vitoaaa"
+ike V=root:0:ikev1-radius_0: XAUTH 700221448263 pending
+ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=108....
+ike V=root:0: IKEv1 exchange=Informational id=d888eba8ce9099d3/7dd96ef849a2b2ff:b47470b3 len=108 vrf=0
+ike 0: in D888EBA8CE9099D37DD96EF849A2B2FF08100501B47470B30000006CD6FA65B89528E4C871CFDDA5966BC86E26C1A475DD23D9D290F24000134F8B91C87D97
+CB3B9AE948A2F258109C61C4D24B6D4D5E5463D364D876EB3E3EBA0C4DD26B62065616AAEBE1522C8B4EB66357
+[1757] handle_req-Rcvd auth req 700221448263 for vitoaaa in labDC-radius-ITAdmins opt=00000000 prot=4 svc=2
+ike 0:ikev1-radius_0:63232: dec D888EBA8CE9099D37DD96EF849A2B2FF08100501B47470B30000006C0B000024DFE701534A17FEBCAB0DCA2E838217C19EDBDB96
+A6B863C05A9E4C9D6675DB67000000200000000101108D28D888EBA8CE9099D37DD96EF849A2B2FF00000000CBA0FBD1F3CDD892FC82CA0B
+[333] __compose_group_list_from_req-Group 'labDC-radius-ITAdmins', type 1
+ike V=root:0:ikev1-radius_0:63232: notify msg received: R-U-THERE
+[760] fnbamd_saml_auth_cache_lookup-Authneticating 'vitoaaa'.
+ike 0:ikev1-radius_0:63232: enc D888EBA8CE9099D37DD96EF849A2B2FF081005010E58F212000000600B000024FB6E8F62EBFE3DDEF117952A36A7B0C2CE5FB1A1
+9762365666D3628AFC768A82000000200000000101108D29D888EBA8CE9099D37DD96EF849A2B2FF00000000
+ike 0:ikev1-radius_0:63232: out D888EBA8CE9099D37DD96EF849A2B2FF081005010E58F2120000006C52313D4CACC17CE4A2B3247BA655FF4BC4D55F1FA0DB0DBD
+439352CD2EFA90AD2B63F9AE9D7807175CDDECEF53851AD1E758E8C0E27C1422701036BE1D05DB4E73E75EEDEA3FDDD880798C53D7D677E7
+ike V=root:0:ikev1-radius_0:63232: sent IKE msg (R-U-THERE-ACK): 10.128.202.142:500->10.21.4.181:500, len=108, vrf=0, id=d888eba8ce9099d
+3/7dd96ef849a2b2ff:0e58f212
+[508] create_auth_session-Session created for req id 700221448263
+[357] auth_local-started for vitoaaa
+[429] auth_local-No conclusion, FNBAM_UNKNOWN
+[590] fnbamd_cfg_get_tac_plus_list-
+[545] __fnbamd_cfg_get_tac_plus_list_by_group-
+[557] __fnbamd_cfg_get_tac_plus_list_by_group-Group 'labDC-radius-ITAdmins'
+[606] fnbamd_cfg_get_tac_plus_list-Total tac+ servers to try: 0
+[840] fnbamd_cfg_get_ldap_list-
+[756] __fnbamd_cfg_get_ldap_list_by_group-
+[856] fnbamd_cfg_get_ldap_list-Total LDAP servers to try: 0
+[416] ldap_start-Didn't find ldap servers
+[316] radius_start-eap_local=0
+[896] fnbamd_cfg_get_radius_list-
+[844] __fnbamd_cfg_get_radius_list_by_group-
+[858] __fnbamd_cfg_get_radius_list_by_group-Group 'labDC-radius-ITAdmins'
+[456] fnbamd_rad_get-vfid=0, name='labDC-radius'
+[805] __rad_auth_ctx_insert-Loaded RADIUS server 'labDC-radius'
+[863] __fnbamd_cfg_get_radius_list_by_group-Loaded RADIUS server 'labDC-radius' for usergroup 'labDC-radius-ITAdmins' (6)
+[818] __rad_auth_ctx_insert_all_usergroup-
+[918] fnbamd_cfg_get_radius_list-Total rad servers to try: 1
+[936] fnbamd_rad_get_auth_server-
+[1172] fnbamd_rad_auth_ctx_init-User ha_relay? 0.
+[295] fnbamd_radius_get_next_auth_prot-Next auth prot MS-CHAPv2
+[1107] __auth_ctx_svr_push-Added addr 10.21.1.100:1812 from rad 'labDC-radius'
+[930] __fnbamd_rad_get_next_addr-Next available address of rad 'labDC-radius': 10.21.1.100:1812.
+[1125] __auth_ctx_start-Connection starts labDC-radius:10.21.1.100, addr 10.21.1.100:1812 proto: UDP
+[280] __rad_udp_open-Opened radius socket 11, sa_family 2
+[945] __rad_conn_start-Socket 11 is created for rad 'labDC-radius'.
+[807] __rad_add_job_timer-
+[439] fnbamd_cfg_get_pop3_list-
+[417] __fnbamd_cfg_get_pop3_list_by_group-
+[422] __fnbamd_cfg_get_pop3_list_by_group-Group 'labDC-radius-ITAdmins'
+[449] fnbamd_cfg_get_pop3_list-Total pop3 servers to try: 0
+[434] start_remote_auth-Total 1 server(s) to try
+[1900] handle_req-r=4
+[828] __rad_rxtx-fd 11, state 1(Auth)
+[830] __rad_rxtx-Stop rad conn timer.
+[837] __rad_rxtx-
+[605] fnbamd_rad_make_access_request-
+[328] __create_access_request-Compose RADIUS request
+[588] __create_access_request-Created RADIUS Access-Request. Len: 209.
+[1171] fnbamd_socket_update_interface-vfid is 0, intf mode is 0, intf name is , server address is 10.21.1.100:1812, source address is nu
+ll, protocol number is 17, oif id is 0
+[353] __rad_udp_send-oif=0, intf_sel.mode=0, intf_sel.name=
+[868] __rad_rxtx-Sent radius req to server 'labDC-radius': fd=11, IP=10.21.1.100(10.21.1.100:1812) code=1 id=102 len=209
+[877] __rad_rxtx-Start rad conn timer.
+[828] __rad_rxtx-fd 11, state 1(Auth)
+[830] __rad_rxtx-Stop rad conn timer.
+[880] __rad_rxtx-
+[431] __rad_udp_recv-Recved 60 bytes. Buf sz 8192
+[1125] __rad_chk_resp_authenticator-The Message Authenticator validation is mandatory now
+[1148] __rad_chk_resp_authenticator-ret=0
+[1216] fnbamd_rad_validate_pkt-RADIUS resp code 3
+[624] fnbamd_rad_extract_chap_error-CHAP err: E=691 R=0 V=3
+[1028] __rad_error-Ret 1, st = 1.
+[295] fnbamd_radius_get_next_auth_prot-Next auth prot CHAP
+[828] __rad_rxtx-fd 11, state 1(Auth)
+[830] __rad_rxtx-Stop rad conn timer.
+[837] __rad_rxtx-
+[605] fnbamd_rad_make_access_request-
+[328] __create_access_request-Compose RADIUS request
+[588] __create_access_request-Created RADIUS Access-Request. Len: 146.
+[1171] fnbamd_socket_update_interface-vfid is 0, intf mode is 0, intf name is , server address is 10.21.1.100:1812, source address is nu
+ll, protocol number is 17, oif id is 0
+[353] __rad_udp_send-oif=0, intf_sel.mode=0, intf_sel.name=
+[868] __rad_rxtx-Sent radius req to server 'labDC-radius': fd=11, IP=10.21.1.100(10.21.1.100:1812) code=1 id=103 len=146
+[877] __rad_rxtx-Start rad conn timer.
+[828] __rad_rxtx-fd 11, state 1(Auth)
+[830] __rad_rxtx-Stop rad conn timer.
+[880] __rad_rxtx-
+[431] __rad_udp_recv-Recved 38 bytes. Buf sz 8192
+[1125] __rad_chk_resp_authenticator-The Message Authenticator validation is mandatory now
+[1148] __rad_chk_resp_authenticator-ret=0
+[1216] fnbamd_rad_validate_pkt-RADIUS resp code 3
+[1028] __rad_error-Ret 1, st = 1.
+[295] fnbamd_radius_get_next_auth_prot-Next auth prot PAP
+[828] __rad_rxtx-fd 11, state 1(Auth)
+[830] __rad_rxtx-Stop rad conn timer.
+[837] __rad_rxtx-
+[605] fnbamd_rad_make_access_request-
+[328] __create_access_request-Compose RADIUS request
+[588] __create_access_request-Created RADIUS Access-Request. Len: 145.
+[1171] fnbamd_socket_update_interface-vfid is 0, intf mode is 0, intf name is , server address is 10.21.1.100:1812, source address is nu
+ll, protocol number is 17, oif id is 0
+[353] __rad_udp_send-oif=0, intf_sel.mode=0, intf_sel.name=
+[868] __rad_rxtx-Sent radius req to server 'labDC-radius': fd=11, IP=10.21.1.100(10.21.1.100:1812) code=1 id=104 len=145
+[877] __rad_rxtx-Start rad conn timer.
+[828] __rad_rxtx-fd 11, state 1(Auth)
+[830] __rad_rxtx-Stop rad conn timer.
+[880] __rad_rxtx-
+[431] __rad_udp_recv-Recved 38 bytes. Buf sz 8192
+[1125] __rad_chk_resp_authenticator-The Message Authenticator validation is mandatory now
+[1148] __rad_chk_resp_authenticator-ret=0
+[1216] fnbamd_rad_validate_pkt-RADIUS resp code 3
+[1028] __rad_error-Ret 1, st = 1.
+[295] fnbamd_radius_get_next_auth_prot-Next auth prot ??
+[1077] __rad_error-
+[306] __rad_udp_close-closed.
+[964] __rad_conn_stop-Stop rad conn timer.
+[1286] fnbamd_rad_process-Result from radius svr 'labDC-radius' is 1, req 700221448263
+[1485] fnbamd_rad_process-Challenged: 0, FTK_Challenge: 0, CHG_PWD: 0, Invaid_Digest: 0, State_Len: 0
+[887] update_auth_token_session-mfa_mandatory is off, only success results may require 2fa
+[239] fnbamd_comm_send_result-Sending result 1 (nid 0) for req 700221448263, len=6616
+ike V=root:0:ikev1-radius_0:63232: XAUTH 700221448263 result FNBAM_DENIED
+ike V=root:0:ikev1-radius_0: XAUTH failed for user "vitoaaa", retry(1).
+ike V=root:0:ikev1-radius_0:63232: sending XAUTH request
+ike 0:ikev1-radius_0:63232: enc D888EBA8CE9099D37DD96EF849A2B2FF0810060193495138000000540E0000240BD972F5A4A4926FF0BE7D284CD5858CFA1270AD
+A366F9398AA08F847FC486EA0000001401009E04C088000040890000408A0000
+ike 0:ikev1-radius_0:63232: out D888EBA8CE9099D37DD96EF849A2B2FF08100601934951380000005CE95F2C526496449E722B2BBBF08EE5AF53207BFB7F658D16
+F20D35C78408208F0A784A5A6C2F042BD1351AEEBF027642CDFD548F97BD31BE98D90B10326223AF
+ike V=root:0:ikev1-radius_0:63232: sent IKE msg (cfg_send): 10.128.202.142:500->10.21.4.181:500, len=92, vrf=0, id=d888eba8ce9099d3/7dd9
+6ef849a2b2ff:93495138
+[600] destroy_auth_session-delete session 700221448263
+[1347] fnbamd_rads_destroy-
+[516] fnbamd_rad_auth_ctx_free-Freeing 'labDC-radius' ctx
+[1219] fnbamd_rad_auth_ctx_uninit-
+[969] __rad_stop-
+[964] __rad_conn_stop-Stop rad conn timer.
+ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=108....
+ike V=root:0: IKEv1 exchange=Mode config id=d888eba8ce9099d3/7dd96ef849a2b2ff:93495138 len=108 vrf=0
+ike 0: in D888EBA8CE9099D37DD96EF849A2B2FF08100601934951380000006C591136EAF6A78120430B3C52B72111EFA495CDA8F6E9789B544FB64C9C3884B61E2EA8
+7AC49A78E24838113A0AFDE5C986342F66443B610B4FF8D7FFC26F52CA012B2E9A626C97DF1CBC73937F3FC0EF
+ike 0:ikev1-radius_0:63232: dec D888EBA8CE9099D37DD96EF849A2B2FF08100601934951380000006C0E000024E84AA0E5741EE0B16AACB2D04FA171F6B9067180
+D5F73657ADB7D4E51AF873580000002202009E04C0880000408900077669746F616161408A000766677421313233CDEFE1F6D5E3AD8BF609
+ike V=root:0:ikev1-radius_0:63232: received XAUTH_USER_NAME 'vitoaaa' length 7
+ike V=root:0:ikev1-radius_0:63232: received XAUTH_USER_PASSWORD length 7
+ike V=root:0:ikev1-radius_0: XAUTH user "vitoaaa"
+ike V=root:0:ikev1-radius_0: XAUTH 700221448264 pending
+ike V=root:0: comes 10.21.4.181:500->10.128.202.142:500,ifindex=6,vrf=0,len=108....
+ike V=root:0: IKEv1 exchange=Informational id=d888eba8ce9099d3/7dd96ef849a2b2ff:ca27f033 len=108 vrf=0
+ike 0: in D888EBA8CE9099D37DD96EF849A2B2FF08100501CA27F0330000006C6DA091432E4A03F1451DC266ED8913FB90744275CC5698B881905157090D06FD16E1CD
+44AF6FAC01A07D7EB8BF3F1495405B1114E2FB89CCE4904159BD8B4EC3035B1E4157A180780B40EF7265CB166E
+ike 0:ikev1-radius_0:63232: dec D888EBA8CE9099D37DD96EF849A2B2FF08100501CA27F0330000006C0C000024201F63F57E2A1138CFDB2E4BE3C82306939C3C5B
+8D0D5C578C5320D26CD63A310000001C0000000101100001D888EBA8CE9099D37DD96EF849A2B2FFA2DBADC3B6EECBE6DEB0C0E8D7EADF0F
+ike V=root:0:ikev1-radius_0:63232: recv ISAKMP SA delete d888eba8ce9099d3/7dd96ef849a2b2ff
+ike V=root:0:ikev1-radius_0: going to be deleted
+ike V=root:0:ikev1-radius_0: mode-cfg release 192.168.59.10/0.0.0.0
+ike V=root:0:ikev1-radius_0: delete dynamic
+[784] __rad_del_job_timer-
+[364] fnbamd_rad_free-Freeing labDC-radius, ref:2
+[41] __rad_server_free-Freeing 10.21.1.100, ref:2
+[519] fnbamd_rad_auth_ctx_free-
+[1350] fnbamd_rads_destroy-
+[1865] fnbamd_ldaps_destroy-
+[1042] fnbamd_tacs_destroy-
+[902] fnbamd_pop3s_destroy-
+[1070] fnbamd_ext_idps_destroy-
+[1757] handle_req-Rcvd auth req 700221448264 for vitoaaa in labDC-radius-ITAdmins opt=00000000 prot=4 svc=2
+[333] __compose_group_list_from_req-Group 'labDC-radius-ITAdmins', type 1
+[760] fnbamd_saml_auth_cache_lookup-Authneticating 'vitoaaa'.
+[508] create_auth_session-Session created for req id 700221448264
+[357] auth_local-started for vitoaaa
+[429] auth_local-No conclusion, FNBAM_UNKNOWN
+[590] fnbamd_cfg_get_tac_plus_list-
+[545] __fnbamd_cfg_get_tac_plus_list_by_group-
+[557] __fnbamd_cfg_get_tac_plus_list_by_group-Group 'labDC-radius-ITAdmins'
+[606] fnbamd_cfg_get_tac_plus_list-Total tac+ servers to try: 0
+[840] fnbamd_cfg_get_ldap_list-
+[756] __fnbamd_cfg_get_ldap_list_by_group-
+[856] fnbamd_cfg_get_ldap_list-Total LDAP servers to try: 0
+[416] ldap_start-Didn't find ldap servers
+[316] radius_start-eap_local=0
+[896] fnbamd_cfg_get_radius_list-
+[844] __fnbamd_cfg_get_radius_list_by_group-
+[858] __fnbamd_cfg_get_radius_list_by_group-Group 'labDC-radius-ITAdmins'
+[456] fnbamd_rad_get-vfid=0, name='labDC-radius'
+[805] __rad_auth_ctx_insert-Loaded RADIUS server 'labDC-radius'
+[863] __fnbamd_cfg_get_radius_list_by_group-Loaded RADIUS server 'labDC-radius' for usergroup 'labDC-radius-ITAdmins' (6)
+[818] __rad_auth_ctx_insert_all_usergroup-
+[918] fnbamd_cfg_get_radius_list-Total rad servers to try: 1
+[936] fnbamd_rad_get_auth_server-
+[1172] fnbamd_rad_auth_ctx_init-User ha_relay? 0.
+[295] fnbamd_radius_get_next_auth_prot-Next auth prot MS-CHAPv2
+[1107] __auth_ctx_svr_push-Added addr 10.21.1.100:1812 from rad 'labDC-radius'
+[930] __fnbamd_rad_get_next_addr-Next available address of rad 'labDC-radius': 10.21.1.100:1812.
+[1125] __auth_ctx_start-Connection starts labDC-radius:10.21.1.100, addr 10.21.1.100:1812 proto: UDP
+[280] __rad_udp_open-Opened radius socket 11, sa_family 2
+[945] __rad_conn_start-Socket 11 is created for rad 'labDC-radius'.
+[807] __rad_add_job_timer-
+[439] fnbamd_cfg_get_pop3_list-
+[417] __fnbamd_cfg_get_pop3_list_by_group-
+[422] __fnbamd_cfg_get_pop3_list_by_group-Group 'labDC-radius-ITAdmins'
+[449] fnbamd_cfg_get_pop3_list-Total pop3 servers to try: 0
+[434] start_remote_auth-Total 1 server(s) to try
+[1900] handle_req-r=4
+[2366] handle_req-Rcvd abort req for 700221448264
+[600] destroy_auth_session-delete session 700221448264
+[1339] fnbamd_rad_stop-
+[969] __rad_stop-
+[306] __rad_udp_close-closed.
+[964] __rad_conn_stop-Stop rad conn timer.
+[784] __rad_del_job_timer-
+[1347] fnbamd_rads_destroy-
+[516] fnbamd_rad_auth_ctx_free-Freeing 'labDC-radius' ctx
+[1219] fnbamd_rad_auth_ctx_uninit-
+[969] __rad_stop-
+[964] __rad_conn_stop-Stop rad conn timer.
+[364] fnbamd_rad_free-Freeing labDC-radius, ref:2
+[41] __rad_server_free-Freeing 10.21.1.100, ref:2
+[519] fnbamd_rad_auth_ctx_free-
+[1350] fnbamd_rads_destroy-
+[1865] fnbamd_ldaps_destroy-
+[1042] fnbamd_tacs_destroy-
+[902] fnbamd_pop3s_destroy-
+[1070] fnbamd_ext_idps_destroy-
+
+FortiWiFi-61E #
+FortiWiFi-61E # di de di
+
+FortiWiFi-61E #

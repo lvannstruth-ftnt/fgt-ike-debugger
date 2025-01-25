@@ -5,7 +5,10 @@ from tabulate import tabulate
 #version 1
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_LOG_V1_radius_pswd_wrong.txt"
+file_name = "IKE_Log_cert_auth_fail.txt"
+# IKE_Log_cert_auth_fail
+# IKE_Log_cert_auth.txt
+# IKE_LOG_V1_radius_username_wrong_v2.txt
 # IKE_LOG_V1_radius_DNS_Issues.txt
 # IKE_LOG_V1_radius_not_reachable.txt
 # IKE_LOG_V1_radius_wrong_account.txt
@@ -51,6 +54,7 @@ file_name = "IKE_LOG_V1_radius_pswd_wrong.txt"
 # IKE_LOG_init_no_policy
 # IKE_LOG_V2_overlay_2_init
 # ike_fnbamd_local.txt
+# IKE_LOG_V1_radius_password_wrong_v2.txt
 
 analysis_output = []
 
@@ -406,6 +410,8 @@ def ike_parser(text):
                         if match and proceed == True:
                             if int(match.group(1)) == 10:
                                 analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] radius issue detected for wrong username or password by USER: {user} </span>')
+                            if int(match.group(1)) == 1:
+                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] radius issue detected for wrong password by USER: {user} </span>')
 
 
 #IKE v2 auth logic
@@ -482,6 +488,35 @@ def ike_parser(text):
                     count += 1
             if count >= 10:
                 analysis_output.append(f'<span style="color: red;">Known Issue detected \n Please check: https://community.fortinet.com/t5/FortiClient/Troubleshooting-Tip-Dial-up-IPsec-VPN-in-aggressive-mode-when/ta-p/189924</span>')
+
+# CERT AUTH LOGIC
+        if 'ike' in line and 'received peer identifier' in line:
+            match = re.search(r"received peer identifier (.+)", line)
+            if match:
+                peer_identifier = match.group(1)
+                analysis_output.append(f'[{str(i+1)}]<span style="color: yellow;">Cert auth detected as : {peer_identifier}</span>')
+            else:
+                analysis_output.append(f'<span style="color: yellow;">Cert auth detected at line [{str(i+1)}]</span>')
+            
+        if 'ike' in line and 'peer cert' in line:
+            match = re.search(r"subject='([^']+)', issuer='([^']+)'", line)
+            if match:
+                subject = match.group(1)
+                issuer = match.group(2)
+                analysis_output.append(f'<span style="color: yellow;">Peer cert as :</span> \nSubject: {subject} \nIssuer: {issuer}')
+        if 'ike' in line and 'peer CA cert' in line:
+            match = re.search(r"subject='([^']+)', issuer='([^']+)'", line)
+            if match:
+                subject = match.group(1)
+                issuer = match.group(2)
+                print(f"Subject: {subject}")
+                print(f"Issuer: {issuer}")
+                analysis_output.append(f'<span style="color: yellow;">Peer CA cert :</span> \nSubject: {subject} \nIssuer: {issuer}')
+        if 'ike' in line and 'signature verification succeeded' in line:
+            analysis_output.append(f'<span style="color: green;">[{str(i+1)}]Cert auth succeeded')
+        if 'ike' in line and 'certificate validation failed' in line:
+            analysis_output.append(f'<span style="color: red;">[{str(i+1)}]IKE connection down due to Cert auth fail')
+            analysis_output.append(f'<span style="color: yellow;">Please Check:\n CA signed bt valid CA or the root CA istalled in FGT \n Bad PKI user \n Re-check cert auth settings: {issuer} ')
 
 def _extract_lines(lines, start_line, end_line):
     input_string = "\n".join(lines[start_line-1:end_line])

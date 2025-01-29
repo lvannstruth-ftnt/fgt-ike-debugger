@@ -155,7 +155,7 @@ def ike_parser(text):
             ipsec_lines = lines[-10:]
             ipsec_sa_pattern = re.compile(r"IPsec SA connect .* (\d+\.\d+\.\d+\.\d+->\d+\.\d+\.\d+\.\d+:\d+)")
             ipsec_connections = [match.group(1) for line in ipsec_lines if (match := ipsec_sa_pattern.search(line))]
-            analysis_output.append(f'[{str(i+1)}]:: No Policy found for connection as: {list(set(ipsec_connections))[0]}')
+            analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: No matching Firewall policy found for the IKE negotiation: {list(set(ipsec_connections))[0]} </span>')
 
         if 'no policy configured' in line and 'ignoring request to establish IPsec SA' not in line:
             _no_policy_configured(i,comes_line_phase_1)
@@ -163,7 +163,7 @@ def ike_parser(text):
             comes_line_phase_1 = None
         
         if "gw validation failed" in line:
-            print('BINGO')
+            # print('BINGO')
             last_10_lines = []
             start_index = max(i - 10, 0) 
             last_10_lines.append(line)
@@ -267,15 +267,19 @@ def ike_parser(text):
             if comes_line_phase_1:
                 start_index_failure = comes_line_phase_1.index("comes")
                 failure_message = comes_line_phase_1[start_index_failure:]
-                for prev_line in lines[:i]:
-                    if "EAP identity request" in prev_line:
-                        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::VPN with IP Connection as:: '+failure_message+' is down due to bad PSK in EAP Request from clinet </span>')
+                proceed = True
+                for prev_line in reversed(lines[:i]):
+                    if 'rad_conn_timeout-Connction' in prev_line:
+                        proceed = False
+                        analysis_output.append(f'<span style="color: orange;">[{str(i+1)}]::VPN with IP for the IKE negotiation:: '+failure_message+' is down, most likely due to the Radius server timing out </span>')
+                    elif "EAP identity request" in prev_line and proceed==True:
+                        analysis_output.append(f'<span style="color: orange;">[{str(i+1)}]::VPN with IP for the IKE negotiation:: '+failure_message+' is down, most likely due to a Preshared key mismatch between the Fortigate and the client </span>')
 
         if "negotiation timeout, deleting" in line:
             timeout_index = i
         
         if timeout_index != -1 and abs(i - timeout_index) <= 5:
-            print('hit the old con exp')
+            # print('hit the old con exp')
             if "connection expiring due to phase1 down" in line:
                 # Search for the connection info pattern in the log
                 _phase_1_retrans_check_1(line,lines,i)
@@ -287,7 +291,7 @@ def ike_parser(text):
             for j in range(i + 1, len(lines)):
                 match = re.search(connection_pattern, lines[j])
                 if match:
-                    analysis_output.append(f'[{str(i+1)}]:: Gateway in passive mode for connection: '+match.group(1))
+                    analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: The VPN tunnel is configured to be in passive-mode: </span>'+match.group(1))
                     break
         
         # Check for rekey of phaase-2
@@ -296,7 +300,7 @@ def ike_parser(text):
             parts = line.split()
             for part in parts:
                 if "->" in part and ":" in part:
-                    analysis_output.append(f'[{str(i+1)}]:: Rekey connection found: {part}')
+                    analysis_output.append(f'<span style="color: yellow;">[{str(i+1)}]:: Rekey connection found: {part}</span>')
                     break
         # Rekey failures catch
         if 'rekey in progress' in line:
@@ -305,7 +309,7 @@ def ike_parser(text):
                 if 'RETRANSMIT_CREATE_CHILD' in lines[j]:
                     retransmit_count += 1
                 if retransmit_count >= 3:
-                    analysis_output.append(f'[{str(i+1)}]:: rekey in progress followed by 3 RETRANSMIT_CREATE_CHILD. Possible re-key failures')
+                    analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: A rekey is observed to be in progress, and, multiple RETRANSMIT_CREATE_CHILD messages observed. Possible re-key failure. </span>')
 
         
         # Check for keepalives
@@ -324,14 +328,14 @@ def ike_parser(text):
 
             # Check if it meets the condition
             if keepalive_count >= 5:
-                analysis_output.append(f'[{str(i+1)}]:: 5 consecutive keep-alives detected for connection: {part}. Check: \n-> ISP issues \n->re-key issues \n-> Check if peer is Meraki')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: 5 consecutive keep-alives transmitted for the IKE negotiation: {part}. Check:</span> \n-> ISP issues \n->re-key issues \n-> Check if peer is Meraki')
 
         # Check for network unreachable
         if "Network is unreachable" in line:
             # Use regex to extract the IP connection details
             match = re.search(r"(\d+\.\d+\.\d+\.\d+:\d+->\d+\.\d+\.\d+\.\d+:\d+)", line)
             if match:
-                analysis_output.append(f'[{str(i+1)}]:: Network Unreachable for connection: {match.group(1)} Check: \n->Next hop IP \n->Route to the peer \n->Arp of next hop')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: Network Unreachable error observed for the IKE negotiation: {match.group(1)} Check:</span> \n->Next hop IP \n->Route to the peer \n->Arp of next hop')
 
 #IKE v1 auth logic
         if 'ike' in line and 'sending XAUTH request' in line:
@@ -347,13 +351,13 @@ def ike_parser(text):
                     if match:
                         eap_id = match.group(1)
             if user and group==None  and eap_id==None:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: {user} group: Unknown   Fnbamd-ID: Unknown')
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection </span>\n    user: {user} group: Unknown   Fnbamd-ID: Unknown')
             if user and group  and eap_id:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: {user} group: {group}   Fnbamd-ID: {eap_id}')
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection </span>\n    user: {user} group: {group}   Fnbamd-ID: {eap_id}')
             if user and eap_id:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: {user} group: Unknown   Fnbamd-ID: {eap_id}')
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection </span>\n    user: {user} group: Unknown   Fnbamd-ID: {eap_id}')
             if group  and eap_id:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: Unknown group: {group}   Fnbamd-ID: {eap_id}')                            
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection </span>\n    user: Unknown group: {group}   Fnbamd-ID: {eap_id}')                            
             if eap_id:
                 rest_lines = lines[i:]
                 for k,remaining_line in enumerate(rest_lines):
@@ -364,10 +368,10 @@ def ike_parser(text):
                         if SAML == False:
                             analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED</span>')
                         if SAML == True:
-                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED with SAML.</span> <span style="color: yellow;">\n->Check Group Mismatch \n-> Check Group Attribute/Name Mismatch</span>')                            
+                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED with SAML.</span> <span style="color: yellow;">\n->Check Group Mismatch \n-> Check Group Attribute/Name Mismatch</span>')
                         last_10_lines = rest_lines[max(0, k - 9):k + 1]
                         if any("find_matched_usr_grps-Failed group matching" in l for l in last_10_lines):
-                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd failing due to possible group mismatch</span>')
+                            analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] Fnbamd failure observed due to a possible group mismatch</span>')
                     if 'fnbam_user_auth_group_match' in remaining_line and eap_id in remaining_line:
                             analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] Check the server response in the above line</span>')
                     if 'fnbamd_comm_send_result' in remaining_line and eap_id in remaining_line:
@@ -390,51 +394,46 @@ def ike_parser(text):
                             if 'XAUTH' in info and 'result' not in info:
                                 analysis_output.append(f'       [{str(i+k+1)}]{info.strip()}')
                     if eap_id in remaining_line and 'FNBAM_DENIED' in remaining_line:
-                        if SAML == False:
-                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED</span>')
-                        if SAML == True:
-                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED with SAML.</span> <span style="color: yellow;">\n->Check Group Mismatch \n-> Check Group Attribute/Name Mismatch</span>')                            
                         for prev_line in reversed(rest_lines[:k]):
                             if "ldap_next_state" in prev_line and 'ldap_next_state-State' not in prev_line:
-                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. Could be a possible reason as: {prev_line}</span>')
+                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP failure observed. Possible reason: {prev_line}</span>')
                             if "fnbamd_ldap_parse_response-Error" in prev_line:
-                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. Could be a possible reason as: {prev_line}</span>')
+                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP failure observed. Possible reason: {prev_line}</span>')
                     if eap_id in remaining_line and 'FNBAM_ERROR' in remaining_line:
                         analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] FNBAMD ERROR means possible FNBAMD Unavailaibility due to lack of servers or non_reachability or DNS issues</span>')
                         for prev_line in reversed(rest_lines[:k]):
                             if "__ldap_try_next_server-No more server to try." in prev_line:
-                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for FNBAM_error. Could be a possible reason as: {prev_line}</span>')
+                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for FNBAM_error. Possible reason: {prev_line}</span>')
                             if "fnbamd_dns_parse_resp" in prev_line and 'wrong dns format' in prev_line:
-                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. DNS for LDAP server issue detected</span>')
+                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. DNS issue for LDAP server detected</span>')
                     if eap_id in remaining_line and 'FNBAM_TIMEOUT' in remaining_line:
                         analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] FNBAM_TIMEOUT means possible FNBAMD Unavailaibility due to lack of servers or non_reachability or retries exceeded for wrong credentials</span>')
                         for prev_line in reversed(rest_lines[:k]):
                             if "__ldap_try_next_server-No more server to try." in prev_line:
-                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for FNBAM_error. Could be a possible reason as: {prev_line}</span>')
+                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for FNBAM_error. Possible reason: {prev_line}</span>')
                             if "fnbamd_cfg_ldap_update_reachability" in prev_line and 'conn_fails' in prev_line:
-                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. SERVER not reachable as in log {prev_line}</span>')
+                                analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] LDAP log found for deny. Server not reachable. Possible reason: {prev_line}</span>')
                     # RADIUS LOGIC 
                     if eap_id in remaining_line and 'fnbamd_rad_process-Result' in remaining_line:
                         proceed = True
                         match1 = re.search(r"svr\s'([^']+)'", remaining_line)
                         if match1:
                             svr = match1.group(1)  # Extracts 'EAP_PROXY'
-                            print(svr)
                             for prev_line in reversed(rest_lines[:k]):
                                 if "fnbamd_cfg_radius_update_reachability" in prev_line and 'conn_fails' in prev_line and svr in prev_line:
-                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS log found for deny. SERVER not reachable as in log {prev_line}</span>')
+                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS log found for deny. Server not reachable. Possible reason: {prev_line}</span>')
                                 if "__rad_try_next_server-No more server to try." in prev_line:
-                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS log found for FNBAM_error. Could be a possible reason as: {prev_line}</span>')
+                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS log found for FNBAM_error. Possible reason: {prev_line}</span>')
                                 if "__fnbamd_rad_dns_cb-Resolved" in prev_line and '0.0.0.0' in prev_line and svr in prev_line:
-                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS reason for deny found. DNS for RADIUS server issue detected</span>') 
+                                    analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] RADIUS reason for  deny. DNS issue for RADIUS server detected</span>') 
                                     proceed = False
                         pattern = r"Result from radius svr '.*?' is (\d+)"
                         match = re.search(pattern, remaining_line)
                         if match and proceed == True:
                             if int(match.group(1)) == 10:
-                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] radius issue detected for wrong username or password by USER: {user} </span>')
+                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Possible credential(likely:username) mismatch for Radius server, for username: {user} </span>')
                             if int(match.group(1)) == 1:
-                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] radius issue detected for wrong password by USER: {user} </span>')
+                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Possible credential(likely:password) mismatch for Radius server, for username: {user} </span>')
 
 
 #IKE v2 auth logic
@@ -451,14 +450,13 @@ def ike_parser(text):
                     if match:
                         eap_id = match.group(1)
             if user and group==None  and eap_id==None:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: {user} group: Unknown   Fnbamd-ID: Unknown')
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection \n    user: {user} group: Unknown   Fnbamd-ID: Unknown</span>')
             if user and group  and eap_id:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: {user} group: {group}   Fnbamd-ID: {eap_id}')
-            if user and eap_id:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: {user} group: Unknown   Fnbamd-ID: {eap_id}')
-            if group  and eap_id:
-                analysis_output.append(f'   The auth log anlysis for the above connection \n    user: Unknown group: {group}   Fnbamd-ID: {eap_id}')                            
-            print(user)
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection \n    user: {user} group: {group}   Fnbamd-ID: {eap_id}</span>')
+            if user and eap_id and group==None:
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection \n    user: {user} group: Unknown   Fnbamd-ID: {eap_id}</span>')
+            if group  and eap_id and user==None:
+                analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection \n    user: Unknown group: {group}   Fnbamd-ID: {eap_id}</span>')                            
             if eap_id:
                 rest_lines = lines[i:]
                 for k,remaining_line in enumerate(rest_lines):
@@ -469,10 +467,10 @@ def ike_parser(text):
                         if SAML == False:
                             analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED</span>')
                         if SAML == True:
-                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED with SAML.</span> <span style="color: yellow;">\n->Check Group Mismatch \n-> Check Group Attribute/Name Mismatch</span>')                            
+                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED with SAML.</span> <span style="color: yellow;">\n->Check Group Mismatch \n-> Check Group Attribute/Name Mismatch</span>')
                         last_10_lines = rest_lines[max(0, k - 9):k + 1]
                         if any("find_matched_usr_grps-Failed group matching" in l for l in last_10_lines):
-                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd failing due to possible group mismatch</span>')
+                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd failing due to a possible user group mismatch</span>')
                     if "handle_req-Error starting session" in remaining_line and SAML == True:
                         analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] Fnbamd failing to start. \n->Check if SAML server is responsive \n-> Check: https://community.fortinet.com/t5/FortiGate/Troubleshooting-Tip-IPsec-SAML-Authentication-fails-due-to/ta-p/339738</span>')
                     if 'fnbamd_comm_send_result' in remaining_line and eap_id in remaining_line:
@@ -488,7 +486,7 @@ def ike_parser(text):
                             if result_value == 5:
                                 analysis_output.append(f'<span style="color: orange;">[{str(i+k+1)}] fnbamd ERROR for the above connection </span>')
                         else:
-                            analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] Check the Fnbam result in the above line \n 0-->SUCCESS 1---> DENY 2--> CHALLENGE</span>')
+                            analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] Check the Fnbam result in the above line \n 0-->SUCCESS 1---> DENY 2--> CHALLENGE</span>')                    
                     if 'fnbamd_rad_process-Result' in remaining_line:
                         pattern = r"svr\s'([^']+)'\s.*?is\s(\d+)"
                         match = re.search(pattern, remaining_line)
@@ -503,7 +501,7 @@ def ike_parser(text):
                                     result = 'success'
                                 if code == '2':
                                     result = 'Challenged or still in progress or need more info'
-                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Trying Local authentication with local-user and the current status is {result}</span>')
+                                analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] Trying Local authentication with local-user and the current status is {result}</span>')
                             else:
                                 if code == '1':
                                     result = 'denied'
@@ -511,15 +509,16 @@ def ike_parser(text):
                                     result = 'success'
                                 if code == '2':
                                     result = 'Challenged or still in progress or need more info'
-                                analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Trying radius authentication and the current status as {result}</span>')
+                                analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] Trying radius authentication and the current status as {result}</span>')
 
                         else:
-                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Check the server response in the above line</span>')
+                            analysis_output.append(f'<span style="color: yellow;">[{str(i+k+1)}] Check the server response in the above line</span>')
                     if eap_id in remaining_line and 'result' in remaining_line:
                         context = rest_lines[k:k + 7]
                         for info in context:
                             if 'EAP' in info and 'result' not in info:
                                 analysis_output.append(f'       [{str(i+k+1)}]{info.strip()}')
+
 # Adding known issue
         if 'compute DH shared secret request queued' in line:
             pattern = "compute DH shared secret request queued"
@@ -530,7 +529,7 @@ def ike_parser(text):
                 if i + j < len(lines) and re.search(pattern, lines[i + j]):
                     count += 1
             if count >= 10:
-                analysis_output.append(f'<span style="color: red;">Known Issue detected \n Please check: https://community.fortinet.com/t5/FortiClient/Troubleshooting-Tip-Dial-up-IPsec-VPN-in-aggressive-mode-when/ta-p/189924</span>')
+                analysis_output.append(f'<span style="color: red;">Known Issue detected for fnbamd crash \n Please check if there are fnbamd crashes in the crashlog. \n Refer: https://community.fortinet.com/t5/FortiClient/Troubleshooting-Tip-Dial-up-IPsec-VPN-in-aggressive-mode-when/ta-p/189924</span>')
 
 # CERT AUTH LOGIC
         if 'ike' in line and 'received peer identifier' in line:
@@ -558,8 +557,9 @@ def ike_parser(text):
         if 'ike' in line and 'signature verification succeeded' in line:
             analysis_output.append(f'<span style="color: green;">[{str(i+1)}]Cert auth succeeded')
         if 'ike' in line and 'certificate validation failed' in line:
-            analysis_output.append(f'<span style="color: red;">[{str(i+1)}]IKE connection down due to Cert auth fail')
+            analysis_output.append(f'<span style="color: red;">[{str(i+1)}]IKE negotiation failure observed, due to a possible certificate authentication failure.')
             analysis_output.append(f'<span style="color: yellow;">Please Check:\n CA signed bt valid CA or the root CA istalled in FGT \n Bad PKI user \n Re-check cert auth settings: {issuer} ')
+
 
 def _extract_lines(lines, start_line, end_line):
     input_string = "\n".join(lines[start_line-1:end_line])
@@ -583,13 +583,13 @@ def _phase_1_check(i,line,lines,comes_line_phase_1):
     start_index_failure = comes_line_phase_1.index("comes")
     failure_message = comes_line_phase_1[start_index_failure:]
     # Also get the connection for which SA proposal is chosen
-    analysis_output.append(f'[{str(i+1)}]::'+sa_proposal+' VPN with IP Connection as:'+failure_message+' is UP for phase-1')
+    analysis_output.append(f'<span style="color: green;">[{str(i+1)}]::'+sa_proposal+' VPN with IP for the IKE negotiation:'+failure_message+' is UP for phase-1</span>')
 
 # Phase-2 check helper function
 def _phase_2_check(i,line,lines,comes_line_phase_1,selectors):
     start_index_failure = comes_line_phase_1.index("comes")
     failure_message = comes_line_phase_1[start_index_failure:]
-    analysis_output.append(f'[{str(i+1)}]::'+'VPN with IP Connection as -> '+failure_message+' is UP for phase-2 \n'+selectors)
+    analysis_output.append(f'<span style="color: green;">[{str(i+1)}]::'+'VPN with IP for the IKE negotiation -> '+failure_message+' is UP for phase-2</span> \n'+selectors)
 
 # Phase-1/2 mismatch helper function
 def _phase_1_2_mismatch(i,line,comes_line_phase_1,ike_phase_1_type,Ike_param,NETWORK_ID):
@@ -632,10 +632,10 @@ def _phase_1_2_mismatch(i,line,comes_line_phase_1,ike_phase_1_type,Ike_param,NET
         if ("PFS is disabled" in Ike_param[0] and "PFS is disabled" not in Ike_param[1]):
             if "IKEv1" in ike_phase_1_type:
                 Ike_type = "IKE-V1"
-                analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in remote peer')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Negotiation Failure observed for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in remote peer</span>')
             if "IKEv2" in ike_phase_1_type:
                 Ike_type = "IKE-V2"
-                analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in remote peer')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Negotiation Failure observed for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in remote peer</span>')
             # turn on phase_2 flag
             phase_2=True
             
@@ -643,22 +643,22 @@ def _phase_1_2_mismatch(i,line,comes_line_phase_1,ike_phase_1_type,Ike_param,NET
         if ("PFS is disabled" in Ike_param[1] and "PFS is disabled" not in Ike_param[0]):
             if "IKEv1" in ike_phase_1_type:
                 Ike_type = "IKE-V1"
-                analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in local peer')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Negotiation Failure observed for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in local peer</span>')
             if "IKEv2" in ike_phase_1_type:
                 Ike_type = "IKE-V2"
-                analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in local peer')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Negotiation Failure observed for '+f'{Ike_type}'+ ' Phase-2 connection '+failure_message.split()[1]+' due to PFS being disabled in local peer</span>')
             # turn on phase_2 flag
             phase_2=True
     
     # only hit this statement if phase_2 remains false
     if "IKEv1" in ike_phase_1_type and phase_2==False:
         Ike_type = "IKE-V1"
-        analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' With mismatch as'+NETWORK_ID+'\n'+str(parse_to_table(mismatch_param)))
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' With mismatch as</span>'+NETWORK_ID+'\n'+str(parse_to_table(mismatch_param)))
 
     # only hit this statement if phase_2 remains false
     if "IKEv2" in ike_phase_1_type and phase_2==False:
         Ike_type = "IKE-V2"
-        analysis_output.append(f'[{str(i+1)}]::'+' Negotiation Failure for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' With mismatch as'+NETWORK_ID+'\n'+str(parse_to_table(mismatch_param)))
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Failure for '+f'{Ike_type}'+ ' negotiation '+failure_message.split()[1]+' With mismatch as</span>'+NETWORK_ID+'\n'+str(parse_to_table(mismatch_param)))
 
 
 def _phase_1_psk_fail(i,line,comes_line_phase_1,ike_phase_1_type):
@@ -667,13 +667,13 @@ def _phase_1_psk_fail(i,line,comes_line_phase_1,ike_phase_1_type):
     failure_message = comes_line_phase_1[start_index_failure:]
     if "IKEv1" in ike_phase_1_type:
         Ike_type = "IKE-V1"
-        analysis_output.append(f'[{str(i+1)}]::'+' PSK Mismatch for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' Please check PSK ')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Preshared key (PSK) mismatch for '+f'{Ike_type}'+ ' negotiation '+failure_message.split()[1]+' Please check PSK </span>')
     if "IKEv2" in ike_phase_1_type:
         Ike_type = "IKE-V2"
-        analysis_output.append(f'[{str(i+1)}]::'+' PSK Mismatch for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' Please check PSK ')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Preshared key (PSK) mismatch for '+f'{Ike_type}'+ ' negotiation '+failure_message.split()[1]+' Please check PSK</span> ')
 
 def _notify_no_proposal_chosen(i,line,comes_line_phase_1):
-    analysis_output.append(f'[{str(i+1)}]::'+' Peer connection: '+comes_line_phase_1+ ' is notifying a no proposal chosen or negotiation mismatch')
+    analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' IKE negotiation: '+comes_line_phase_1+ ' - no proposal chosen or negotiation mismatch</span>')
 
 def _gw_validation_fail(i,line,comes_line_phase_1,ike_phase_1_type):
     Ike_type = ''
@@ -681,10 +681,10 @@ def _gw_validation_fail(i,line,comes_line_phase_1,ike_phase_1_type):
     failure_message = comes_line_phase_1[start_index_failure:]
     if "IKEv1" in ike_phase_1_type:
         Ike_type = "IKE-V1"
-        analysis_output.append(f'[{str(i+1)}]::'+' Gateway validation fail for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' Please Check: \n->peer ID \n->certificate settings \n->network ID')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' Gateway validation fail for '+f'{Ike_type}'+ ' negotiation '+failure_message.split()[1]+' Please Check:</span> \n->peer ID \n->certificate settings \n->network ID')
     if "IKEv2" in ike_phase_1_type:
         Ike_type = "IKE-V2"
-        analysis_output.append(f'[{str(i+1)}]::'' Gateway validation fail for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' Please Check: \n->peer ID \n->certificate settings \n->network ID')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'' Gateway validation fail for '+f'{Ike_type}'+ ' negotiation '+failure_message.split()[1]+' Please Check: </span>\n->peer ID \n->certificate settings \n->network ID')
 
 def _peer_id_fail(i,line,comes_line_phase_1,ike_phase_1_type):
     Ike_type = ''
@@ -692,16 +692,16 @@ def _peer_id_fail(i,line,comes_line_phase_1,ike_phase_1_type):
     failure_message = comes_line_phase_1[start_index_failure:]
     if "IKEv1" in ike_phase_1_type:
         Ike_type = "IKE-V1"
-        analysis_output.append(f'[{str(i+1)}]::'+' PEER ID fail for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' Please Check: ->peer ID')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' PEER ID fail for '+f'{Ike_type}'+ ' negotiation '+failure_message.split()[1]+' Please Check: ->peer ID</span>')
     if "IKEv2" in ike_phase_1_type:
         Ike_type = "IKE-V2"
-        analysis_output.append(f'[{str(i+1)}]::'+' PEER ID fail for '+f'{Ike_type}'+ ' Connection '+failure_message.split()[1]+' Please Check: ->peer ID')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]::'+' PEER ID fail for '+f'{Ike_type}'+ ' negotiation '+failure_message.split()[1]+' Please Check: ->peer ID</span>')
 
 
 def _phase_2_subset(i,line,lines,selectors):
     accepted_proposals = ''
     if i + 1 < len(lines):
-        analysis_output.append(f'[{str(i+1)}]:: phase-2 matched by intersection. Accepted proposals are: \n' + selectors + '\n advised to use matching selectors and not sub/super sets')
+        analysis_output.append(f'<span style="color: yellow;">[{str(i+1)}]:: phase-2 matched by intersection. Accepted proposals are: \n' + selectors + '\n advised to use matching selectors and not sub/super sets</span>')
 
 # phase_2 selector mismatch on responder
 def _phase_2_ts_mismatch_responder(i,line,lines,comes_line_phase_1,ike_phase_1_type,selectors):
@@ -710,10 +710,10 @@ def _phase_2_ts_mismatch_responder(i,line,lines,comes_line_phase_1,ike_phase_1_t
     if i + 1 < len(lines):
         if "IKEv1" in ike_phase_1_type:
             Ike_type = "IKE-V1"
-            analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch for incoming traffic selectors \n' + selectors + '\n advised to check traffic selectors on initiatior for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+            analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: phase2 selector mismatch for incoming traffic selectors</span> \n' + selectors + '\n advised to check traffic selectors on initiatior for \n' + f'{Ike_type}' + ' negotiation ' + f'{failure_message}')
         if "IKEv2" in ike_phase_1_type:
             Ike_type = "IKE-V2"
-            analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch for incoming traffic selectors \n' + selectors + '\n advised to check traffic selectors on initiatior for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+            analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: phase2 selector mismatch for incoming traffic selectors</span> \n' + selectors + '\n advised to check traffic selectors on initiatior for \n' + f'{Ike_type}' + ' negotiation ' + f'{failure_message}')
 
 # phase_2 selector mismatch on initiator
 def _phase_2_ts_mismatch_initiator(i,line,lines,comes_line_phase_1,ike_phase_1_type):
@@ -721,15 +721,15 @@ def _phase_2_ts_mismatch_initiator(i,line,lines,comes_line_phase_1,ike_phase_1_t
     failure_message = comes_line_phase_1[start_index_failure:]
     if "IKEv1" in ike_phase_1_type:
         Ike_type = "IKE-V1"
-        analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' negotiation ' + f'{failure_message}</span>')
     if "IKEv2" in ike_phase_1_type:
         Ike_type = "IKE-V2"
-        analysis_output.append(f'[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' connection ' + f'{failure_message}')
+        analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: phase2 selector mismatch \n advised to check traffic selectors on responder for \n' + f'{Ike_type}' + ' negotiation ' + f'{failure_message}</span>')
 
 def _no_policy_configured(i,comes_line_phase_1):
     start_index_failure = comes_line_phase_1.index("comes")
     failure_message = comes_line_phase_1[start_index_failure:]
-    analysis_output.append(f'[{str(i+1)}]:: No Policy is Configured for connection'+failure_message)
+    analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: No Firewall policy is Configured for connection</span>'+failure_message)
 
 # check for retrans for phase-1 down
 def _phase_1_retrans_check_1(line,lines,i):
@@ -748,16 +748,16 @@ def _phase_1_retrans_check_1(line,lines,i):
                     if retransmit_match:
                         retransmit_type = retransmit_match.group(1)
                         if 'response' in retransmit_type or 'RESPONSE' in retransmit_type:
-                            analysis_output.append(f'[{str(k+1)}]::VPN with IP Connection as:: '+connection_match.group(1)+' is down due to negotiation or timeout')
+                            analysis_output.append(f'<span style="color: red;">[{str(k+1)}]::VPN for the IKE negotiation: '+connection_match.group(1)+' is down due to negotiation timeout</span>')
                         else:
-                            analysis_output.append(f'[{str(i+1)}]:: VPN with IP Connection as: '+connection_match.group(1)+' is down for Phase-1 due to retransmission failures \n  Possible issues could be: \n -> NAT-T blocked \n -> ISP blocking IKE \n -> port forward misconfig\n -> Network Overlay ID mismatch \n -> Possible PSK mismatch')
+                            analysis_output.append(f'<span style="color: red;">[{str(i+1)}]:: VPN for the IKE negotiation: '+connection_match.group(1)+' is down for Phase-1 due to retransmission failures</span> \n  Possible issues could be: \n -> NAT-T blocked \n -> ISP blocking IKE \n -> port forward misconfig\n -> Network Overlay ID mismatch \n -> Possible PSK mismatch')
                 if retransmit_match:
                     retransmit_type = retransmit_match.group(1)
                     retransmit_info = retransmit_match.group(2)
                     if 'response' in retransmit_type or 'RESPONSE' in retransmit_type:
-                        analysis_output.append(f'[{str(k+1)}]::Reason for VPN with IP Connection as: '+retransmit_info+' could be for the follwing reasons for error: '+retransmit_type +' \nCheck \n->NAT-4500 blocked \n->authentication failures on the peer ' )
+                        analysis_output.append(f'<span style="color: orange;">[{str(k+1)}]::Failure reason for IKE negotiation: '+retransmit_info+' could be for the follwing reasons for error: </span>'+retransmit_type +' \nCheck \n->NAT-4500 blocked \n->authentication failures on the peer ' )
                     else:
-                        analysis_output.append(f'[{str(k+1)}]::Reason for VPN with IP Connection as: '+retransmit_info+' for retransmission is for: '+retransmit_type )
+                        analysis_output.append(f'<span style="color: orange;">[{str(k+1)}]::Failure reason for IKE negotiation: '+retransmit_info+' for retransmission is for: </span>'+retransmit_type )
 
 def parse_to_table(data_string):
     # Split the string into individual comparisons
@@ -830,13 +830,13 @@ def saml_parser(text):
                             analysis_output.append(f'   <span style="color: yellow;">[{str(i+1)}] NAME: {email.group(1)}</span>')
 
             if 'samld_sp_login_resp' in line and 'Failed to verify signature' in line:
-                analysis_output.append(f'<span style=": red;">[{str(i+1)}] SAML wrong certficate on FortiGate Detected. Please check the base x64 cert on Fortigate for SAML</span>')
+                analysis_output.append(f'<span style=": red;">[{str(i+1)}] Wrong SAML certficate on FortiGate Detected. Please check certificate on Fortigate for SAML</span>')
             if 'samld_send_common_reply' in line and 'Failed to verify signature' in line:
-                analysis_output.append(f'<span style=": red;">[{str(i+1)}] SAML wrong certficate on FortiGate Detected. Please check the base x64 cert on Fortigate for SAML</span>')
+                analysis_output.append(f'<span style=": red;">[{str(i+1)}] Wrong SAML certficate on FortiGate Detected. Please check certificate on Fortigate for SAML</span>')
             # if 'samld_send_common_reply' in line:
             #     analysis_output.append(f'<span style="color: yellow;">[{str(i+1)}] {line}</span>')
     else:
-        analysis_output.append(f'<span style="color: red;">AUTHD DEBUGS NOT DETECTED. SAML SESSION CO-RELATION may not be 100% correct</span>')
+        analysis_output.append(f'<span style="color: yellow;">AUTHD DEBUGS NOT DETECTED. SAML SESSION CO-RELATION may not be 100% correct</span>')
         lines = text.splitlines()
         for i, line in enumerate(lines):
             if 'samld_send_common_reply' in line and 'magic' in line:
@@ -854,9 +854,9 @@ def saml_parser(text):
                 if email:
                     analysis_output.append(f'   <span style="color: yellow;">[{str(i+1)}] NAME: {email.group(1)}</span>')
             if 'samld_sp_login_resp' in line and 'Failed to verify signature' in line:
-                analysis_output.append(f'<span style=": red;">[{str(i+1)}] SAML wrong certficate on FortiGate Detected. Please check the base x64 cert on Fortigate for SAML</span>')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}] Wrong SAML certficate on FortiGate Detected. Please check certificate on Fortigate for SAML</span>')
             if 'samld_send_common_reply' in line and 'Failed to verify signature' in line:
-                analysis_output.append(f'<span style=": red;">[{str(i+1)}] SAML wrong certficate on FortiGate Detected. Please check the base x64 cert on Fortigate for SAML</span>')
+                analysis_output.append(f'<span style="color: red;">[{str(i+1)}] Wrong SAML certficate on FortiGate Detected. Please check certificate on Fortigate for SAML</span>')
 
 # Log file in cache
 ike_log = read_file(file_name)

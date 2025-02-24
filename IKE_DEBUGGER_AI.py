@@ -2,10 +2,12 @@ import os
 import re
 import pandas as pd
 from tabulate import tabulate
+import requests
+import json
 #version 3
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_Log_combined_all.txt"
+file_name = "IKE_LOG_SAML_non_working_group_mismatch.txt"
 # saml_ntp_issue.txt
 # saml_config_issues.txt
 # IKE_LOG_SAML_authd_working
@@ -898,11 +900,50 @@ def deduplicate_array(arr):
             unique_elements.append(item)
     return unique_elements
 # Loop through the array to print the analysis
-for output in deduplicate_array(analysis_output):
-    print(output)
-    print('\n')
 
-print(list(set(Incoming_conn)))
+# List to store solutions
+solutions = []
+pattern = r'<span style="color: (red|orange);">(.*?)</span>'
+
+# Loop through each element and extract the solution text
+for text in analysis_output:
+    matches = re.findall(pattern, text)
+    for match in matches:
+        solution_text = f"What is the solution for: {match[1]}"
+        solutions.append(solution_text)
+
+# Print the solutions
+
+question = "\n".join(solutions)
+print(question)
+
+
+url = "http://localhost:11434/api/generate"
+data = {
+    "model": "llama3:latest",
+    "prompt": f"Answer in less than 50 words in respect to Fortigate error as shown below for an IPSEC Connection: \n {question}"
+}
+
+response = requests.post(url, json=data)
+print(response)
+result = response.text
+lines = result.split("\n")
+
+responses = []
+for line in lines:
+    try:
+        data = json.loads(line)
+        responses.append(data["response"])
+    except json.JSONDecodeError:
+        pass  # Skip any invalid JSON lines
+
+# Combine the responses into a full sentence
+final_sentence = "".join(responses)
+
+print(final_sentence)
+
+
+
 
 
 

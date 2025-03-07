@@ -4,10 +4,12 @@ import pandas as pd
 from tabulate import tabulate
 import requests
 import json
+from data_model import Model
+from difflib import get_close_matches
 #version 3
 # change1
 # Specify the file name this will be an environment variable later 
-file_name = "IKE_LOG_SAML_non_working_group_mismatch.txt"
+file_name = "IKE_LOG_V1_radius_DNS_Issues.txt"
 # saml_ntp_issue.txt
 # saml_config_issues.txt
 # IKE_LOG_SAML_authd_working
@@ -913,34 +915,61 @@ for text in analysis_output:
         solutions.append(solution_text)
 
 # Print the solutions
-
 question = "\n".join(solutions)
-print(question)
 
 
-url = "http://localhost:11434/api/generate"
-data = {
-    "model": "llama3:latest",
-    "prompt": f"Answer in less than 50 words in respect to Fortigate error as shown below for an IPSEC Connection: \n {question}"
-}
+def find_best_match(errors, knowledge_base):
+    results = []
+    
+    # Iterate over the errors in the first list
+    for error in errors:
+        # Extract the error message by removing the initial part (e.g., "What is the solution for: ")
+        error_message = error.split("for: ")[-1].strip()
 
-response = requests.post(url, json=data)
-print(response)
-result = response.text
-lines = result.split("\n")
+        # Find the best match in the knowledge base
+        best_match = get_close_matches(error_message, [item['question'] for item in knowledge_base], n=1, cutoff=0.5)
 
-responses = []
-for line in lines:
-    try:
-        data = json.loads(line)
-        responses.append(data["response"])
-    except json.JSONDecodeError:
-        pass  # Skip any invalid JSON lines
+        if best_match:
+            # Find the matched dictionary
+            matched_entry = next(item for item in knowledge_base if item['question'] == best_match[0])
+            # Append the match in the desired format
+            results.append({
+                error_message: {
+                    "context": matched_entry['context'],
+                    "answer": matched_entry['answer']
+                }
+            })
+    
+    return results
 
-# Combine the responses into a full sentence
-final_sentence = "".join(responses)
+matched_results = find_best_match(solutions, Model.data_model)
+data_as_string = json.dumps(matched_results, indent=4)
+print(f"Answer in less than 150 words in points with respect to Fortigate error as shown below for an IPSEC Connection: \n {question} \n Find the soution in the below List with each elemnt as a dictionary with key as an error mntioned above with the value as the context and answer \n {data_as_string} \n if the errors do not exist in the list then skip the response solution for that error")
 
-print(final_sentence)
+
+# url = "http://localhost:11434/api/generate"
+# data = {
+#     "model": "llama3:latest",
+#     "prompt": f"Answer in less than 250 words in respect to Fortigate error as shown below for an IPSEC Connection: \n {question} \n Find the soution in the below List with each elemnt as a dictionary with key as an error mntioned above with the value as the context and answer \n {data_as_string}"
+# }
+
+# response = requests.post(url, json=data)
+# print(response)
+# result = response.text
+# lines = result.split("\n")
+
+# responses = []
+# for line in lines:
+#     try:
+#         data = json.loads(line)
+#         responses.append(data["response"])
+#     except json.JSONDecodeError:
+#         pass  # Skip any invalid JSON lines
+
+# # Combine the responses into a full sentence
+# final_sentence = "".join(responses)
+
+# print(final_sentence)
 
 
 

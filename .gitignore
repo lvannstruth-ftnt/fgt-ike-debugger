@@ -1,6 +1,5 @@
-lvs-notes
+lvs-notes/
 
-/root/lvs-dev/fgt-ike-debugger/__pycache__
 
 
 # Byte-compiled / optimized / DLL files
@@ -177,3 +176,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+test-output

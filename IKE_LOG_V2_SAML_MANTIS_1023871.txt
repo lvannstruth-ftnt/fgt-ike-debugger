@@ -1,410 +1,722 @@
-gateway (1) # show
-config match
-    edit 1
-        set server-name "azure-ipsec"
-        set group-name "b31d0fd0-9134-478b-8c3f-5c19aa594b4e"
-    next
-end
-
-gateway (1) # end
-
-gateway (AzureADSAML-IPSec) # end
-
-gateway # fsae_io_ctx_process_msg[fac.planetexpress.com.au]: received heartbeat 0
-authd_epoll_work: timeout 4750
-authd_epoll_work: timeout 2480
-authd_epoll_work: timeout 4480
-authd_epoll_work: timeout 4490
-authd_epoll_work: timeout 4510
-authd_epoll_work: timeout 49520
-
-gateway #
-gateway #
-gateway #
-gateway # authd_timer_run: 1 expired
-authd_epoll_work: timeout 1970
-
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway #
-gateway # authd_timer_run: 3 expired
-authd_epoll_work: timeout 47980
-authd_epoll_work: timeout 9970
-authd_timer_run: 1 expired
-authd_epoll_work: timeout 22970
-authd_timer_run: 1 expired
-authd_epoll_work: timeout 53970
-
-gateway # fsae_io_ctx_process_msg[fac.planetexpress.com.au]: received heartbeat 0
-authd_epoll_work: timeout 4720
-authd_timer_run: 1 expired
-authd_epoll_work: timeout 3970
-[authd_http_accept_session:1112]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 0 to 1
-[authd_http_accepting:1191]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 1 to 2
-[authd_http_connect:1696]: src 4.199.33.224 flag 00008000
-[authd_http_set_server_cert:820]: found gateway.planetexpress.com.au_le for gateway.planetexpress.com.au
-authd_epoll_work: timeout 31040
-authd_timer_run: 1 expired
-authd_epoll_work: timeout 55970
-[authd_http_read:981]: src 4.199.33.224 flag 00008000
-[authd_http_connect:1696]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 2 to 3
-[authd_http_wait_req:2299]: src 4.199.33.224 flag 00008000
-[authd_http_read_http_message:493]: called
-authd_epoll_work: timeout 31020
-[authd_http_read:981]: src 4.199.33.224 flag 00008000
-[authd_http_wait_req:2299]: src 4.199.33.224 flag 00008000
-[authd_http_read_http_message:493]: called
-[authd_http_is_full_http_message:443]: called
-authd_epoll_work: timeout 31000
-[authd_http_read:981]: src 4.199.33.224 flag 00008000
-[authd_http_wait_req:2299]: src 4.199.33.224 flag 00008000
-[authd_http_read_http_message:493]: called
-[authd_http_is_full_http_message:443]: called
-[authd_http_on_method_post:5240]: src 4.199.33.224 flag 00008000
-[authd_local_saml_auth:5696]: SAML login with UID 'AC1B46AB4D314A3DAB8C885A2D3ECD2B'.
-[authd_http_prepare_javascript_redir:3909]: https://gateway.planetexpress.com.au:4443/saml?010305829b9db04d
-[authd_http_send:1268]: src 4.199.33.224 flag 0000a000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 0000a000
-authd_http: change state from 3 to 5
-[authd_http_disconnect:2736]: src 4.199.33.224 flag 0000a000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 0000a000
-authd_http: change state from 5 to 6
-[authd_http_done:2781]: src 4.199.33.224 flag 0000a000
-[authd_local_saml_auth:5719]
-authd_epoll_work: timeout 29610
-[authd_http_accept_session:1112]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 0 to 1
-[authd_http_accepting:1191]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 1 to 2
-[authd_http_connect:1696]: src 4.199.33.224 flag 00008000
-[authd_http_set_server_cert:820]: found gateway.planetexpress.com.au_le for gateway.planetexpress.com.au
-authd_epoll_work: timeout 29380
-[authd_http_read:981]: src 4.199.33.224 flag 00008000
-[authd_http_connect:1696]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 2 to 3
-[authd_http_wait_req:2299]: src 4.199.33.224 flag 00008000
-[authd_http_read_http_message:493]: called
-authd_epoll_work: timeout 29320
-[authd_http_read:981]: src 4.199.33.224 flag 00008000
-[authd_http_wait_req:2299]: src 4.199.33.224 flag 00008000
-[authd_http_read_http_message:493]: called
-[authd_http_is_full_http_message:443]: called
-[authd_http_on_method_get:5734]: src 4.199.33.224 flag 00008000
-[authd_http_check_local_portal:1835]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 0000a000
-authd_http: change state from 3 to 106
-[authd_http_wait_saml_msg:4621]: src 4.199.33.224 flag 0000a000
-[authd_saml_login_req:31]: SAML login req. ID:563636, relayState:magic=010305829b9db04d
-authd_epoll_work: timeout 29310
-samld_process_request [145]: len=465, cmd=0, pid=297, job_id=563636
-samld_process_request [162]: Received 465, 0x4bbc00
-__samld_sp_create_auth_req [429]: SAML SP algo: 0 -> lasso=1. Binding Method: urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST
-
-__samld_sp_create_auth_req [449]:
-**** AuthnRequest URL ****
-https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=nZJNj5swEIb%2FCvKdb1iIFSJR2KiRti3apD30UjlmyFoyNvWY%2Ffj3NaQf20P30KPH89rzPJotslFOtJ7tg7qH7zOg9Z5HqZCuFxWZjaKaoUCq2AhILafH%2BsMdTYKITkZbzbUkryJvJxgiGCu0It6hrci39mYTNem%2BbpKmiOpNuU9uyuJ2n5d1G5dpe0u8L2DQ9VfExV0IcYaDQsuUdaUoyfyo8OP4FMU0T2iafyVe6xiEYnZNPVg7IQ1DqS9CBaPgRqMerFZSKAi4HsOyiPuoZInPC5b5WXou%2FU0K3M%2BKPhvykmXJOQ8XsoR4e204rK4qMjCJsEzUOSjxCL8r3U8r74Tqhbq8LeR8bUL6%2FnTq%2FO7T8US8%2BpekRiucRzBHMI%2BCw%2Bf7uz9AF2bhib0Ek2QKLDxPBhAXoIDNNMuyNDQwagvr6Fd8stsuB7pKNLv%2Fe2kEy3pm2TZ8%2Fdb2ukYfHd%2Bh7bQU%2FGWRNTL7b%2Fw4iNeK6P1hbaWzwgm4GAT0zoKU%2Bqkx4KariDUzkHB3%2FfTvdd39AA%3D%3D&RelayState=magic%3D010305829b9db04d&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=j7qAjGd8SDn5QiflxbRi4%2BPD4PX3rS%2BjLIeOPoCJZ%2FyAWMtjdksd9wGX8EEPDfFwVFmdRLaoCYcA28OzbvQyJypQ7tXn9Dabwqkb6MTFj%2FMN6rM1ddntajaoVjO1lqXe1w4gMs%2Bdb2EgBOBB4zmgUIPDIDVGNEzB7nbc87zFWwuhkM5pMEc5JKaC87FfX2h8pZAtTwQ2wsrckocYXU9ii%2F%2B9I%2B9yfGueHfmZ7gi56Utuk5q%2Bi14JWKUSHqaesb4TTRGQSFxgZEFIm0aUGFWPz52IG5fhG3legPn554rzAqavnT9X4QrSKaQuKz5X9t1jXJrScaPo%2F%2Fxc%2BrHkOEB7Ng%3D%3D
-***********************
-__samld_sp_create_auth_req [463]:
-**** AuthnRequest ****
-<samlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_D690C3FAC2C70A98F2687EF58AD183DE" Version="2.0" IssueInstant="2024-07-11T01:52:35Z" Destination="https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://gateway.planetexpress.com.au:4443/remote/saml/login"><saml:Issuer>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest>
-***********************
-__samld_sp_create_auth_req [468]:
-**** SP Login Dump ****
-<lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" LoginDumpVersion="2"><lasso:Request><samlp:AuthnRequest ID="_D690C3FAC2C70A98F2687EF58AD183DE" Version="2.0" IssueInstant="2024-07-11T01:52:35Z" Destination="https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://gateway.planetexpress.com.au:4443/remote/saml/login"><saml:Issuer>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest></lasso:Request><lasso:RemoteProviderID>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=nZJNj5swEIb%2FCvKdb1iIFSJR2KiRti3apD30UjlmyFoyNvWY%2Ffj3NaQf20P30KPH89rzPJotslFOtJ7tg7qH7zOg9Z5HqZCuFxWZjaKaoUCq2AhILafH%2BsMdTYKITkZbzbUkryJvJxgiGCu0It6hrci39mYTNem%2BbpKmiOpNuU9uyuJ2n5d1G5dpe0u8L2DQ9VfExV0IcYaDQsuUdaUoyfyo8OP4FMU0T2iafyVe6xiEYnZNPVg7IQ1DqS9CBaPgRqMerFZSKAi4HsOyiPuoZInPC5b5WXou%2FU0K3M%2BKPhvykmXJOQ8XsoR4e204rK4qMjCJsEzUOSjxCL8r3U8r74Tqhbq8LeR8bUL6%2FnTq%2FO7T8US8%2BpekRiucRzBHMI%2BCw%2Bf7uz9AF2bhib0Ek2QKLDxPBhAXoIDNNMuyNDQwagvr6Fd8stsuB7pKNLv%2Fe2kEy3pm2TZ8%2Fdb2ukYfHd%2Bh7bQU%2FGWRNTL7b%2Fw4iNeK6P1hbaWzwgm4GAT0zoKU%2Bqkx4KariDUzkHB3%2FfTvdd39AA%3D%3D&amp;RelayState=magic%3D010305829b9db04d&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&amp;Signature=j7qAjGd8SDn5QiflxbRi4%2BPD4PX3rS%2BjLIeOPoCJZ%2FyAWMtjdksd9wGX8EEPDfFwVFmdRLaoCYcA28OzbvQyJypQ7tXn9Dabwqkb6MTFj%2FMN6rM1ddntajaoVjO1lqXe1w4gMs%2Bdb2EgBOBB4zmgUIPDIDVGNEzB7nbc87zFWwuhkM5pMEc5JKaC87FfX2h8pZAtTwQ2wsrckocYXU9ii%2F%2B9I%2B9yfGueHfmZ7gi56Utuk5q%2Bi14JWKUSHqaesb4TTRGQSFxgZEFIm0aUGFWPz52IG5fhG3legPn554rzAqavnT9X4QrSKaQuKz5X9t1jXJrScaPo%2F%2Fxc%2BrHkOEB7Ng%3D%3D</lasso:MsgUrl><lasso:MsgRelayState>magic=010305829b9db04d</lasso:MsgRelayState><lasso:HttpRequestMethod>4</lasso:HttpRequestMethod><lasso:RequestID>_D690C3FAC2C70A98F2687EF58AD183DE</lasso:RequestID></lasso:Login>
-***********************
-samld_send_common_reply [91]: Code: 0, id: 563636, pid: 297, len: 3541, data_len 3525
-samld_send_common_reply [99]:     Attr: 14, 2368, <lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" LoginDumpVersion="2"><lasso:Request><samlp:AuthnRequest ID="_D690C3FAC2C70A98F2687EF58AD183DE" Version="2.0" IssueInstant="2024-07-11T01:52:35Z" Destination="https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://gateway.planetexpress.com.au:4443/remote/saml/login"><saml:Issuer>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest></lasso:Request><lasso:RemoteProviderID>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=nZJNj5swEIb%2FCvKdb1iIFSJR2KiRti3apD30UjlmyFoyNvWY%2Ffj3NaQf20P30KPH89rzPJotslFOtJ7tg7qH7zOg9Z5HqZCuFxWZjaKaoUCq2AhILafH%2BsMdTYKITkZbzbUkryJvJxgiGCu0It6hrci39mYTNem%2BbpKmiOpNuU9uyuJ2n5d1G5dpe0u8L2DQ9VfExV0IcYaDQsuUdaUoyfyo8OP4FMU0T2iafyVe6xiEYnZNPVg7IQ1DqS9CBaPgRqMerFZSKAi4HsOyiPuoZInPC5b5WXou%2FU0K3M%2BKPhvykmXJOQ8XsoR4e204rK4qMjCJsEzUOSjxCL8r3U8r74Tqhbq8LeR8bUL6%2FnTq%2FO7T8US8%2BpekRiucRzBHMI%2BCw%2Bf7uz9AF2bhib0Ek2QKLDxPBhAXoIDNNMuyNDQwagvr6Fd8stsuB7pKNLv%2Fe2kEy3pm2TZ8%2Fdb2ukYfHd%2Bh7bQU%2FGWRNTL7b%2Fw4iNeK6P1hbaWzwgm4GAT0zoKU%2Bqkx4KariDUzkHB3%2FfTvdd39AA%3D%3D&amp;RelayState=magic%3D010305829b9db04d&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&amp;Signature=j7qAjGd8SDn5QiflxbRi4%2BPD4PX3rS%2BjLIeOPoCJZ%2FyAWMtjdksd9wGX8EEPDfFwVFmdRLaoCYcA28OzbvQyJypQ7tXn9Dabwqkb6MTFj%2FMN6rM1ddntajaoVjO1lqXe1w4gMs%2Bdb2EgBOBB4zmgUIPDIDVGNEzB7nbc87zFWwuhkM5pMEc5JKaC87FfX2h8pZAtTwQ2wsrckocYXU9ii%2F%2B9I%2B9yfGueHfmZ7gi56Utuk5q%2Bi14JWKUSHqaesb4TTRGQSFxgZEFIm0aUGFWPz52IG5fhG3legPn554rzAqavnT9X4QrSKaQuKz5X9t1jXJrScaPo%2F%2Fxc%2BrHkOEB7Ng%3D%3D</lasso:MsgUrl><lasso:MsgRelayState>magic=010305829b9db04d</lasso:MsgRelayState><lasso:HttpRequestMethod>4</lasso:HttpRequestMethod><lasso:RequestID>_D690C3FAC2C70A98F2687EF58AD183DE</lasso:RequestID></lasso:Login>
-samld_send_common_reply [99]:     Attr: 11, 1157, https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=nZJNj5swEIb%2FCvKdb1iIFSJR2KiRti3apD30UjlmyFoyNvWY%2Ffj3NaQf20P30KPH89rzPJotslFOtJ7tg7qH7zOg9Z5HqZCuFxWZjaKaoUCq2AhILafH%2BsMdTYKITkZbzbUkryJvJxgiGCu0It6hrci39mYTNem%2BbpKmiOpNuU9uyuJ2n5d1G5dpe0u8L2DQ9VfExV0IcYaDQsuUdaUoyfyo8OP4FMU0T2iafyVe6xiEYnZNPVg7IQ1DqS9CBaPgRqMerFZSKAi4HsOyiPuoZInPC5b5WXou%2FU0K3M%2BKPhvykmXJOQ8XsoR4e204rK4qMjCJsEzUOSjxCL8r3U8r74Tqhbq8LeR8bUL6%2FnTq%2FO7T8US8%2BpekRiucRzBHMI%2BCw%2Bf7uz9AF2bhib0Ek2QKLDxPBhAXoIDNNMuyNDQwagvr6Fd8stsuB7pKNLv%2Fe2kEy3pm2TZ8%2Fdb2ukYfHd%2Bh7bQU%2FGWRNTL7b%2Fw4iNeK6P1hbaWzwgm4GAT0zoKU%2Bqkx4KariDUzkHB3%2FfTvdd39AA%3D%3D&RelayState=magic%3D010305829b9db04d&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=j7qAjGd8SDn5QiflxbRi4%2BPD4PX3rS%2BjLIeOPoCJZ%2FyAWMtjdksd9wGX8EEPDfFwVFmdRLaoCYcA28OzbvQyJypQ7tXn9Dabwqkb6MTFj%2FMN6rM1ddntajaoVjO1lqXe1w4gMs%2Bdb2EgBOBB4zmgUIPDIDVGNEzB7nbc87zFWwuhkM5pMEc5JKaC87FfX2h8pZAtTwQ2wsrckocYXU9ii%2F%2B9I%2B9yfGueHfmZ7gi56Utuk5q%2Bi14JWKUSHqaesb4TTRGQSFxgZEFIm0aUGFWPz52IG5fhG3legPn554rzAqavnT9X4QrSKaQuKz5X9t1jXJrScaPo%2F%2Fxc%2BrHkOEB7Ng%3D%3D
-samld_send_common_reply [119]: Sent resp: 3541, pid=297, job_id=563636.
-[authd_saml_read:119]: Resp len 3541 bytes
-[authd_saml_read:130]: Rcvd 3541 bytes
-[authd_http_on_saml_msg:4450]: src 4.199.33.224 flag 0000a000
-[authd_http_on_saml_msg:4459]: cmd 0, code 0.
-[authd_http_prepare_javascript_redir:3909]: https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=nZJNj5swEIb%2FCvKdb1iIFSJR2KiRti3apD30UjlmyFoyNvWY%2Ffj3NaQf20P30KPH89rzPJotslFOtJ7tg7qH7zOg9Z5HqZCuFxWZjaKaoUCq2AhILafH%2BsMdTYKITkZbzbUkryJvJxgiGCu0It6hrci39mYTNem%2BbpKmiOpNuU9uyuJ2n5d1G5dpe0u8L2DQ9VfExV0IcYaDQsuUdaUoyfyo8OP4FMU0T2iafyVe6xiEYnZNPVg7IQ1DqS9CBaPgRqMerFZSKAi4HsOyiPuoZInPC5b5WXou%2FU0K3M%2BKPhvykmXJOQ8XsoR4e204rK4qMjCJsEzUOSjxCL8r3U8r74Tqhbq8LeR8bUL6%2FnTq%2FO7T8US8%2BpekRiucRzBHMI%2BCw%2Bf7uz9AF2bhib0Ek2QKLDxPBhAXoIDNNMuyNDQwagvr6Fd8stsuB7pKNLv%2Fe2kEy3pm2TZ8%2Fdb2ukYfHd%2Bh7bQU%2FGWRNTL7b%2Fw4iNeK6P1hbaWzwgm4GAT0zoKU%2Bqkx4KariDUzkHB3%2FfTvdd39AA%3D%3D&RelayState=magic%3D010305829b9db04d&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=j7qAjGd8SDn5QiflxbRi4%2BPD4PX3rS%2BjLIeOPoCJZ%2FyAWMtjdksd9wGX8EEPDfFwVFmdRLaoCYcA28OzbvQyJypQ7tXn9Dabwqkb6MTFj%2FMN6rM1ddntajaoVjO1lqXe1w4gMs%2Bdb2EgBOBB4zmgUIPDIDVGNEzB7nbc87zFWwuhkM5pMEc5JKaC87FfX2h8pZAtTwQ2wsrckocYXU9ii%2F%2B9I%2B9yfGueHfmZ7gi56Utuk5q%2Bi14JWKUSHqaesb4TTRGQSFxgZEFIm0aUGFWPz52IG5fhG3legPn554rzAqavnT9X4QrSKaQuKz5X9t1jXJrScaPo%2F%2Fxc%2BrHkOEB7Ng%3D%3D
-[authd_http_send:1268]: src 4.199.33.224 flag 0000a000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 0000a000
-authd_http: change state from 106 to 5
-[authd_http_disconnect:2736]: src 4.199.33.224 flag 0000a000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 0000a000
-authd_http: change state from 5 to 6
-[authd_http_done:2781]: src 4.199.33.224 flag 0000a000
-authd_epoll_work: timeout 29270
-[authd_http_accept_session:1112]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 0 to 1
-[authd_http_accepting:1191]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 1 to 2
-[authd_http_connect:1696]: src 4.199.33.224 flag 00008000
-[authd_http_set_server_cert:820]: found gateway.planetexpress.com.au_le for gateway.planetexpress.com.au
-authd_epoll_work: timeout 28900
-[authd_http_read:981]: src 4.199.33.224 flag 00008000
-[authd_http_connect:1696]: src 4.199.33.224 flag 00008000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 00008000
-authd_http: change state from 2 to 3
-[authd_http_wait_req:2299]: src 4.199.33.224 flag 00008000
-[authd_http_read_http_message:493]: called
-[authd_http_is_full_http_message:443]: called
-authd_epoll_work: timeout 28880
-[authd_http_read:981]: src 4.199.33.224 flag 00008000
-[authd_http_wait_req:2299]: src 4.199.33.224 flag 00008000
-[authd_http_read_http_message:493]: called
-[authd_http_is_full_http_message:443]: called
-[authd_http_on_method_post:5240]: src 4.199.33.224 flag 00008000
-[authd_local_saml_auth:5680]
-[authd_saml_login_resp:63]: SAML login resp. ID:563636
-authd_epoll_work: timeout 28880
-samld_process_request [145]: len=10806, cmd=2, pid=297, job_id=563636
-samld_process_request [162]: Received 10806, 0x4bbc00
+samld_process_request [145]: len=10333, cmd=2, pid=3617, job_id=565223
+samld_process_request [162]: Received 10333, 0x649f20
 __samld_sp_login_resp [811]:
-SP Login Response Msg Body (8140)
-<samlp:Response ID="_a3529190-4bb6-4ae8-8b2a-531e609043c7" Version="2.0" IssueInstant="2024-07-11T01:52:35.952Z" Destination="https://gateway.planetexpress.com.au:4443/remote/saml/login" InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><Issuer xmlns="urn:oasis:names:tc:SAML:2.0:assertion">https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><Assertion ID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" IssueInstant="2024-07-11T01:52:35.947Z" Version="2.0" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"><Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>s01l1ijlqv63KG9dHzqd7onuHtip43+igyyntaARfHo=</DigestValue></Reference></SignedInfo><SignatureValue>BTSArsxhg9G04jBPC6PEBdE1eviZkB1d63RGD6+boySbbkhlFwKT624/rk/3AFHp2NQDx3xsBJiz9i1HAK6ElXwONX7c4gAq4NPDPTkM6Mjm53gn0SzI93YLtFLThuvZ53j044U8I9Sj87vyLXJcQenqkq33OdIavQMNMtbzDOMEfHc75UdJqShmryD52uffUntXFeX7zSTf+pFAMFYGbnIooOIKwd2xpHq0cjpY+2k+LsPkK1Tsd0dYKYPdgRChsZXCk1siuwl92MaqCXd25IW+OPgtv9pF3IT7Gqh7dobucRfrSyG++hoQbE+xRUNUsENHOkdmuMdoV4thAQmM5Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQJ3By9RoWebFAgwikc8HeTzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA0MjAyMjIwMDlaFw0yNzA0MjAyMjIwMDhaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1hpTy0iY6sxvemn2wB+BDAuEFPphx3MbGxfObVSnmB1owbZhplm0OQ8OqmjDpePRip8cdkRTsf9hR77L7PbblItLGJ2sPEooTlO2Gtovp9XG+wlzhWgPQuiMUKGkvshUqMmUpiF5iHnDXnOVf/XB547Or/89k+SIRdNoPWioydPDC7Kaq2FWAf1qrzDXdJsPG5oB4C/WPTvHfMfsXu/XwiyJv3nt3Glg9GAEyQchdZOS8lJvt9ZuhDnGeteMwNVhMvAFy9Bsc9A2/eZj2bWYR+ei41oGtmPQX68F9LPPV1KP1Z8Uob/DLbofCkzaU7UTMPrBuqszsGtckHIQkXEoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCHy513BeR3DmjVwwIOZeXHl5TVPfwYYo024BN4bmA7xv9LWgXx8pgPgRC1hR4gr9wnRNGfGtaOMWRusIhO2rx60od2OPsttCNHJSWsaNJfYaYnk31cnOQMUl+ojuCRbF9M0QJSamYPrFVBpDQNk7F0NW32v2nNfLWrN5wA7pFLJ5WYOZ4tBn1zGtVVsgys201wAXmNn7DagcrubX17IKBziA0iZ3l0ttdhol5yue57X2N4n/RaWnGPyS+WvveBw5FS+O8+LzWSv3ERDfldXsQjo0H29HHCnLaxK5IU3YZiDdRG7qisThglVl15XfxiBAEgGA81sk6+2fl6TZfxy267</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" NotOnOrAfter="2024-07-11T02:52:35.820Z" Recipient="https://gateway.planetexpress.com.au:4443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-07-11T01:47:35.820Z" NotOnOrAfter="2024-07-11T02:52:35.820Z"><AudienceRestriction><Audience>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>871d08a2-c7a4-43b8-93ec-47d4f58a42b5</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>7b1a4af9-f9ad-4755-8e55-f3ecfd737b75</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Johann Lo</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3</AttributeValue><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Johann</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Lo</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="groups"><AttributeValue>5098d212-02a5-4db9-8d48-e2488aad058f</AttributeValue><AttributeValue>a4c1b865-e0f4-489c-b298-b519b67f78ac</AttributeValue><AttributeValue>b90d667f-ebf6-4ac7-b40e-313c111802df</AttributeValue><AttributeValue>c9da6584-8647-4e7d-9d37-03c76cedecc7</AttributeValue><AttributeValue>b31d0fd0-9134-478b-8c3f-5c19aa594b4e</AttributeValue><AttributeValue>e165dad1-e522-40b0-b7ae-8cf46ae936fa</AttributeValue><AttributeValue>a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-07-10T00:56:32.311Z" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response>
+SP Login Response Msg Body (7728)
+<samlp:Response ID="_3c606072-b2c7-4d06-ad2f-be4c92598db5" Version="2.0" IssueInstant="2024-09-24T16:21:26.138Z" Destination="https://156.99.82.129:9443/remote/saml/lo
+gin" InResponseTo="_E1C6DDD406854FD00853394D757C06B2" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><Issuer xmlns="urn:oasis:names:tc:SAML:2.0:assertion">https://
+sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><Asser
+tion ID="_ab2f5d34-4389-4a98-92d3-0a880e4e5300" IssueInstant="2024-09-24T16:21:26.133Z" Version="2.0" xmlns="urn:oasis:names:tc:SAML:2.0:assertion"><Issuer>https://sts
+.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://
+www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_ab2f5d34-4389-4a98-92d3-0a880e4e53
+00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transfo
+rms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>SgQ9yEJ7bzsZjqNhjo3W3g+elP4hlRJ1SNP825N7Hog=</DigestValue></Reference></SignedInfo>
+<SignatureValue>K+spi5mL7gxjl7ruPH9lk/Nb9qh5L03kw5tY8aHlfeYiM4urPpo+zLVCkU5YOUJt2Bkq3RMcod1GlKkVel9ZdT1AFK5ene7umPfSFPZb0aKouutQI46gwEvdCtrWyxtGqk2ygG26qGzBAJmVIhlu1RB
++22pT74YhmIUtNQY4qyLloW2x7FZxmn3ucQZj/JJ+rt3qexkORT+2ryt2Qsaicql8IRsRRml224Y2ytqoiC1+OsAZIFqzNkRL/BmyHwQqoMhtNQPRMcVOMcjv19L1MKRA2bUNaiem1IUIfuDzIspWVTNFFAQUPWWHD8jwKt
+C8F0tNj0kuDP/caAXo3BCu7w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQHNFkMEdeja9GDM23yVDVoTANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3Nv
+ZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA5MTgxNDA1NDZaFw0yNzA5MTgxNDA1NDZaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjA
+NBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsrBwTaahpTPfNXp09lY/Jb94+AmWZoYzMfHZOj7FytGL28AdHwoBHnksm73JAhtvwa+SvzIxSyt727OVC0NFsreiFcAQQZlxY4hj3qoSymFjpRGWoS0yuDpePHpwjO5+UQ
+Hu1aDMR7D4pbq18E7LntWccV0rOJIKOnqyPHpa9sDRBrNd2K0sBbrwgHpiR5RtnW13ayanE8IF+9TqK95pAhxLuX+OPEvRrb/A8cIXfR3R7CWf/U+LHXe4u+PBJeeq5aqBarw9ANgQbiu8WQhD2PHmzDo9TE1wdGQXK2lgO
+VCvWsmHXXo1h1w++/eAkooO97vB1Uf2Cm4CB2xctV8ylQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA/hK4N4Npb+fHWkG43xM5CEWzXcrRHEzxEF4tmEIt6GZFd0DT/eKlxSIW7DjigVzOIApTTdpRYz0MMmLJGHKMEpWpE
+Dw3t8HW9UY3hnX4cc01JrVPNbWPcXCjpmr2y1D/oT7nhW3dOSg6/1R5yBR6fNHoi3Sd/q8j4neskn2hOCnT9ZNy1f9tNMonSM+janZN30hMsdN6tjXWLdEmmWedwK7lKN1rBLNAo05/yEneg8SVy1Xp3KfUS2l+oY1teKjJ
+cEoal9lwSFw14tBPbluQlubZDmHMWDXJfUEROtT6uvOKLlHnD6uWf7DNZ4uYPGDE9Ue7wQj+CYkFI4BzcT5SR</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oa
+sis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.Anderson@owatonna.gov</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConf
+irmationData InResponseTo="_E1C6DDD406854FD00853394D757C06B2" NotOnOrAfter="2024-09-24T17:21:25.915Z" Recipient="https://156.99.82.129:9443/remote/saml/login"/></Subje
+ctConfirmation></Subject><Conditions NotBefore="2024-09-24T16:16:25.915Z" NotOnOrAfter="2024-09-24T17:21:25.915Z"><AudienceRestriction><Audience>http://156.99.82.129:9
+443/remote/saml/metadata/</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><Att
+ributeValue>5119c72d-51d9-4424-b16b-16e1c971c579</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><Attribute
+Value>b2c0ed85-e42b-4db5-80e9-ff4a7499c634</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Thoma
+s A. Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/5119c
+72d-51d9-4424-b16b-16e1c971c579/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schema
+s.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></A
+ttribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribut
+e><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Thomas</AttributeValue></Attribute><Attribute Name="http://schemas.
+xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/cl
+aims/emailaddress"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
+"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></At
+tribute><Attribute Name="group"><AttributeValue>244ef30d-be95-4a8c-85f9-0a627c290163</AttributeValue><AttributeValue>153b8883-0116-4232-affa-265b251c2c1d</AttributeVal
+ue><AttributeValue>9054caa7-f39b-4d09-873b-51a884ef14b5</AttributeValue><AttributeValue>bbe7c2a9-4b9c-44c6-b58d-9211cfefa520</AttributeValue></Attribute></AttributeSta
+tement><AuthnStatement AuthnInstant="2024-09-24T16:21:19.197Z" SessionIndex="_ab2f5d34-4389-4a98-92d3-0a880e4e5300"><AuthnContext><AuthnContextClassRef>urn:oasis:names
+:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response>
 __samld_sp_login_resp [832]:
 **** Assertion Dump ****
-<Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" IssueInstant="2024-07-11T01:52:35.947Z" Version="2.0"><Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>s01l1ijlqv63KG9dHzqd7onuHtip43+igyyntaARfHo=</DigestValue></Reference></SignedInfo><SignatureValue>BTSArsxhg9G04jBPC6PEBdE1eviZkB1d63RGD6+boySbbkhlFwKT624/rk/3AFHp2NQDx3xsBJiz9i1HAK6ElXwONX7c4gAq4NPDPTkM6Mjm53gn0SzI93YLtFLThuvZ53j044U8I9Sj87vyLXJcQenqkq33OdIavQMNMtbzDOMEfHc75UdJqShmryD52uffUntXFeX7zSTf+pFAMFYGbnIooOIKwd2xpHq0cjpY+2k+LsPkK1Tsd0dYKYPdgRChsZXCk1siuwl92MaqCXd25IW+OPgtv9pF3IT7Gqh7dobucRfrSyG++hoQbE+xRUNUsENHOkdmuMdoV4thAQmM5Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQJ3By9RoWebFAgwikc8HeTzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA0MjAyMjIwMDlaFw0yNzA0MjAyMjIwMDhaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1hpTy0iY6sxvemn2wB+BDAuEFPphx3MbGxfObVSnmB1owbZhplm0OQ8OqmjDpePRip8cdkRTsf9hR77L7PbblItLGJ2sPEooTlO2Gtovp9XG+wlzhWgPQuiMUKGkvshUqMmUpiF5iHnDXnOVf/XB547Or/89k+SIRdNoPWioydPDC7Kaq2FWAf1qrzDXdJsPG5oB4C/WPTvHfMfsXu/XwiyJv3nt3Glg9GAEyQchdZOS8lJvt9ZuhDnGeteMwNVhMvAFy9Bsc9A2/eZj2bWYR+ei41oGtmPQX68F9LPPV1KP1Z8Uob/DLbofCkzaU7UTMPrBuqszsGtckHIQkXEoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCHy513BeR3DmjVwwIOZeXHl5TVPfwYYo024BN4bmA7xv9LWgXx8pgPgRC1hR4gr9wnRNGfGtaOMWRusIhO2rx60od2OPsttCNHJSWsaNJfYaYnk31cnOQMUl+ojuCRbF9M0QJSamYPrFVBpDQNk7F0NW32v2nNfLWrN5wA7pFLJ5WYOZ4tBn1zGtVVsgys201wAXmNn7DagcrubX17IKBziA0iZ3l0ttdhol5yue57X2N4n/RaWnGPyS+WvveBw5FS+O8+LzWSv3ERDfldXsQjo0H29HHCnLaxK5IU3YZiDdRG7qisThglVl15XfxiBAEgGA81sk6+2fl6TZfxy267</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" NotOnOrAfter="2024-07-11T02:52:35.820Z" Recipient="https://gateway.planetexpress.com.au:4443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-07-11T01:47:35.820Z" NotOnOrAfter="2024-07-11T02:52:35.820Z"><AudienceRestriction><Audience>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>871d08a2-c7a4-43b8-93ec-47d4f58a42b5</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>7b1a4af9-f9ad-4755-8e55-f3ecfd737b75</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Johann Lo</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3</AttributeValue><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Johann</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Lo</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="groups"><AttributeValue>5098d212-02a5-4db9-8d48-e2488aad058f</AttributeValue><AttributeValue>a4c1b865-e0f4-489c-b298-b519b67f78ac</AttributeValue><AttributeValue>b90d667f-ebf6-4ac7-b40e-313c111802df</AttributeValue><AttributeValue>c9da6584-8647-4e7d-9d37-03c76cedecc7</AttributeValue><AttributeValue>b31d0fd0-9134-478b-8c3f-5c19aa594b4e</AttributeValue><AttributeValue>e165dad1-e522-40b0-b7ae-8cf46ae936fa</AttributeValue><AttributeValue>a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-07-10T00:56:32.311Z" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion>
+<Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_ab2f5d34-4389-4a98-92d3-0a880e4e5300" IssueInstant="20
+24-09-24T16:21:26.133Z" Version="2.0"><Issuer>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig
+#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha2
+56"/><Reference URI="#_ab2f5d34-4389-4a98-92d3-0a880e4e5300"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algor
+ithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>SgQ9yEJ7bzsZjqNhjo3W3g+elP
+4hlRJ1SNP825N7Hog=</DigestValue></Reference></SignedInfo><SignatureValue>K+spi5mL7gxjl7ruPH9lk/Nb9qh5L03kw5tY8aHlfeYiM4urPpo+zLVCkU5YOUJt2Bkq3RMcod1GlKkVel9ZdT1AFK5ene
+7umPfSFPZb0aKouutQI46gwEvdCtrWyxtGqk2ygG26qGzBAJmVIhlu1RB+22pT74YhmIUtNQY4qyLloW2x7FZxmn3ucQZj/JJ+rt3qexkORT+2ryt2Qsaicql8IRsRRml224Y2ytqoiC1+OsAZIFqzNkRL/BmyHwQqoMhtN
+QPRMcVOMcjv19L1MKRA2bUNaiem1IUIfuDzIspWVTNFFAQUPWWHD8jwKtC8F0tNj0kuDP/caAXo3BCu7w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQHNFkMEdeja9
+GDM23yVDVoTANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA5MTgxNDA1NDZaFw0yNzA5MTgxNDA1NDZaMDQxMjAwBgNVBAMTKU1pY3
+Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsrBwTaahpTPfNXp09lY/Jb94+AmWZoYzMfHZOj7FytGL28AdHwoBHnksm73JAhtvwa+SvzIxS
+yt727OVC0NFsreiFcAQQZlxY4hj3qoSymFjpRGWoS0yuDpePHpwjO5+UQHu1aDMR7D4pbq18E7LntWccV0rOJIKOnqyPHpa9sDRBrNd2K0sBbrwgHpiR5RtnW13ayanE8IF+9TqK95pAhxLuX+OPEvRrb/A8cIXfR3R7CWf
+/U+LHXe4u+PBJeeq5aqBarw9ANgQbiu8WQhD2PHmzDo9TE1wdGQXK2lgOVCvWsmHXXo1h1w++/eAkooO97vB1Uf2Cm4CB2xctV8ylQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA/hK4N4Npb+fHWkG43xM5CEWzXcrRHEzx
+EF4tmEIt6GZFd0DT/eKlxSIW7DjigVzOIApTTdpRYz0MMmLJGHKMEpWpEDw3t8HW9UY3hnX4cc01JrVPNbWPcXCjpmr2y1D/oT7nhW3dOSg6/1R5yBR6fNHoi3Sd/q8j4neskn2hOCnT9ZNy1f9tNMonSM+janZN30hMsdN
+6tjXWLdEmmWedwK7lKN1rBLNAo05/yEneg8SVy1Xp3KfUS2l+oY1teKjJcEoal9lwSFw14tBPbluQlubZDmHMWDXJfUEROtT6uvOKLlHnD6uWf7DNZ4uYPGDE9Ue7wQj+CYkFI4BzcT5SR</X509Certificate></X509D
+ata></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.Anderson@owatonna.gov</NameID><SubjectConfirmation Me
+thod="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_E1C6DDD406854FD00853394D757C06B2" NotOnOrAfter="2024-09-24T17:21:25.915Z" Recipien
+t="https://156.99.82.129:9443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-09-24T16:16:25.915Z" NotOnOrAfter="2024-09-24T17:21:25.91
+5Z"><AudienceRestriction><Audience>http://156.99.82.129:9443/remote/saml/metadata/</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="ht
+tp://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>5119c72d-51d9-4424-b16b-16e1c971c579</AttributeValue></Attribute><Attribute Name="http://schemas.m
+icrosoft.com/identity/claims/objectidentifier"><AttributeValue>b2c0ed85-e42b-4db5-80e9-ff4a7499c634</AttributeValue></Attribute><Attribute Name="http://schemas.microso
+ft.com/identity/claims/displayname"><AttributeValue>Thomas A. Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identi
+typrovider"><AttributeValue>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/cla
+ims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schem
+as.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>b79fbf
+4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Thomas</At
+tributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Anderson</AttributeValue></Attribute><Attribut
+e Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="h
+ttp://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="username"><Attribu
+teValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="group"><AttributeValue>244ef30d-be95-4a8c-85f9-0a627c290163</AttributeValue><Attribut
+eValue>153b8883-0116-4232-affa-265b251c2c1d</AttributeValue><AttributeValue>9054caa7-f39b-4d09-873b-51a884ef14b5</AttributeValue><AttributeValue>bbe7c2a9-4b9c-44c6-b58
+d-9211cfefa520</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-09-24T16:21:19.197Z" SessionIndex="_ab2f5d34-4389-4a98-92d3-0a880e4e
+5300"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion>
 ***********************
 __samld_sp_login_resp [839]: Clock skew tolerance: 0
 
 __samld_parse_attr_statement [205]:
 __samld_sp_login_resp [872]:
 **** SP session Dump ****
-<Session xmlns="http://www.entrouvert.org/namespaces/lasso/0.0" Version="2"><Assertion RemoteProviderID="https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/"><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" IssueInstant="2024-07-11T01:52:35.947Z" Version="2.0"><Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>s01l1ijlqv63KG9dHzqd7onuHtip43+igyyntaARfHo=</DigestValue></Reference></SignedInfo><SignatureValue>BTSArsxhg9G04jBPC6PEBdE1eviZkB1d63RGD6+boySbbkhlFwKT624/rk/3AFHp2NQDx3xsBJiz9i1HAK6ElXwONX7c4gAq4NPDPTkM6Mjm53gn0SzI93YLtFLThuvZ53j044U8I9Sj87vyLXJcQenqkq33OdIavQMNMtbzDOMEfHc75UdJqShmryD52uffUntXFeX7zSTf+pFAMFYGbnIooOIKwd2xpHq0cjpY+2k+LsPkK1Tsd0dYKYPdgRChsZXCk1siuwl92MaqCXd25IW+OPgtv9pF3IT7Gqh7dobucRfrSyG++hoQbE+xRUNUsENHOkdmuMdoV4thAQmM5Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQJ3By9RoWebFAgwikc8HeTzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA0MjAyMjIwMDlaFw0yNzA0MjAyMjIwMDhaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1hpTy0iY6sxvemn2wB+BDAuEFPphx3MbGxfObVSnmB1owbZhplm0OQ8OqmjDpePRip8cdkRTsf9hR77L7PbblItLGJ2sPEooTlO2Gtovp9XG+wlzhWgPQuiMUKGkvshUqMmUpiF5iHnDXnOVf/XB547Or/89k+SIRdNoPWioydPDC7Kaq2FWAf1qrzDXdJsPG5oB4C/WPTvHfMfsXu/XwiyJv3nt3Glg9GAEyQchdZOS8lJvt9ZuhDnGeteMwNVhMvAFy9Bsc9A2/eZj2bWYR+ei41oGtmPQX68F9LPPV1KP1Z8Uob/DLbofCkzaU7UTMPrBuqszsGtckHIQkXEoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCHy513BeR3DmjVwwIOZeXHl5TVPfwYYo024BN4bmA7xv9LWgXx8pgPgRC1hR4gr9wnRNGfGtaOMWRusIhO2rx60od2OPsttCNHJSWsaNJfYaYnk31cnOQMUl+ojuCRbF9M0QJSamYPrFVBpDQNk7F0NW32v2nNfLWrN5wA7pFLJ5WYOZ4tBn1zGtVVsgys201wAXmNn7DagcrubX17IKBziA0iZ3l0ttdhol5yue57X2N4n/RaWnGPyS+WvveBw5FS+O8+LzWSv3ERDfldXsQjo0H29HHCnLaxK5IU3YZiDdRG7qisThglVl15XfxiBAEgGA81sk6+2fl6TZfxy267</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" NotOnOrAfter="2024-07-11T02:52:35.820Z" Recipient="https://gateway.planetexpress.com.au:4443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-07-11T01:47:35.820Z" NotOnOrAfter="2024-07-11T02:52:35.820Z"><AudienceRestriction><Audience>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>871d08a2-c7a4-43b8-93ec-47d4f58a42b5</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>7b1a4af9-f9ad-4755-8e55-f3ecfd737b75</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Johann Lo</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3</AttributeValue><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Johann</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Lo</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="groups"><AttributeValue>5098d212-02a5-4db9-8d48-e2488aad058f</AttributeValue><AttributeValue>a4c1b865-e0f4-489c-b298-b519b67f78ac</AttributeValue><AttributeValue>b90d667f-ebf6-4ac7-b40e-313c111802df</AttributeValue><AttributeValue>c9da6584-8647-4e7d-9d37-03c76cedecc7</AttributeValue><AttributeValue>b31d0fd0-9134-478b-8c3f-5c19aa594b4e</AttributeValue><AttributeValue>e165dad1-e522-40b0-b7ae-8cf46ae936fa</AttributeValue><AttributeValue>a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-07-10T00:56:32.311Z" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></Assertion><NidAndSessionIndex ProviderID="https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/" AssertionID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00">
-<saml:NameID xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</saml:NameID>
+<Session xmlns="http://www.entrouvert.org/namespaces/lasso/0.0" Version="2"><Assertion RemoteProviderID="https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/"
+><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_ab2f5d34-4389-4a98-92d3-0a880e4e5300" IssueInstant="2
+024-09-24T16:21:26.133Z" Version="2.0"><Issuer>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsi
+g#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha
+256"/><Reference URI="#_ab2f5d34-4389-4a98-92d3-0a880e4e5300"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algo
+rithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>SgQ9yEJ7bzsZjqNhjo3W3g+el
+P4hlRJ1SNP825N7Hog=</DigestValue></Reference></SignedInfo><SignatureValue>K+spi5mL7gxjl7ruPH9lk/Nb9qh5L03kw5tY8aHlfeYiM4urPpo+zLVCkU5YOUJt2Bkq3RMcod1GlKkVel9ZdT1AFK5en
+e7umPfSFPZb0aKouutQI46gwEvdCtrWyxtGqk2ygG26qGzBAJmVIhlu1RB+22pT74YhmIUtNQY4qyLloW2x7FZxmn3ucQZj/JJ+rt3qexkORT+2ryt2Qsaicql8IRsRRml224Y2ytqoiC1+OsAZIFqzNkRL/BmyHwQqoMht
+NQPRMcVOMcjv19L1MKRA2bUNaiem1IUIfuDzIspWVTNFFAQUPWWHD8jwKtC8F0tNj0kuDP/caAXo3BCu7w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQHNFkMEdeja
+9GDM23yVDVoTANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA5MTgxNDA1NDZaFw0yNzA5MTgxNDA1NDZaMDQxMjAwBgNVBAMTKU1pY
+3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsrBwTaahpTPfNXp09lY/Jb94+AmWZoYzMfHZOj7FytGL28AdHwoBHnksm73JAhtvwa+SvzIx
+Syt727OVC0NFsreiFcAQQZlxY4hj3qoSymFjpRGWoS0yuDpePHpwjO5+UQHu1aDMR7D4pbq18E7LntWccV0rOJIKOnqyPHpa9sDRBrNd2K0sBbrwgHpiR5RtnW13ayanE8IF+9TqK95pAhxLuX+OPEvRrb/A8cIXfR3R7CW
+f/U+LHXe4u+PBJeeq5aqBarw9ANgQbiu8WQhD2PHmzDo9TE1wdGQXK2lgOVCvWsmHXXo1h1w++/eAkooO97vB1Uf2Cm4CB2xctV8ylQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA/hK4N4Npb+fHWkG43xM5CEWzXcrRHEz
+xEF4tmEIt6GZFd0DT/eKlxSIW7DjigVzOIApTTdpRYz0MMmLJGHKMEpWpEDw3t8HW9UY3hnX4cc01JrVPNbWPcXCjpmr2y1D/oT7nhW3dOSg6/1R5yBR6fNHoi3Sd/q8j4neskn2hOCnT9ZNy1f9tNMonSM+janZN30hMsd
+N6tjXWLdEmmWedwK7lKN1rBLNAo05/yEneg8SVy1Xp3KfUS2l+oY1teKjJcEoal9lwSFw14tBPbluQlubZDmHMWDXJfUEROtT6uvOKLlHnD6uWf7DNZ4uYPGDE9Ue7wQj+CYkFI4BzcT5SR</X509Certificate></X509
+Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.Anderson@owatonna.gov</NameID><SubjectConfirmation M
+ethod="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_E1C6DDD406854FD00853394D757C06B2" NotOnOrAfter="2024-09-24T17:21:25.915Z" Recipie
+nt="https://156.99.82.129:9443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-09-24T16:16:25.915Z" NotOnOrAfter="2024-09-24T17:21:25.9
+15Z"><AudienceRestriction><Audience>http://156.99.82.129:9443/remote/saml/metadata/</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="h
+ttp://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>5119c72d-51d9-4424-b16b-16e1c971c579</AttributeValue></Attribute><Attribute Name="http://schemas.
+microsoft.com/identity/claims/objectidentifier"><AttributeValue>b2c0ed85-e42b-4db5-80e9-ff4a7499c634</AttributeValue></Attribute><Attribute Name="http://schemas.micros
+oft.com/identity/claims/displayname"><AttributeValue>Thomas A. Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/ident
+ityprovider"><AttributeValue>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/cl
+aims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://sche
+mas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>b79fb
+f4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Thomas</A
+ttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Anderson</AttributeValue></Attribute><Attribu
+te Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="
+http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="username"><Attrib
+uteValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="group"><AttributeValue>244ef30d-be95-4a8c-85f9-0a627c290163</AttributeValue><Attribu
+teValue>153b8883-0116-4232-affa-265b251c2c1d</AttributeValue><AttributeValue>9054caa7-f39b-4d09-873b-51a884ef14b5</AttributeValue><AttributeValue>bbe7c2a9-4b9c-44c6-b5
+8d-9211cfefa520</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-09-24T16:21:19.197Z" SessionIndex="_ab2f5d34-4389-4a98-92d3-0a880e4
+e5300"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></Assertio
+n><NidAndSessionIndex ProviderID="https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/" AssertionID="_ab2f5d34-4389-4a98-92d3-0a880e4e5300" SessionIndex="_ab2
+f5d34-4389-4a98-92d3-0a880e4e5300">
+<saml:NameID xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.Anderson@owatonna.gov</saml:Name
+ID>
 </NidAndSessionIndex>
 </Session>
 ***********************
 __samld_sp_login_resp [874]:
 **** SP Login Dump ****
-<lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" LoginDumpVersion="2"><lasso:Request><samlp:AuthnRequest ID="_D690C3FAC2C70A98F2687EF58AD183DE" Version="2.0" IssueInstant="2024-07-11T01:52:35Z" Destination="https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://gateway.planetexpress.com.au:4443/remote/saml/login"><saml:Issuer>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest></lasso:Request><lasso:Response><samlp:Response ID="_a3529190-4bb6-4ae8-8b2a-531e609043c7" InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" Version="2.0" IssueInstant="2024-07-11T01:52:35.952Z" Destination="https://gateway.planetexpress.com.au:4443/remote/saml/login" SignType="0" SignMethod="0"><saml:Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</saml:Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" ID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" IssueInstant="2024-07-11T01:52:35.947Z" Version="2.0"><Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>s01l1ijlqv63KG9dHzqd7onuHtip43+igyyntaARfHo=</DigestValue></Reference></SignedInfo><SignatureValue>BTSArsxhg9G04jBPC6PEBdE1eviZkB1d63RGD6+boySbbkhlFwKT624/rk/3AFHp2NQDx3xsBJiz9i1HAK6ElXwONX7c4gAq4NPDPTkM6Mjm53gn0SzI93YLtFLThuvZ53j044U8I9Sj87vyLXJcQenqkq33OdIavQMNMtbzDOMEfHc75UdJqShmryD52uffUntXFeX7zSTf+pFAMFYGbnIooOIKwd2xpHq0cjpY+2k+LsPkK1Tsd0dYKYPdgRChsZXCk1siuwl92MaqCXd25IW+OPgtv9pF3IT7Gqh7dobucRfrSyG++hoQbE+xRUNUsENHOkdmuMdoV4thAQmM5Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQJ3By9RoWebFAgwikc8HeTzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA0MjAyMjIwMDlaFw0yNzA0MjAyMjIwMDhaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1hpTy0iY6sxvemn2wB+BDAuEFPphx3MbGxfObVSnmB1owbZhplm0OQ8OqmjDpePRip8cdkRTsf9hR77L7PbblItLGJ2sPEooTlO2Gtovp9XG+wlzhWgPQuiMUKGkvshUqMmUpiF5iHnDXnOVf/XB547Or/89k+SIRdNoPWioydPDC7Kaq2FWAf1qrzDXdJsPG5oB4C/WPTvHfMfsXu/XwiyJv3nt3Glg9GAEyQchdZOS8lJvt9ZuhDnGeteMwNVhMvAFy9Bsc9A2/eZj2bWYR+ei41oGtmPQX68F9LPPV1KP1Z8Uob/DLbofCkzaU7UTMPrBuqszsGtckHIQkXEoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCHy513BeR3DmjVwwIOZeXHl5TVPfwYYo024BN4bmA7xv9LWgXx8pgPgRC1hR4gr9wnRNGfGtaOMWRusIhO2rx60od2OPsttCNHJSWsaNJfYaYnk31cnOQMUl+ojuCRbF9M0QJSamYPrFVBpDQNk7F0NW32v2nNfLWrN5wA7pFLJ5WYOZ4tBn1zGtVVsgys201wAXmNn7DagcrubX17IKBziA0iZ3l0ttdhol5yue57X2N4n/RaWnGPyS+WvveBw5FS+O8+LzWSv3ERDfldXsQjo0H29HHCnLaxK5IU3YZiDdRG7qisThglVl15XfxiBAEgGA81sk6+2fl6TZfxy267</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" NotOnOrAfter="2024-07-11T02:52:35.820Z" Recipient="https://gateway.planetexpress.com.au:4443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-07-11T01:47:35.820Z" NotOnOrAfter="2024-07-11T02:52:35.820Z"><AudienceRestriction><Audience>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>871d08a2-c7a4-43b8-93ec-47d4f58a42b5</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>7b1a4af9-f9ad-4755-8e55-f3ecfd737b75</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Johann Lo</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3</AttributeValue><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Johann</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Lo</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="groups"><AttributeValue>5098d212-02a5-4db9-8d48-e2488aad058f</AttributeValue><AttributeValue>a4c1b865-e0f4-489c-b298-b519b67f78ac</AttributeValue><AttributeValue>b90d667f-ebf6-4ac7-b40e-313c111802df</AttributeValue><AttributeValue>c9da6584-8647-4e7d-9d37-03c76cedecc7</AttributeValue><AttributeValue>b31d0fd0-9134-478b-8c3f-5c19aa594b4e</AttributeValue><AttributeValue>e165dad1-e522-40b0-b7ae-8cf46ae936fa</AttributeValue><AttributeValue>a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-07-10T00:56:32.311Z" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response></lasso:Response><lasso:NameIdentifier><saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</saml:NameID></lasso:NameIdentifier><lasso:RemoteProviderID>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=nZJNj5swEIb%2FCvKdb1iIFSJR2KiRti3apD30UjlmyFoyNvWY%2Ffj3NaQf20P30KPH89rzPJotslFOtJ7tg7qH7zOg9Z5HqZCuFxWZjaKaoUCq2AhILafH%2BsMdTYKITkZbzbUkryJvJxgiGCu0It6hrci39mYTNem%2BbpKmiOpNuU9uyuJ2n5d1G5dpe0u8L2DQ9VfExV0IcYaDQsuUdaUoyfyo8OP4FMU0T2iafyVe6xiEYnZNPVg7IQ1DqS9CBaPgRqMerFZSKAi4HsOyiPuoZInPC5b5WXou%2FU0K3M%2BKPhvykmXJOQ8XsoR4e204rK4qMjCJsEzUOSjxCL8r3U8r74Tqhbq8LeR8bUL6%2FnTq%2FO7T8US8%2BpekRiucRzBHMI%2BCw%2Bf7uz9AF2bhib0Ek2QKLDxPBhAXoIDNNMuyNDQwagvr6Fd8stsuB7pKNLv%2Fe2kEy3pm2TZ8%2Fdb2ukYfHd%2Bh7bQU%2FGWRNTL7b%2Fw4iNeK6P1hbaWzwgm4GAT0zoKU%2Bqkx4KariDUzkHB3%2FfTvdd39AA%3D%3D&amp;RelayState=magic%3D010305829b9db04d&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&amp;Signature=j7qAjGd8SDn5QiflxbRi4%2BPD4PX3rS%2BjLIeOPoCJZ%2FyAWMtjdksd9wGX8EEPDfFwVFmdRLaoCYcA28OzbvQyJypQ7tXn9Dabwqkb6MTFj%2FMN6rM1ddntajaoVjO1lqXe1w4gMs%2Bdb2EgBOBB4zmgUIPDIDVGNEzB7nbc87zFWwuhkM5pMEc5JKaC87FfX2h8pZAtTwQ2wsrckocYXU9ii%2F%2B9I%2B9yfGueHfmZ7gi56Utuk5q%2Bi14JWKUSHqaesb4TTRGQSFxgZEFIm0aUGFWPz52IG5fhG3legPn554rzAqavnT9X4QrSKaQuKz5X9t1jXJrScaPo%2F%2Fxc%2BrHkOEB7Ng%3D%3D</lasso:MsgUrl><lasso:MsgRelayState>magic=010305829b9db04d</lasso:MsgRelayState><lasso:HttpRequestMethod>4</lasso:HttpRequestMethod><lasso:RequestID>_D690C3FAC2C70A98F2687EF58AD183DE</lasso:RequestID></lasso:Login>
-***********************
-__samld_sp_login_resp [876]:
-__samld_sp_create_logout_req [928]:
-SP Session Dump
-<Session xmlns="http://www.entrouvert.org/namespaces/lasso/0.0" Version="2"><Assertion RemoteProviderID="https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/"><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" IssueInstant="2024-07-11T01:52:35.947Z" Version="2.0"><Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>s01l1ijlqv63KG9dHzqd7onuHtip43+igyyntaARfHo=</DigestValue></Reference></SignedInfo><SignatureValue>BTSArsxhg9G04jBPC6PEBdE1eviZkB1d63RGD6+boySbbkhlFwKT624/rk/3AFHp2NQDx3xsBJiz9i1HAK6ElXwONX7c4gAq4NPDPTkM6Mjm53gn0SzI93YLtFLThuvZ53j044U8I9Sj87vyLXJcQenqkq33OdIavQMNMtbzDOMEfHc75UdJqShmryD52uffUntXFeX7zSTf+pFAMFYGbnIooOIKwd2xpHq0cjpY+2k+LsPkK1Tsd0dYKYPdgRChsZXCk1siuwl92MaqCXd25IW+OPgtv9pF3IT7Gqh7dobucRfrSyG++hoQbE+xRUNUsENHOkdmuMdoV4thAQmM5Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQJ3By9RoWebFAgwikc8HeTzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA0MjAyMjIwMDlaFw0yNzA0MjAyMjIwMDhaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1hpTy0iY6sxvemn2wB+BDAuEFPphx3MbGxfObVSnmB1owbZhplm0OQ8OqmjDpePRip8cdkRTsf9hR77L7PbblItLGJ2sPEooTlO2Gtovp9XG+wlzhWgPQuiMUKGkvshUqMmUpiF5iHnDXnOVf/XB547Or/89k+SIRdNoPWioydPDC7Kaq2FWAf1qrzDXdJsPG5oB4C/WPTvHfMfsXu/XwiyJv3nt3Glg9GAEyQchdZOS8lJvt9ZuhDnGeteMwNVhMvAFy9Bsc9A2/eZj2bWYR+ei41oGtmPQX68F9LPPV1KP1Z8Uob/DLbofCkzaU7UTMPrBuqszsGtckHIQkXEoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCHy513BeR3DmjVwwIOZeXHl5TVPfwYYo024BN4bmA7xv9LWgXx8pgPgRC1hR4gr9wnRNGfGtaOMWRusIhO2rx60od2OPsttCNHJSWsaNJfYaYnk31cnOQMUl+ojuCRbF9M0QJSamYPrFVBpDQNk7F0NW32v2nNfLWrN5wA7pFLJ5WYOZ4tBn1zGtVVsgys201wAXmNn7DagcrubX17IKBziA0iZ3l0ttdhol5yue57X2N4n/RaWnGPyS+WvveBw5FS+O8+LzWSv3ERDfldXsQjo0H29HHCnLaxK5IU3YZiDdRG7qisThglVl15XfxiBAEgGA81sk6+2fl6TZfxy267</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" NotOnOrAfter="2024-07-11T02:52:35.820Z" Recipient="https://gateway.planetexpress.com.au:4443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-07-11T01:47:35.820Z" NotOnOrAfter="2024-07-11T02:52:35.820Z"><AudienceRestriction><Audience>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>871d08a2-c7a4-43b8-93ec-47d4f58a42b5</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>7b1a4af9-f9ad-4755-8e55-f3ecfd737b75</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Johann Lo</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3</AttributeValue><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Johann</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Lo</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="groups"><AttributeValue>5098d212-02a5-4db9-8d48-e2488aad058f</AttributeValue><AttributeValue>a4c1b865-e0f4-489c-b298-b519b67f78ac</AttributeValue><AttributeValue>b90d667f-ebf6-4ac7-b40e-313c111802df</AttributeValue><AttributeValue>c9da6584-8647-4e7d-9d37-03c76cedecc7</AttributeValue><AttributeValue>b31d0fd0-9134-478b-8c3f-5c19aa594b4e</AttributeValue><AttributeValue>e165dad1-e522-40b0-b7ae-8cf46ae936fa</AttributeValue><AttributeValue>a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-07-10T00:56:32.311Z" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></Assertion><NidAndSessionIndex ProviderID="https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/" AssertionID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00">
-<saml:NameID xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</saml:NameID>
-</NidAndSessionIndex>
-</Session>
-
-__samld_sp_create_logout_req [980]:
+<lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:as
+sertion" LoginDumpVersion="2"><lasso:Request><samlp:AuthnRequest ID="_E1C6DDD406854FD00853394D757C06B2" Version="2.0" IssueInstant="2024-09-24T16:20:19Z" Destination="
+https://login.microsoftonline.com/5119c72d-51d9-4424-b16b-16e1c971c579/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oas
+is:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://156.99.82.129:9443/remote/saml/login"><saml:Issuer>http://156.99.82.129:9443/remote/saml/
+metadata/</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest></lasso:Request><las
+so:Response><samlp:Response ID="_3c606072-b2c7-4d06-ad2f-be4c92598db5" InResponseTo="_E1C6DDD406854FD00853394D757C06B2" Version="2.0" IssueInstant="2024-09-24T16:21:26
+.138Z" Destination="https://156.99.82.129:9443/remote/saml/login" SignType="0" SignMethod="0"><saml:Issuer>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579
+/</saml:Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:asserti
+on" ID="_ab2f5d34-4389-4a98-92d3-0a880e4e5300" IssueInstant="2024-09-24T16:21:26.133Z" Version="2.0"><Issuer>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c5
+79/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMe
+thod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_ab2f5d34-4389-4a98-92d3-0a880e4e5300"><Transforms><Transform Algorithm="http://ww
+w.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/
+2001/04/xmlenc#sha256"/><DigestValue>SgQ9yEJ7bzsZjqNhjo3W3g+elP4hlRJ1SNP825N7Hog=</DigestValue></Reference></SignedInfo><SignatureValue>K+spi5mL7gxjl7ruPH9lk/Nb9qh5L03
+kw5tY8aHlfeYiM4urPpo+zLVCkU5YOUJt2Bkq3RMcod1GlKkVel9ZdT1AFK5ene7umPfSFPZb0aKouutQI46gwEvdCtrWyxtGqk2ygG26qGzBAJmVIhlu1RB+22pT74YhmIUtNQY4qyLloW2x7FZxmn3ucQZj/JJ+rt3qex
+kORT+2ryt2Qsaicql8IRsRRml224Y2ytqoiC1+OsAZIFqzNkRL/BmyHwQqoMhtNQPRMcVOMcjv19L1MKRA2bUNaiem1IUIfuDzIspWVTNFFAQUPWWHD8jwKtC8F0tNj0kuDP/caAXo3BCu7w==</SignatureValue><Key
+Info><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQHNFkMEdeja9GDM23yVDVoTANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTA
+eFw0yNDA5MTgxNDA1NDZaFw0yNzA5MTgxNDA1NDZaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsrBwTaahpT
+PfNXp09lY/Jb94+AmWZoYzMfHZOj7FytGL28AdHwoBHnksm73JAhtvwa+SvzIxSyt727OVC0NFsreiFcAQQZlxY4hj3qoSymFjpRGWoS0yuDpePHpwjO5+UQHu1aDMR7D4pbq18E7LntWccV0rOJIKOnqyPHpa9sDRBrNd2
+K0sBbrwgHpiR5RtnW13ayanE8IF+9TqK95pAhxLuX+OPEvRrb/A8cIXfR3R7CWf/U+LHXe4u+PBJeeq5aqBarw9ANgQbiu8WQhD2PHmzDo9TE1wdGQXK2lgOVCvWsmHXXo1h1w++/eAkooO97vB1Uf2Cm4CB2xctV8ylQID
+AQABMA0GCSqGSIb3DQEBCwUAA4IBAQA/hK4N4Npb+fHWkG43xM5CEWzXcrRHEzxEF4tmEIt6GZFd0DT/eKlxSIW7DjigVzOIApTTdpRYz0MMmLJGHKMEpWpEDw3t8HW9UY3hnX4cc01JrVPNbWPcXCjpmr2y1D/oT7nhW3d
+OSg6/1R5yBR6fNHoi3Sd/q8j4neskn2hOCnT9ZNy1f9tNMonSM+janZN30hMsdN6tjXWLdEmmWedwK7lKN1rBLNAo05/yEneg8SVy1Xp3KfUS2l+oY1teKjJcEoal9lwSFw14tBPbluQlubZDmHMWDXJfUEROtT6uvOKLlH
+nD6uWf7DNZ4uYPGDE9Ue7wQj+CYkFI4BzcT5SR</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddres
+s">Thomas.Anderson@owatonna.gov</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_E1C6DDD406854FD0085
+3394D757C06B2" NotOnOrAfter="2024-09-24T17:21:25.915Z" Recipient="https://156.99.82.129:9443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore=
+"2024-09-24T16:16:25.915Z" NotOnOrAfter="2024-09-24T17:21:25.915Z"><AudienceRestriction><Audience>http://156.99.82.129:9443/remote/saml/metadata/</Audience></AudienceR
+estriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>5119c72d-51d9-4424-b16b-16e1c971c57
+9</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>b2c0ed85-e42b-4db5-80e9-ff4a7499c634</Att
+ributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Thomas A. Anderson</AttributeValue></Attribute><Attr
+ibute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</AttributeValu
+e></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticat
+ionmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.micros
+oft.com/ws/2008/06/identity/claims/wids"><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/w
+s/2005/05/identity/claims/givenname"><AttributeValue>Thomas</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
+><AttributeValue>Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>Thomas.Ander
+son@owatonna.gov</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>Thomas.Anderson@owatonna.gov<
+/AttributeValue></Attribute><Attribute Name="username"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="group"><AttributeValue
+>244ef30d-be95-4a8c-85f9-0a627c290163</AttributeValue><AttributeValue>153b8883-0116-4232-affa-265b251c2c1d</AttributeValue><AttributeValue>9054caa7-f39b-4d09-873b-51a8
+84ef14b5</AttributeValue><AttributeValue>bbe7c2a9-4b9c-44c6-b58d-9211cfefa520</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-09-24
+T16:21:19.197Z" SessionIndex="_ab2f5d34-4389-4a98-92d3-0a880e4e5300"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextC
+lassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response></lasso:Response><lasso:NameIdentifier><saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-for
+mat:emailAddress">Thomas.Anderson@owatonna.gov</saml:NameID></lasso:NameIdentifier><lasso:RemoteProviderID>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579
+/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsofton__samld_sp_create_logout_req [980]:
 **** SP Logout request ****
-<samlp:LogoutRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_3AE8D3F8298094D96D8A7E28B51A20FD" Version="2.0" IssueInstant="2024-07-11T01:52:36Z" Destination="https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2" SignType="0" SignMethod="0"><saml:Issuer>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</saml:Issuer><saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</saml:NameID><samlp:SessionIndex>_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00</samlp:SessionIndex>
+<samlp:LogoutRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_8D041842F00B8BC9447303451F6F981B" Versi
+on="2.0" IssueInstant="2024-09-24T16:21:26Z" Destination="https://login.microsoftonline.com/5119c72d-51d9-4424-b16b-16e1c971c579/saml2" SignType="0" SignMethod="0"><sa
+ml:Issuer>http://156.99.82.129:9443/remote/saml/metadata/</saml:Issuer><saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.Anderson@owa
+tonna.gov</saml:NameID><samlp:SessionIndex>_ab2f5d34-4389-4a98-92d3-0a880e4e5300</samlp:SessionIndex>
 </samlp:LogoutRequest>
 ***********************
 __samld_sp_create_logout_req [985]:
-samld_send_common_reply [91]: Code: 0, id: 563636, pid: 297, len: 17685, data_len 17669
-samld_send_common_reply [99]:     Attr: 14, 8612, <lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" LoginDumpVersion="2"><lasso:Request><samlp:AuthnRequest ID="_D690C3FAC2C70A98F2687EF58AD183DE" Version="2.0" IssueInstant="2024-07-11T01:52:35Z" Destination="https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2" SignType="0" SignMethod="0" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://gateway.planetexpress.com.au:4443/remote/saml/login"><saml:Issuer>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true"/></samlp:AuthnRequest></lasso:Request><lasso:Response><samlp:Response ID="_a3529190-4bb6-4ae8-8b2a-531e609043c7" InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" Version="2.0" IssueInstant="2024-07-11T01:52:35.952Z" Destination="https://gateway.planetexpress.com.au:4443/remote/saml/login" SignType="0" SignMethod="0"><saml:Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</saml:Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" ID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" IssueInstant="2024-07-11T01:52:35.947Z" Version="2.0"><Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>s01l1ijlqv63KG9dHzqd7onuHtip43+igyyntaARfHo=</DigestValue></Reference></SignedInfo><SignatureValue>BTSArsxhg9G04jBPC6PEBdE1eviZkB1d63RGD6+boySbbkhlFwKT624/rk/3AFHp2NQDx3xsBJiz9i1HAK6ElXwONX7c4gAq4NPDPTkM6Mjm53gn0SzI93YLtFLThuvZ53j044U8I9Sj87vyLXJcQenqkq33OdIavQMNMtbzDOMEfHc75UdJqShmryD52uffUntXFeX7zSTf+pFAMFYGbnIooOIKwd2xpHq0cjpY+2k+LsPkK1Tsd0dYKYPdgRChsZXCk1siuwl92MaqCXd25IW+OPgtv9pF3IT7Gqh7dobucRfrSyG++hoQbE+xRUNUsENHOkdmuMdoV4thAQmM5Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQJ3By9RoWebFAgwikc8HeTzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA0MjAyMjIwMDlaFw0yNzA0MjAyMjIwMDhaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1hpTy0iY6sxvemn2wB+BDAuEFPphx3MbGxfObVSnmB1owbZhplm0OQ8OqmjDpePRip8cdkRTsf9hR77L7PbblItLGJ2sPEooTlO2Gtovp9XG+wlzhWgPQuiMUKGkvshUqMmUpiF5iHnDXnOVf/XB547Or/89k+SIRdNoPWioydPDC7Kaq2FWAf1qrzDXdJsPG5oB4C/WPTvHfMfsXu/XwiyJv3nt3Glg9GAEyQchdZOS8lJvt9ZuhDnGeteMwNVhMvAFy9Bsc9A2/eZj2bWYR+ei41oGtmPQX68F9LPPV1KP1Z8Uob/DLbofCkzaU7UTMPrBuqszsGtckHIQkXEoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCHy513BeR3DmjVwwIOZeXHl5TVPfwYYo024BN4bmA7xv9LWgXx8pgPgRC1hR4gr9wnRNGfGtaOMWRusIhO2rx60od2OPsttCNHJSWsaNJfYaYnk31cnOQMUl+ojuCRbF9M0QJSamYPrFVBpDQNk7F0NW32v2nNfLWrN5wA7pFLJ5WYOZ4tBn1zGtVVsgys201wAXmNn7DagcrubX17IKBziA0iZ3l0ttdhol5yue57X2N4n/RaWnGPyS+WvveBw5FS+O8+LzWSv3ERDfldXsQjo0H29HHCnLaxK5IU3YZiDdRG7qisThglVl15XfxiBAEgGA81sk6+2fl6TZfxy267</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" NotOnOrAfter="2024-07-11T02:52:35.820Z" Recipient="https://gateway.planetexpress.com.au:4443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-07-11T01:47:35.820Z" NotOnOrAfter="2024-07-11T02:52:35.820Z"><AudienceRestriction><Audience>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>871d08a2-c7a4-43b8-93ec-47d4f58a42b5</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>7b1a4af9-f9ad-4755-8e55-f3ecfd737b75</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Johann Lo</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3</AttributeValue><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Johann</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Lo</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="groups"><AttributeValue>5098d212-02a5-4db9-8d48-e2488aad058f</AttributeValue><AttributeValue>a4c1b865-e0f4-489c-b298-b519b67f78ac</AttributeValue><AttributeValue>b90d667f-ebf6-4ac7-b40e-313c111802df</AttributeValue><AttributeValue>c9da6584-8647-4e7d-9d37-03c76cedecc7</AttributeValue><AttributeValue>b31d0fd0-9134-478b-8c3f-5c19aa594b4e</AttributeValue><AttributeValue>e165dad1-e522-40b0-b7ae-8cf46ae936fa</AttributeValue><AttributeValue>a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-07-10T00:56:32.311Z" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response></lasso:Response><lasso:NameIdentifier><saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</saml:NameID></lasso:NameIdentifier><lasso:RemoteProviderID>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=nZJNj5swEIb%2FCvKdb1iIFSJR2KiRti3apD30UjlmyFoyNvWY%2Ffj3NaQf20P30KPH89rzPJotslFOtJ7tg7qH7zOg9Z5HqZCuFxWZjaKaoUCq2AhILafH%2BsMdTYKITkZbzbUkryJvJxgiGCu0It6hrci39mYTNem%2BbpKmiOpNuU9uyuJ2n5d1G5dpe0u8L2DQ9VfExV0IcYaDQsuUdaUoyfyo8OP4FMU0T2iafyVe6xiEYnZNPVg7IQ1DqS9CBaPgRqMerFZSKAi4HsOyiPuoZInPC5b5WXou%2FU0K3M%2BKPhvykmXJOQ8XsoR4e204rK4qMjCJsEzUOSjxCL8r3U8r74Tqhbq8LeR8bUL6%2FnTq%2FO7T8US8%2BpekRiucRzBHMI%2BCw%2Bf7uz9AF2bhib0Ek2QKLDxPBhAXoIDNNMuyNDQwagvr6Fd8stsuB7pKNLv%2Fe2kEy3pm2TZ8%2Fdb2ukYfHd%2Bh7bQU%2FGWRNTL7b%2Fw4iNeK6P1hbaWzwgm4GAT0zoKU%2Bqkx4KariDUzkHB3%2FfTvdd39AA%3D%3D&amp;RelayState=magic%3D010305829b9db04d&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&amp;Signature=j7qAjGd8SDn5QiflxbRi4%2BPD4PX3rS%2BjLIeOPoCJZ%2FyAWMtjdksd9wGX8EEPDfFwVFmdRLaoCYcA28OzbvQyJypQ7tXn9Dabwqkb6MTFj%2FMN6rM1ddntajaoVjO1lqXe1w4gMs%2Bdb2EgBOBB4zmgUIPDIDVGNEzB7nbc87zFWwuhkM5pMEc5JKaC87FfX2h8pZAtTwQ2wsrckocYXU9ii%2F%2B9I%2B9yfGueHfmZ7gi56Utuk5q%2Bi14JWKUSHqaesb4TTRGQSFxgZEFIm0aUGFWPz52IG5fhG3legPn554rzAqavnT9X4QrSKaQuKz5X9t1jXJrScaPo%2F%2Fxc%2BrHkOEB7Ng%3D%3D</lasso:MsgUrl><lasso:MsgRelayState>magic=010305829b9db04d</lasso:MsgRelayState><lasso:HttpRequestMethod>4</lasso:HttpRequestMethod><lasso:RequestID>_D690C3FAC2C70A98F2687EF58AD183DE</lasso:RequestID></lasso:Login>
-samld_send_common_reply [99]:     Attr: 13, 6223, <Session xmlns="http://www.entrouvert.org/namespaces/lasso/0.0" Version="2"><Assertion RemoteProviderID="https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/"><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" IssueInstant="2024-07-11T01:52:35.947Z" Version="2.0"><Issuer>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>s01l1ijlqv63KG9dHzqd7onuHtip43+igyyntaARfHo=</DigestValue></Reference></SignedInfo><SignatureValue>BTSArsxhg9G04jBPC6PEBdE1eviZkB1d63RGD6+boySbbkhlFwKT624/rk/3AFHp2NQDx3xsBJiz9i1HAK6ElXwONX7c4gAq4NPDPTkM6Mjm53gn0SzI93YLtFLThuvZ53j044U8I9Sj87vyLXJcQenqkq33OdIavQMNMtbzDOMEfHc75UdJqShmryD52uffUntXFeX7zSTf+pFAMFYGbnIooOIKwd2xpHq0cjpY+2k+LsPkK1Tsd0dYKYPdgRChsZXCk1siuwl92MaqCXd25IW+OPgtv9pF3IT7Gqh7dobucRfrSyG++hoQbE+xRUNUsENHOkdmuMdoV4thAQmM5Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQJ3By9RoWebFAgwikc8HeTzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA0MjAyMjIwMDlaFw0yNzA0MjAyMjIwMDhaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1hpTy0iY6sxvemn2wB+BDAuEFPphx3MbGxfObVSnmB1owbZhplm0OQ8OqmjDpePRip8cdkRTsf9hR77L7PbblItLGJ2sPEooTlO2Gtovp9XG+wlzhWgPQuiMUKGkvshUqMmUpiF5iHnDXnOVf/XB547Or/89k+SIRdNoPWioydPDC7Kaq2FWAf1qrzDXdJsPG5oB4C/WPTvHfMfsXu/XwiyJv3nt3Glg9GAEyQchdZOS8lJvt9ZuhDnGeteMwNVhMvAFy9Bsc9A2/eZj2bWYR+ei41oGtmPQX68F9LPPV1KP1Z8Uob/DLbofCkzaU7UTMPrBuqszsGtckHIQkXEoQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCHy513BeR3DmjVwwIOZeXHl5TVPfwYYo024BN4bmA7xv9LWgXx8pgPgRC1hR4gr9wnRNGfGtaOMWRusIhO2rx60od2OPsttCNHJSWsaNJfYaYnk31cnOQMUl+ojuCRbF9M0QJSamYPrFVBpDQNk7F0NW32v2nNfLWrN5wA7pFLJ5WYOZ4tBn1zGtVVsgys201wAXmNn7DagcrubX17IKBziA0iZ3l0ttdhol5yue57X2N4n/RaWnGPyS+WvveBw5FS+O8+LzWSv3ERDfldXsQjo0H29HHCnLaxK5IU3YZiDdRG7qisThglVl15XfxiBAEgGA81sk6+2fl6TZfxy267</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_D690C3FAC2C70A98F2687EF58AD183DE" NotOnOrAfter="2024-07-11T02:52:35.820Z" Recipient="https://gateway.planetexpress.com.au:4443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-07-11T01:47:35.820Z" NotOnOrAfter="2024-07-11T02:52:35.820Z"><AudienceRestriction><Audience>https://gateway.planetexpress.com.au:4443/remote/saml/metadata</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>871d08a2-c7a4-43b8-93ec-47d4f58a42b5</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>7b1a4af9-f9ad-4755-8e55-f3ecfd737b75</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Johann Lo</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3</AttributeValue><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Johann</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Lo</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>johannlo@planetexpress.com.au</AttributeValue></Attribute><Attribute Name="groups"><AttributeValue>5098d212-02a5-4db9-8d48-e2488aad058f</AttributeValue><AttributeValue>a4c1b865-e0f4-489c-b298-b519b67f78ac</AttributeValue><AttributeValue>b90d667f-ebf6-4ac7-b40e-313c111802df</AttributeValue><AttributeValue>c9da6584-8647-4e7d-9d37-03c76cedecc7</AttributeValue><AttributeValue>b31d0fd0-9134-478b-8c3f-5c19aa594b4e</AttributeValue><AttributeValue>e165dad1-e522-40b0-b7ae-8cf46ae936fa</AttributeValue><AttributeValue>a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2024-07-10T00:56:32.311Z" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00"><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></Assertion><NidAndSessionIndex ProviderID="https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/" AssertionID="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00" SessionIndex="_c585e70b-dece-4ce7-81a3-6ef9fbbb3d00">
-<saml:NameID xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">johannlo@planetexpress.com.au</saml:NameID>
-</NidAndSessionIndex>
-</Session>
-samld_send_common_reply [99]:     Attr: 17, 31, magic=010305829b9db04d
-samld_send_common_reply [99]:     Attr: 18, 33, 2024-07-11T02:52:35.820Z
-samld_send_common_reply [95]:     Attr: 10, 99, 'http://schemas.microsoft.com/identity/claims/tenantid' '871d08a2-c7a4-43b8-93ec-47d4f58a42b5'
-samld_send_common_reply [95]:     Attr: 10, 107, 'http://schemas.microsoft.com/identity/claims/objectidentifier' '7b1a4af9-f9ad-4755-8e55-f3ecfd737b75'
-samld_send_common_reply [95]:     Attr: 10, 75, 'http://schemas.microsoft.com/identity/claims/displayname' 'Johann Lo'
-samld_send_common_reply [95]:     Attr: 10, 132, 'http://schemas.microsoft.com/identity/claims/identityprovider' 'https://sts.windows.net/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/'
-samld_send_common_reply [95]:     Attr: 10, 146, 'http://schemas.microsoft.com/claims/authnmethodsreferences' 'http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password'
+samld_send_common_reply [91]: Code: 0, id: 565223, pid: 3617, len: 16760, data_len 16744
+samld_send_common_reply [99]:     Attr: 14, 8250, <lasso:Login xmlns:lasso="http://www.entrouvert.org/namespaces/lasso/0.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:pr
+otocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" LoginDumpVersion="2"><lasso:Request><samlp:AuthnRequest ID="_E1C6DDD406854FD00853394D757C06B2" Version="2.0"
+ IssueInstant="2024-09-24T16:20:19Z" Destination="https://login.microsoftonline.com/5119c72d-51d9-4424-b16b-16e1c971c579/saml2" SignType="0" SignMethod="0" ForceAuthn=
+"false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://156.99.82.129:9443/remote/saml/login"><
+saml:Issuer>http://156.99.82.129:9443/remote/saml/metadata/</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate
+="true"/></samlp:AuthnRequest></lasso:Request><lasso:Response><samlp:Response ID="_3c606072-b2c7-4d06-ad2f-be4c92598db5" InResponseTo="_E1C6DDD406854FD00853394D757C06B
+2" Version="2.0" IssueInstant="2024-09-24T16:21:26.138Z" Destination="https://156.99.82.129:9443/remote/saml/login" SignType="0" SignMethod="0"><saml:Issuer>https://st
+s.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</saml:Issuer><samlp:Status><samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/></samlp:Status><As
+sertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" ID="_ab2f5d34-4389-4a98-92d3-0a880e4e5300" IssueInstant="2024-09-24T16:21:26.133Z" Version="2.0"><Issuer>https://
+sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http
+://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_ab2f5d34-4389-4a98-92d3-0a880e4
+e5300"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Tran
+sforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>SgQ9yEJ7bzsZjqNhjo3W3g+elP4hlRJ1SNP825N7Hog=</DigestValue></Reference></SignedIn
+fo><SignatureValue>K+spi5mL7gxjl7ruPH9lk/Nb9qh5L03kw5tY8aHlfeYiM4urPpo+zLVCkU5YOUJt2Bkq3RMcod1GlKkVel9ZdT1AFK5ene7umPfSFPZb0aKouutQI46gwEvdCtrWyxtGqk2ygG26qGzBAJmVIhlu
+1RB+22pT74YhmIUtNQY4qyLloW2x7FZxmn3ucQZj/JJ+rt3qexkORT+2ryt2Qsaicql8IRsRRml224Y2ytqoiC1+OsAZIFqzNkRL/BmyHwQqoMhtNQPRMcVOMcjv19L1MKRA2bUNaiem1IUIfuDzIspWVTNFFAQUPWWHD8j
+wKtC8F0tNj0kuDP/caAXo3BCu7w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC8DCCAdigAwIBAgIQHNFkMEdeja9GDM23yVDVoTANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb
+3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA5MTgxNDA1NDZaFw0yNzA5MTgxNDA1NDZaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsrBwTaahpTPfNXp09lY/Jb94+AmWZoYzMfHZOj7FytGL28AdHwoBHnksm73JAhtvwa+SvzIxSyt727OVC0NFsreiFcAQQZlxY4hj3qoSymFjpRGWoS0yuDpePHpwjO5
++UQHu1aDMR7D4pbq18E7LntWccV0rOJIKOnqyPHpa9sDRBrNd2K0sBbrwgHpiR5RtnW13ayanE8IF+9TqK95pAhxLuX+OPEvRrb/A8cIXfR3R7CWf/U+LHXe4u+PBJeeq5aqBarw9ANgQbiu8WQhD2PHmzDo9TE1wdGQXK2
+lgOVCvWsmHXXo1h1w++/eAkooO97vB1Uf2Cm4CB2xctV8ylQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA/hK4N4Npb+fHWkG43xM5CEWzXcrRHEzxEF4tmEIt6GZFd0DT/eKlxSIW7DjigVzOIApTTdpRYz0MMmLJGHKMEp
+WpEDw3t8HW9UY3hnX4cc01JrVPNbWPcXCjpmr2y1D/oT7nhW3dOSg6/1R5yBR6fNHoi3Sd/q8j4neskn2hOCnT9ZNy1f9tNMonSM+janZN30hMsdN6tjXWLdEmmWedwK7lKN1rBLNAo05/yEneg8SVy1Xp3KfUS2l+oY1te
+KjJcEoal9lwSFw14tBPbluQlubZDmHMWDXJfUEROtT6uvOKLlHnD6uWf7DNZ4uYPGDE9Ue7wQj+CYkFI4BzcT5SR</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn
+:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.Anderson@owatonna.gov</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectC
+onfirmationData InResponseTo="_E1C6DDD406854FD00853394D757C06B2" NotOnOrAfter="2024-09-24T17:21:25.915Z" Recipient="https://156.99.82.129:9443/remote/saml/login"/></Su
+bjectConfirmation></Subject><Conditions NotBefore="2024-09-24T16:16:25.915Z" NotOnOrAfter="2024-09-24T17:21:25.915Z"><AudienceRestriction><Audience>http://156.99.82.12
+9:9443/remote/saml/metadata/</Audience></AudienceRestriction></Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><
+AttributeValue>5119c72d-51d9-4424-b16b-16e1c971c579</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><Attrib
+uteValue>b2c0ed85-e42b-4db5-80e9-ff4a7499c634</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Th
+omas A. Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/51
+19c72d-51d9-4424-b16b-16e1c971c579/</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://sch
+emas.microsoft.com/ws/2008/06/identity/authenticationmethod/password</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue>
+</Attribute><Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/wids"><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attri
+bute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"><AttributeValue>Thomas</AttributeValue></Attribute><Attribute Name="http://schem
+as.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeValue>Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity
+/claims/emailaddress"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/n
+ame"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue></Attribute><Attribute Name="username"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeValue><
+/Attribute><Attribute Name="group"><AttributeValue>244ef30d-be95-4a8c-85f9-0a627c290163</AttributeValue><AttributeValue>153b8883-0116-4232-affa-265b251c2c1d</Attribute
+Value><AttributeValue>9054caa7-f39b-4d09-873b-51a884ef14b5</AttributeValue><AttributeValue>bbe7c2a9-4b9c-44c6-b58d-9211cfefa520</AttributeValue></Attribute></Attribute
+Statement><AuthnStatement AuthnInstant="2024-09-24T16:21:19.197Z" SessionIndex="_ab2f5d34-4389-4a98-92d3-0a880e4e5300"><AuthnContext><AuthnContextClassRef>urn:oasis:na
+mes:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response></lasso:Response><lasso:NameIdentifier><saml:Nam
+eID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.Anderson@owatonna.gov</saml:NameID></lasso:NameIdentifier><lasso:RemoteProviderID>https://st
+s.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</lasso:RemoteProviderID><lasso:MsgUrl>https://login.microsoftonline.com/5119c72d-51d9-4424-b16b-16e1c971c579/saml2?
+SAMLRequest=hZJNj9MwEIb%2FSuR7Ppw6SW21lboNKyotEG0LBy7Idaa7lmK7eJwF%2Fj1OusByYDl6PI89z6tZoTTDRWzH8Gjv4esIGJLvZrAo5os1Gb0VTqJGYaUBFEGJw%2FbdnSizQly8C065gbxAXickIvignSXJv
+l2TL2%2Form7blhX1smK3bVEsq8WCs7apml1R35Qk%2BQQeY%2F%2BaRDxCiCPsLQZpQywVJUsLnpbsSGtRFoLyzyRpo4O2MszUYwgXFHk%2BuAdtM6OVd%2BjOwdlBW8iUM3lFKVdN2acV7XnKWHzyROtTSmugijdUVQ3P
+J7M4zK3zCuas1uQsB4Rpoi5K6Sf4XemeU7nRttf24fVATtcmFG%2BPxy7tPhyOJNn%2BCmnnLI4G%2FAH8k1bw8f7ujxCt6ozzbFlmtOSCM7bIPRgXYJ716ks2q%2Bkg5tT8ZkL%2FTxoIspdB5qv8Jby6Lsr7aLBvOzdo9
+WOKw8jwb0Ga0bmi%2B%2FQ8t4rR4gWUPmvoo%2BcwuG87DzLE8IIfgeSb66d%2FL%2BTmJw%3D%3D&amp;RelayState=magic%3D05050a849bf2ef7e&amp;SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2F
+xmldsig%23rsa-sha1&amp;Signature=OeBYnh%2FLz6dGmP2JVogsTdvnY1sExkcQZrRNsiMtIeOjuPezeO3BNrkzp3%2BwMjqN6KAEbP%2FxEwPUfYPPeeHQnXRRY1UkI0m2PLqWfk0v2yqdpi6BPm5ddWnhGuohU9eu
+0teUisT28YCvyCdjJKBRPupFdCrb2OnhcxWBGoYj1X0Q2UtToHDJ8qu7zJBimKW3rEAWlzhYHqPe8kvyEZ381qm8U9E2G7UHxKCt1u%2FRlky8qWwSE6NkLZGG3fmSRZmPU%2FQMc5rywqXIKKpH6npRLKSZqyRP3KnmtAG
+wFCdfeBsHXi%2B0potd6hSW7N2B5YSNMM4nrYqd4P%2Bcc1YXbWBRww%3D%3D</lasso:MsgUrl><lasso:MsgRelayState>magic=05050a849bf2ef7e</lasso:MsgRelayState><lasso:HttpRequestMethod>4
+</lasso:HttpRequestMethod><lasso:RequestID>_E1C6DDD406854FD00853394D757C06B2</lasso:RequestID></lasso:Login>
+samld_send_common_reply [99]:     Attr: 13, 5926, <Session xmlns="http://www.entrouvert.org/namespaces/lasso/0.0" Version="2"><Assertion RemoteProviderID="https://sts.
+windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/"><Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_ab2
+f5d34-4389-4a98-92d3-0a880e4e5300" IssueInstant="2024-09-24T16:21:26.133Z" Version="2.0"><Issuer>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</Issuer>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorit
+hm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#_ab2f5d34-4389-4a98-92d3-0a880e4e5300"><Transforms><Transform Algorithm="http://www.w3.org/200
+0/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmle
+nc#sha256"/><DigestValue>SgQ9yEJ7bzsZjqNhjo3W3g+elP4hlRJ1SNP825N7Hog=</DigestValue></Reference></SignedInfo><SignatureValue>K+spi5mL7gxjl7ruPH9lk/Nb9qh5L03kw5tY8aHlfeY
+iM4urPpo+zLVCkU5YOUJt2Bkq3RMcod1GlKkVel9ZdT1AFK5ene7umPfSFPZb0aKouutQI46gwEvdCtrWyxtGqk2ygG26qGzBAJmVIhlu1RB+22pT74YhmIUtNQY4qyLloW2x7FZxmn3ucQZj/JJ+rt3qexkORT+2ryt2Qs
+aicql8IRsRRml224Y2ytqoiC1+OsAZIFqzNkRL/BmyHwQqoMhtNQPRMcVOMcjv19L1MKRA2bUNaiem1IUIfuDzIspWVTNFFAQUPWWHD8jwKtC8F0tNj0kuDP/caAXo3BCu7w==</SignatureValue><KeyInfo><X509Da
+ta><X509Certificate>MIIC8DCCAdigAwIBAgIQHNFkMEdeja9GDM23yVDVoTANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA5MTg
+xNDA1NDZaFw0yNzA5MTgxNDA1NDZaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsrBwTaahpTPfNXp09lY/Jb
+94+AmWZoYzMfHZOj7FytGL28AdHwoBHnksm73JAhtvwa+SvzIxSyt727OVC0NFsreiFcAQQZlxY4hj3qoSymFjpRGWoS0yuDpePHpwjO5+UQHu1aDMR7D4pbq18E7LntWccV0rOJIKOnqyPHpa9sDRBrNd2K0sBbrwgHpiR
+5RtnW13ayanE8IF+9TqK95pAhxLuX+OPEvRrb/A8cIXfR3R7CWf/U+LHXe4u+PBJeeq5aqBarw9ANgQbiu8WQhD2PHmzDo9TE1wdGQXK2lgOVCvWsmHXXo1h1w++/eAkooO97vB1Uf2Cm4CB2xctV8ylQIDAQABMA0GCSqG
+SIb3DQEBCwUAA4IBAQA/hK4N4Npb+fHWkG43xM5CEWzXcrRHEzxEF4tmEIt6GZFd0DT/eKlxSIW7DjigVzOIApTTdpRYz0MMmLJGHKMEpWpEDw3t8HW9UY3hnX4cc01JrVPNbWPcXCjpmr2y1D/oT7nhW3dOSg6/1R5yBR6
+fNHoi3Sd/q8j4neskn2hOCnT9ZNy1f9tNMonSM+janZN30hMsdN6tjXWLdEmmWedwK7lKN1rBLNAo05/yEneg8SVy1Xp3KfUS2l+oY1teKjJcEoal9lwSFw14tBPbluQlubZDmHMWDXJfUEROtT6uvOKLlHnD6uWf7DNZ4u
+YPGDE9Ue7wQj+CYkFI4BzcT5SR</X509Certificate></X509Data></KeyInfo></Signature><Subject><NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Thomas.An
+derson@owatonna.gov</NameID><SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"><SubjectConfirmationData InResponseTo="_E1C6DDD406854FD00853394D757C06B
+2" NotOnOrAfter="2024-09-24T17:21:25.915Z" Recipient="https://156.99.82.129:9443/remote/saml/login"/></SubjectConfirmation></Subject><Conditions NotBefore="2024-09-24T
+16:16:25.915Z" NotOnOrAfter="2024-09-24T17:21:25.915Z"><AudienceRestriction><Audience>http://156.99.82.129:9443/remote/saml/metadata/</Audience></AudienceRestriction><
+/Conditions><AttributeStatement><Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid"><AttributeValue>5119c72d-51d9-4424-b16b-16e1c971c579</Attribute
+Value></Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier"><AttributeValue>b2c0ed85-e42b-4db5-80e9-ff4a7499c634</AttributeValue>
+</Attribute><Attribute Name="http://schemas.microsoft.com/identity/claims/displayname"><AttributeValue>Thomas A. Anderson</AttributeValue></Attribute><Attribute Name="
+http://schemas.microsoft.com/identity/claims/identityprovider"><AttributeValue>https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c971c579/</AttributeValue></Attribut
+e><Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences"><AttributeValue>http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/pa
+ssword</AttributeValue><AttributeValue>http://schemas.microsoft.com/claims/multipleauthn</AttributeValue></Attribute><Attribute Name="http://schemas.microsoft.com/ws/2
+008/06/identity/claims/wids"><AttributeValue>b79fbf4d-3ef9-4689-8143-76b194e85509</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/id
+entity/claims/givenname"><AttributeValue>Thomas</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"><AttributeV
+alue>Anderson</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"><AttributeValue>Thomas.Anderson@owatonna
+.gov</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"><AttributeValue>Thomas.Anderson@owatonna.gov</AttributeVa
+lue></Attribute><Attrsamld_send_common_reply [95]:     Attr: 10, 99, 'http://schemas.microsoft.com/identity/claims/tenantid' '5119c72d-51d9-4424-b16b-16e1c971c579'
+samld_send_common_reply [95]:     Attr: 10, 107, 'http://schemas.microsoft.com/identity/claims/objectidentifier' 'b2c0ed85-e42b-4db5-80e9-ff4a7499c634'
+samld_send_common_reply [95]:     Attr: 10, 84, 'http://schemas.microsoft.com/identity/claims/displayname' 'Thomas A. Anderson'
+samld_send_common_reply [95]:     Attr: 10, 132, 'http://schemas.microsoft.com/identity/claims/identityprovider' 'https://sts.windows.net/5119c72d-51d9-4424-b16b-16e1c
+971c579/'
+samld_send_common_reply [95]:     Attr: 10, 146, 'http://schemas.microsoft.com/claims/authnmethodsreferences' 'http://schemas.microsoft.com/ws/2008/06/identity/authent
+icationmethod/password'
 samld_send_common_reply [95]:     Attr: 10, 117, 'http://schemas.microsoft.com/claims/authnmethodsreferences' 'http://schemas.microsoft.com/claims/multipleauthn'
-samld_send_common_reply [95]:     Attr: 10, 106, 'http://schemas.microsoft.com/ws/2008/06/identity/claims/wids' '9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3'
 samld_send_common_reply [95]:     Attr: 10, 106, 'http://schemas.microsoft.com/ws/2008/06/identity/claims/wids' 'b79fbf4d-3ef9-4689-8143-76b194e85509'
-samld_send_common_reply [95]:     Attr: 10, 79, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname' 'Johann'
-samld_send_common_reply [95]:     Attr: 10, 73, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname' 'Lo'
-samld_send_common_reply [95]:     Attr: 10, 105, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress' 'johannlo@planetexpress.com.au'
-samld_send_common_reply [95]:     Attr: 10, 97, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' 'johannlo@planetexpress.com.au'
-samld_send_common_reply [95]:     Attr: 10, 47, 'username' 'johannlo@planetexpress.com.au'
-samld_send_common_reply [95]:     Attr: 10, 52, 'groups' '5098d212-02a5-4db9-8d48-e2488aad058f'
-samld_send_common_reply [95]:     Attr: 10, 52, 'groups' 'a4c1b865-e0f4-489c-b298-b519b67f78ac'
-samld_send_common_reply [95]:     Attr: 10, 52, 'groups' 'b90d667f-ebf6-4ac7-b40e-313c111802df'
-samld_send_common_reply [95]:     Attr: 10, 52, 'groups' 'c9da6584-8647-4e7d-9d37-03c76cedecc7'
-samld_send_common_reply [95]:     Attr: 10, 52, 'groups' 'b31d0fd0-9134-478b-8c3f-5c19aa594b4e'
-samld_send_common_reply [95]:     Attr: 10, 52, 'groups' 'e165dad1-e522-40b0-b7ae-8cf46ae936fa'
-samld_send_common_reply [95]:     Attr: 10, 52, 'groups' 'a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea'
-samld_send_common_reply [99]:     Attr: 11, 1117, https://login.microsoftonline.com/871d08a2-c7a4-43b8-93ec-47d4f58a42b5/saml2?SAMLRequest=fZJBb5wwEIXv%2FRWIu8GAWYy1i0pFVlop7aGpesglGuxhQ4Vtaht1%2B%2B%2FLso2UVk1Plmbme2%2FmyXsPeprFvT3bJXzG7wv6EF30ZLzYOod4cUZY8KMXBjR6EaR4aD%2FeizyhYnY2WGmn%2BBXyfwK8RxdGa%2BLo1B3ip6K9411x5HnNac26etfxtrrL%2BYcya3N67OLoKzq%2Fzh%2FiFV8h7xc8GR%2FAhLVEc0ZoRbLsC81EmYti9xhH3XrDaCBs1HMIsxdpOtnzaBI9Sme9HYI102gwkVanvMoU5ZATWQEjrOg5qQuUhFWKDSUHlvdler0sj5v99RXbEq55kT5DwB%2FwM5knMBjwMjv0%2FiqdwCIYY0XqUNuAm0iqMYCCAPv0tdZN%2BNOa16mLjtZpCG8HmSXZVhkVGbZRgRrGqVXq6hw33%2BwzGDPZ9%2F%2Fa6LfvzermO4uHtb%2FGdTIKL82TLHmJFe2JQomESawIz6AgOxzqoe%2F7QlF6k%2FmLfPdS%2FeM%2FNb8A&RelayState=magic%3D010305829b9db04d&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=ICej%2FD4cAA1TL0J%2FQuyHVg14HU9gS1zF7u6ULWqKg%2FdY5QjheAUutG6akeC28Zi4MM0yiH9bJA3OA9AFfGak79Yodi7fP060aHWuURFkfoLsUOYKtCSEcQAb32NdEgX3CCHtHo7IipbSg5uxGJNz%2FOhTYXjLNRsFu0GJO4i7sb0LbVOUF7lILi4XWd8t97wpdYVnqe96QZixZOVQdF4jUhIbl3d1a%2FXJCP2PJqVjyfrUHO1Hf3EnMeYaKZGFZynZa4mo06HsvOX9vP0CveFqfQsJCAA2miQH0AJtJxnAIgfxv2H%2BLv9MOZl5SyMZ4Y3HIK%2BhkqocWd9pzNGTGKfjKA%3D%3D
-samld_send_common_reply [119]: Sent resp: 17685, pid=297, job_id=563636.
-[authd_saml_read:119]: Resp len 17685 bytes
-[authd_saml_read:130]: Rcvd 17685 bytes
-[authd_http_on_saml_msg:4450]: src 4.199.33.224 flag 0000a000
-[authd_http_on_saml_msg:4459]: cmd 2, code 0.
-[authd_http_on_saml_msg:4535]: user 'johannlo@planetexpress.com.au'.
-[authd_http_on_saml_msg:4527]: group '5098d212-02a5-4db9-8d48-e2488aad058f'.
-[authd_http_on_saml_msg:4527]: group 'a4c1b865-e0f4-489c-b298-b519b67f78ac'.
-[authd_http_on_saml_msg:4527]: group 'b90d667f-ebf6-4ac7-b40e-313c111802df'.
-[authd_http_on_saml_msg:4527]: group 'c9da6584-8647-4e7d-9d37-03c76cedecc7'.
-[authd_http_on_saml_msg:4527]: group 'b31d0fd0-9134-478b-8c3f-5c19aa594b4e'.
-[authd_http_on_saml_msg:4527]: group 'e165dad1-e522-40b0-b7ae-8cf46ae936fa'.
-[authd_http_on_saml_msg:4527]: group 'a1ab1b81-9345-4f2e-bc4d-2c045b41c8ea'.
-[2559] handle_req-Rcvd auth cache message
-[139] __saml_auth_cache_push-Hash bucket 79
-[186] __saml_auth_cache_push-New auth cache entry is created, user='AC1B46AB4D314A3DAB8C885A2D3ECD2B', saml_user='johannlo@planetexpress.com.au', expires=1720666355, SAML_server='azure-ipsec', vfid=0
-[authd_http_authentication_done:1590]: src 4.199.33.224 flag 0000a000
-[authd_http_send_ok:2657]: src 4.199.33.224 flag 0000a000
-[authd_http_send:1268]: src 4.199.33.224 flag 0000a000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 0000a000
-authd_http: change state from 3 to 5
-[authd_http_disconnect:2736]: src 4.199.33.224 flag 0000a000
-[authd_http_change_state:2813]: src 4.199.33.224 flag 0000a000
-authd_http: change state from 5 to 6
-[authd_http_done:2781]: src 4.199.33.224 flag 0000a000
-authd_epoll_work: timeout 28810
-fsae_io_ctx_process_msg[fac.planetexpress.com.au]: received heartbeat 0
-authd_epoll_work: timeout 54680
-[1909] handle_req-Rcvd auth req 1380546115 for AC1B46AB4D314A3DAB8C885A2D3ECD2B in  opt=00000000 prot=8
-[486] __compose_group_list_from_req-Group 6, type 3
-[616] fnbamd_pop3_start-AC1B46AB4D314A3DAB8C885A2D3ECD2B
-[645] fnbamd_cfg_get_radius_list-Loading RADIUS server 'eap_proxy'
-[342] fnbamd_create_radius_socket-Opened radius socket 10
-[342] fnbamd_create_radius_socket-Opened radius socket 11
-[1476] fnbamd_radius_auth_send-Compose RADIUS request
-fnbamd_dbg_hex_pnt[48] EAP msg from client (37)-02 F3 00 25 01 41 43 31 42 34 36 41 42 34 44 33 31 34 41 33 44 41 42 38 43 38 38 35 41 32 44 33 45 43 44 32 42
-[1197] gen_grplist_from_grpid-Group id 6 and Group name 'AzureADSAML-IPSec'
-[1433] fnbamd_rad_dns_cb-127.0.0.1->127.0.0.1
-[1405] __fnbamd_rad_send-Sent radius req to server 'eap_proxy': fd=10, IP=127.0.0.1(127.0.0.1:1812) code=1 id=20 len=225 user="AC1B46AB4D314A3DAB8C885A2D3ECD2B" using EAP
-[319] radius_server_auth-Timer of rad 'eap_proxy' is added
-[764] auth_tac_plus_start-Didn't find tac_plus servers (0)
-[1009] __fnbamd_cfg_get_ldap_list_by_group-
-[1117] fnbamd_cfg_get_ldap_list-Total ldap servers to try: 0
-[497] ldap_start-Didn't find ldap servers
-[480] fnbamd_cfg_get_ext_idp_list-
-[454] __fnbamd_cfg_get_ext_idp_list_by_group-
-[460] __fnbamd_cfg_get_ext_idp_list_by_group-Group 'AzureADSAML-IPSec'
-[490] fnbamd_cfg_get_ext_idp_list-Total external identity provider servers to try: 0
-[652] create_auth_session-Total 1 server(s) to try
-[1950] handle_req-r=4
-[1522] fnbamd_auth_handle_radius_result-Timer of rad 'eap_proxy' is deleted
-[1890] fnbamd_radius_auth_validate_pkt-RADIUS resp code 11
-fnbamd_dbg_hex_pnt[48] EAP msg from server (33)-01 F4 00 21 1A 01 F4 00 1C 10 05 24 D4 D8 03 E2 55 F6 57 25 B3 9F 07 71 7B 5B 68 6F 73 74 61 70 64
-[1548] fnbamd_auth_handle_radius_result-->Result for radius svr 'eap_proxy' 127.0.0.1(1) is 2
-[209] fnbamd_comm_send_result-Sending result 2 (nid 0) for req 1380546115, len=2569
-[1279] freeze_auth_session-
-[2444] handle_req-Rcvd chal rsp for req 1380546115
-[1296] unfreeze_auth_session-
-[342] fnbamd_create_radius_socket-Opened radius socket 10
-[342] fnbamd_create_radius_socket-Opened radius socket 11
-[1476] fnbamd_radius_auth_send-Compose RADIUS request
-fnbamd_dbg_hex_pnt[48] EAP msg from client (91)-02 F4 00 5B 1A 02 F4 00 56 31 BC B6 B3 4A 9B 6B 4E 26 FD 32 B7 D6 B6 AE 9C F6 00 00 00 00 00 00 00 00 58 97 A0 54 6C E1 96 16 24 FD AF A1 80 48 F3 11 D8 4E 8F C7 FB 35 08 90 00 41 43 31 42 34 36 41 42 34 44 33 31 34 41 33 44 41 42 38 43 38 38 35 41 32 44 33 45 43 44 32 42
-[1197] gen_grplist_from_grpid-Group id 6 and Group name 'AzureADSAML-IPSec'
-[1405] __fnbamd_rad_send-Sent radius req to server 'eap_proxy': fd=10, IP=127.0.0.1(127.0.0.1:1812) code=1 id=21 len=285 user="AC1B46AB4D314A3DAB8C885A2D3ECD2B" using EAP
-[1333] send_radius_challenge_rsp-Timer of rad 'eap_proxy' is added
-[1909] handle_req-Rcvd auth req 1380546116 for AC1B46AB4D314A3DAB8C885A2D3ECD2B in  opt=00000000 prot=4
-[489] __compose_group_list_from_req-Group 'AzureADSAML-IPSec', type 1
-[1007] fnbamd_saml_auth_cache_lookup-Authneticating 'AC1B46AB4D314A3DAB8C885A2D3ECD2B'.
-[1041] fnbamd_saml_auth_cache_lookup-Authentication passed.
-[234] __clear_one_entry-'AC1B46AB4D314A3DAB8C885A2D3ECD2B' is cleared.
-[1950] handle_req-r=0
-[1623] fnbam_user_auth_group_match-req id: 1380546116, server: azure-ipsec, local auth: 0, dn match: 0
-[1592] __group_match-Group 'AzureADSAML-IPSec' passed group matching
-[1595] __group_match-Add matched group 'AzureADSAML-IPSec'(6)
-[1968] handle_req-Passed group matching
-[209] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 1380546116, len=2800
-[1522] fnbamd_auth_handle_radius_result-Timer of rad 'eap_proxy' is deleted
-[1890] fnbamd_radius_auth_validate_pkt-RADIUS resp code 11
-fnbamd_dbg_hex_pnt[48] EAP msg from server (56)-01 F5 00 38 1A 03 F4 00 33 53 3D 45 42 42 39 46 42 42 46 31 32 46 38 33 43 43 36 36 42 43 30 32 42 43 34 39 32 32 39 31 33 38 36 34 39 46 32 45 30 35 41 20 4D 3D 4F 4B
-[1548] fnbamd_auth_handle_radius_result-->Result for radius svr 'eap_proxy' 127.0.0.1(1) is 2
-[209] fnbamd_comm_send_result-Sending result 2 (nid 0) for req 1380546115, len=2592
-[1279] freeze_auth_session-
-[2444] handle_req-Rcvd chal rsp for req 1380546115
-[1296] unfreeze_auth_session-
-[342] fnbamd_create_radius_socket-Opened radius socket 10
-[342] fnbamd_create_radius_socket-Opened radius socket 11
-[1476] fnbamd_radius_auth_send-Compose RADIUS request
-fnbamd_dbg_hex_pnt[48] EAP msg from client (6)-02 F5 00 06 1A 03
-[1197] gen_grplist_from_grpid-Group id 6 and Group name 'AzureADSAML-IPSec'
-[1405] __fnbamd_rad_send-Sent radius req to server 'eap_proxy': fd=10, IP=127.0.0.1(127.0.0.1:1812) code=1 id=22 len=200 user="AC1B46AB4D314A3DAB8C885A2D3ECD2B" using EAP
-[1333] send_radius_challenge_rsp-Timer of rad 'eap_proxy' is added
-[1522] fnbamd_auth_handle_radius_result-Timer of rad 'eap_proxy' is deleted
-[1890] fnbamd_radius_auth_validate_pkt-RADIUS resp code 2
-[362] extract_success_vsas-FORTINET attr, type 255, val azure-ipsec
-[362] extract_success_vsas-FORTINET attr, type 253, val johannlo@planetexpress.com.au
-[1750] __radius_decode_mppe_key-Key len after decode 16
+samld_send_common_reply [95]:     Attr: 10, 79, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname' 'Thomas'
+samld_send_common_reply [95]:     Attr: 10, 79, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname' 'Anderson'
+samld_send_common_reply [95]:     Attr: 10, 104, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress' 'Thomas.Anderson@owatonna.gov'
+samld_send_common_reply [95]:     Attr: 10, 96, 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' 'Thomas.Anderson@owatonna.gov'
+samld_send_common_reply [95]:     Attr: 10, 46, 'username' 'Thomas.Anderson@owatonna.gov'
+samld_send_common_reply [95]:     Attr: 10, 51, 'group' '244ef30d-be95-4a8c-85f9-0a627c290163'
+samld_send_common_reply [95]:     Attr: 10, 51, 'group' '153b8883-0116-4232-affa-265b251c2c1d'
+samld_send_common_reply [95]:     Attr: 10, 51, 'group' '9054caa7-f39b-4d09-873b-51a884ef14b5'
+samld_send_common_reply [95]:     Attr: 10, 51, 'group' 'bbe7c2a9-4b9c-44c6-b58d-9211cfefa520'
+samld_send_common_reply [99]:     Attr: 11, 1105, https://login.microsoftonline.com/5119c72d-51d9-4424-b16b-16e1c971c579/saml2?SAMLRequest=fZJBbxshFITv%2BRUr7rDAsmtA9q
+p2LUuW0h6SqIdeIrxgZ6WF5wJO8vOL162UVmpPSMP75jEjlsn46azv4QSX%2FOB%2BXFzK1bufQtLzzQpdYtBg0ph0MN4lnQf9uP5yrzmh%2BhwhwwAT%2BoD8nzApuZhHCKjab1foWW6pYFLwHaUbufmshFg0tBEt23U7J
+dkGVd9cTGV%2BhQpeoJQubh9SNiEXiXKBqcJcPLFOc6Z59x1V25JhDCbP1EvO56TreoLTGIgfhwgJjhnCNAZHBvB1y5gaFtzillmFhSiWB9YdMOscG9SCDe1C1ddkHPXL66nnR8T%2Bal2cWdsRpYjkhHGlS4Kmjs5DdjNU
+e5eNNdnUy%2FojfHP6Wgrab6sdRG%2Fyv5tjhM3KaPFxHtXOm3FaWxtdSqh%2FegFvElkHW8qC8AneTEkYDDnB66%2B1t023tWf9WLBSz74A7%2F2zOfBjaxuBRSNLA0ZJrLhtMDVSUidc21B6s%2FmLvPut%2FvF%2F%2B
+p8%3D&RelayState=magic%3D05050a849bf2ef7e&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=qZaxxLgK3LE21J3VMZjrSBffOOYPLdo5zJe3BgU7G2wIy83VSD1
+Sbb44juzWFq8OJlQFCTLMUbiqyWZ3GQOnofbGuoGdixLUGh9GQHBGbGfaTpkZI6h0pmEdo4utN6Z9En1f%2B3VKs%2B6MdhedA%2B6fddfjcpWLvRNsmy4pOqs3It6B7xajUPNnNeLA9E7yTulxlgcN%2BztD11PD3hXwjj
+ad7nSFwujAJoP6GE%2Fl7hlbQw%2FeP82Maw4gqaDorD2kynWLYWA6Bk7nBZ4fbfjw2LbaSdHtrRc4LUu9L5ieYCJmFf4gfFCpcBIba5fzl1zWTBuqean9MK%2BiMpH6j0rOjXnnag%3D%3D
+samld_send_common_reply [119]: Sent resp: 16760, pid=3617, job_id=565223.
+2024-09-24 11:21:26 [2559] handle_req-Rcvd auth cache message
+2024-09-24 11:21:26 [139] __saml_auth_cache_push-Hash bucket 225
+2024-09-24 11:21:26 [186] __saml_auth_cache_push-New auth cache entry is created, user='9926B1A1F26A44E4B898F4486C80F255', saml_user='Thomas.Anderson@owatonna.gov', ex
+pires=1727198485, SAML_server='entra-id-saml', vfid=0
+2024-09-24 11:21:29.895379 ike 0: comes 216.17.94.60:1012->156.99.82.129:500,ifindex=69,vrf=0....
+2024-09-24 11:21:29.895416 ike 0: IKEv2 exchange=SA_INIT id=a7fd63a123d09b24/0000000000000000 len=456
+2024-09-24 11:21:29.895426 ike 0: in A7FD63A123D09B2400000000000000002120220800000000000001C82200005C0200002C010100040300000C0100000C800E010003000008020000050300000803
+00000C00000008040000050000002C020100040300000C0100000C800E0080030000080200000203000008030000020000000804000005280000C800050000B950037DAE7848338E551A8BA8D56DE5FE2A90DCF
+1839E24D2A7754603EB8655A0FED313DC3DF447B4D2BF67A501B18D7C121BFCAAB557DFD802B92FD074C33C09C33A2D250AA8B2A5F1FD99F525458530E29EA1227178EA8D46F7E9111DD6147576933E6E3C565A
+DCA3852EBCFFD2E55E8E0045E6DAD2AD478F2F251C939EE2988DBE0908EA2E502DBA18AF16A3AB8FFD70DDCF62F1D95064EC225FBBFEDF37351F6EEBB1B23E569E1EFE5EAB9679905E9109D51CC0CA4AEA7BB1A
+2657B39C42B000014FE88C55E832D9B180E3948C3BCFEDD8D2B0000144C53427B6D465D1B337BB755A37A7FEF2B000014B4F01CA951E9DA8D0BAFBBD34AD3044E29000014C1DC4350476B98A429B91781914CA4
+3E2900001C000040040D90F9D149B4B62D8D96DADC3C4B0111423E8B000000001C0000400502A572E7A324FCDFA473FB3C33A81FBF0544868A
+2024-09-24 11:21:29.895450 ike 0:a7fd63a123d09b24/0000000000000000:59436: responder received SA_INIT msg
+2024-09-24 11:21:29.895461 ike 0:a7fd63a123d09b24/0000000000000000:59436: VID forticlient connect license 4C53427B6D465D1B337BB755A37A7FEF
+2024-09-24 11:21:29.895471 ike 0:a7fd63a123d09b24/0000000000000000:59436: VID Fortinet Endpoint Control B4F01CA951E9DA8D0BAFBBD34AD3044E
+2024-09-24 11:21:29.895480 ike 0:a7fd63a123d09b24/0000000000000000:59436: VID Forticlient EAP Extension C1DC4350476B98A429B91781914CA43E
+2024-09-24 11:21:29.895490 ike 0:a7fd63a123d09b24/0000000000000000:59436: received notify type NAT_DETECTION_SOURCE_IP
+2024-09-24 11:21:29.895499 ike 0:a7fd63a123d09b24/0000000000000000:59436: received notify type NAT_DETECTION_DESTINATION_IP
+2024-09-24 11:21:29.895511 ike 0:a7fd63a123d09b24/0000000000000000:59436: incoming proposal:
+2024-09-24 11:21:29.895520 ike 0:a7fd63a123d09b24/0000000000000000:59436: proposal id = 1:
+2024-09-24 11:21:29.895527 ike 0:a7fd63a123d09b24/0000000000000000:59436:   protocol = IKEv2:
+2024-09-24 11:21:29.895533 ike 0:a7fd63a123d09b24/0000000000000000:59436:      encapsulation = IKEv2/none
+2024-09-24 11:21:29.895541 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=ENCR, val=AES_CBC (key_len = 256)
+2024-09-24 11:21:29.895548 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=INTEGR, val=AUTH_HMAC_SHA2_256_128
+2024-09-24 11:21:29.895555 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=PRF, val=PRF_HMAC_SHA2_256
+2024-09-24 11:21:29.895562 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=DH_GROUP, val=MODP1536.
+2024-09-24 11:21:29.895571 ike 0:a7fd63a123d09b24/0000000000000000:59436: proposal id = 2:
+2024-09-24 11:21:29.895577 ike 0:a7fd63a123d09b24/0000000000000000:59436:   protocol = IKEv2:
+2024-09-24 11:21:29.895584 ike 0:a7fd63a123d09b24/0000000000000000:59436:      encapsulation = IKEv2/none
+2024-09-24 11:21:29.895590 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=ENCR, val=AES_CBC (key_len = 128)
+2024-09-24 11:21:29.895597 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=INTEGR, val=AUTH_HMAC_SHA_96
+2024-09-24 11:21:29.895604 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=PRF, val=PRF_HMAC_SHA
+2024-09-24 11:21:29.895611 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=DH_GROUP, val=MODP1536.
+2024-09-24 11:21:29.895628 ike 0:a7fd63a123d09b24/0000000000000000:59436: matched proposal id 2
+2024-09-24 11:21:29.895635 ike 0:a7fd63a123d09b24/0000000000000000:59436: proposal id = 2:
+2024-09-24 11:21:29.895640 ike 0:a7fd63a123d09b24/0000000000000000:59436:   protocol = IKEv2:
+2024-09-24 11:21:29.895644 ike 0:a7fd63a123d09b24/0000000000000000:59436:      encapsulation = IKEv2/none
+2024-09-24 11:21:29.895649 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=ENCR, val=AES_CBC (key_len = 128)
+2024-09-24 11:21:29.895654 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=INTEGR, val=AUTH_HMAC_SHA_96
+2024-09-24 11:21:29.895658 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=PRF, val=PRF_HMAC_SHA
+2024-09-24 11:21:29.895663 ike 0:a7fd63a123d09b24/0000000000000000:59436:         type=DH_GROUP, val=MODP1536.
+2024-09-24 11:21:29.895668 ike 0:a7fd63a123d09b24/0000000000000000:59436: lifetime=86400
+2024-09-24 11:21:29.895675 ike 0:a7fd63a123d09b24/0000000000000000:59436: SA proposal chosen, matched gateway SAML-IPSec-VPN
+2024-09-24 11:21:29.895706 ike 0:SAML-IPSec-VPN: created connection: 0x9e31280 69 156.99.82.129->216.17.94.60:1012.
+2024-09-24 11:21:29.895713 ike 0:SAML-IPSec-VPN: HA start as master
+2024-09-24 11:21:29.895722 ike 0:SAML-IPSec-VPN:59436: processing notify type NAT_DETECTION_SOURCE_IP
+2024-09-24 11:21:29.895740 ike 0:SAML-IPSec-VPN:59436: processing NAT-D payload
+2024-09-24 11:21:29.895748 ike 0:SAML-IPSec-VPN:59436: NAT detected: PEER
+2024-09-24 11:21:29.895760 ike 0:SAML-IPSec-VPN:59436: process NAT-D
+2024-09-24 11:21:29.895764 ike 0:SAML-IPSec-VPN:59436: processing notify type NAT_DETECTION_DESTINATION_IP
+2024-09-24 11:21:29.895776 ike 0:SAML-IPSec-VPN:59436: processing NAT-D payload
+2024-09-24 11:21:29.895781 ike 0:SAML-IPSec-VPN:59436: NAT detected: PEER
+2024-09-24 11:21:29.895785 ike 0:SAML-IPSec-VPN:59436: process NAT-D
+2024-09-24 11:21:29.895790 ike 0:SAML-IPSec-VPN:59436: FEC vendor ID received FEC but IP not set
+2024-09-24 11:21:29.895795 ike 0:SAML-IPSec-VPN:59436: FCT EAP 2FA extension vendor ID received
+2024-09-24 11:21:29.895812 ike 0:SAML-IPSec-VPN:59436: responder preparing SA_INIT msg
+2024-09-24 11:21:29.895825 ike 0:SAML-IPSec-VPN:59436: generate DH public value request queued
+2024-09-24 11:21:29.895846 ike 0:SAML-IPSec-VPN:59436: responder preparing SA_INIT msg
+2024-09-24 11:21:29.895869 ike 0:SAML-IPSec-VPN:59436: compute DH shared secret request queued
+2024-09-24 11:21:29.896003 ike 0:SAML-IPSec-VPN:59436: responder preparing SA_INIT msg
+2024-09-24 11:21:29.896012 ike 0:SAML-IPSec-VPN:59436: create NAT-D hash local 156.99.82.129/500 remote 216.17.94.60/1012
+2024-09-24 11:21:29.896024 ike 0:SAML-IPSec-VPN:59436: out A7FD63A123D09B24673033E6F900D330212022200000000000000160220000300000002C020100040300000C0100000C800E00800300
+00080200000203000008030000020000000804000005280000C80005000006A3D8476584C93071D44F57C93172442D63C3D2D5382AA6E43C813860A296BEF5C3EAEF013A7C95591F367992122E4A3A79898EBC0
+4886F11EEED341BD2C26CAB9EA4E1DFC10383DC53DEAAA7A1C021763D7F42D247ADB8A2F825C9FD2137D40099B0D35C70243D0AE1E13E69A1B4FAC3A3EC96344869B10228B00AD63EA824E735D5BC963BD74539
+9E523D1E5A3C8A78F246EB968A4AB7FFA615306537601927B9EB2EDB0C8530DF7E07F80F87EFDF83CCB5EFB3AC1306F49A23FAC6475BCD290000145B7F0DFD2947C529B1527BC364D7F3662900001C00004004D
+6A0A0A8A2F8418575B96D74B0FD9701EF76F9240000001C00004005D196BEFCB2192079B9E65431952ADE6B174F2652
+2024-09-24 11:21:29.896053 ike 0:SAML-IPSec-VPN:59436: sent IKE msg (SA_INIT_RESPONSE): 156.99.82.129:500->216.17.94.60:1012, len=352, vrf=0, id=a7fd63a123d09b24/67303
+3e6f900d330
+2024-09-24 11:21:29.896098 ike 0:SAML-IPSec-VPN:59436: IKE SA a7fd63a123d09b24/673033e6f900d330 SK_ei 16:D00CDC777D94CBBEEDE7F692E00DDD46
+2024-09-24 11:21:29.896105 ike 0:SAML-IPSec-VPN:59436: IKE SA a7fd63a123d09b24/673033e6f900d330 SK_er 16:BF337FA6A0D6801546EA320E09DE6DEA
+2024-09-24 11:21:29.896111 ike 0:SAML-IPSec-VPN:59436: IKE SA a7fd63a123d09b24/673033e6f900d330 SK_ai 20:5BB454C12AAB5FF5D217345B685D4EE951E6BAF6
+2024-09-24 11:21:29.896117 ike 0:SAML-IPSec-VPN:59436: IKE SA a7fd63a123d09b24/673033e6f900d330 SK_ar 20:E23405083880D25C587058BFE215421645E370D2
+2024-09-24 11:21:29.925326 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:29.925338 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000001 len=684
+2024-09-24 11:21:29.925352 ike 0: in A7FD63A123D09B24673033E6F900D3302E20230800000001000002AC23000290E2A11695EDED3ACBDA57756D1E6B85BE4FAACBBEC88D974920E176B04E8DA09072
+B96C92C1F449D22186FAE549C87DE645234835589CCAF3E538F00809ECD2C70759963D5DF89104EEB0E552CB0EEFB570EB2334F35AC1EA6D3AB2CF4A39ECE87F618569BBC42DBD699DAD1B2796636EB6C159448
+2525282C5E575B69BB060519E398180F2C8CAEB3EC4DF50E942E94969F4F6425CA7ABBDFD72F95C5FA5AD43F1F5FE655B6013B4A4E4FBA87F1D6DE1B68612EDDC9B4A749561EC0464D1738723B5706EAEC3B2E4
+157C74AE0FA69DC55104B4111F2926D3D4681BAB852F2818FD10B69BE590203FE684654C508AFD20A359F26DAEEFB45BA204C9BE84E017AF61E346291F7F0CAC5285F02A70793037E4DC2209C933615739B6E40
+81EA8F3E8D3DB5E08F60BD6DCD054DBE6256E0AF06E944AF31B99495892E5306636C5C9F9520781C7F34F9E1956FB834824FFA58C6204AE2F1509883563DEAE43FA91F6369837F593C641B28B0A2E3652C4314E
+16F0B8CA17CA462B2D4E07C5246E27366B9EFA1027F78408A672F05446FE036E07BFF462EA125E1D0AB2FE3EE62A93B94E517B361CDB359CCFC8EB9900786ABF7A2A5C79290E38812F984EEA1698F5F43CB6523
+BEE873FF4F56C7DD15BCDBB3DB79C321CF9A919430EF6D50B45F66604B09B82440FC2CA6B9361578779F76C453DDBDF550528C842E3B2070BE71A43647ACC75B6C42334452725225AFDB4C47882D29EA52E788E
+1CD643B3123C913F5F2852B3FF454CDD15EAD77A96F6DFFD7E33EA4A58181B021EC3F7EA2DBDB9D132969A9D45788E7FABB8001C69D5C004AEEA519E2EF939262128B69A32BBB147A170EC34CA4B3B320EE5D91
+BB293FA09B92570AC9D67AE9F56CE3605FD7A1B06E3B2234B28392649C319A8F1A950
+2024-09-24 11:21:29.925376 ike 0:SAML-IPSec-VPN: HA state master(2)
+2024-09-24 11:21:29.925416 ike 0:SAML-IPSec-VPN:59436: dec A7FD63A123D09B24673033E6F900D3302E202308000000010000028E230000042900000C01000000AC10FB2F29000008000040002F00
+017A0000F1005645523D310A4643545645523D372E322E352E313035330A5549443D39393236423141314632364134344534423839384634343836433830463235350A49503D31302E302E302E31300A4D41433
+D33342D37332D35612D65652D39362D37653B61342D34322D33622D33382D33332D34383B61342D34322D33622D33382D33332D34343B61342D34322D33622D33382D33332D34353B61362D34322D33622D3338
+2D33332D34343B0A484F53543D4341492D433435423142332D310A555345523D39393236423141314632364134344534423839384634343836433830463235350A4F535645523D4D6963726F736F66742057696
+E646F777320313020456E74657270726973652045646974696F6E2C2036342D62697420286275696C64203139303434290A5245475F5354415455533D300A454D53534E3D464354454D53303030303132313436
+320A454D5349443D30303030303030303030303030303030303030303030303030303030303030300A002100005C010000000007001046435438303031353032393735393631000100000002000000030000000
+40000000D00000019000000080000000F0000000A0000000B000070010000540A0000540B00007000000070060000001900002C0000540200002801030403786C8FE20300000C0100000C800E00800300000803
+00000200000008050000000000002802030403786C8FE20300000C0100000C800E0100030000080300000C00000008050000002D00001801000000070000100000FFFF00000000FFFFFFFF00000018010000000
+70000100000FFFF00000000FFFFFFFF
+2024-09-24 11:21:29.925437 ike 0:SAML-IPSec-VPN:59436: responder received AUTH msg
+2024-09-24 11:21:29.925442 ike 0:SAML-IPSec-VPN:59436: processing notify type INITIAL_CONTACT
+2024-09-24 11:21:29.925460 ike 0:SAML-IPSec-VPN:59436: processing notify type FORTICLIENT_CONNECT
+2024-09-24 11:21:29.925471 ike 0:SAML-IPSec-VPN:59436: received FCT data len = 370, data = 'VER=1
+FCTVER=7.2.5.1053
+UID=9926B1A1F26A44E4B898F4486C80F255
+IP=10.0.0.10
+MAC=34-73-5a-ee-96-7e;a4-42-3b-38-33-48;a4-42-3b-38-33-44;a4-42-3b-38-33-45;a6-42-3b-38-33-44;
+HOST=CAI-C45B1B3-1
+USER=9926B1A1F26A44E4B898F4486C80F255
+OSVER=Microsoft Windows 10 Enterprise Edition, 64-bit (build 19044)
+REG_STATUS=0
+EMSSN=FCTEMS0000121462
+EMSID=00000000000000000000000000000000
+'
+2024-09-24 11:21:29.925491 ike 0:SAML-IPSec-VPN:59436: received FCT-UID = 9926B1A1F26A44E4B898F4486C80F255
+2024-09-24 11:21:29.925497 ike 0:SAML-IPSec-VPN:59436: peer identifier IPV4_ADDR 172.16.251.47
+2024-09-24 11:21:29.925503 ike 0:SAML-IPSec-VPN:59436: re-validate gw ID
+2024-09-24 11:21:29.925511 ike 0:SAML-IPSec-VPN:59436: gw validation OK
+2024-09-24 11:21:29.925516 ike 0:SAML-IPSec-VPN:59436: responder preparing EAP identity request
+2024-09-24 11:21:29.925534 ike 0:SAML-IPSec-VPN:59436: enc 2700000C010000009C6352813000001C02000000043365B37CF7E3F429DAA0FC84DE1B62836FD2D500000009013B0005010E0D0C0B0A
+0908070605040302010E
+2024-09-24 11:21:29.925547 ike 0:SAML-IPSec-VPN:59436: remote port change 1012 -> 64917
+2024-09-24 11:21:29.925552 ike 0:SAML-IPSec-VPN:59436: out A7FD63A123D09B24673033E6F900D3302E202320000000010000007C240000601DAD439690CFDC01732C72DAAAEC442E96C90B84C5D9
+BF25D695A226BDA3244929805FF5D5D6F0CCF96BA5641C3483445E0B3E624FFF5BE656069C6BBA48927F4592DAD3638BBE941F5CDCBEBCD8C29682A1D66A47B35D18E900EF8F
+2024-09-24 11:21:29.925576 ike 0:SAML-IPSec-VPN:59436: sent IKE msg (AUTH_RESPONSE): 156.99.82.129:4500->216.17.94.60:64917, len=124, vrf=0, id=a7fd63a123d09b24/673033
+e6f900d330:00000001
+2024-09-24 11:21:29.932357 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:29.932367 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000002 len=108
+2024-09-24 11:21:29.932374 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000020000006C30000050FEDBB38ADAC2FB302F5E7F664E4E8342A753C7A0365979721DAABE50AB262E313E
+D43D83A60C485C002B2899C79CA60D92C607711116B52F833BB038B11205350BD60EBD5EC99A961805F2F1
+2024-09-24 11:21:29.932379 ike 0:SAML-IPSec-VPN: HA state master(2)
+2024-09-24 11:21:29.932393 ike 0:SAML-IPSec-VPN:59436: dec A7FD63A123D09B24673033E6F900D3302E20230800000002000000493000000400000029023B00250139393236423141314632364134
+34453442383938463434383643383046323535
+2024-09-24 11:21:29.932400 ike 0:SAML-IPSec-VPN:59436: responder received EAP msg
+2024-09-24 11:21:29.932404 ike 0:SAML-IPSec-VPN:59436: send EAP message to FNBAM
+2024-09-24 11:21:29.932409 ike 0:SAML-IPSec-VPN:59436: initiating EAP authentication
+2024-09-24 11:21:29.932421 ike 0:SAML-IPSec-VPN: EAP user "9926B1A1F26A44E4B898F4486C80F255"
+2024-09-24 11:21:29.932427 ike 0:SAML-IPSec-VPN: auth candidate group 'Entra-ID-VPN' 2
+2024-09-24 11:21:29.932474 ike 0:SAML-IPSec-VPN: EAP 1174100458 pending
+2024-09-24 11:21:29 [1909] handle_req-Rcvd auth req 1174100458 for 9926B1A1F26A44E4B898F4486C80F255 in  opt=00000000 prot=8
+2024-09-24 11:21:29 [486] __compose_group_list_from_req-Group 2, type 3
+2024-09-24 11:21:29 [616] fnbamd_pop3_start-9926B1A1F26A44E4B898F4486C80F255
+2024-09-24 11:21:29 [2282] fnbamd_user_ldap_create-LDAP servers are created, vfid=0, total=0
+2024-09-24 11:21:29 [645] fnbamd_cfg_get_radius_list-Loading RADIUS server 'eap_proxy'
+2024-09-24 11:21:29 [342] fnbamd_create_radius_socket-Opened radius socket 10
+2024-09-24 11:21:29 [342] fnbamd_create_radius_socket-Opened radius socket 11
+2024-09-24 11:21:29 [1476] fnbamd_radius_auth_send-Compose RADIUS request
+2024-09-24 11:21:29 fnbamd_dbg_hex_pnt[48] EAP msg from client (37)-02 3B 00 25 01 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34 38 36 43 38 30
+46 32 35 35
+2024-09-24 11:21:29 [1197] gen_grplist_from_grpid-Group id 2 and Group name 'Entra-ID-VPN'
+2024-09-24 11:21:29 [1433] fnbamd_rad_dns_cb-127.0.0.1->127.0.0.1
+2024-09-24 11:21:29 [1405] __fnbamd_rad_send-Sent radius req to server 'eap_proxy': fd=10, IP=127.0.0.1(127.0.0.1:1812) code=1 id=0 len=224 user="9926B1A1F26A44E4B898F
+4486C80F255" using EAP
+2024-09-24 11:21:29 [319] radius_server_auth-Timer of rad 'eap_proxy' is added
+2024-09-24 11:21:29 RADIUS SRV: Received 224 bytes from 127.0.0.1:19791
+2024-09-24 11:21:29 1727194889.933469: 2024-09-24 11:21:29 [764] auth_tac_plus_start-Didn't find tac_plus servers (0)
+2024-09-24 11:21:29 RADIUS SRV: Received data - hexdump(len=224):
+2024-09-24 11:21:29 [1009] __fnbamd_cfg_get_ldap_list_by_group-
+2024-09-24 11:21:29  01 00 00 e0 f3 ce 33 7e c9 6f 16 d4 f4 79 ce 83 bf 24 a8 7b 20 0d 4f 77 61 74 6f 6e 6e 61 2d 48
+2024-09-24 11:21:29  41 01 22 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34 38 36 43 38 30 46
+2024-09-24 11:21:29 [1117] fnbamd_cfg_get_ldap_list-Total ldap servers to try: 0
+2024-09-24 11:21:29  32 35 35 4f 27 02 3b 00 25 01 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34
+2024-09-24 11:21:29 [497] ldap_start-Didn't find ldap servers
+2024-09-24 11:21:29  34 38 36 43 38 30 46 32 35 35 08 06 d8 11 5e 3c 3d 06 00 00 00 05 1f 0e 32 31 36 2e 31 37 2e 39
+2024-09-24 11:21:29 [480] fnbamd_cfg_get_ext_idp_list-
+2024-09-24 11:21:29  34 2e 36 30 1a 14 00 00 30 44 02 0e 32 31 36 2e 31 37 2e 39 34 2e 36 30 2c 0a 34 35 66 62 35 39
+2024-09-24 11:21:29 [454] __fnbamd_cfg_get_ext_idp_list_by_group-
+2024-09-24 11:21:29  65 61 4d 0b 76 70 6e 2d 69 6b 65 76 32 1a 0c 00 00 30 44 03 06 72 6f 6f 74 1a 15 00 00 30 44 01
+2024-09-24 11:21:29 2024-09-24 11:21:29  0f 45 6e 74 72 61 2d 49 44 2d 56 50 4e 00 50 12 14 9c 58 1e 25 85 ed 26 fb b2 61 d6 2e a9 9d 3e
+2024-09-24 11:21:29 [490] fnbamd_cfg_get_ext_idp_list-Total external identity provider servers to try: 0
 
-[1750] __radius_decode_mppe_key-Key len after decode 16
+2024-09-24 11:21:29 [652] create_auth_session-Total 1 server(s) to try
+2024-09-24 11:21:29 [1950] handle_req-r=4
+2024-09-24 11:21:29 1727194889.933833: 2024-09-24 11:21:29 RADIUS SRV: Creating a new session
+2024-09-24 11:21:29 1727194889.933888: 2024-09-24 11:21:29 RADIUS SRV: User-Name - hexdump_ascii(len=32):
+2024-09-24 11:21:29      39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34   9926B1A1F26A44E4
+2024-09-24 11:21:29      42 38 39 38 46 34 34 38 36 43 38 30 46 32 35 35   B898F4486C80F255
+2024-09-24 11:21:29 1727194889.933997: 2024-09-24 11:21:29 RADIUS SRV: Matching user entry found
+2024-09-24 11:21:29 1727194889.934048: 2024-09-24 11:21:29 EAP: Server state machine created
+2024-09-24 11:21:29 1727194889.934098: 2024-09-24 11:21:29 RADIUS SRV: NAS-ID - hexdump_ascii(len=11):
+2024-09-24 11:21:29      4f 77 61 74 6f 6e 6e 61 2d 48 41                  Owatonna-HA
+2024-09-24 11:21:29 1727194889.934177: 2024-09-24 11:21:29 RADIUS SRV: CALLING-STATION-ID - hexdump_ascii(len=12):
+2024-09-24 11:21:29      32 31 36 2e 31 37 2e 39 34 2e 36 30               216.17.94.60
+2024-09-24 11:21:29 1727194889.934256: 2024-09-24 11:21:29 RADIUS SRV: SVC_TYPE - hexdump_ascii(len=9):
+2024-09-24 11:21:29      76 70 6e 2d 69 6b 65 76 32                        vpn-ikev2
+2024-09-24 11:21:29 1727194889.934333: 2024-09-24 11:21:29 RADIUS SRV: New session 0x0 initialized
+2024-09-24 11:21:29 1727194889.934382: 2024-09-24 11:21:29 RADIUS SRV: Received EAP data - hexdump(len=37):
+2024-09-24 11:21:29  02 3b 00 25 01 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34 38 36 43 38
+2024-09-24 11:21:29  30 46 32 35 35
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.934513: 2024-09-24 11:21:29 EAP: EAP entering state INITIALIZE
+2024-09-24 11:21:29 1727194889.934564: 2024-09-24 11:21:29 EAP: parseEapResp: rxResp=1 respId=59 respMethod=1 respVendor=0 respVendorMethod=0
+2024-09-24 11:21:29 1727194889.934616: 2024-09-24 11:21:29 CTRL-EVENT-EAP-STARTED 00:00:00:00:00:00
+2024-09-24 11:21:29 1727194889.934666: 2024-09-24 11:21:29 EAP: EAP entering state PICK_UP_METHOD
+2024-09-24 11:21:29 1727194889.934716: 2024-09-24 11:21:29 CTRL-EVENT-EAP-PROPOSED-METHOD method=1
+2024-09-24 11:21:29 1727194889.934768: 2024-09-24 11:21:29 EAP: EAP entering state METHOD_RESPONSE
+2024-09-24 11:21:29 1727194889.934818: 2024-09-24 11:21:29 EAP-Identity: Peer identity - hexdump_ascii(len=32):
+2024-09-24 11:21:29      39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34   9926B1A1F26A44E4
+2024-09-24 11:21:29      42 38 39 38 46 34 34 38 36 43 38 30 46 32 35 35   B898F4486C80F255
+2024-09-24 11:21:29 1727194889.934922: 2024-09-24 11:21:29 EAP: EAP entering state SELECT_ACTION
+2024-09-24 11:21:29 1727194889.934971: 2024-09-24 11:21:29 EAP: getDecision: another method available -> CONTINUE
+2024-09-24 11:21:29 1727194889.935021: 2024-09-24 11:21:29 EAP: EAP entering state PROPOSE_METHOD
+2024-09-24 11:21:29 1727194889.935071: 2024-09-24 11:21:29 EAP: getNextMethod: vendor 0 type 26
+2024-09-24 11:21:29 1727194889.935122: 2024-09-24 11:21:29 CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=26
+2024-09-24 11:21:29 1727194889.935177: 2024-09-24 11:21:29 EAP: EAP entering state METHOD_REQUEST
+2024-09-24 11:21:29 1727194889.935229: 2024-09-24 11:21:29 EAP: building EAP-Request: Identifier 60
+2024-09-24 11:21:29 1727194889.935371: 2024-09-24 11:21:29 EAP-MSCHAPV2: Challenge - hexdump(len=16):
+2024-09-24 11:21:29  20 d6 ad 02 79 21 8a 14 ec fc 54 8e c2 66 38 8c
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.935473: 2024-09-24 11:21:29 EAP: EAP entering state SEND_REQUEST
+2024-09-24 11:21:29 1727194889.935523: 2024-09-24 11:21:29 EAP: EAP entering state IDLE
+2024-09-24 11:21:29 1727194889.935572: 2024-09-24 11:21:29 EAP: retransmit timeout 3 seconds (from dynamic back off; retransCount=0)
+2024-09-24 11:21:29 1727194889.935623: 2024-09-24 11:21:29 RADIUS SRV: EAP data from the state machine - hexdump(len=33):
+2024-09-24 11:21:29  01 3c 00 21 1a 01 3c 00 1c 10 20 d6 ad 02 79 21 8a 14 ec fc 54 8e c2 66 38 8c 68 6f 73 74 61 70
+2024-09-24 11:21:29  64
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.935758: 2024-09-24 11:21:29 RADIUS SRV: Reply to 127.0.0.1:19791
+2024-09-24 11:21:29 [1522] fnbamd_auth_handle_radius_result-Timer of rad 'eap_proxy' is deleted
+2024-09-24 11:21:29 [1890] fnbamd_radius_auth_validate_pkt-RADIUS resp code 11
+2024-09-24 11:21:29 fnbamd_dbg_hex_pnt[48] EAP msg from server (33)-01 3C 00 21 1A 01 3C 00 1C 10 20 D6 AD 02 79 21 8A 14 EC FC 54 8E C2 66 38 8C 68 6F 73 74 61 70 64
+2024-09-24 11:21:29 [1548] fnbamd_auth_handle_radius_result-->Result for radius svr 'eap_proxy' 127.0.0.1(1) is 2
+2024-09-24 11:21:29 [209] fnbamd_comm_send_result-Sending result 2 (nid 0) for req 1174100458, len=2569
+2024-09-24 11:21:29 [1279] freeze_auth_session-
+2024-09-24 11:21:29.936058 ike 0:SAML-IPSec-VPN:59436 EAP 1174100458 result FNBAM_CHALLENGED
+2024-09-24 11:21:29.936073 ike 0:SAML-IPSec-VPN: EAP challenged for user "9926B1A1F26A44E4B898F4486C80F255"
+2024-09-24 11:21:29.936080 ike 0:SAML-IPSec-VPN:59436: responder preparing EAP pass through message
+2024-09-24 11:21:29.936092 ike 0:SAML-IPSec-VPN:59436: enc 00000025013C00211A013C001C1020D6AD0279218A14ECFC548EC266388C686F73746170640A0908070605040302010A
+2024-09-24 11:21:29.936111 ike 0:SAML-IPSec-VPN:59436: out A7FD63A123D09B24673033E6F900D3302E202320000000020000006C300000502B03382F811B4319DE36B14ACD5917899A129F12594D
+F78C90E24E47FCE14B10EAD74B30DA8D2797D4EA03000E529D1D7104C8FC9F9EC8673D357C2099412C5B22239554759CFC28C8001015
+2024-09-24 11:21:29.936135 ike 0:SAML-IPSec-VPN:59436: sent IKE msg (AUTH_RESPONSE): 156.99.82.129:4500->216.17.94.60:64917, len=108, vrf=0, id=a7fd63a123d09b24/673033
+e6f900d330:00000002
+2024-09-24 11:21:29.943934 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:29.943946 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000003 len=156
+2024-09-24 11:21:29.943953 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000030000009C30000080C50838582460D20D5EC28E445BA346ACF927F778AAE85BBF40C167F15BCDA60E05
+9DF85A645525283FDB516C3983E95671CBB027F11E005592108CE77FBCA118072AB673F2B18A77B474AB5D07D88149ADF3C541531D48AB6AEAEAAA52AD70226E552E7AADC243EB4FCAEFF1C3060D56C68B53F82
+86DBACF44A39E50
+2024-09-24 11:21:29.943961 ike 0:SAML-IPSec-VPN: HA state master(2)
+2024-09-24 11:21:29.943976 ike 0:SAML-IPSec-VPN:59436: dec A7FD63A123D09B24673033E6F900D3302E202308000000030000007F300000040000005F023C005B1A023C005631CC345EEEE3FBDD11
+A0A14AE745792D4B0000000000000000AEC251573E70F88613173F8414448321072297F8A2F12187003939323642314131463236413434453442383938463434383643383046323535
+2024-09-24 11:21:29.943984 ike 0:SAML-IPSec-VPN:59436: responder received EAP msg
+2024-09-24 11:21:29.943989 ike 0:SAML-IPSec-VPN:59436: send EAP message to FNBAM
+2024-09-24 11:21:29.944000 ike 0:SAML-IPSec-VPN: EAP 1174100458 pending
+2024-09-24 11:21:29 [2444] handle_req-Rcvd chal rsp for req 1174100458
+2024-09-24 11:21:29 [1296] unfreeze_auth_session-
+2024-09-24 11:21:29 [342] fnbamd_create_radius_socket-Opened radius socket 10
+2024-09-24 11:21:29 [342] fnbamd_create_radius_socket-Opened radius socket 11
+2024-09-24 11:21:29 [1476] fnbamd_radius_auth_send-Compose RADIUS request
+2024-09-24 11:21:29 fnbamd_dbg_hex_pnt[48] EAP msg from client (91)-02 3C 00 5B 1A 02 3C 00 56 31 CC 34 5E EE E3 FB DD 11 A0 A1 4A E7 45 79 2D 4B 00 00 00 00 00 00 00
+00 AE C2 51 57 3E 70 F8 86 13 17 3F 84 14 44 83 21 07 22 97 F8 A2 F1 21 87 00 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34 38 36 43 38 30 46 32
+ 35 35
+2024-09-24 11:21:29 [1197] gen_grplist_from_grpid-Group id 2 and Group name 'Entra-ID-VPN'
+2024-09-24 11:21:29 [1405] __fnbamd_rad_send-Sent radius req to server 'eap_proxy': fd=10, IP=127.0.0.1(127.0.0.1:1812) code=1 id=1 len=284 user="9926B1A1F26A44E4B898F
+4486C80F255" using EAP
+2024-09-24 11:21:29 RADIUS SRV: Received 284 bytes from 127.0.0.1:3160
+2024-09-24 11:21:29 [1333] send_radius_challenge_rsp-Timer of rad 'eap_proxy' is added
+2024-09-24 11:21:29 1727194889.944549: 2024-09-24 11:21:29 RADIUS SRV: Received data - hexdump(len=284):
+2024-09-24 11:21:29  01 01 01 1c df b8 5e 45 eb b3 80 11 25 2e c3 d8 e9 be eb b4 20 0d 4f 77 61 74 6f 6e 6e 61 2d 48
+2024-09-24 11:21:29  41 18 06 00 00 00 00 01 22 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34
+2024-09-24 11:21:29  38 36 43 38 30 46 32 35 35 4f 5d 02 3c 00 5b 1a 02 3c 00 56 31 cc 34 5e ee e3 fb dd 11 a0 a1 4a
+2024-09-24 11:21:29  e7 45 79 2d 4b 00 00 00 00 00 00 00 00 ae c2 51 57 3e 70 f8 86 13 17 3f 84 14 44 83 21 07 22 97
+2024-09-24 11:21:29  f8 a2 f1 21 87 00 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34 38 36 43
+2024-09-24 11:21:29  38 30 46 32 35 35 08 06 d8 11 5e 3c 3d 06 00 00 00 05 1f 0e 32 31 36 2e 31 37 2e 39 34 2e 36 30
+2024-09-24 11:21:29  1a 14 00 00 30 44 02 0e 32 31 36 2e 31 37 2e 39 34 2e 36 30 2c 0a 34 35 66 62 35 39 65 61 4d 0b
+2024-09-24 11:21:29  76 70 6e 2d 69 6b 65 76 32 1a 0c 00 00 30 44 03 06 72 6f 6f 74 1a 15 00 00 30 44 01 0f 45 6e 74
+2024-09-24 11:21:29  72 61 2d 49 44 2d 56 50 4e 00 50 12 72 89 ba 9d 1a 45 1e 35 59 a4 81 58 9c 1c b1 dd
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.944907: 2024-09-24 11:21:29 RADIUS SRV: Request for session 0x0
+2024-09-24 11:21:29 1727194889.944956: 2024-09-24 11:21:29 RADIUS SRV: Received EAP data - hexdump(len=91):
+2024-09-24 11:21:29  02 3c 00 5b 1a 02 3c 00 56 31 cc 34 5e ee e3 fb dd 11 a0 a1 4a e7 45 79 2d 4b 00 00 00 00 00 00
+2024-09-24 11:21:29  00 00 ae c2 51 57 3e 70 f8 86 13 17 3f 84 14 44 83 21 07 22 97 f8 a2 f1 21 87 00 39 39 32 36 42
+2024-09-24 11:21:29  31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34 38 36 43 38 30 46 32 35 35
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.945114: 2024-09-24 11:21:29 EAP: EAP entering state RECEIVED
+2024-09-24 11:21:29 1727194889.945162: 2024-09-24 11:21:29 EAP: parseEapResp: rxResp=1 respId=60 respMethod=26 respVendor=0 respVendorMethod=0
+2024-09-24 11:21:29 1727194889.945212: 2024-09-24 11:21:29 EAP: EAP entering state INTEGRITY_CHECK
+2024-09-24 11:21:29 1727194889.945261: 2024-09-24 11:21:29 EAP: EAP entering state METHOD_RESPONSE
+2024-09-24 11:21:29 1727194889.945310: 2024-09-24 11:21:29 EAP-MSCHAPV2: Peer-Challenge - hexdump(len=16):
+2024-09-24 11:21:29  cc 34 5e ee e3 fb dd 11 a0 a1 4a e7 45 79 2d 4b
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.945408: 2024-09-24 11:21:29 EAP-MSCHAPV2: NT-Response - hexdump(len=24):
+2024-09-24 11:21:29  ae c2 51 57 3e 70 f8 86 13 17 3f 84 14 44 83 21 07 22 97 f8 a2 f1 21 87
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.945508: 2024-09-24 11:21:29 EAP-MSCHAPV2: Flags 0x0
+2024-09-24 11:21:29 1727194889.945556: 2024-09-24 11:21:29 EAP-MSCHAPV2: Name - hexdump_ascii(len=32):
+2024-09-24 11:21:29      39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34   9926B1A1F26A44E4
+2024-09-24 11:21:29      42 38 39 38 46 34 34 38 36 43 38 30 46 32 35 35   B898F4486C80F255
+2024-09-24 11:21:29 1727194889.945660: 2024-09-24 11:21:29 EAP-MSCHAPV2: User name - hexdump_ascii(len=32):
+2024-09-24 11:21:29      39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34   9926B1A1F26A44E4
+2024-09-24 11:21:29      42 38 39 38 46 34 34 38 36 43 38 30 46 32 35 35   B898F4486C80F255
+2024-09-24 11:21:29 1727194889.945766: 2024-09-24 11:21:29 eap_comm_session_add 675 -- comm session added, ses_id=1
 
-fnbamd_dbg_hex_pnt[48] EAP msg from server (4)-03 F5 00 04
-[1548] fnbamd_auth_handle_radius_result-->Result for radius svr 'eap_proxy' 127.0.0.1(1) is 0
-[1573] fnbamd_auth_handle_radius_result-RADIUS auth succeeds with server 'azure-ipsec'
-[1623] fnbam_user_auth_group_match-req id: 1380546115, server: azure-ipsec, local auth: 0, dn match: 0
-[295] find_matched_usr_grps-Failed group matching
-[209] fnbamd_comm_send_result-Sending result 1 (nid 0) for req 1380546115, len=2540
-[808] destroy_auth_session-delete session 1380546115
-[1086] fnbamd_ext_idps_destroy-
-[2465] handle_req-Rcvd abort req for 1380546115
-[2480] handle_req-Can't abort, no active req 1380546115
-authd_timer_run: 2 expired
-authd_epoll_work: timeout 46950
-fsae_io_ctx_process_msg[fac.planetexpress.com.au]: received heartbeat 0
-authd_epoll_work: timeout 44640
-[2487] handle_req-Rcvd auth_cert req id=1380546117, len=1128, opt=0
-[983] __cert_auth_ctx_init-req_id=1380546117, opt=0
-[103] __cert_chg_st- 'Init'
-[156] fnbamd_cert_load_certs_from_req-3 cert(s) in req.
-[669] __cert_init-req_id=1380546117
-[718] __cert_build_chain-req_id=1380546117
-[273] fnbamd_chain_build-Chain discovery, opt 0x13, cur total 1
-[291] fnbamd_chain_build-Following depth 0
-[320] fnbamd_chain_build-Extend chain by system trust store. (no luck)
-[374] fnbamd_chain_build-Extend chain by peer-provided certs. (good)
-[291] fnbamd_chain_build-Following depth 1
-[326] fnbamd_chain_build-Extend chain by system trust store. (good: 'DigiCert_High_Assurance_EV_Root_CA')
-[291] fnbamd_chain_build-Following depth 2
-[305] fnbamd_chain_build-Self-sign detected.
-[99] __cert_chg_st- 'Init' -> 'Validation'
-[840] __cert_verify-req_id=1380546117
-[841] __cert_verify-Chain is complete.
-[486] fnbamd_cert_verify-Chain number:3
-[500] fnbamd_cert_verify-Following cert chain depth 0
-[500] fnbamd_cert_verify-Following cert chain depth 1
-[573] fnbamd_cert_verify-Issuer found: DigiCert_High_Assurance_EV_Root_CA (SSL_DPI opt 1)
-[500] fnbamd_cert_verify-Following cert chain depth 2
-[657] fnbamd_cert_check_group_list-group list is empty, match any!
-[191] __get_default_ocsp_ctx-def_ocsp_ctx=(nil), no_ocsp_query=0, ocsp_enabled=0
-[876] __cert_verify_do_next-req_id=1380546117
-[99] __cert_chg_st- 'Validation' -> 'Done'
-[921] __cert_done-req_id=1380546117
-[1654] fnbamd_auth_session_done-Session done, id=1380546117
-[966] __fnbamd_cert_auth_run-Exit, req_id=1380546117
-[1691] create_auth_cert_session-fnbamd_cert_auth_init returns 0, id=1380546117
-[1610] auth_cert_success-id=1380546117
-[1068] fnbamd_cert_auth_copy_cert_status-req_id=1380546117
-[1107] fnbamd_cert_auth_copy_cert_status-Leaf cert status is unchecked.
-[1124] fnbamd_cert_auth_copy_cert_status-Issuer of cert depth 0 is not detected in CMDB.
-[1195] fnbamd_cert_auth_copy_cert_status-Cert st 2c0, req_id=1380546117
-[209] fnbamd_comm_send_result-Sending result 0 (nid 672) for req 1380546117, len=2536
-[1555] destroy_auth_cert_session-id=1380546117
-[1041] fnbamd_cert_auth_uninit-req_id=1380546117
-fsae_io_ctx_process_msg[fac.planetexpress.com.au]: received heartbeat 0
-authd_epoll_work: timeout 34600
-authd_epoll_work: timeout 8940
+2024-09-24 11:21:29 1727194889.945827: eap_comm_server_read 317 req.msg_type:0.
+2024-09-24 11:21:29 EAP: EAP entering state WAIT_FNBAM_AUTH
+ep_fnbam_auth_wpa_user 402 -- svc_type='vpn-ikev2', user='9926B1A1F26A44E4B898F4486C80F255', vdom='root', intf='Owatonna-HA'
+ep_fnbam_auth_wpa_user 498 -- auth_res=4.
+ep_fnbam_auth_wpa_user 517 --auth sess added, ses_id=1174100459.
+2024-09-24 11:21:29 [1909] handle_req-Rcvd auth req 1174100459 for 9926B1A1F26A44E4B898F4486C80F255 in  opt=00000000 prot=4
+2024-09-24 11:21:29 [489] __compose_group_list_from_req-Group 'Entra-ID-VPN', type 1
+2024-09-24 11:21:29 [1007] fnbamd_saml_auth_cache_lookup-Authneticating '9926B1A1F26A44E4B898F4486C80F255'.
+2024-09-24 11:21:29 [1041] fnbamd_saml_auth_cache_lookup-Authentication passed.
+2024-09-24 11:21:29 [234] __clear_one_entry-'9926B1A1F26A44E4B898F4486C80F255' is cleared.
+2024-09-24 11:21:29 [1950] handle_req-r=0
+2024-09-24 11:21:29 [1623] fnbam_user_auth_group_match-req id: 1174100459, server: entra-id-saml, local auth: 0, dn match: 0
+2024-09-24 11:21:29 [1592] __group_match-Group 'Entra-ID-VPN' passed group matching
+2024-09-24 11:21:29 [1595] __group_match-Add matched group 'Entra-ID-VPN'(2)
+2024-09-24 11:21:29 [1968] handle_req-Passed group matching
+2024-09-24 11:21:29 [209] fnbamd_comm_send_result-Sending result 0 (nid 0) for req 1174100459, len=2689
+wpad_fnbam_read() -- got response
+process_auth_result 651 -- ses_id=1174100459, auth_res=0.
+process_auth_result 692 --group '244ef30d-be95-4a8c-85f9-0a627c290163' is matched.
+process_auth_result 692 --group '153b8883-0116-4232-affa-265b251c2c1d' is matched.
+process_auth_result 692 --group '9054caa7-f39b-4d09-873b-51a884ef14b5' is matched.
+process_auth_result 692 --group 'bbe7c2a9-4b9c-44c6-b58d-9211cfefa520' is matched.
+process_auth_result 708 -- user 'Thomas.Anderson@owatonna.gov', server 'entra-id-saml'.
+Not enough buffer for groups
+eap_comm_send_auth_result 240 rsp len:888
 
+ep_auth_session_del 149 -- auth session deleted, ses_id=1174100459
+2024-09-24 11:21:29 1727194889.946690: 2024-09-24 11:21:29 eap_comm_client_read 580.rsp->msg_type:0
+
+2024-09-24 11:21:29 1727194889.946750: 2024-09-24 11:21:29 EAP-MSCHAPV2: Correct user password
+2024-09-24 11:21:29 1727194889.946800: 2024-09-24 11:21:29 eap_comm_session_del 489 -- comm session deleted, ses_id=1
+
+2024-09-24 11:21:29 1727194889.946857: 2024-09-24 11:21:29 EAP: EAP entering state METHOD_REQUEST
+2024-09-24 11:21:29 1727194889.946910: 2024-09-24 11:21:29 EAP: building EAP-Request: Identifier 61
+2024-09-24 11:21:29 1727194889.946963: 2024-09-24 11:21:29 EAP-MSCHAPV2: Success Request Message - hexdump_ascii(len=47):
+2024-09-24 11:21:29      53 3d 34 41 31 46 42 35 45 46 32 32 33 35 45 42   S=4A1FB5EF2235EB
+2024-09-24 11:21:29      32 42 34 46 34 32 42 38 39 31 38 36 36 33 30 31   2B4F42B891866301
+2024-09-24 11:21:29      44 43 46 38 41 42 33 42 38 39 20 4d 3d 4f 4b      DCF8AB3B89 M=OK
+2024-09-24 11:21:29 1727194889.947100: 2024-09-24 11:21:29 EAP: EAP entering state SEND_REQUEST
+2024-09-24 11:21:29 1727194889.947150: 2024-09-24 11:21:29 EAP: EAP entering state IDLE
+2024-09-24 11:21:29 1727194889.947200: 2024-09-24 11:21:29 EAP: retransmit timeout 3 seconds (from dynamic back off; retransCount=0)
+2024-09-24 11:21:29 1727194889.947256: 2024-09-24 11:21:29 RADIUS SRV: Reply to 127.0.0.1:3160
+2024-09-24 11:21:29 [1522] fnbamd_auth_handle_radius_result-Timer of rad 'eap_proxy' is deleted
+2024-09-24 11:21:29 [1890] fnbamd_radius_auth_validate_pkt-RADIUS resp code 11
+2024-09-24 11:21:29 fnbamd_dbg_hex_pnt[48] EAP msg from server (56)-01 3D 00 38 1A 03 3C 00 33 53 3D 34 41 31 46 42 35 45 46 32 32 33 35 45 42 32 42 34 46 34 32 42 38
+39 31 38 36 36 33 30 31 44 43 46 38 41 42 33 42 38 39 20 4D 3D 4F 4B
+2024-09-24 11:21:29 [1548] fnbamd_auth_handle_radius_result-->Result for radius svr 'eap_proxy' 127.0.0.1(1) is 2
+2024-09-24 11:21:29 [209] fnbamd_comm_send_result-Sending result 2 (nid 0) for req 1174100458, len=2592
+2024-09-24 11:21:29.947488 ike 0:SAML-IPSec-VPN:59436 EAP 1174100458 result FNBAM_CHALLENGED
+2024-09-24 11:21:29 2024-09-24 11:21:29.947501 ike 0:SAML-IPSec-VPN: EAP challenged for user "9926B1A1F26A44E4B898F4486C80F255"
+2024-09-24 11:21:29.947509 ike 0:SAML-IPSec-VPN:59436: responder preparing EAP pass through message
+2024-09-24 11:21:29.947520 ike 0:SAML-IPSec-VPN:59436: enc 0000003C013D00381A033C0033533D344131464235454632323335454232423446343242383931383636333031444346384142334238
+39204D3D4F4B03020103
+2024-09-24 11:21:29.947539 ike 0:SAML-IPSec-VPN:59436: out A7FD63A123D09B24673033E6F900D3302E202320000000030000007C30000060E6DCF44A190CBB03365434E810F6429541A5D1CFB336
+BF03EF31D4BC84E32C9E465651B3595713254E38D73D708D83E6BF0394528692CDBDF8A790F11983A8312766B000FF24B691D0354A768E910D9832878078C37F7809065D800D
+2024-09-24 11:21:29.947564 ike 0:SAML-IPSec-VPN:59436: sent IKE msg (AUTH_RESPONSE): 156.99.82.129:4500->216.17.94.60:64917, len=124, vrf=0, id=a7fd63a123d09b24/673033
+e6f900d330:00000003
+2024-09-24 11:21:29.953003 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:29.953012 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000004 len=76
+2024-09-24 11:21:29.953019 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000040000004C300000309C4AFA5D80B4500D0483CE05B6C1CFA82E98173715BB148694E548275CF543688E
+18747F7260B4E595D6D683
+2024-09-24 11:21:29.953025 ike 0:SAML-IPSec-VPN: HA state master(2)
+2024-09-24 11:21:29.953038 ike 0:SAML-IPSec-VPN:59436: dec A7FD63A123D09B24673033E6F900D3302E202308000000040000002A300000040000000A023D00061A03
+2024-09-24 11:21:29.953044 ike 0:SAML-IPSec-VPN:59436: responder received EAP msg
+2024-09-24 11:21:29.953049 ike 0:SAML-IPSec-VPN:59436: send EAP message to FNBAM
+2024-09-24 11:21:29.953058 ike 0:SAML-IPSec-VPN: EAP 1174100458 pending
+2024-09-24 11:21:29 [2444] handle_req-Rcvd chal rsp for req 1174100458
+2024-09-24 11:21:29 [1296] unfreeze_auth_session-
+2024-09-24 11:21:29 [342] fnbamd_create_radius_socket-Opened radius socket 10
+2024-09-24 11:21:29 [342] fnbamd_create_radius_socket-Opened radius socket 11
+2024-09-24 11:21:29 [1476] fnbamd_radius_auth_send-Compose RADIUS request
+2024-09-24 11:21:29 fnbamd_dbg_hex_pnt[48] EAP msg from client (6)-02 3D 00 06 1A 03
+2024-09-24 11:21:29 [1197] gen_grplist_from_grpid-Group id 2 and Group name 'Entra-ID-VPN'
+2024-09-24 11:21:29 2024-09-24 11:21:29 1727194889.953413: 2024-09-24 11:21:29 [1333] send_radius_challenge_rsp-Timer of rad 'eap_proxy' is added
+2024-09-24 11:21:29 RADIUS SRV: Received 199 bytes from 127.0.0.1:22230
+2024-09-24 11:21:29 1727194889.953481: 2024-09-24 11:21:29 RADIUS SRV: Received data - hexdump(len=199):
+2024-09-24 11:21:29  01 02 00 c7 d4 4c c4 1a dc 0c 56 28 ff a0 c6 b3 95 32 e0 3e 20 0d 4f 77 61 74 6f 6e 6e 61 2d 48
+2024-09-24 11:21:29  41 18 06 00 00 00 00 01 22 39 39 32 36 42 31 41 31 46 32 36 41 34 34 45 34 42 38 39 38 46 34 34
+2024-09-24 11:21:29  38 36 43 38 30 46 32 35 35 4f 08 02 3d 00 06 1a 03 08 06 d8 11 5e 3c 3d 06 00 00 00 05 1f 0e 32
+2024-09-24 11:21:29  31 36 2e 31 37 2e 39 34 2e 36 30 1a 14 00 00 30 44 02 0e 32 31 36 2e 31 37 2e 39 34 2e 36 30 2c
+2024-09-24 11:21:29  0a 34 35 66 62 35 39 65 61 4d 0b 76 70 6e 2d 69 6b 65 76 32 1a 0c 00 00 30 44 03 06 72 6f 6f 74
+2024-09-24 11:21:29  1a 15 00 00 30 44 01 0f 45 6e 74 72 61 2d 49 44 2d 56 50 4e 00 50 12 7b a2 2f 2c 89 a9 7f f0 c1
+2024-09-24 11:21:29  ee 3c f2 30 39 91 b3
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.953783: 2024-09-24 11:21:29 RADIUS SRV: Request for session 0x0
+2024-09-24 11:21:29 1727194889.953834: 2024-09-24 11:21:29 RADIUS SRV: Received EAP data - hexdump(len=6):
+2024-09-24 11:21:29  02 3d 00 06 1a 03
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.953935: 2024-09-24 11:21:29 EAP: EAP entering state RECEIVED
+2024-09-24 11:21:29 1727194889.953984: 2024-09-24 11:21:29 EAP: parseEapResp: rxResp=1 respId=61 respMethod=26 respVendor=0 respVendorMethod=0
+2024-09-24 11:21:29 1727194889.954035: 2024-09-24 11:21:29 EAP: EAP entering state INTEGRITY_CHECK
+2024-09-24 11:21:29 1727194889.954085: 2024-09-24 11:21:29 EAP: EAP entering state METHOD_RESPONSE
+2024-09-24 11:21:29 1727194889.954137: 2024-09-24 11:21:29 EAP-MSCHAPV2: Received Success Response - authentication completed successfully
+2024-09-24 11:21:29 1727194889.954188: 2024-09-24 11:21:29 EAP-MSCHAPV2: Derived key - hexdump(len=32):
+2024-09-24 11:21:29  [REMOVED]2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.954288: 2024-09-24 11:21:29 EAP: EAP entering state SELECT_ACTION
+2024-09-24 11:21:29 1727194889.954337: 2024-09-24 11:21:29 EAP: getDecision: method succeeded -> SUCCESS
+2024-09-24 11:21:29 1727194889.954389: 2024-09-24 11:21:29 EAP: EAP entering state SUCCESS
+2024-09-24 11:21:29 1727194889.954439: 2024-09-24 11:21:29 EAP: Building EAP-Success (id=61)
+2024-09-24 11:21:29 1727194889.954489: 2024-09-24 11:21:29 CTRL-EVENT-EAP-SUCCESS 00:00:00:00:00:00
+2024-09-24 11:21:29 1727194889.954539: 2024-09-24 11:21:29 RADIUS SRV: EAP data from the state machine - hexdump(len=4):
+2024-09-24 11:21:29  03 3d 00 04
+2024-09-24 11:21:29
+2024-09-24 11:21:29 1727194889.954655: 2024-09-24 11:21:29 RADIUS SRV: Reply to 127.0.0.1:22230
+2024-09-24 11:21:29 1727194889.954739: 2024-09-24 11:21:29 [1522] fnbamd_auth_handle_radius_result-Timer of rad 'eap_proxy' is deleted
+2024-09-24 11:21:29 RADIUS SRV: Removing completed session 0x0 after timeout
+2024-09-24 11:21:29 [1890] fnbamd_radius_auth_validate_pkt-RADIUS resp code 2
+2024-09-24 11:21:29 [362] extract_success_vsas-FORTINET attr, type 255, val entra-id-saml
+2024-09-24 11:21:29 [362] extract_success_vsas-FORTINET attr, type 253, val Thomas.Anderson@owatonna.gov
+2024-09-24 11:21:29 [1750] __radius_decode_mppe_key-Key len after decode 16
+
+2024-09-24 11:21:29 [1750] __radius_decode_mppe_key-Key len after decode 16
+
+2024-09-24 11:21:29 fnbamd_dbg_hex_pnt[48] EAP msg from server (4)-03 3D 00 04
+2024-09-24 11:21:29 [1548] fnbamd_auth_handle_radius_result-->Result for radius svr 'eap_proxy' 127.0.0.1(1) is 0
+2024-09-24 11:21:29 [1573] fnbamd_auth_handle_radius_result-RADIUS auth succeeds with server 'entra-id-saml'
+2024-09-24 11:21:29 [1623] fnbam_user_auth_group_match-req id: 1174100458, server: entra-id-saml, local auth: 0, dn match: 0
+2024-09-24 11:21:29 [295] find_matched_usr_grps-Failed group matching
+2024-09-24 11:21:29 [209] fnbamd_comm_send_result-Sending result 1 (nid 0) for req 1174100458, len=2540
+2024-09-24 11:21:29.955150 ike 0:SAML-IPSec-VPN:59436 EAP 1174100458 result FNBAM_DENIED
+2024-09-24 11:21:29 2024-09-24 11:21:29.955158 ike 0:SAML-IPSec-VPN: EAP failed for user "9926B1A1F26A44E4B898F4486C80F255"
+2024-09-24 11:21:29.955183 ike 0:SAML-IPSec-VPN:59436: responder preparing EAP pass through message
+2024-09-24 11:21:29.955192 ike 0:SAML-IPSec-VPN:59436: enc 00000008033D00040706050403020107
+2024-09-24 11:21:29.955206 ike 0:SAML-IPSec-VPN:59436: out A7FD63A123D09B24673033E6F900D3302E202320000000040000004C30000030C8848AE4AC012226B0AC50F591166BD9C9FCB0CFE15E
+B1ED9E5B21520F8644C8ECAC002BF28A9A395B506E33
+2024-09-24 11:21:29.955226 ike 0:SAML-IPSec-VPN:59436: sent IKE msg (AUTH_RESPONSE): 156.99.82.129:4500->216.17.94.60:64917, len=76, vrf=0, id=a7fd63a123d09b24/673033e
+6f900d330:00000004
+2024-09-24 11:21:29.955232 ike 0:SAML-IPSec-VPN: connection expiring due to EAP failure
+2024-09-24 11:21:29.955237 ike 0:SAML-IPSec-VPN: deleting
+2024-09-24 11:21:29.955266 ike 0:SAML-IPSec-VPN: deleted
+2024-09-24 11:21:29 [2465] handle_req-Rcvd abort req for 1174100458
+2024-09-24 11:21:29 [2480] handle_req-Can't abort, no active req 1174100458
+2024-09-24 11:21:29.962090 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:29.962098 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000005 len=92
+2024-09-24 11:21:29.962104 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000050000005C27000040AE21678F50301A90EAD5169C290DC52F2BAF02D6D9F1A5DD5D67C2ABAF29B53153
+5010015D9996BA06C09792D3473989E49C7B793D28A08362733D61
+2024-09-24 11:21:29.962111 ike 0: invalid IKE request SPI a7fd63a123d09b24/673033e6f900d330:00000005
+2024-09-24 11:21:32.990652 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:32.990679 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000005 len=92
+2024-09-24 11:21:32.990687 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000050000005C27000040AE21678F50301A90EAD5169C290DC52F2BAF02D6D9F1A5DD5D67C2ABAF29B53153
+5010015D9996BA06C09792D3473989E49C7B793D28A08362733D61
+2024-09-24 11:21:32.990696 ike 0: invalid IKE request SPI a7fd63a123d09b24/673033e6f900d330:00000005
+2024-09-24 11:21:35.981498 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:35.981525 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000005 len=92
+2024-09-24 11:21:35.981532 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000050000005C27000040AE21678F50301A90EAD5169C290DC52F2BAF02D6D9F1A5DD5D67C2ABAF29B53153
+5010015D9996BA06C09792D3473989E49C7B793D28A08362733D61
+2024-09-24 11:21:35.981541 ike 0: invalid IKE request SPI a7fd63a123d09b24/673033e6f900d330:00000005
+2024-09-24 11:21:38.986858 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:38.986884 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000005 len=92
+2024-09-24 11:21:38.986891 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000050000005C27000040AE21678F50301A90EAD5169C290DC52F2BAF02D6D9F1A5DD5D67C2ABAF29B53153
+5010015D9996BA06C09792D3473989E49C7B793D28A08362733D61
+2024-09-24 11:21:38.986900 ike 0: invalid IKE request SPI a7fd63a123d09b24/673033e6f900d330:00000005
+2024-09-24 11:21:39 1727194899.962066: 2024-09-24 11:21:39 RADIUS SRV: Removing completed session 0x0
+2024-09-24 11:21:39 1727194899.962171: 2024-09-24 11:21:39 EAP: Server state machine removed
+2024-09-24 11:21:41.991190 ike 0: comes 216.17.94.60:64917->156.99.82.129:4500,ifindex=69,vrf=0....
+2024-09-24 11:21:41.991217 ike 0: IKEv2 exchange=AUTH id=a7fd63a123d09b24/673033e6f900d330:00000005 len=92
+2024-09-24 11:21:41.991224 ike 0: in A7FD63A123D09B24673033E6F900D3302E202308000000050000005C27000040AE21678F50301A90EAD5169C290DC52F2BAF02D6D9F1A5DD5D67C2ABAF29B53153
+5010015D9996BA06C09792D3473989E49C7B793D28A08362733D61
+2024-09-24 11:21:41.991232 ike 0: invalid IKE request SPI a7fd63a123d09b24/673033e6f900d330:00000005
+2024-09-24 11:21:44 [2487] handle_req-Rcvd auth_cert req id=1174100460, len=1599, opt=8

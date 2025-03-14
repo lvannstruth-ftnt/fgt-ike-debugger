@@ -67,6 +67,7 @@ file_name = "IKE_Log_combined_all.txt"
 # IKE_LOG_V2_overlay_2_init
 # ike_fnbamd_local.txt
 # IKE_LOG_V1_radius_password_wrong_v2.txt
+# IKE_LOG_V2_SAML_MANTIS_1023871
 
 analysis_output = []
 Incoming_conn = []
@@ -461,6 +462,11 @@ def ike_parser(text):
                 analysis_output.append(f'<span style="color: yellow;">   The auth log anlysis for the above connection \n    user: Unknown group: {group}   Fnbamd-ID: {eap_id}</span>')                            
             if eap_id:
                 rest_lines = lines[i:]
+
+                # declaring variables for mantis 1023871 group checking
+                initial_fnbamd_gmatch_success = False
+                final_fnbamd_gmatch_success = False
+
                 for k,remaining_line in enumerate(rest_lines):
                     
                     if eap_id in remaining_line:
@@ -468,7 +474,10 @@ def ike_parser(text):
                     if eap_id in remaining_line and "FNBAM_DENIED" in remaining_line:
                         if SAML == False:
                             analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED</span>')
-                        if SAML == True:
+                        # check for mantis 1023871 before saml group attribute name mismatch
+                        if initial_fnbamd_gmatch_success and not final_fnbamd_gmatch_success and SAML:
+                            analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED with SAML after successful initial group match</span> <span style="color: yellow;">\n->Check Mantis 1023871\n</span>')
+                        elif SAML == True:
                             analysis_output.append(f'<span style="color: red;">[{str(i+k+1)}] Fnbamd DENIED DETECTED with SAML.</span> <span style="color: yellow;">\n->Check Group Mismatch \n-> Check Group Attribute/Name Mismatch</span>')
                         last_10_lines = rest_lines[max(0, k - 9):k + 1]
                         if any("find_matched_usr_grps-Failed group matching" in l for l in last_10_lines):
@@ -520,6 +529,11 @@ def ike_parser(text):
                         for info in context:
                             if 'EAP' in info and 'result' not in info:
                                 analysis_output.append(f'       [{str(i+k+1)}]{info.strip()}')
+                    ### check if first fnbamd group match was successful from EAP_proxy authentication
+                    if "__group_match-Group" in remaining_line and "passed group matching" in remaining_line:
+                        initial_fnbamd_gmatch_success = True
+                    elif "find_matched_usr_grps-Failed group matching" in remaining_line:
+                        final_fnbamd_gmatch_success = False
 
 # Adding known issue
         if 'compute DH shared secret request queued' in line:
